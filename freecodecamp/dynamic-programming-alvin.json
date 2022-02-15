@@ -1,1 +1,182 @@
-{"id":"playlist-2c5daff0-3db1-4fc0-aafe-627969d989f4","title":"Dynamic Programming Basics - Collection","createdBy":"","bookmarks":[{"id":"bookmark-21339cfd-0cad-4a31-bdbd-168b750cd78c","description":"<p>Hey Programmers, I am Alvin</p><p>&nbsp;</p><p>Welcome to - <strong>Dynamic Programming Course</strong></p>","start":6,"position":1,"video":{"id":"video-355f99c0-4a3f-4697-9f68-74bd889ad203","url":"https://www.youtube.com/watch?v=oBt53YbR9Kk","seen":5.821207,"total":18602}},{"id":"bookmark-5329c162-967b-4460-9dea-5989aafc9e45","description":"<p><i>Problems we're going to solve in this course -</i><br>&nbsp;</p><p>1. Calculate the 40th number of fibonacci sequence</p><p>2. Count the number of different ways to move through a 6x9 grid</p><p>3. Given a set of coins, how can we make 27 cents in the least number of coins</p><p>4. Given a set of substrings, what're the possible ways to construct the string <strong>\"potentpot\"</strong></p>","start":49,"position":2,"video":{"id":"video-e8affe11-dd9b-4db6-a7b2-3a9773d5e14a","url":"https://www.youtube.com/watch?v=oBt53YbR9Kk","seen":48.78339704005432,"total":18602}},{"id":"bookmark-87c3f6d2-33b1-440d-8879-76de4363d436","description":"<p>Visualize algorithms</p>","start":102,"position":3,"video":{"id":"video-3ebdb82d-8a2a-43cc-9d28-07bb6ebb7340","url":"https://www.youtube.com/watch?v=oBt53YbR9Kk","seen":101.85076303814698,"total":18602}},{"id":"bookmark-cee30b07-8d9b-49ff-9f41-93268e1f7ce2","description":"<p><i>Dynamic Programming concepts - <strong>solving Overlapping Sub-problems</strong> &nbsp;techniques covered -</i><br><br>Part 1: Memoization<br>Part 2: Tabulation<br><br><i>Pre-requisite required</i><br><br>1. Basics of Recursion<br>2. Basics of Complexity Analysis</p>","start":166,"position":4,"video":{"id":"video-b8a8124f-766a-4646-92fc-2543a2793d9e","url":"https://www.youtube.com/watch?v=oBt53YbR9Kk","seen":166.10665610681153,"total":18602}},{"id":"bookmark-d7dbb6d0-c065-41c9-8995-0cf845315ed2","description":"<p><strong>Challenge #1 </strong>- program a fibonacci using memoization<br><br><i>Write a function fib(n) that takes in a number as an argument. The function should return the nth number of the Fibonacci sequence</i><br><br>+ The 1st &amp; 2nd number of the sequence is 1.<br>+ To generate the next number of the sequence, we sum the previous two<br>&nbsp;</p>","start":206,"position":5,"video":{"id":"video-3ac0215e-3858-4175-9f09-dcbeb40b6c77","url":"https://www.youtube.com/watch?v=oBt53YbR9Kk","seen":205.677969,"total":18602}},{"id":"bookmark-782c2eb7-86c1-4301-977c-5240cd562485","description":"<p>Classic implementation</p><pre><code class=\"language-javascript\">// Classic implementation (w/o memoization)\nconst fib = (n) =&gt; {\n // base-case\n if (n&lt;=2) return 1;\n // recursive case\n return fib(n-1) + fib(n-2);\n};\n\nconsole.log(fib(6)); // 8\nconsole.log(fib(7)); // 13\nconsole.log(fib(8)); // 21\nconsole.log(fib(50)); // takes a looong time</code></pre><p>&nbsp;</p><p><strong>Review: </strong>Problem with this approach - We are re-visiting already visited / computed numbers</p>","start":275,"position":6,"video":{"id":"video-a5c31f2e-fd3e-4158-9854-d5d8974441eb","url":"https://www.youtube.com/watch?v=oBt53YbR9Kk","seen":275.45966992370603,"total":18602}},{"id":"bookmark-218122a5-67ef-41a4-97a4-d808348f05a3","description":"<p>Students need to work on drawing things....</p>","start":406,"position":7,"video":{"id":"video-e55ae7e7-7965-4344-a3a1-a0362d7a9c57","url":"https://www.youtube.com/watch?v=oBt53YbR9Kk","seen":405.7348070190735,"total":18602}},{"id":"bookmark-c1dd9097-4480-44af-a728-b0f7b8c509cc","description":"<p>Drawing a tree to explain optimization approach</p>","start":457,"position":8,"video":{"id":"video-86e46e83-fee0-46d4-a26d-bb7170662be8","url":"https://www.youtube.com/watch?v=oBt53YbR9Kk","seen":456.75220912016295,"total":18602}},{"id":"bookmark-6258308c-10da-417f-bf81-50f641666264","description":"<p>The Above solution approach is explained...<br><br>+ For all of these base cases, I know they return 1 to their parent<br>+ and all the parent nodes add up these base cases</p>","start":615,"position":9,"video":{"id":"video-138b84b9-e006-40bc-9126-ccc0eb130930","url":"https://www.youtube.com/watch?v=oBt53YbR9Kk","seen":615.4869470267029,"total":18602}},{"id":"bookmark-32c3daf8-3ace-49b9-a815-2137210e5aa3","description":"<p>Time Complexity<br><br>+ Off-hand people mention that a Fibonacci recursive implementation Big-O is - <strong>2^n</strong><br>+ This drawing is asymmetric.<br>+ Students have a real hard time convincing themselves on this <strong>2^n</strong></p>","start":646,"position":10,"video":{"id":"video-0beb427f-cc06-425c-befe-99b4fdb20f66","url":"https://www.youtube.com/watch?v=oBt53YbR9Kk","seen":646.2404470267029,"total":18601.941}},{"id":"bookmark-209abced-658e-439d-8b59-db51cbe7cede","description":"<p><strong>Basic refresher of Space Time Complexity for Recursion -</strong><br><br><strong>Example #1</strong><br>&nbsp;</p><pre><code class=\"language-javascript\">const foo = (n) =&gt; {\n if(n&lt;=1) return;\n foo(n-1);\n};</code></pre><p>&nbsp;</p><p>+ Time Complexity - <strong>O(n) - </strong>Takes n time to go through recursion</p><p>+ Space Complexity - <strong>O(n) </strong>- N times the function is called - Stacks function therefore <strong>O(n)</strong></p><p>&nbsp;</p><p><strong>Example #2</strong></p><p>&nbsp;</p><pre><code class=\"language-javascript\">const bar = (n) =&gt; {\n if(n&lt;=1) return;\n foo(n-2);\n};</code></pre><p>&nbsp;</p><p>+ Time Complexity - O(n/2) ~ O(n)<br>+ Space Complexity - O(n/2) ~ O(n)</p>","start":685,"position":11,"video":{"id":"video-1146e212-beaf-4e4c-83e3-ff6611fb5f69","url":"https://www.youtube.com/watch?v=oBt53YbR9Kk","seen":684.8481930648499,"total":18601.941}},{"id":"bookmark-d86014c4-8f9a-454d-9303-645488c602a9","description":"<p><strong>Example #3</strong></p><p>&nbsp;</p><pre><code class=\"language-javascript\">// produces a symmetric tree\nconst dib = (n) =&gt; {\n if (n&lt;=1) return;\n dib(n-1); // left child\n dib(n-1); // right child\n};</code></pre><p><br>+ Time Complexity - <strong>O(2^n)</strong><br>&nbsp; &nbsp; &nbsp;- First consider one of the paths, that will also be the height of the tree<br>&nbsp; &nbsp; &nbsp;- Height is also called - Levels<br>&nbsp; &nbsp; &nbsp;- The number of nodes doubles every level<br>+ Space Complexity - <strong>O(n)</strong><br>&nbsp; &nbsp; - Students always assume Space = Time when it comes to recursive function<br>&nbsp; &nbsp; - At any given time, the number of stacks is same as that of the height of the tree</p>","start":853,"position":12,"video":{"id":"video-8505f7e9-b4e4-4278-805a-576019c3635e","url":"https://www.youtube.com/watch?v=oBt53YbR9Kk","seen":853.1214597959137,"total":18601.941}},{"id":"bookmark-ca47d8b2-00d3-45d9-bd0f-a6c8de9949db","description":"<p><strong>Example #4</strong></p><p>&nbsp;</p><pre><code class=\"language-javascript\">// produces a symmetric tree\nconst lib = (n) =&gt; {\n if (n&lt;=1) return;\n dib(n-2); // left child\n dib(n-2); // right child\n};</code></pre><p><br>+ Time Complexity - <strong>O(2^n/2) ~ O(2^n)</strong><br>&nbsp; &nbsp; &nbsp;- First consider one of the paths, that will also be the height of the tree<br>&nbsp; &nbsp; &nbsp;- Height is also called - Levels<br>&nbsp; &nbsp; &nbsp;- The number of nodes SKIPS two steps every level so the height is halved.<br>+ Space Complexity - <strong>O(n/2) ~ O(n)</strong><br>&nbsp; &nbsp; - Students always assume Space = Time when it comes to recursive function<br>&nbsp; &nbsp; - At any given time, the number of stacks is half as that of the height of the tree</p>","start":1200,"position":13,"video":{"id":"video-f5286d4f-8d77-4bc3-8d87-0107539602ef","url":"https://www.youtube.com/watch?v=oBt53YbR9Kk","seen":1199.664206885559,"total":18602}},{"id":"bookmark-a425bb55-5a97-447c-b038-e70239523f8f","description":"<p>Where does our Fibonacci fit in these 4 examples ?</p><p>&nbsp;</p><pre><code class=\"language-plaintext\">Time - O(dib) &lt;= O(fib) &lt;= O(lib)</code></pre>","start":1281,"position":14,"video":{"id":"video-786219cd-2368-48a2-8b94-13c611d4d912","url":"https://www.youtube.com/watch?v=oBt53YbR9Kk","seen":1281.149031049591,"total":18602}},{"id":"bookmark-139055ac-b2f2-469d-aa0e-d04ece62e6df","description":"<p>O(2^n) is not a good Time Complexity (explained)...<br><br>+ Consider fib(50) ~ 2^50<br>+ if we just bring up the calculator &amp; do a 2 raised to 50 = <strong>1,1,25,899,906,842,624</strong> steps !!&nbsp;<br>+ One quadrillion steps</p>","start":1356,"position":15,"video":{"id":"video-4b57cc6a-2bf1-424b-827b-6c30891bae9a","url":"https://www.youtube.com/watch?v=oBt53YbR9Kk","seen":1356.2389128550415,"total":18602}},{"id":"bookmark-8c14283f-cfd8-4322-8bce-44db1958babd","description":"<p><strong>Overlapping Sub-problems explained...</strong></p><p>&nbsp;</p><p>+ Alot of duplicates in my subtree</p><p>+ I know my previous number fibonacci doesn't change</p><p>&nbsp;</p><p><i>Solving these kind of Overlapping Sub-problems is the core of <strong>\"Dynamic Programming\"</strong></i></p>","start":1441,"position":16,"video":{"id":"video-069e5147-48c4-4a8a-8c3c-09f3c0cce75b","url":"https://www.youtube.com/watch?v=oBt53YbR9Kk","seen":1440.895907956131,"total":18602}}]}
+{
+    "id": "playlist-2c5daff0-3db1-4fc0-aafe-627969d989f4",
+    "title": "Dynamic Programming Basics - Collection",
+    "createdBy": "",
+    "bookmarks": [{
+        "id": "bookmark-21339cfd-0cad-4a31-bdbd-168b750cd78c",
+        "description": "<p>Hey Programmers, I am Alvin</p><p>&nbsp;</p><p>Welcome to - <strong>Dynamic Programming Course</strong></p>",
+        "start": 6,
+        "position": 1,
+        "video": {
+            "id": "video-355f99c0-4a3f-4697-9f68-74bd889ad203",
+            "url": "https://www.youtube.com/watch?v=oBt53YbR9Kk",
+            "seen": 5.821207,
+            "total": 18602
+        }
+    }, {
+        "id": "bookmark-5329c162-967b-4460-9dea-5989aafc9e45",
+        "description": "<p><i>Problems we're going to solve in this course -</i><br>&nbsp;</p><p>1. Calculate the 40th number of fibonacci sequence</p><p>2. Count the number of different ways to move through a 6x9 grid</p><p>3. Given a set of coins, how can we make 27 cents in the least number of coins</p><p>4. Given a set of substrings, what're the possible ways to construct the string <strong>\"potentpot\"</strong></p>",
+        "start": 49,
+        "position": 2,
+        "video": {
+            "id": "video-e8affe11-dd9b-4db6-a7b2-3a9773d5e14a",
+            "url": "https://www.youtube.com/watch?v=oBt53YbR9Kk",
+            "seen": 48.78339704005432,
+            "total": 18602
+        }
+    }, {
+        "id": "bookmark-87c3f6d2-33b1-440d-8879-76de4363d436",
+        "description": "<p>Visualize algorithms</p>",
+        "start": 102,
+        "position": 3,
+        "video": {
+            "id": "video-3ebdb82d-8a2a-43cc-9d28-07bb6ebb7340",
+            "url": "https://www.youtube.com/watch?v=oBt53YbR9Kk",
+            "seen": 101.85076303814698,
+            "total": 18602
+        }
+    }, {
+        "id": "bookmark-cee30b07-8d9b-49ff-9f41-93268e1f7ce2",
+        "description": "<p><i>Dynamic Programming concepts - <strong>solving Overlapping Sub-problems</strong> &nbsp;techniques covered -</i><br><br>Part 1: Memoization<br>Part 2: Tabulation<br><br><i>Pre-requisite required</i><br><br>1. Basics of Recursion<br>2. Basics of Complexity Analysis</p>",
+        "start": 166,
+        "position": 4,
+        "video": {
+            "id": "video-b8a8124f-766a-4646-92fc-2543a2793d9e",
+            "url": "https://www.youtube.com/watch?v=oBt53YbR9Kk",
+            "seen": 166.10665610681153,
+            "total": 18602
+        }
+    }, {
+        "id": "bookmark-d7dbb6d0-c065-41c9-8995-0cf845315ed2",
+        "description": "<p><strong>Challenge #1 </strong>- program a fibonacci using memoization<br><br><i>Write a function fib(n) that takes in a number as an argument. The function should return the nth number of the Fibonacci sequence</i><br><br>+ The 1st &amp; 2nd number of the sequence is 1.<br>+ To generate the next number of the sequence, we sum the previous two<br>&nbsp;</p>",
+        "start": 206,
+        "position": 5,
+        "video": {
+            "id": "video-3ac0215e-3858-4175-9f09-dcbeb40b6c77",
+            "url": "https://www.youtube.com/watch?v=oBt53YbR9Kk",
+            "seen": 205.677969,
+            "total": 18602
+        }
+    }, {
+        "id": "bookmark-782c2eb7-86c1-4301-977c-5240cd562485",
+        "description": "<p>Classic implementation</p><pre><code class=\"language-javascript\">// Classic implementation (w/o memoization)\nconst fib = (n) =&gt; {\n // base-case\n if (n&lt;=2) return 1;\n // recursive case\n return fib(n-1) + fib(n-2);\n};\n\nconsole.log(fib(6)); // 8\nconsole.log(fib(7)); // 13\nconsole.log(fib(8)); // 21\nconsole.log(fib(50)); // takes a looong time</code></pre><p>&nbsp;</p><p><strong>Review: </strong>Problem with this approach - We are re-visiting already visited / computed numbers</p>",
+        "start": 275,
+        "position": 6,
+        "video": {
+            "id": "video-a5c31f2e-fd3e-4158-9854-d5d8974441eb",
+            "url": "https://www.youtube.com/watch?v=oBt53YbR9Kk",
+            "seen": 275.45966992370603,
+            "total": 18602
+        }
+    }, {
+        "id": "bookmark-218122a5-67ef-41a4-97a4-d808348f05a3",
+        "description": "<p>Students need to work on drawing things....</p>",
+        "start": 406,
+        "position": 7,
+        "video": {
+            "id": "video-e55ae7e7-7965-4344-a3a1-a0362d7a9c57",
+            "url": "https://www.youtube.com/watch?v=oBt53YbR9Kk",
+            "seen": 405.7348070190735,
+            "total": 18602
+        }
+    }, {
+        "id": "bookmark-c1dd9097-4480-44af-a728-b0f7b8c509cc",
+        "description": "<p>Drawing a tree to explain optimization approach</p>",
+        "start": 457,
+        "position": 8,
+        "video": {
+            "id": "video-86e46e83-fee0-46d4-a26d-bb7170662be8",
+            "url": "https://www.youtube.com/watch?v=oBt53YbR9Kk",
+            "seen": 456.75220912016295,
+            "total": 18602
+        }
+    }, {
+        "id": "bookmark-6258308c-10da-417f-bf81-50f641666264",
+        "description": "<p>The Above solution approach is explained...<br><br>+ For all of these base cases, I know they return 1 to their parent<br>+ and all the parent nodes add up these base cases</p>",
+        "start": 615,
+        "position": 9,
+        "video": {
+            "id": "video-138b84b9-e006-40bc-9126-ccc0eb130930",
+            "url": "https://www.youtube.com/watch?v=oBt53YbR9Kk",
+            "seen": 615.4869470267029,
+            "total": 18602
+        }
+    }, {
+        "id": "bookmark-32c3daf8-3ace-49b9-a815-2137210e5aa3",
+        "description": "<p>Time Complexity<br><br>+ Off-hand people mention that a Fibonacci recursive implementation Big-O is - <strong>2^n</strong><br>+ This drawing is asymmetric.<br>+ Students have a real hard time convincing themselves on this <strong>2^n</strong></p>",
+        "start": 646,
+        "position": 10,
+        "video": {
+            "id": "video-0beb427f-cc06-425c-befe-99b4fdb20f66",
+            "url": "https://www.youtube.com/watch?v=oBt53YbR9Kk",
+            "seen": 646.2404470267029,
+            "total": 18601.941
+        }
+    }, {
+        "id": "bookmark-209abced-658e-439d-8b59-db51cbe7cede",
+        "description": "<p><strong>Basic refresher of Space Time Complexity for Recursion -</strong><br><br><strong>Example #1</strong><br>&nbsp;</p><pre><code class=\"language-javascript\">const foo = (n) =&gt; {\n if(n&lt;=1) return;\n foo(n-1);\n};</code></pre><p>&nbsp;</p><p>+ Time Complexity - <strong>O(n) - </strong>Takes n time to go through recursion</p><p>+ Space Complexity - <strong>O(n) </strong>- N times the function is called - Stacks function therefore <strong>O(n)</strong></p><p>&nbsp;</p><p><strong>Example #2</strong></p><p>&nbsp;</p><pre><code class=\"language-javascript\">const bar = (n) =&gt; {\n if(n&lt;=1) return;\n foo(n-2);\n};</code></pre><p>&nbsp;</p><p>+ Time Complexity - O(n/2) ~ O(n)<br>+ Space Complexity - O(n/2) ~ O(n)</p>",
+        "start": 685,
+        "position": 11,
+        "video": {
+            "id": "video-1146e212-beaf-4e4c-83e3-ff6611fb5f69",
+            "url": "https://www.youtube.com/watch?v=oBt53YbR9Kk",
+            "seen": 684.8481930648499,
+            "total": 18601.941
+        }
+    }, {
+        "id": "bookmark-d86014c4-8f9a-454d-9303-645488c602a9",
+        "description": "<p><strong>Example #3</strong></p><p>&nbsp;</p><pre><code class=\"language-javascript\">// produces a symmetric tree\nconst dib = (n) =&gt; {\n if (n&lt;=1) return;\n dib(n-1); // left child\n dib(n-1); // right child\n};</code></pre><p><br>+ Time Complexity - <strong>O(2^n)</strong><br>&nbsp; &nbsp; &nbsp;- First consider one of the paths, that will also be the height of the tree<br>&nbsp; &nbsp; &nbsp;- Height is also called - Levels<br>&nbsp; &nbsp; &nbsp;- The number of nodes doubles every level<br>+ Space Complexity - <strong>O(n)</strong><br>&nbsp; &nbsp; - Students always assume Space = Time when it comes to recursive function<br>&nbsp; &nbsp; - At any given time, the number of stacks is same as that of the height of the tree</p>",
+        "start": 853,
+        "position": 12,
+        "video": {
+            "id": "video-8505f7e9-b4e4-4278-805a-576019c3635e",
+            "url": "https://www.youtube.com/watch?v=oBt53YbR9Kk",
+            "seen": 853.1214597959137,
+            "total": 18601.941
+        }
+    }, {
+        "id": "bookmark-ca47d8b2-00d3-45d9-bd0f-a6c8de9949db",
+        "description": "<p><strong>Example #4</strong></p><p>&nbsp;</p><pre><code class=\"language-javascript\">// produces a symmetric tree\nconst lib = (n) =&gt; {\n if (n&lt;=1) return;\n dib(n-2); // left child\n dib(n-2); // right child\n};</code></pre><p><br>+ Time Complexity - <strong>O(2^n/2) ~ O(2^n)</strong><br>&nbsp; &nbsp; &nbsp;- First consider one of the paths, that will also be the height of the tree<br>&nbsp; &nbsp; &nbsp;- Height is also called - Levels<br>&nbsp; &nbsp; &nbsp;- The number of nodes SKIPS two steps every level so the height is halved.<br>+ Space Complexity - <strong>O(n/2) ~ O(n)</strong><br>&nbsp; &nbsp; - Students always assume Space = Time when it comes to recursive function<br>&nbsp; &nbsp; - At any given time, the number of stacks is half as that of the height of the tree</p>",
+        "start": 1200,
+        "position": 13,
+        "video": {
+            "id": "video-f5286d4f-8d77-4bc3-8d87-0107539602ef",
+            "url": "https://www.youtube.com/watch?v=oBt53YbR9Kk",
+            "seen": 1199.664206885559,
+            "total": 18602
+        }
+    }, {
+        "id": "bookmark-a425bb55-5a97-447c-b038-e70239523f8f",
+        "description": "<p>Where does our Fibonacci fit in these 4 examples ?</p><p>&nbsp;</p><pre><code class=\"language-plaintext\">Time - O(dib) &lt;= O(fib) &lt;= O(lib)</code></pre>",
+        "start": 1281,
+        "position": 14,
+        "video": {
+            "id": "video-786219cd-2368-48a2-8b94-13c611d4d912",
+            "url": "https://www.youtube.com/watch?v=oBt53YbR9Kk",
+            "seen": 1281.149031049591,
+            "total": 18602
+        }
+    }, {
+        "id": "bookmark-139055ac-b2f2-469d-aa0e-d04ece62e6df",
+        "description": "<p>O(2^n) is not a good Time Complexity (explained)...<br><br>+ Consider fib(50) ~ 2^50<br>+ if we just bring up the calculator &amp; do a 2 raised to 50 = <strong>1,1,25,899,906,842,624</strong> steps !!&nbsp;<br>+ One quadrillion steps</p>",
+        "start": 1356,
+        "position": 15,
+        "video": {
+            "id": "video-4b57cc6a-2bf1-424b-827b-6c30891bae9a",
+            "url": "https://www.youtube.com/watch?v=oBt53YbR9Kk",
+            "seen": 1356.2389128550415,
+            "total": 18602
+        }
+    }, {
+        "id": "bookmark-8c14283f-cfd8-4322-8bce-44db1958babd",
+        "description": "<p><strong>Overlapping Sub-problems explained...</strong></p><p>&nbsp;</p><p>+ Alot of duplicates in my subtree</p><p>+ I know my previous number fibonacci doesn't change</p><p>&nbsp;</p><p><i>Solving these kind of Overlapping Sub-problems is the core of <strong>\"Dynamic Programming\"</strong></i></p>",
+        "start": 1441,
+        "position": 16,
+        "video": {
+            "id": "video-069e5147-48c4-4a8a-8c3c-09f3c0cce75b",
+            "url": "https://www.youtube.com/watch?v=oBt53YbR9Kk",
+            "seen": 1440.895907956131,
+            "total": 18602
+        }
+    }]
+}
