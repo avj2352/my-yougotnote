@@ -1,0 +1,50 @@
+{
+    "id": "playlist-9e55d4f1-fc9b-4200-8394-6d51d449c5b4",
+    "title": "Testing Express Request, Response using Jest",
+    "createdBy": "",
+    "bookmarks": [{
+        "id": "bookmark-383592ad-7839-4ea4-9be2-828455e44da9",
+        "description": "<p>Creating Express Endpoint</p>",
+        "start": 85,
+        "position": 0,
+        "video": {
+            "id": "video-2e4b491c-424e-4a01-a3ea-c33615852a8b",
+            "url": "https://www.youtube.com/watch?v=hC1q576vRNA",
+            "seen": 85.00117401745409,
+            "total": 421.441
+        }
+    }, {
+        "id": "bookmark-aa021e2f-d27d-43df-ba08-251e9c1bb696",
+        "description": "<p>Adding Typedef - Request &amp; Response types to your express endpoint params</p>",
+        "start": 105,
+        "position": 1,
+        "video": {
+            "id": "video-9c7ae092-fab7-4386-8c2a-3edf5cda6bf6",
+            "url": "https://www.youtube.com/watch?v=hC1q576vRNA",
+            "seen": 105.29145003178971,
+            "total": 421.441
+        }
+    }, {
+        "id": "bookmark-deef643c-fc80-484c-972c-03bd430b5643",
+        "description": "<p>Create spec files</p>",
+        "start": 63,
+        "position": 2,
+        "video": {
+            "id": "video-c8183c70-21ec-477a-9022-17dadb8c57f4",
+            "url": "https://www.youtube.com/watch?v=hC1q576vRNA",
+            "seen": 62.812124908048226,
+            "total": 421.441
+        }
+    }, {
+        "id": "bookmark-26ee9262-bdc4-426a-8e0a-ee2ea8222b23",
+        "description": "<p>Our first problem - Typescript complains the type of Request and Response</p>",
+        "start": 179,
+        "position": 4,
+        "video": {
+            "id": "video-19aa6111-23f2-4015-a459-19257761694a",
+            "url": "https://www.youtube.com/watch?v=hC1q576vRNA",
+            "seen": 178.69408164787149,
+            "total": 421.441
+        }
+    }]
+}
