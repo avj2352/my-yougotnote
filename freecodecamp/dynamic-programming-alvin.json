@@ -178,7 +178,7 @@
         "pin": "red"
     }, {
         "id": "bookmark-8c14283f-cfd8-4322-8bce-44db1958babd",
-        "description": "<p><strong>Overlapping Sub-problems explained...</strong></p><p>&nbsp;</p><p>+ Alot of duplicates in my subtree</p><p>+ I know my previous number fibonacci doesn't change</p><p>&nbsp;</p><p><i>Solving these kind of Overlapping Sub-problems is the core of <strong>\"Dynamic Programming\"</strong></i></p>",
+        "description": "<p><strong>Overlapping Sub-problems explained...</strong></p><p>&nbsp;</p><p>+ A lot of duplicates in my subtree</p><p>+ I know my previous number fibonacci doesn't change</p><p>&nbsp;</p><p><i>Solving these kind of Overlapping Sub-problems is the core of <strong>\"Dynamic Programming\"</strong></i></p><p>&nbsp;</p><p>+ Any instance where we have a larger problem, We decompose it into smaller sub-problems</p><p>+ We also have overlapping sub-problems</p><p>+ Identify which of the sub-problem is &nbsp;a duplicate</p>",
         "start": 1441,
         "position": 16,
         "video": {
@@ -187,6 +187,30 @@
             "seen": 1440.895907956131,
             "total": 18602
         },
-        "pin": "yellow"
+        "pin": "red"
+    }, {
+        "id": "bookmark-78ea8ed9-3cd0-4fef-95d6-b701b38e3f99",
+        "description": "<p><strong>Solution to optimize Class Fibonacci implementation (Javascript)</strong></p><p>&nbsp;</p><p>+ Create a memo (fast access - HashMap / Map / Object in Javascript)</p><p>+ keys to the memo will be the argument to the function</p><p>+ first check the memo</p><p>+ else instead of returning your recursive case, store it in memo then return</p><p>&nbsp;</p><pre><code class=\"language-javascript\">/**\r\n * memoization\r\n * js object, keys will be arg to fn, value will be return value\r\n * @param {*} n \r\n * @param {*} memo ?\r\n */\r\nconst fib = (n, memo={}) =&gt; {\r\n    // first check memo\r\n    if (n in memo) return memo[n];    \r\n    if (n&lt;=2) return 1;\r\n    // store in memo\r\n    memo[n] = fib(n-1, memo) + fib(n-2, memo);\r\n    return memo[n];\r\n};\r\n\r\nconsole.log(fib(50));</code></pre><p>&nbsp;</p>",
+        "start": 1558,
+        "position": 17,
+        "video": {
+            "id": "video-8c1a3202-d95a-4181-9f27-249630ec0a04",
+            "url": "https://www.youtube.com/watch?v=oBt53YbR9Kk",
+            "seen": 1557.9886851296997,
+            "total": 18602
+        },
+        "pin": "cyan"
+    }, {
+        "id": "bookmark-f93c5096-fe36-4529-9c22-56ed05dfbe51",
+        "description": "<p>Understand the optimized code (using Tree diagram)</p>",
+        "start": 1904,
+        "position": 18,
+        "video": {
+            "id": "video-0007f953-2a30-4986-b9b9-245f34369f96",
+            "url": "https://www.youtube.com/watch?v=oBt53YbR9Kk",
+            "seen": 1904.3894609141694,
+            "total": 18602
+        },
+        "pin": "green"
     }]
 }
