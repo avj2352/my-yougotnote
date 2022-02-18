@@ -1,5 +1,5 @@
 {
-    "id": "playlist-2c5daff0-3db1-4fc0-aafe-627969d989f4",
+    "id": "playlist-91232ed7-14c4-47a9-b5a0-68c881fecc8b",
     "title": "Dynamic Programming Basics - Collection",
     "createdBy": "",
     "bookmarks": [{
@@ -23,7 +23,8 @@
             "url": "https://www.youtube.com/watch?v=oBt53YbR9Kk",
             "seen": 48.78339704005432,
             "total": 18602
-        }
+        },
+        "pin": "green"
     }, {
         "id": "bookmark-87c3f6d2-33b1-440d-8879-76de4363d436",
         "description": "<p>Visualize algorithms</p>",
@@ -45,7 +46,8 @@
             "url": "https://www.youtube.com/watch?v=oBt53YbR9Kk",
             "seen": 166.10665610681153,
             "total": 18602
-        }
+        },
+        "pin": "green"
     }, {
         "id": "bookmark-d7dbb6d0-c065-41c9-8995-0cf845315ed2",
         "description": "<p><strong>Challenge #1 </strong>- program a fibonacci using memoization<br><br><i>Write a function fib(n) that takes in a number as an argument. The function should return the nth number of the Fibonacci sequence</i><br><br>+ The 1st &amp; 2nd number of the sequence is 1.<br>+ To generate the next number of the sequence, we sum the previous two<br>&nbsp;</p>",
@@ -56,7 +58,8 @@
             "url": "https://www.youtube.com/watch?v=oBt53YbR9Kk",
             "seen": 205.677969,
             "total": 18602
-        }
+        },
+        "pin": "yellow"
     }, {
         "id": "bookmark-782c2eb7-86c1-4301-977c-5240cd562485",
         "description": "<p>Classic implementation</p><pre><code class=\"language-javascript\">// Classic implementation (w/o memoization)\nconst fib = (n) =&gt; {\n // base-case\n if (n&lt;=2) return 1;\n // recursive case\n return fib(n-1) + fib(n-2);\n};\n\nconsole.log(fib(6)); // 8\nconsole.log(fib(7)); // 13\nconsole.log(fib(8)); // 21\nconsole.log(fib(50)); // takes a looong time</code></pre><p>&nbsp;</p><p><strong>Review: </strong>Problem with this approach - We are re-visiting already visited / computed numbers</p>",
@@ -67,7 +70,8 @@
             "url": "https://www.youtube.com/watch?v=oBt53YbR9Kk",
             "seen": 275.45966992370603,
             "total": 18602
-        }
+        },
+        "pin": "cyan"
     }, {
         "id": "bookmark-218122a5-67ef-41a4-97a4-d808348f05a3",
         "description": "<p>Students need to work on drawing things....</p>",
@@ -89,7 +93,8 @@
             "url": "https://www.youtube.com/watch?v=oBt53YbR9Kk",
             "seen": 456.75220912016295,
             "total": 18602
-        }
+        },
+        "pin": "red"
     }, {
         "id": "bookmark-6258308c-10da-417f-bf81-50f641666264",
         "description": "<p>The Above solution approach is explained...<br><br>+ For all of these base cases, I know they return 1 to their parent<br>+ and all the parent nodes add up these base cases</p>",
@@ -122,7 +127,8 @@
             "url": "https://www.youtube.com/watch?v=oBt53YbR9Kk",
             "seen": 684.8481930648499,
             "total": 18601.941
-        }
+        },
+        "pin": "cyan"
     }, {
         "id": "bookmark-d86014c4-8f9a-454d-9303-645488c602a9",
         "description": "<p><strong>Example #3</strong></p><p>&nbsp;</p><pre><code class=\"language-javascript\">// produces a symmetric tree\nconst dib = (n) =&gt; {\n if (n&lt;=1) return;\n dib(n-1); // left child\n dib(n-1); // right child\n};</code></pre><p><br>+ Time Complexity - <strong>O(2^n)</strong><br>&nbsp; &nbsp; &nbsp;- First consider one of the paths, that will also be the height of the tree<br>&nbsp; &nbsp; &nbsp;- Height is also called - Levels<br>&nbsp; &nbsp; &nbsp;- The number of nodes doubles every level<br>+ Space Complexity - <strong>O(n)</strong><br>&nbsp; &nbsp; - Students always assume Space = Time when it comes to recursive function<br>&nbsp; &nbsp; - At any given time, the number of stacks is same as that of the height of the tree</p>",
@@ -133,7 +139,8 @@
             "url": "https://www.youtube.com/watch?v=oBt53YbR9Kk",
             "seen": 853.1214597959137,
             "total": 18601.941
-        }
+        },
+        "pin": "red"
     }, {
         "id": "bookmark-ca47d8b2-00d3-45d9-bd0f-a6c8de9949db",
         "description": "<p><strong>Example #4</strong></p><p>&nbsp;</p><pre><code class=\"language-javascript\">// produces a symmetric tree\nconst lib = (n) =&gt; {\n if (n&lt;=1) return;\n dib(n-2); // left child\n dib(n-2); // right child\n};</code></pre><p><br>+ Time Complexity - <strong>O(2^n/2) ~ O(2^n)</strong><br>&nbsp; &nbsp; &nbsp;- First consider one of the paths, that will also be the height of the tree<br>&nbsp; &nbsp; &nbsp;- Height is also called - Levels<br>&nbsp; &nbsp; &nbsp;- The number of nodes SKIPS two steps every level so the height is halved.<br>+ Space Complexity - <strong>O(n/2) ~ O(n)</strong><br>&nbsp; &nbsp; - Students always assume Space = Time when it comes to recursive function<br>&nbsp; &nbsp; - At any given time, the number of stacks is half as that of the height of the tree</p>",
@@ -144,7 +151,8 @@
             "url": "https://www.youtube.com/watch?v=oBt53YbR9Kk",
             "seen": 1199.664206885559,
             "total": 18602
-        }
+        },
+        "pin": "cyan"
     }, {
         "id": "bookmark-a425bb55-5a97-447c-b038-e70239523f8f",
         "description": "<p>Where does our Fibonacci fit in these 4 examples ?</p><p>&nbsp;</p><pre><code class=\"language-plaintext\">Time - O(dib) &lt;= O(fib) &lt;= O(lib)</code></pre>",
@@ -166,7 +174,8 @@
             "url": "https://www.youtube.com/watch?v=oBt53YbR9Kk",
             "seen": 1356.2389128550415,
             "total": 18602
-        }
+        },
+        "pin": "red"
     }, {
         "id": "bookmark-8c14283f-cfd8-4322-8bce-44db1958babd",
         "description": "<p><strong>Overlapping Sub-problems explained...</strong></p><p>&nbsp;</p><p>+ Alot of duplicates in my subtree</p><p>+ I know my previous number fibonacci doesn't change</p><p>&nbsp;</p><p><i>Solving these kind of Overlapping Sub-problems is the core of <strong>\"Dynamic Programming\"</strong></i></p>",
@@ -177,6 +186,7 @@
             "url": "https://www.youtube.com/watch?v=oBt53YbR9Kk",
             "seen": 1440.895907956131,
             "total": 18602
-        }
+        },
+        "pin": "yellow"
     }]
 }
