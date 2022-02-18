@@ -1,5 +1,5 @@
 {
-    "id": "playlist-a547484f-70cc-4b62-9828-b5f2f082d34f",
+    "id": "playlist-e5922860-7e49-49d9-bf77-2e12e9d9cff6",
     "title": "DynamoDB Modelling - Alex DebRie",
     "createdBy": "",
     "bookmarks": [{
@@ -23,7 +23,8 @@
             "url": "https://www.youtube.com/watch?v=Q6-qWdsa8a4",
             "seen": 247.49071200907179,
             "total": 4275.981
-        }
+        },
+        "pin": "red"
     }, {
         "id": "bookmark-9944cb13-00ab-4318-9a43-3efd1f4ac149",
         "description": "<blockquote><p>\"We were doing Dynamo DB wrong!\"</p></blockquote><p>&nbsp;</p><p>+ How to use Access Patterns<br>+ How to make data fit into Dynamo DB</p><p>+ NoSQL getting better since 2016</p>",
@@ -34,7 +35,8 @@
             "url": "https://www.youtube.com/watch?v=Q6-qWdsa8a4",
             "seen": 321.04203568236045,
             "total": 4275.981
-        }
+        },
+        "pin": "green"
     }, {
         "id": "bookmark-168df5f5-4c3e-4750-ab7a-4cb3afa36241",
         "description": "<p>Background on Dynamo DB<br><br>+ Why choose Dynamo DB ?<br>+ Basics concepts of Dynamo DB<br>+ Single Table concepts</p>",
@@ -100,7 +102,8 @@
             "url": "https://www.youtube.com/watch?v=Q6-qWdsa8a4",
             "seen": 736.5370272908996,
             "total": 4275.981
-        }
+        },
+        "pin": "red"
     }, {
         "id": "bookmark-fc6dd2f4-3476-4f70-a203-be8c3e1a459f",
         "description": "<p><strong>Modelling a Single Table in Dynamo DB</strong><br><br>+ <a href=\"https://github.com/alexdebrie/dynamodb-instagram\">[github repo](alexdebrie/dynamodb-instagram)</a><br>+ Terms, Concepts, Constraints<br>+ Plan your Access Patterns first<br>+ Consider how you will use API requests to access your Entities<br>+ Entity Chart (think what is PK, SK patterns)</p>",
@@ -122,7 +125,8 @@
             "url": "https://www.youtube.com/watch?v=Q6-qWdsa8a4",
             "seen": 1260.5162400043928,
             "total": 4276
-        }
+        },
+        "pin": "red"
     }, {
         "id": "bookmark-058c0778-7cf9-40de-893f-30bd4ce27c07",
         "description": "<p>Another important difference between RDBMS and NoSQL Dynamo DBs<br><br>+ Relational Databases - You normalise your data first then think about your Access Patterns<br>+ Dynamo DB - You think about your access patterns first, then design your entities within a single table</p>",
@@ -133,7 +137,8 @@
             "url": "https://www.youtube.com/watch?v=Q6-qWdsa8a4",
             "seen": 1532.8443409053646,
             "total": 4275.981
-        }
+        },
+        "pin": "purple"
     }, {
         "id": "bookmark-52779265-7c14-4989-a432-795fcb4ea980",
         "description": "<p>\"How do you keep up with applications that keep growing, changing, migrating &amp; plan your Access Patterns\"<br><br>Depends on the Type of Migrations -&nbsp;<br>+ Adding new attributes to existing items (simple - null, because Dynamo DB is schema-less)<br>+ When adding new Entity<br>+ Existing Data accessed in new ways (gets tricky..., update manually then create Secondary indexes - SCAN, IDENTIFY &amp; UPDATE)</p>",
@@ -144,7 +149,8 @@
             "url": "https://www.youtube.com/watch?v=Q6-qWdsa8a4",
             "seen": 1564.284684472265,
             "total": 4275.981
-        }
+        },
+        "pin": "red"
     }, {
         "id": "bookmark-74ad1e13-d29e-4376-ba95-204eda88b614",
         "description": "<p>Infrastructure as Code, creating a Dynamo DB Table with Primary Keys<br><br>Configure a Composite Primary Key as follows -<br>&nbsp;</p><pre><code class=\"language-plaintext\">KeySchema\n- AttributeName: \"PK\"\n  KeyType: \"HASH\"\n- AttributeName: \"SK\"\n  KeyType: \"RANGE\"</code></pre><p>&nbsp;</p><p>In Serverless, its HASH &amp; RANGE where as in Dynamo DB is \"PARTITION\" and \"SORT\"</p>",
@@ -155,7 +161,8 @@
             "url": "https://www.youtube.com/watch?v=Q6-qWdsa8a4",
             "seen": 1937.6093391349993,
             "total": 4276
-        }
+        },
+        "pin": "red"
     }, {
         "id": "bookmark-6b5a7de6-b270-45db-aee8-c811a3942f2a",
         "description": "<pre><code class=\"language-plaintext\">BillingMode: \"PAY_PER_REQUEST\"</code></pre><p><br><strong>Different type of Billing Modes in Dynamo DB</strong><br><br>+ Traditional Billing Mode - \"PROVISION_BY_CAPACITY\" - This is how many Read Units and Write Units I want, provisioned for you ahead of time<br>+ \"PAY_PER_REQUEST\" - You dont need to provision anything upfront in advance, They charge accordingly as your application scales.<br>+ \"PAY_PER_REQUEST\" - is more than \"PROVISION_BY_CAPACITY\" - Better than PROVISION, use it until your monthly bill scales up!</p>",
@@ -166,7 +173,8 @@
             "url": "https://www.youtube.com/watch?v=Q6-qWdsa8a4",
             "seen": 2050.65248622011,
             "total": 4276
-        }
+        },
+        "pin": "red"
     }, {
         "id": "bookmark-b0cf8767-eb78-405a-9a90-485b280e5c07",
         "description": "<p>Typescript - Abstract class to store a Record (Item) into a Dynamo DB Document&nbsp;<br><br><i><strong>🤔 Reason for this:&nbsp;</strong></i><br>Creating this Abstract class and then making all your Business Logic Entities inherit from this will separate your business logic entities from \"indexing\" entities</p><p>&nbsp;</p><pre><code class=\"language-javascript\">/**\n* src/data/base.ts\n* Abstract class to store a record / item into Dynamo DB\n* Defines a few important fields that every entity that sub-classes this class\n**/\nimport { DynamoDB } from \"aws-sdk\"\n\nexport abstract class Item {\n    abstract get pk(): string\n    abstract get sk(): string\n\n    public keys(): DynamoDB.Key {\n        return {\n            PK: { S: this.pk },\n            SK: { S: this.sk }\n        }\n    }\n    \n    // implement this method to store items to dynamo db\n    abstract toItem(): Record&lt;string, unknown&gt;\n}</code></pre>",
@@ -177,7 +185,8 @@
             "url": "https://www.youtube.com/watch?v=Q6-qWdsa8a4",
             "seen": 2315.1823045708334,
             "total": 4276
-        }
+        },
+        "pin": "cyan"
     }, {
         "id": "bookmark-3a126adf-3ea1-47f0-adb6-8b8139335af8",
         "description": "<p>Example of how an Entity - \"User\" inherits the base class and gets those indexing keys out-of-the-box</p><p>&nbsp;</p><pre><code class=\"language-javascript\">/**\n* User entity inherit Base.ts\n**/\n\nimport { DynamoDB } from \"aws-sdk\"\nimport { Item } from \"./base\"\nimport { getClient } from \"./client\"\n\nexport class User extends Item {\n    username: string\n    name: string\n    followerCount: number\n    followingCount: number\n\n    constructor(username: string, name?: string, followerCount?: number, followingCount?: number) {\n        super()\n        this.username = username\n        this.name = name || \"\"\n        this.followerCount = followerCount || 0\n        this.followingCount = followingCount || 0\n    }\n\n    // helper method to retrieve record from dynamo db and return as an instance\n    static fromItem(item?: DynamoDB.AttributeMap): User {\n        if (!item) throw new Error(\"No item!\")\n        return new User(item.username.S, item.name.S, Number(item.followerCount.N), Number(item.followingCount.N))\n    }\n\n    // here we define which of our indexing fields from User entity will be indexed\n    get pk(): string {\n        return `USER#${this.username}`\n    }\n\n    // here we define which of our indexing fields from User entity will be grouped\n    get sk(): string {\n        return `USER#${this.username}`\n    }\n\n    // implement abstract method to store to dynamo db\n    toItem(): Record&lt;string, unknown&gt; {\n        return {\n            ...this.keys(),\n            username: { S: this.username },\n            name: { S: this.name },\n            followerCount: { N: this.followerCount.toString() },\n            followingCount: { N: this.followingCount.toString() }\n        }\n    }\n}\n\nexport const createUser = async (user: User): Promise&lt;User&gt; =&gt; {\n    const client = getClient()\n\n    try {\n        await client\n            .putItem({\n                TableName: process.env.TABLE_NAME,\n                Item: user.toItem(),\n                ConditionExpression: \"attribute_not_exists(PK)\" // create guards to ensure uniqueness\n            })\n            .promise()\n        return user\n    } catch (error) {\n        console.log(error)\n        throw error\n    }\n}\n\nexport const getUser = async (username: string): Promise&lt;User&gt; =&gt; {\n    const client = getClient()\n    const user = new User(username, \"\")\n\n    try {\n        const resp = await client\n            .getItem({\n                TableName: process.env.TABLE_NAME,\n                Key: user.keys()\n            })\n            .promise()\n        return User.fromItem(resp.Item)\n    } catch (error) {\n        console.log(error)\n        throw error\n    }\n}</code></pre>",
@@ -188,7 +197,8 @@
             "url": "https://www.youtube.com/watch?v=Q6-qWdsa8a4",
             "seen": 2518.522982684006,
             "total": 4275.981
-        }
+        },
+        "pin": "cyan"
     }, {
         "id": "bookmark-7704d222-9fbc-43a9-906a-c88fade3b567",
         "description": "<p>What is a <strong>Condition Expression</strong> ?&nbsp;</p><p>&nbsp;</p><p>+ A Condition Expression is like a guard statement. It evaluates to a true or false<br>+ Whenever you do a \"<strong>write</strong>\" operation to dynamo or you <strong>update the state</strong> of a record in dynamo db<br>+ The condition expression is evaluated before the <strong>write</strong>. false will cancel out the <strong>write</strong><br>+ Write operations - put item, update item, delete item<br>+ it's atomic, no race conditions</p>",
@@ -199,7 +209,8 @@
             "url": "https://www.youtube.com/watch?v=Q6-qWdsa8a4",
             "seen": 2620.142104755618,
             "total": 4275.981
-        }
+        },
+        "pin": "red"
     }, {
         "id": "bookmark-5eea73f7-5a28-4079-a37c-bb4d5d8840c0",
         "description": "<p>Helper function (can also be a helper class) to fetch Dynamo DB Document client. Other reasons -</p><p>&nbsp;</p><p>+ When creating dynamo db client, certain parameters - <strong>connectTimeout</strong> &amp; request <strong>timeout</strong><br>+ Cutting of connectTimeout - 1000<br>+ Cutting of request timeout - 1000<br>+ Default timeout is 30 seconds - 30000<br>+ Also caches the client, creates a singleton class. every class uses the same reference</p><p>&nbsp;</p><pre><code class=\"language-javascript\">/**\n* Helper method / class to fetch Dynamo DB Document client\n**/\nimport { DynamoDB } from \"aws-sdk\";\n\nlet client = null\n\nexport const getClient = (): DynamoDB =&gt; {\n    if (client) return client\n    client = new DynamoDB({\n        httpOptions: {\n            connectTimeout: 1000,\n            timeout: 1000\n        }\n    })\n    return client\n}</code></pre>",
@@ -210,7 +221,8 @@
             "url": "https://www.youtube.com/watch?v=Q6-qWdsa8a4",
             "seen": 2756.5853248444296,
             "total": 4275.981
-        }
+        },
+        "pin": "cyan"
     }, {
         "id": "bookmark-4515199b-a385-4019-93f0-63193f86223e",
         "description": "<p>How do you test this / locally or mock the service. Recommended or not ?<br><br>+ Different people like different things<br>+ API Gateway, Lambda, Dynamo DB - these resources CAN be tested locally easily<br>+ Other parts - SQS, EventBridge, Kinesis - a lot of this cannot be tested locally, recommended to test in cloud</p>",
@@ -221,7 +233,8 @@
             "url": "https://www.youtube.com/watch?v=Q6-qWdsa8a4",
             "seen": 2905.1452529543512,
             "total": 4275.981
-        }
+        },
+        "pin": "purple"
     }, {
         "id": "bookmark-1f70f69e-3f4b-4029-9da0-22eb75f522b3",
         "description": "<p>Important Library to use for Constructing APIs&nbsp;</p><p>&nbsp;</p><pre><code class=\"language-plaintext\">npm i ulid</code></pre><p>&nbsp;</p><p>+ They support every major language<br>+ Uniqueness of <strong>uuid </strong>but prefixed with a <strong>timestamp</strong><br>+ You will get sorting as well as uniqueness<br>+ Another alternative - <strong>ksid</strong></p>",
@@ -232,7 +245,8 @@
             "url": "https://www.youtube.com/watch?v=Q6-qWdsa8a4",
             "seen": 3130.348766658739,
             "total": 4275.981
-        }
+        },
+        "pin": "green"
     }, {
         "id": "bookmark-f83db96f-299c-490c-afed-bbe6358637ac",
         "description": "<p>Introduction to <strong>Transactions</strong> in Dynamo DB<br><br>+ New feature as of AWS:Reinvent 2018<br>+ Can perform multiple write operation at once in a single transaction operation / single request<br>+ If one of the operation fails, all of them will fail.&nbsp;<br>+ This will make them more atomic<br>+ Transactions can also target multiple tables</p><p>&nbsp;</p><pre><code class=\"language-javascript\">/**\n* src/data/like.ts\n* The following method will add a record as well as update the like counter\n**/\nexport const likePhoto = async (photo: Photo, likingUsername: string): Promise&lt;Like&gt; =&gt; {\n    const client = getClient()\n    const like = new Like(likingUsername, photo.photoId)\n\n    try {\n        await executeTransactWrite({\n            client,\n            params: {\n                TransactItems: [\n                    {\n                        Put: {\n                            TableName: process.env.TABLE_NAME,\n                            Item: like.toItem(),\n                            ConditionExpression: \"attribute_not_exists(PK)\"\n                        }\n                    },\n                    {\n                        Update: {\n                            TableName: process.env.TABLE_NAME,\n                            Key: photo.keys(),\n                            ConditionExpression: \"attribute_exists(PK)\",\n                            UpdateExpression: \"SET #likesCount = #likesCount + :inc\",\n                            ExpressionAttributeNames: {\n                                \"#likesCount\": \"likesCount\"\n                            },\n                            ExpressionAttributeValues: {\n                                \":inc\": { N: \"1\" }\n                            }\n                        }\n                    }\n                ]\n            }\n        })\n        return like\n    } catch (error) {\n        console.log(error)\n        throw error\n    }\n}</code></pre>",
@@ -243,7 +257,8 @@
             "url": "https://www.youtube.com/watch?v=Q6-qWdsa8a4",
             "seen": 3421.6294742542304,
             "total": 4275.981
-        }
+        },
+        "pin": "cyan"
     }, {
         "id": "bookmark-086ddd00-8f34-42d8-8258-3f324d2d1706",
         "description": "<p>Using <strong>Query</strong> operation<br><br>+ Can query a list of records<br>+ Can sort by time, get latest by time<br>+ Can do a little \"search\" (sort of)<br>+ If you only know \"part\" of the primary key, you can use query in that case</p><p>&nbsp;</p><pre><code class=\"language-javascript\">/**\n* Queries a secondary index\n**/\nexport const listLikesForPhoto = async (photoId: string): Promise&lt;Like[]&gt; =&gt; {\n    const client = getClient()\n    const like = new Like(\"\", photoId)\n\n    try {\n        const resp = await client\n            .query({\n                TableName: process.env.TABLE_NAME,\n                IndexName: \"GSI1\",\n                KeyConditionExpression: \"GSI1PK = :gsi1pk\",\n                ExpressionAttributeValues: {\n                    \":gsi1pk\": { S: like.gsi1pk }\n                },\n                ScanIndexForward: false\n            })\n            .promise()\n        return resp.Items.map((item) =&gt; Like.fromItem(item))\n    } catch (error) {\n        console.log(error)\n        throw error\n    }\n}</code></pre>",
@@ -254,7 +269,8 @@
             "url": "https://www.youtube.com/watch?v=Q6-qWdsa8a4",
             "seen": 3697.496279405578,
             "total": 4275.981
-        }
+        },
+        "pin": "cyan"
     }, {
         "id": "bookmark-8260042d-926f-4211-9e76-bcdfabe6e04a",
         "description": "<p>One more important Operation - <strong>batchGetItem&nbsp;</strong></p><p>&nbsp;</p><p>+ This operation will replace multiple reads using a loop to a Database&nbsp;</p><p>&nbsp;</p><pre><code class=\"language-javascript\">// instead of reading multiple times using a loop, use - batchGetItem\ntry {\n        const resp = await client.batchGetItem({\n            RequestItems: {\n                [process.env.TABLE_NAME]: {\n                    Keys: keys\n                }\n            }\n        }).promise()\n        return resp.Responses[process.env.TABLE_NAME].map((item) =&gt; User.fromItem(item))\n    } catch (error) {\n        console.log(error)\n        throw error\n    } </code></pre>",
@@ -265,7 +281,8 @@
             "url": "https://www.youtube.com/watch?v=Q6-qWdsa8a4",
             "seen": 3831.5910566184916,
             "total": 4275.981
-        }
+        },
+        "pin": "cyan"
     }, {
         "id": "bookmark-87e6293a-a2af-4a53-962e-e42c05c74891",
         "description": "<p><strong>OUTRO</strong><br><br>+ Github repo of the project: <a href=\"https://github.com/alexdebrie/dynamodb-instagram\">https://github.com/alexdebrie/dynamodb-instagram</a><br>+ Look into the Dynamo Documentation<br>+ Follow Alex DebRie on twitter: <a href=\"https://twitter.com/alexbdebrie\">https://twitter.com/alexbdebrie</a><br>+ The DynamoDB book: <a href=\"https://www.dynamodbbook.com/\">https://www.dynamodbbook.com/</a></p>",
@@ -276,6 +293,7 @@
             "url": "https://www.youtube.com/watch?v=Q6-qWdsa8a4",
             "seen": 4111.530922276667,
             "total": 4275.981
-        }
+        },
+        "pin": "green"
     }]
 }
