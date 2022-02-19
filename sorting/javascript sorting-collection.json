@@ -1,12 +1,12 @@
 {
-    "id": "playlist-3561fa06-7086-486e-98e5-6f2b7a2b72ea",
+    "id": "playlist-161433b8-ee9a-417a-a44d-13d4c83d4c47",
     "title": "All types Sorting in Javascript - Collection",
     "createdBy": "",
     "bookmarks": [{
         "id": "bookmark-37fb403d-fb77-48eb-a454-3ca819d321d3",
         "description": "<p><strong>Bubble sort - &nbsp;Explanation</strong></p><p>We compare adjacent items and the bigger number, bubbles up.</p><p>&nbsp;</p><p style=\"margin-left:0px;\"><i>The bubble sort method starts at the beginning of an unsorted array and 'bubbles up' unsorted values towards the end, iterating through the array until it is completely sorted. It does this by comparing adjacent items and swapping them if they are out of order. The method continues looping through the array until no swaps occur at which point the array is sorted.</i></p><p style=\"margin-left:0px;\">&nbsp;</p><p style=\"margin-left:0px;\"><i>This method requires multiple iterations through the array and for average and worst cases has quadratic time complexity. While simple, it is usually impractical in most situations.</i></p>",
         "start": 58,
-        "position": 2,
+        "position": 1,
         "video": {
             "id": "video-e6b46932-c5fb-469a-8a43-08e7f94dea2b",
             "url": "https://www.youtube.com/watch?v=IAeLoGzU4RE",
@@ -35,17 +35,6 @@
             "id": "video-bc65c375-6923-4971-82f6-549c67b5b7ea",
             "url": "https://www.youtube.com/watch?v=IAeLoGzU4RE",
             "seen": 199.19875665840877,
-            "total": 611.141
-        }
-    }, {
-        "id": "bookmark-be0c8740-5cb6-4693-a740-f1d6910a4485",
-        "description": "<p>Running bubble sort solution</p>",
-        "start": 383,
-        "position": 4,
-        "video": {
-            "id": "video-45af80ec-ad2d-4f8f-87a8-f1fa7bd84e7b",
-            "url": "https://www.youtube.com/watch?v=IAeLoGzU4RE",
-            "seen": 382.9752491446785,
             "total": 611.141
         }
     }, {
@@ -98,75 +87,132 @@
         "pin": "yellow"
     }, {
         "id": "bookmark-63ad5494-fdeb-4158-907b-cedf2a9d83ba",
-        "pin": "gray",
-        "description": "<p>Placeholder Bookmark #bookmark-2802f429-dcb0-4c60-a3ad-54073d1ab67c</p><p>&nbsp;</p><pre><code class=\"language-javascript\">console.log('Placeholder code');</code></pre>",
+        "description": "<p><strong>Explanation of Selection Sort</strong></p><p>&nbsp;</p><p>+ Find the first element, compare &amp; swap it</p><p>+ Next iteration ignore the first element, go to second element, compare &amp; swap it</p>",
         "start": 100,
         "position": 9,
         "video": {
             "id": "video-4ce1d671-4214-43d2-85cf-66916f44e5f0",
-            "url": "https://www.youtube.com/watch?v=9jwm_9lOHu0&t=2s",
+            "url": "https://www.youtube.com/watch?v=9jwm_9lOHu0",
             "seen": 100.40963275955514,
             "total": 687.221
         }
     }, {
         "id": "bookmark-abb5c5eb-7ec2-49d3-b0b4-c5892e92617b",
-        "pin": "gray",
-        "description": "<p>Placeholder Bookmark #bookmark-ba594e6e-86d1-4227-ad55-428373beb9f2</p><p>&nbsp;</p><pre><code class=\"language-javascript\">console.log('Placeholder code');</code></pre>",
+        "pin": "cyan",
+        "description": "<p><strong>Classic implementation of Selection Sort (using Javascript)</strong></p><p>&nbsp;</p><pre><code class=\"language-javascript\">//in-place algorithm. mutates the array. side-effects\r\nfunction selectionSort(array) {\r\n    // we don't need to compare the last element\r\n\tfor (let i=0; i&lt;array.length - 1; i++) {\r\n\t   let minIndex = i;\r\n\t   // for j - we do need to go to the last element\r\n\t   // we assume first element is minIndex, so j=i+1\r\n\t   for (let j=i+1; j&lt;array.length; j++) {\r\n\t       if (array[j] &lt; array[minIndex]) {\r\n\t          minIndex = j;\r\n\t       }\r\n\t   }\r\n\t // swap\r\n\t const temp = array[i];\r\n\t array[i] = array[minIndex];\r\n\t array[minIndex] = temp;\r\n\t}\r\n\treturn array;\r\n}\r\n\r\n// testing\r\nconsole.log(selectionSort([1,4,2,8,345,123,32,5443,63]));</code></pre>",
         "start": 144,
         "position": 10,
         "video": {
             "id": "video-fac8d9d1-65b7-40f0-b54e-7247b8005639",
-            "url": "https://www.youtube.com/watch?v=9jwm_9lOHu0&t=2s",
+            "url": "https://www.youtube.com/watch?v=9jwm_9lOHu0",
             "seen": 143.71914120540623,
             "total": 687.221
         }
     }, {
-        "id": "bookmark-1676055f-a297-4151-a7ab-0e8f3c2ef861",
-        "pin": "gray",
-        "description": "<p>Placeholder Bookmark #bookmark-77ad98ed-91a7-4bac-9af7-2b6f65a7f4fa</p><p>&nbsp;</p><pre><code class=\"language-javascript\">console.log('Placeholder code');</code></pre>",
-        "start": 179,
+        "id": "bookmark-9805d68d-2c75-4c8a-a83f-704992fb61b4",
+        "pin": "cyan",
+        "description": "<p>First optimization / Refactoring that we can do&nbsp;<br><br>+ Simple Array switch for swapping element</p><p>&nbsp;</p><pre><code class=\"language-javascript\">//in-place algorithm. mutates the array. side-effects\r\nfunction selectionSort(array) {\r\n    // we don't need to compare the last element\r\n    for (let i = 0; i &lt; array.length - 1; i++) {\r\n        let minIndex = i;\r\n        // for j - we do need to go to the last element\r\n        // we assume first element is minIndex, so j=i+1\r\n        for (let j = i + 1; j &lt; array.length; j++) {\r\n            if (array[j] &lt; array[minIndex]) {\r\n                minIndex = j;\r\n            }\r\n        }\r\n        // swap - one-line optimization\r\n        [array[i], array[minIndex]] = [array[minIndex], array[i]];\r\n    }\r\n    return array;\r\n}\r\n\r\n// testing\r\nconsole.log(selectionSort([1, 4, 2, 8, 345, 123, 32, 5443, 63]));</code></pre>",
+        "start": 472,
         "position": 11,
         "video": {
-            "id": "video-224d649a-59e3-4899-a694-f38d078bd8b3",
-            "url": "https://www.youtube.com/watch?v=9jwm_9lOHu0&t=2s",
-            "seen": 178.96374887267962,
-            "total": 687.221
-        }
-    }, {
-        "id": "bookmark-a13e2966-3d93-4440-9b07-06b2cb6f0d16",
-        "pin": "gray",
-        "description": "<p>Placeholder Bookmark #bookmark-fabeb7cc-4d31-4bb7-a54a-869a34ec05a8</p><p>&nbsp;</p><pre><code class=\"language-javascript\">console.log('Placeholder code');</code></pre>",
-        "start": 211,
-        "position": 12,
-        "video": {
-            "id": "video-e3f4b801-83ed-4f03-832b-a321444dbcf3",
-            "url": "https://www.youtube.com/watch?v=9jwm_9lOHu0&t=2s",
-            "seen": 210.8584154124796,
-            "total": 687.221
-        }
-    }, {
-        "id": "bookmark-9805d68d-2c75-4c8a-a83f-704992fb61b4",
-        "pin": "gray",
-        "description": "<p>Placeholder Bookmark #bookmark-e1d75281-883e-475b-82b9-14bd89f2f3b9</p><p>&nbsp;</p><pre><code class=\"language-javascript\">console.log('Placeholder code');</code></pre>",
-        "start": 472,
-        "position": 13,
-        "video": {
             "id": "video-1dfa2825-dc82-415e-aeec-036350850459",
-            "url": "https://www.youtube.com/watch?v=9jwm_9lOHu0&t=2s",
+            "url": "https://www.youtube.com/watch?v=9jwm_9lOHu0",
             "seen": 471.52370017608314,
             "total": 687.221
         }
     }, {
         "id": "bookmark-6e63234c-634d-4790-a21b-c675bd6adfbe",
-        "pin": "gray",
-        "description": "<p>Placeholder Bookmark #bookmark-f85937fa-4299-4bd5-b4d5-61b091d6c8a9</p><p>&nbsp;</p><pre><code class=\"language-javascript\">console.log('Placeholder code');</code></pre>",
+        "pin": "cyan",
+        "description": "<p><strong>Second Optimization </strong>- Pure function</p><p>+ Creating a Shallow copy of the array. Making the function a pure function</p><p>+ Comes at a price - Space complexity is of the order N -&gt; <strong>O(N)</strong></p><p>&nbsp;</p><pre><code class=\"language-javascript\">//in-place algorithm. mutates the array. side-effects\r\nfunction selectionSort(array) {\r\n    const arr = [...array];\r\n    // we don't need to compare the last element\r\n    for (let i = 0; i &lt; arr.length - 1; i++) {\r\n        let minIndex = i;\r\n        // for j - we do need to go to the last element\r\n        // we assume first element is minIndex, so j=i+1\r\n        for (let j = i + 1; j &lt; arr.length; j++) {\r\n            if (arr[j] &lt; arr[minIndex]) {\r\n                minIndex = j;\r\n            }\r\n        }\r\n        // swap - one-line optimization\r\n        [arr[i], arr[minIndex]] = [arr[minIndex], arr[i]];\r\n    }\r\n    return arr;\r\n}\r\n\r\n// testing\r\nconst input = [1, 4, 2, 8, 345, 123, 32, 5443, 63];\r\nconsole.log('Sorted',selectionSort(input));\r\nconsole.log('Original array', input);</code></pre>",
         "start": 518,
-        "position": 14,
+        "position": 12,
         "video": {
             "id": "video-dd7833af-cf87-4af9-a9b2-0729a2edee7d",
-            "url": "https://www.youtube.com/watch?v=9jwm_9lOHu0&t=2s",
+            "url": "https://www.youtube.com/watch?v=9jwm_9lOHu0",
             "seen": 518.3588295109297,
             "total": 687.221
+        }
+    }, {
+        "id": "bookmark-0361698c-a40d-43ba-a8b1-2164e13412c8",
+        "description": "<p style=\"margin-left:0px;\"><strong>Space Time complexity of selection sort</strong></p><p style=\"margin-left:0px;\">&nbsp;</p><p style=\"margin-left:0px;\"><a href=\"https://www.bigocheatsheet.com/\">Link to the Sorting algorithms cheat sheet</a></p><p style=\"margin-left:0px;\">&nbsp;</p><p style=\"margin-left:0px;\"><strong>Time Complexity</strong><br>+ Since the loop follows x = 1+2+3+....+(N-1)<br>+ Therefore x = (N(N-1))/2<br>+ Big(O) = O(<strong>N^2)</strong></p><p style=\"margin-left:0px;\">&nbsp;</p><p style=\"margin-left:0px;\"><strong>Space Complexity</strong></p><p style=\"margin-left:0px;\">+ No data structures or arrays used, so Space Complexity is of constant<br>+ Big(O) = <strong>O(1)</strong></p><p style=\"margin-left:0px;\">+ If we end up using Pure functions, space complexity is <strong>O(N)</strong></p>",
+        "start": 679,
+        "position": 13,
+        "video": {
+            "id": "video-cfbff55b-1848-4e50-a845-37200477a60b",
+            "url": "https://www.youtube.com/watch?v=9jwm_9lOHu0",
+            "seen": 678.560585,
+            "total": 687.221
+        },
+        "pin": "red"
+    }, {
+        "id": "bookmark-9c59d752-9857-4de7-92cc-c0db4bf0e2b7",
+        "pin": "yellow",
+        "description": "<p><strong>Insertion Sort </strong>-Definition</p><p>&nbsp;</p><p><i>This method works by building up a sorted array at the beginning of the list. It begins the sorted array with the first element.&nbsp;</i></p><p><i>Then it inspects the next element and swaps it backwards into the sorted array until it is in sorted position.&nbsp;</i></p><p><i>It continues iterating through the list and swapping new items backwards into the sorted portion until it reaches the end.&nbsp;</i></p><p>&nbsp;</p><p><i>This algorithm has quadratic time complexity in the average and worst cases.</i></p><p>&nbsp;</p>",
+        "start": 14,
+        "position": 14,
+        "video": {
+            "id": "video-2e5f7ede-461c-4516-a1ed-178f9f4fe4e0",
+            "url": "https://www.youtube.com/watch?v=Q_U71D3U23M",
+            "seen": 13.631363185012818,
+            "total": 526
+        }
+    }, {
+        "id": "bookmark-11e4847b-7072-4269-b19d-16a8d5f5a9d6",
+        "description": "<p>Explaining Insertion Sort</p>",
+        "start": 81,
+        "position": 14,
+        "video": {
+            "id": "video-0d372533-a920-4308-ac4c-04b4fe30d9c0",
+            "url": "https://www.youtube.com/watch?v=Q_U71D3U23M",
+            "seen": 81.03527909155274,
+            "total": 526
+        }
+    }, {
+        "id": "bookmark-5cc047d8-7ce7-48e4-88ce-f5ee818a8496",
+        "pin": "cyan",
+        "description": "<p>Classic Implementation of <strong>Insertion sort</strong> (using Javascript)</p><p>&nbsp;</p><pre><code class=\"language-javascript\">console.log('Placeholder code');</code></pre>",
+        "start": 200,
+        "position": 15,
+        "video": {
+            "id": "video-3396f2d5-f81e-4279-b697-188195a33036",
+            "url": "https://www.youtube.com/watch?v=Q_U71D3U23M",
+            "seen": 200.4103508512268,
+            "total": 526
+        }
+    }, {
+        "id": "bookmark-e255e211-c7fe-4fbb-8188-d219c0612387",
+        "pin": "gray",
+        "description": "<p><strong>Optimization / Refactoring of our Insertion Sort Algorithm</strong></p><p>&nbsp;</p><pre><code class=\"language-javascript\">console.log('Placeholder code');</code></pre>",
+        "start": 419,
+        "position": 16,
+        "video": {
+            "id": "video-3c9aeffd-03f2-4177-84b7-1c37bf7cd62a",
+            "url": "https://www.youtube.com/watch?v=Q_U71D3U23M",
+            "seen": 419.30910602670286,
+            "total": 526
+        }
+    }, {
+        "id": "bookmark-3195ebc3-4e37-49b3-a589-ca93609f2b50",
+        "description": "<p><strong>Heap Sort - Solution in Javascript</strong></p><p>&nbsp;</p><pre><code class=\"language-javascript\">// heap sort</code></pre>",
+        "start": 11,
+        "position": 19,
+        "video": {
+            "id": "video-86eebd54-4d60-4056-a97a-7151d9dbb5aa",
+            "url": "https://www.youtube.com/watch?v=qjOzHmih-8c",
+            "seen": 11.025009923706055,
+            "total": 1109
+        },
+        "pin": "cyan"
+    }, {
+        "id": "bookmark-518a56dc-a1c3-4f0b-af26-d987039abae2",
+        "description": "<p><strong>Heap Sort Solution Explanation</strong></p><p>&nbsp;</p><pre><code class=\"language-javascript\">console.log('Placeholder code');</code></pre>",
+        "start": 545,
+        "position": 19,
+        "video": {
+            "id": "video-90b2c9b4-f175-45d4-997c-08eae164e3d0",
+            "url": "https://www.youtube.com/watch?v=qjOzHmih-8c",
+            "seen": 545.4223198931885,
+            "total": 1109
         }
     }]
 }
