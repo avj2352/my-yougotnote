@@ -1,0 +1,100 @@
+{
+    "id": "playlist-9a0df164-4597-4e7b-96ce-f266d7385b9c",
+    "title": "All types Sorting in Javascript - Collection",
+    "createdBy": "",
+    "bookmarks": [{
+        "id": "bookmark-37fb403d-fb77-48eb-a454-3ca819d321d3",
+        "description": "<p><strong>Bubble sort - &nbsp;Explanation</strong></p><p>We compare adjacent items and the bigger number, bubbles up.</p><p>&nbsp;</p><p style=\"margin-left:0px;\"><i>The bubble sort method starts at the beginning of an unsorted array and 'bubbles up' unsorted values towards the end, iterating through the array until it is completely sorted. It does this by comparing adjacent items and swapping them if they are out of order. The method continues looping through the array until no swaps occur at which point the array is sorted.</i></p><p style=\"margin-left:0px;\">&nbsp;</p><p style=\"margin-left:0px;\"><i>This method requires multiple iterations through the array and for average and worst cases has quadratic time complexity. While simple, it is usually impractical in most situations.</i></p>",
+        "start": 58,
+        "position": 2,
+        "video": {
+            "id": "video-e6b46932-c5fb-469a-8a43-08e7f94dea2b",
+            "url": "https://www.youtube.com/watch?v=IAeLoGzU4RE",
+            "seen": 57.53259350453177,
+            "total": 611.141
+        },
+        "pin": "yellow"
+    }, {
+        "id": "bookmark-2c345d70-31d4-4fbe-8d58-a8fbbf36ce94",
+        "description": "<p><strong>Solution for Bubble Sort Algorithm (in Javascript)</strong></p><p>&nbsp;</p><p><strong>Classic Implementation</strong></p><pre><code class=\"language-javascript\">function bubbleSort(array) {\n   // we don't need to compare the very last number\n   for(let i=0; i&lt;array.length-1; i++) {\n    // inorder to lock the highest number in it's place\n    for (let j=0;j&lt;array.length-1-i; j++) {\n\t\tif (array[j] &gt; array[j+1]) {\n\t\t  const temp = array[j];\n\t\t  array[j] = array[j+1];\n\t\t  array[j+1] = temp;\n\t\t}\n     } \n   }\n   return array;\n}\n\n// testing\nconsole.log(bubbleSort([1,4,2,8,345,123,43]));</code></pre>",
+        "start": 147,
+        "position": 2,
+        "video": {
+            "id": "video-3c8c19eb-dec0-4008-a28a-9de016b6ea55",
+            "url": "https://www.youtube.com/watch?v=IAeLoGzU4RE",
+            "seen": 147.25131083208768,
+            "total": 611.141
+        },
+        "pin": "cyan"
+    }, {
+        "id": "bookmark-6a66fd87-51cc-438d-a808-5a91dad922be",
+        "description": "<p><strong>NOTE:</strong> For the outer loop - array.length - Do we need all, because we don't want to compare the last item</p>",
+        "start": 199,
+        "position": 3,
+        "video": {
+            "id": "video-bc65c375-6923-4971-82f6-549c67b5b7ea",
+            "url": "https://www.youtube.com/watch?v=IAeLoGzU4RE",
+            "seen": 199.19875665840877,
+            "total": 611.141
+        }
+    }, {
+        "id": "bookmark-be0c8740-5cb6-4693-a740-f1d6910a4485",
+        "description": "<p>Running bubble sort solution</p>",
+        "start": 383,
+        "position": 4,
+        "video": {
+            "id": "video-45af80ec-ad2d-4f8f-87a8-f1fa7bd84e7b",
+            "url": "https://www.youtube.com/watch?v=IAeLoGzU4RE",
+            "seen": 382.9752491446785,
+            "total": 611.141
+        }
+    }, {
+        "id": "bookmark-056ead5c-c052-469a-a468-e7849f358efe",
+        "description": "<p>Couple ways we can refactor this code</p><p>&nbsp;</p><p>+ Making arrays simple</p><p>+ Instead of a variable, just flip the array on the right side<br><br><strong>Optimised Code</strong></p><p>&nbsp;</p><pre><code class=\"language-javascript\">function bubbleSort(array) {\n   // we don't need to compare the very last number\n   for(let i=0; i&lt;array.length-1; i++) {\n     // inorder to lock the highest number in it's place\n     for (let j=0;j&lt;array.length-1-i; j++) {\n\t    if (array[j] &gt; array[j+1]) {\n\t      // one liner trick to flip 2 numbers in an array\n\t      [array[j], array[j+1]] = [array[j+1], array[j]]; \n\t    }\n     } \n   }\n   return array;\n}\n\n// testing\nconsole.log(bubbleSort([1,4,2,8,345,123,43]));</code></pre>",
+        "start": 405,
+        "position": 5,
+        "video": {
+            "id": "video-cb639706-7db2-49f1-a21c-f481fed5bbdf",
+            "url": "https://www.youtube.com/watch?v=IAeLoGzU4RE",
+            "seen": 404.5490085664729,
+            "total": 611.141
+        },
+        "pin": "cyan"
+    }, {
+        "id": "bookmark-09dda6ea-11f3-438b-a6e7-0ce617bb1025",
+        "description": "<p><strong>Second optimisation (purely optional) - Pure functions !</strong></p><p>&nbsp;</p><p>Right now our function - bubbleSort() is an inplace algorithm, ie., it is mutating our original array</p><p>How can we make this function a Pure function with no side-effects</p><p>&nbsp;+ Make a shallow copy using the <strong>array.slice()</strong><br>&nbsp;+ Make a new array using the spread operator</p><p>&nbsp;</p><pre><code class=\"language-javascript\">function bubbleSort(array) {\n   const arr = array.slice(); //make a shallow copy!\n   // we don't need to compare the very last number\n   for(let i=0; i&lt;arr.length-1; i++) {\n     // inorder to lock the highest number in it's place\n     for (let j=0;j&lt;arr.length-1-i; j++) {\n\t    if (arr[j] &gt; arr[j+1]) {\n\t      // one liner trick to flip 2 numbers in an array\n\t      [arr[j], arr[j+1]] = [arr[j+1], arr[j]]; \n\t    }\n     } \n   }\n   return array;\n}\n\n// testing\nconsole.log(bubbleSort([1,4,2,8,345,123,43]));</code></pre>",
+        "start": 450,
+        "position": 6,
+        "video": {
+            "id": "video-233815b8-ed5b-4843-bd66-4bb8f59e1560",
+            "url": "https://www.youtube.com/watch?v=IAeLoGzU4RE",
+            "seen": 450.47503956198324,
+            "total": 611.141
+        },
+        "pin": "cyan"
+    }, {
+        "id": "bookmark-7095fe8e-6ea2-488c-b57c-f8ae7dfd83e4",
+        "description": "<p><strong>Space Time complexity of bubble sort</strong></p><p>&nbsp;</p><p><a href=\"https://www.bigocheatsheet.com\">Link to the Sorting algorithms cheat sheet</a></p><p>&nbsp;</p><p><strong>Time Complexity</strong><br>+ Since the loop follows x = 1+2+3+....+(N-1)<br>+ Therefore x = (N(N-1))/2<br>+ Big(O) = O(<strong>N^2)</strong></p><p>&nbsp;</p><p><strong>Space Complexity</strong></p><p>+ No data structures or arrays used, so Space Complexity is of constant<br>+ Big(O) = <strong>O(1)</strong></p>",
+        "start": 399,
+        "position": 7,
+        "video": {
+            "id": "video-144a099f-c95a-4eab-afc4-db24ab9e3669",
+            "url": "https://youtu.be/Yffvd3pkTW4?t=399",
+            "seen": 399.15982124450966,
+            "total": 678.661
+        },
+        "pin": "red"
+    }, {
+        "id": "bookmark-f9e1ebf1-9cdf-4355-961e-20c95b9b9f60",
+        "description": "<p><strong>Selection Sort - Explanation</strong></p><p>&nbsp;</p><p><i>Selection sort works by selecting the minimum value in a list and swapping it with the first value in the list. It then starts at the second position, selects the smallest value in the remaining list, and swaps it with the second element. It continues iterating through the list and swapping elements until it reaches the end of the list. Now the list is sorted.&nbsp;</i></p><p><i>Selection sort has quadratic time complexity in all cases.</i></p><p>&nbsp;</p><p>&nbsp;</p>",
+        "start": 2,
+        "position": 8,
+        "video": {
+            "id": "video-924a9ff4-a2d4-4bf3-a641-1fe60e470cca",
+            "url": "https://www.youtube.com/watch?v=9jwm_9lOHu0",
+            "seen": 1.995349314001341,
+            "total": 687.221
+        },
+        "pin": "yellow"
+    }]
+}
