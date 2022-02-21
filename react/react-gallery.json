@@ -1,0 +1,51 @@
+{
+    "id": "playlist-bf3be731-7161-4874-a079-ec13157a984c",
+    "title": "Great React Designs",
+    "createdBy": "",
+    "bookmarks": [{
+        "id": "bookmark-e8cb31f1-1a53-4422-bc07-9feb6fc29482",
+        "description": "<p>Animated React Gallery - Design &amp; Code by <strong>Dev Ed</strong></p>",
+        "start": 1,
+        "position": 1,
+        "video": {
+            "id": "video-97f34bbb-c726-4f00-a123-7a44482105fa",
+            "url": "https://www.youtube.com/watch?v=nyg5Lpl6AiM",
+            "seen": 1.2409693590006248,
+            "total": 2419.421
+        }
+    }, {
+        "id": "bookmark-b7290113-59c0-4067-b2a2-86127c618a4e",
+        "description": "<p>CSS Filter Effect</p>",
+        "start": 23,
+        "position": 2,
+        "video": {
+            "id": "video-58edb7de-8f78-43cf-865f-569c392957df",
+            "url": "https://www.youtube.com/watch?v=nyg5Lpl6AiM",
+            "seen": 23.03063372991596,
+            "total": 2420
+        }
+    }, {
+        "id": "bookmark-429bca82-f138-4352-a519-b42ba722d00b",
+        "description": "<p>CSS Grid Filter showcase</p>",
+        "start": 167,
+        "position": 3,
+        "video": {
+            "id": "video-01dd52b8-fe4c-4f29-88fa-0c326d37f42b",
+            "url": "https://www.youtube.com/watch?v=nyg5Lpl6AiM",
+            "seen": 166.90674034418223,
+            "total": 2420
+        }
+    }, {
+        "id": "bookmark-b46c15a6-dce8-47fc-96c2-d4ce8d6cc818",
+        "pin": "cyan",
+        "description": "<p>Adding fetch api call</p><p>&nbsp;</p><pre><code class=\"language-javascript\">const fetchPopular = async () =&gt; {\n// call movie database api\nconst data = await fetch(`https://get-movie-db-api.json`);\n};</code></pre>",
+        "start": 313,
+        "position": 4,
+        "video": {
+            "id": "video-64ba3c68-e481-4908-8e2a-65b1f357da74",
+            "url": "https://www.youtube.com/watch?v=nyg5Lpl6AiM",
+            "seen": 313.3108890906261,
+            "total": 2420
+        }
+    }]
+}
