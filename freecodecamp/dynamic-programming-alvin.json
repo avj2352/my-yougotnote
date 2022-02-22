@@ -1,5 +1,5 @@
 {
-    "id": "playlist-91232ed7-14c4-47a9-b5a0-68c881fecc8b",
+    "id": "playlist-5bbf0d1e-d758-4db7-8668-ede26c5df8de",
     "title": "Dynamic Programming Basics - Collection",
     "createdBy": "",
     "bookmarks": [{
@@ -50,7 +50,7 @@
         "pin": "green"
     }, {
         "id": "bookmark-d7dbb6d0-c065-41c9-8995-0cf845315ed2",
-        "description": "<p><strong>Challenge #1 </strong>- program a fibonacci using memoization<br><br><i>Write a function fib(n) that takes in a number as an argument. The function should return the nth number of the Fibonacci sequence</i><br><br>+ The 1st &amp; 2nd number of the sequence is 1.<br>+ To generate the next number of the sequence, we sum the previous two<br>&nbsp;</p>",
+        "description": "<p>📜 <strong>Challenge #1 - program a fibonacci using memoization</strong><br><br><i>Write a function fib(n) that takes in a number as an argument. The function should return the nth number of the Fibonacci sequence</i><br><br>+ The 1st &amp; 2nd number of the sequence is 1.<br>+ To generate the next number of the sequence, we sum the previous two<br>&nbsp;</p>",
         "start": 206,
         "position": 5,
         "video": {
@@ -202,7 +202,7 @@
         "pin": "cyan"
     }, {
         "id": "bookmark-f93c5096-fe36-4529-9c22-56ed05dfbe51",
-        "description": "<p>Understand the optimized code (using Tree diagram)</p>",
+        "description": "<p>Understand the optimized code using Memoization (using Tree diagram)</p>",
         "start": 1904,
         "position": 18,
         "video": {
@@ -212,5 +212,87 @@
             "total": 18602
         },
         "pin": "green"
+    }, {
+        "id": "bookmark-0c78e606-7f98-4372-9d65-397e5a58a97b",
+        "pin": "green",
+        "description": "<p><strong>Space Time Complexity using Memoization</strong></p><p>&nbsp;</p><p>+ We definitely cut down the whole runtime of the Fibonacci series</p><p>+ New Time Complexity: <strong>O(n)</strong> = where n is the height of the tree</p><p>+ New Space Complexity: <strong>O(n)</strong> = where n is the number of stacks called</p><p>&nbsp;</p><p><i>Using Memoization, we brought down the Time complexity from being exponential to a linear time complexity - Pretty powerful</i></p>",
+        "start": 2142,
+        "position": 19,
+        "video": {
+            "id": "video-25204ecf-fb2b-4ef0-ab99-6ea6bd4df84a",
+            "url": "https://www.youtube.com/watch?v=oBt53YbR9Kk",
+            "seen": 2141.7331049980926,
+            "total": 18601.941
+        }
+    }, {
+        "id": "bookmark-999fca94-7bb9-4a4d-8094-bb10da92278c",
+        "description": "<p><strong>📜 Challenge #2: Grid Traveler</strong></p><p><br><strong>Problem Statement</strong></p><p><i>\"Say that you're a traveler in a 2D grid. You begin in the top-left corner &amp; your goal is to travel to the bottom-right corner. You may only move down or right\"</i></p><p><i>\"In how many ways can you travel to the goal on a grid with dimensions mxn\"</i></p><p>&nbsp;</p><pre><code class=\"language-plaintext\">gridTraveler(m,n); // where m is the number of rows, n - number of columns</code></pre><p>&nbsp;</p><p><strong>Step 1: Ask clarifying question</strong></p><p>+ Is the grid a square grid (MxM) or a rectangular grid (MxN) - <i>Can be a rectangle also, not necessarily a square</i></p><p>+ Explain with a diagram</p><p>+ Ask - what happens if our grid is zero ?</p>",
+        "start": 2321,
+        "position": 20,
+        "video": {
+            "id": "video-66afde5e-8d4e-4ee8-9766-b1a005eefba3",
+            "url": "https://www.youtube.com/watch?v=oBt53YbR9Kk",
+            "seen": 2320.855694830246,
+            "total": 18601.941
+        },
+        "pin": "yellow"
+    }, {
+        "id": "bookmark-df3f6c39-abc0-455c-ae1e-8bd6b7986248",
+        "description": "<p>Breaking down the problem into sub-problems</p><p>&nbsp;</p><p>+ Try to frame the problem using relatively small units ?</p><p>+ What does it mean to have a 0x0 grid ?</p><p>&nbsp;</p><pre><code class=\"language-javascript\">gridTraveler (1,1) -&gt; 0\ngridTraveler (1,0) -&gt; 0\ngridTraveler (0,1) -&gt; 0\ngridTraveler (0,0) -&gt; 0\ngridTraveler (M,0) -&gt; 0\ngridTraveler (0,N) -&gt; 0</code></pre><p>&nbsp;</p><p>+ We have now some edge cases we can code</p>",
+        "start": 2423,
+        "position": 21,
+        "video": {
+            "id": "video-99bc1a94-2baa-435c-8ba8-856f251b99ad",
+            "url": "https://www.youtube.com/watch?v=oBt53YbR9Kk",
+            "seen": 2422.977149032425,
+            "total": 18601.941
+        }
+    }, {
+        "id": "bookmark-7614af0b-375d-496e-a892-9216855a1ad4",
+        "description": "<p><strong>Let's consider a grid - 3x3</strong></p><p>&nbsp;</p><p>+ Consider how we can decrease the problem size</p><p>+ We know we always travel from <strong>top-left</strong> to <strong>bottom-right</strong></p><p>+ We know we have overlapping sub-problem</p><p>+ Using a tree makes sense since we only need to consider 2 directions -&gt; <strong>down</strong> and <strong>right</strong></p><p>+ Left node of the tree (Down) -&gt; means reduce the row M by 1 (M-1)</p><p>+ Right node of tree (Right) -&gt; means reduce the column N by 1 (N-1)</p><p>&nbsp;</p><pre><code class=\"language-javascript\">gridTraveler (3,3) -&gt; gridTraveler(2,3) -&gt; gridTraveler(1,3) -&gt; gridTraveler(1,2) -&gt; gridTraveler(1,1) which is our base case</code></pre>",
+        "start": 2524,
+        "position": 22,
+        "video": {
+            "id": "video-e51a4e29-670c-46a3-b6bf-4bb9954a3615",
+            "url": "https://www.youtube.com/watch?v=oBt53YbR9Kk",
+            "seen": 2523.7752299923704,
+            "total": 18601.941
+        },
+        "pin": "red"
+    }, {
+        "id": "bookmark-e3e57698-9376-4f84-b411-0fb224cbe211",
+        "pin": "cyan",
+        "description": "<p><strong>Classic implementation of Grid Traveler</strong> (w/o Memoization)</p><p>&nbsp;</p><p><strong>Brute Force approach</strong></p><p>&nbsp;</p><p>+ We'll implement the 2 base case scenarios</p><p>+ If both row and column are 1 then return 1</p><p>+ If either row or column are 0 then return 0 since there is no grid!</p><p>+ For all other scenario, we will follow the Tree (left and right) approach, so same as fibonacci</p><p>&nbsp;</p><pre><code class=\"language-javascript\">// basic implementation - w/o memo\nconst gridTraveler = (m,n) =&gt; {\n   // base case #1 - 1x1 grid\n   if (m===1 &amp;amp;&amp;amp; n===1) return 1;\n   // base case #2 - if either row or column is 0, answer is 0\n   if (m===0 || n===0) return 0;\n   // down and right (left and right nodes) of binary tree\n   // so same formula as fibonacci\n   return gridTraveler(m,n-1) + gridTraveler(m-1,n);\n};</code></pre>",
+        "start": 2946,
+        "position": 23,
+        "video": {
+            "id": "video-220b2a53-2f41-432f-a13d-8f301d122146",
+            "url": "https://www.youtube.com/watch?v=oBt53YbR9Kk",
+            "seen": 2945.7773759732972,
+            "total": 18602
+        }
+    }, {
+        "id": "bookmark-5fae6ff6-8e82-458e-bad8-9f4adde33fb8",
+        "description": "<p><strong>Drawing board - analysis of brute force solution</strong></p><p>&nbsp;</p><p>&nbsp;</p>",
+        "start": 3054,
+        "position": 24,
+        "video": {
+            "id": "video-f2abc5fc-7516-4b07-a12b-10919c5cf6b9",
+            "url": "https://www.youtube.com/watch?v=oBt53YbR9Kk",
+            "seen": 3054.450121994278,
+            "total": 18602
+        }
+    }, {
+        "id": "bookmark-c2d1d55c-aafe-4ffe-b390-99dd1d66795b",
+        "description": "<p>50% Completed !!</p>",
+        "start": 9005,
+        "position": 25,
+        "video": {
+            "id": "video-bac8d8d2-e63d-45c5-ba65-9324466e6885",
+            "url": "https://www.youtube.com/watch?v=oBt53YbR9Kk",
+            "seen": 9004.920422982834,
+            "total": 18601.941
+        },
+        "pin": "purple"
     }]
 }
