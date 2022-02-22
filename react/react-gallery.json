@@ -1,6 +1,6 @@
 {
-    "id": "playlist-bf3be731-7161-4874-a079-ec13157a984c",
-    "title": "Great React Designs",
+    "id": "playlist-22398663-012c-416b-a91c-cddeebc9b9c7",
+    "title": "React Designs for my Portfolio site",
     "createdBy": "",
     "bookmarks": [{
         "id": "bookmark-e8cb31f1-1a53-4422-bc07-9feb6fc29482",
@@ -12,7 +12,8 @@
             "url": "https://www.youtube.com/watch?v=nyg5Lpl6AiM",
             "seen": 1.2409693590006248,
             "total": 2419.421
-        }
+        },
+        "pin": "yellow"
     }, {
         "id": "bookmark-b7290113-59c0-4067-b2a2-86127c618a4e",
         "description": "<p>CSS Filter Effect</p>",
@@ -23,7 +24,8 @@
             "url": "https://www.youtube.com/watch?v=nyg5Lpl6AiM",
             "seen": 23.03063372991596,
             "total": 2420
-        }
+        },
+        "pin": "purple"
     }, {
         "id": "bookmark-429bca82-f138-4352-a519-b42ba722d00b",
         "description": "<p>CSS Grid Filter showcase</p>",
@@ -46,6 +48,102 @@
             "url": "https://www.youtube.com/watch?v=nyg5Lpl6AiM",
             "seen": 313.3108890906261,
             "total": 2420
+        }
+    }, {
+        "id": "bookmark-652d99a5-b555-41a9-a8a8-cc8cb3ec4ee6",
+        "pin": "cyan",
+        "description": "<p>Map our API result to a state</p><p>&nbsp;</p><pre><code class=\"language-javascript\">// states\nconst [popular, setPopular] = useState([]);\n...\n...\n...\n// api call\nconst fetchPopular = async () =&gt; {\n  // call movie database api\n  const data = await fetch(`https://get-movie-db-api.json`);\n  const movies = await data.json();\n  setPopular(movies.result);\n};\n...\n...\n// side-effect\nuseEffect(()=&gt;{\n   fetchPopular();\n}[]);</code></pre>",
+        "start": 522,
+        "position": 5,
+        "video": {
+            "id": "video-686ff9ee-096f-4baf-af45-806bd52453c3",
+            "url": "https://www.youtube.com/watch?v=nyg5Lpl6AiM",
+            "seen": 522.1520663229417,
+            "total": 2419.421
+        }
+    }, {
+        "id": "bookmark-6ee003dc-0de7-4d1f-814a-82737437a54a",
+        "pin": "cyan",
+        "description": "<p>Creating our Movie Component - starter boilerplate</p><p>&nbsp;</p><pre><code class=\"language-javascript\">function Movie(){\n  return(&lt;div&gt;\n     &lt;h2&gt;Title&lt;/h2&gt;\n     &lt;img src=\"\" alt=\"\"/&gt;\n  &lt;/div&gt;);\n}\n\nexport default Movie;</code></pre>",
+        "start": 639,
+        "position": 6,
+        "video": {
+            "id": "video-73fede22-d5a9-4e91-acbc-ca72fcac2f75",
+            "url": "https://www.youtube.com/watch?v=nyg5Lpl6AiM",
+            "seen": 639.2150245414924,
+            "total": 2419.421
+        }
+    }, {
+        "id": "bookmark-f5126ea3-b416-4a8f-b514-dee56d246c37",
+        "pin": "cyan",
+        "description": "<p>Creating CSS grid for the container and images within</p><p>&nbsp;</p><pre><code class=\"language-css\">.popular-movies {\n   display:grid;\n   grid-template-columns: repeat(auto-fit, minimal(250px, 1fr));\n   grid-column-gap: 1rem;\n   grid-row-gap: 2rem;\n}\n\n.popular-movies h2 {\n  font-size: 0.8rem;\n}\n \n.popular-movies img {\n  width: 100%;\n  height: 30vh;\n  object-fit: cover;\n  border-radius: 1rem;\n  margin-bottom: 1rem;\n}</code></pre>",
+        "start": 960,
+        "position": 7,
+        "video": {
+            "id": "video-9d65e2eb-b882-4bc3-9f89-2936f61c3ee4",
+            "url": "https://www.youtube.com/watch?v=nyg5Lpl6AiM",
+            "seen": 959.9740861548909,
+            "total": 2419.421
+        }
+    }, {
+        "id": "bookmark-ba4354db-8c32-4ff3-abf7-7325de515254",
+        "pin": "cyan",
+        "description": "<p>Now it's time to animate the cards</p><p>&nbsp;</p><pre><code class=\"language-javascript\">import {motion} from 'framer-motion';</code></pre>",
+        "start": 1924,
+        "position": 10,
+        "video": {
+            "id": "video-b80bb3db-767e-4c4d-b983-ab6e4935e0c3",
+            "url": "https://www.youtube.com/watch?v=nyg5Lpl6AiM",
+            "seen": 1923.527877302839,
+            "total": 2419.421
+        }
+    }, {
+        "id": "bookmark-652d4a9b-7ebd-4c5b-9370-10e289b83c86",
+        "pin": "cyan",
+        "description": "<p><strong>Fix the weird stretching issue:&nbsp;</strong><br>+ In order to fix any weird Motion animation errors, you need to wrap your child components as well as with <strong>&lt;motion.div </strong><i><strong>layout</strong></i><strong>&gt;</strong></p><p>&nbsp;</p><pre><code class=\"language-javascript\">// Movie.jsx\nimport {motion} from 'framer-motion';\n\nfunction Movie({movie}) {\n  return &lt;motion.div layout&gt;\n  ....\n  ...\n  &lt;/motion.div&gt;;\n}\n</code></pre>",
+        "start": 2034,
+        "position": 11,
+        "video": {
+            "id": "video-eacbab53-08e4-482c-9300-ddb9463abad3",
+            "url": "https://www.youtube.com/watch?v=nyg5Lpl6AiM",
+            "seen": 2034.2814270580002,
+            "total": 2419.421
+        }
+    }, {
+        "id": "bookmark-3f76d7c8-5370-4f22-96b0-3ae7778f9aae",
+        "pin": "cyan",
+        "description": "<p>Adding Animations to Movie component</p><p>&nbsp;</p><pre><code class=\"language-javascript\">//Movie.js\n&lt;motion.div layout\n   animate={{opacity: 1}}\n   initial={{opacity: 0}}\n   exit={{opacity: 0}}&gt;\n   &lt;h2&gt;Movie title&lt;/h2&gt;\n   &lt;img .../&gt;\n&lt;/motion.div&gt;</code></pre><p>&nbsp;</p><p>+ Even with this, the exit property doesn't get animated</p><p>+ For that we need to wrap this component with Motion's <strong>AnimatePresence </strong>component</p>",
+        "start": 2235,
+        "position": 11,
+        "video": {
+            "id": "video-c5fbc94d-b831-468b-bc12-387aa116812c",
+            "url": "https://www.youtube.com/watch?v=nyg5Lpl6AiM",
+            "seen": 2235.4092970658144,
+            "total": 2419.421
+        }
+    }, {
+        "id": "bookmark-90a80f95-033c-4133-a5b1-f41b56779cfa",
+        "pin": "cyan",
+        "description": "<p><strong>AnimatePresence</strong><br><br>+ As per the name suggestion, it will detects whenever a child dom node gets removed and it animates them</p><p>&nbsp;</p><pre><code class=\"language-javascript\">import {motion, AnimatePresence} from 'framer-motion';\n...\n...\n&lt;motion.div layout className=\"popular-movies\"&gt;\n   &lt;AnimatePresence&gt;\n      {filtered.map((movie) =&gt; {\n         return &lt;Movie key={movie.id} movie={movie}/&gt;\n      })}\n   &lt;/AnimatePresence&gt;\n&lt;/motion.div&gt;</code></pre>",
+        "start": 2257,
+        "position": 12,
+        "video": {
+            "id": "video-959d3d3a-1df6-4189-9431-3756d3cb25cc",
+            "url": "https://www.youtube.com/watch?v=nyg5Lpl6AiM",
+            "seen": 2256.5131545890754,
+            "total": 2419.421
+        }
+    }, {
+        "id": "bookmark-69827f2c-7109-49d7-a859-7240bdc4a2a4",
+        "pin": "cyan",
+        "description": "<p>Adding Transition property to our animations</p><p>&nbsp;</p><pre><code class=\"language-javascript\">//Movie.js\n&lt;motion.div layout\n   animate={{opacity: 1}}\n   initial={{opacity: 0}}\n   exit={{opacity: 0}}\n   transition={{duration: 1}}&gt;\n   &lt;h2&gt;Movie title&lt;/h2&gt;\n   &lt;img .../&gt;\n&lt;/motion.div&gt;</code></pre>",
+        "start": 2351,
+        "position": 12,
+        "video": {
+            "id": "video-cf95c4c2-70bd-4bb1-93de-1ef6fe5d6f76",
+            "url": "https://www.youtube.com/watch?v=nyg5Lpl6AiM",
+            "seen": 2350.9867530275037,
+            "total": 2419.421
         }
     }]
 }
