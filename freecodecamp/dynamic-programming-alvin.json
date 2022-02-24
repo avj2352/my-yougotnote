@@ -1,5 +1,5 @@
 {
-    "id": "playlist-5bbf0d1e-d758-4db7-8668-ede26c5df8de",
+    "id": "playlist-63a36c13-ef2a-4664-9f80-e473e6b08df1",
     "title": "Dynamic Programming Basics - Collection",
     "createdBy": "",
     "bookmarks": [{
@@ -273,7 +273,7 @@
         }
     }, {
         "id": "bookmark-5fae6ff6-8e82-458e-bad8-9f4adde33fb8",
-        "description": "<p><strong>Drawing board - analysis of brute force solution</strong></p><p>&nbsp;</p><p>&nbsp;</p>",
+        "description": "<p><strong>Drawing board - analysis of brute force solution</strong></p><p>&nbsp;</p><p><strong>Space Time complexity</strong></p><p>+ Time = <strong>O(Math.pow(2, (n+m))</strong> -&gt; where m is rows and n is columns, since its a rectangular grid, worst case time complexity will be O(Math.pow(2,n)) -&gt; Exponential</p><p>+ Space = <strong>O(n+m)</strong> -&gt; for same reasons</p><p>&nbsp;</p>",
         "start": 3054,
         "position": 24,
         "video": {
@@ -281,12 +281,163 @@
             "url": "https://www.youtube.com/watch?v=oBt53YbR9Kk",
             "seen": 3054.450121994278,
             "total": 18602
+        },
+        "pin": "red"
+    }, {
+        "id": "bookmark-8b97fea3-bcfc-4b70-aba4-f0359d7968bf",
+        "pin": "cyan",
+        "description": "<p><strong>Grid Traveler Problem with Memoization</strong></p><p>&nbsp;</p><p><i>Same Grid Traveler problem with Memoization</i><br>&nbsp;</p><pre><code class=\"language-javascript\">\n/**\n * function to find number of ways to travel from top left\n * to bottom right in a MxN grid\n * constraints - can only travel down / right\n * @param {number} m \n * @param {number} n \n * @param {Object || null} memo \n */\nconst gridTraveler = (m,n,memo={}) =&gt; {\n    // prep a unique key\n    const rowCol = `${m}:${n}`;\n    if (rowCol in memo) return memo[rowCol];\n    if (m === 1 &amp;amp;&amp;amp; n === 1) return 1;\n    if (m === 0 || n === 0) return 0;\n    memo[rowCol] = gridTraveler(m-1, n, memo) + gridTraveler(m,n-1, memo);\n    return memo[rowCol];\n};\n\n[m,n] = [18,18];\nconsole.log(`Number of ways in a ${m} x ${n} is: `, gridTraveler(m,n));\n\n\n// Space Time Complexity\n// Time = O(N*M) -&gt; since we're always memoizing one side of the binary tree\n// Space = O(N+M) -&gt; We are calling the stacks recursively and going through one height at a time</code></pre>",
+        "start": 3380,
+        "position": 25,
+        "video": {
+            "id": "video-d9dd924a-2880-44cc-8cf4-e5f9045f8bc2",
+            "url": "https://www.youtube.com/watch?v=oBt53YbR9Kk",
+            "seen": 3380.0638141956456,
+            "total": 18602
+        }
+    }, {
+        "id": "bookmark-c26f284b-7b76-443a-ad17-b0d6e3b1bbd2",
+        "description": "<p><strong>Drawing board to analyze our memoized code</strong></p><p>&nbsp;</p><p><strong>Space Time Complexity</strong></p><p>+ Time Complexity -&gt; O(n*m) =&gt; where n is the number of rows and m, the number of columns</p><p>+ Space Complexity -&gt; O(n+m) =&gt; where n is the number of rows and m, the number of columns</p>",
+        "start": 3704,
+        "position": 26,
+        "video": {
+            "id": "video-d3450886-af5f-4ae7-916e-4aa3b9d19b27",
+            "url": "https://www.youtube.com/watch?v=oBt53YbR9Kk",
+            "seen": 3704.3700115020574,
+            "total": 18602
+        }
+    }, {
+        "id": "bookmark-cdbf76b7-1495-4ecc-a3dd-77a7dd584f0b",
+        "description": "<p><strong>✨Alvin's Memoization Recipe✨</strong></p><p><br>Here are few tips on attaining a Memoized code solution -</p><p>&nbsp;</p><p>+ Make your brute force approach work</p><p>+ Make It efficient later</p><p>+ Use Javascript Object as memo</p><p>+ Make checking &amp; retrieving the first line of code in your recursive function</p><p>+ Then comes the base case(s)</p><p>+ Your recursive case must be assigned to the memo</p><p>+ If your solution involves a tree, try to visualise the \"leaf\" ☘️ as the base case of your recursion</p><p>+ Test your brute force solution</p><p>&nbsp;</p>",
+        "start": 3895,
+        "position": 27,
+        "video": {
+            "id": "video-0ea9fc01-de81-46b0-a64f-30a7b962c6e0",
+            "url": "https://www.youtube.com/watch?v=oBt53YbR9Kk",
+            "seen": 3894.542241437539,
+            "total": 18602
+        }
+    }, {
+        "id": "bookmark-d1bff535-fa3b-4577-aee6-1a7b945ea5fb",
+        "description": "<p><strong>📜 Challenge #3 - CanSum challenge</strong></p><p>&nbsp;</p><p>Write a function canSum(targetSum, numbers) that takes in a targets and an array of numbers as arguments.</p><p>&nbsp;</p><p>The function should return a boolean true or false indicating whether or not it is possible to generate the targetSum using numbers from the array.</p><p>&nbsp;</p><p>Constraints<br>+ You can use the elements of the array as many times as you want</p><p>+ All elements are non-negative numbers</p><p>&nbsp;</p>",
+        "start": 4199,
+        "position": 28,
+        "video": {
+            "id": "video-2d9d0965-e56d-40fb-953b-525494b7f4b8",
+            "url": "https://www.youtube.com/watch?v=oBt53YbR9Kk",
+            "seen": 4199.019655075076,
+            "total": 18601.941
+        },
+        "pin": "yellow"
+    }, {
+        "id": "bookmark-d88443f4-8051-441b-9d6d-20e52ca7e61a",
+        "description": "<p>Visualize the problem using a Tree diagram</p>",
+        "start": 4295,
+        "position": 29,
+        "video": {
+            "id": "video-646fd4fd-358a-4fec-862c-9c410ae4d786",
+            "url": "https://www.youtube.com/watch?v=oBt53YbR9Kk",
+            "seen": 4295.286632984529,
+            "total": 18601.941
+        }
+    }, {
+        "id": "bookmark-a912b03d-d685-477f-b9f0-0fd8eb4ec4ce",
+        "description": "<p>Visualize Another example using a Tree</p>",
+        "start": 4542,
+        "position": 30,
+        "video": {
+            "id": "video-79858bcc-e9a4-499e-92c7-5aba0eaec3d1",
+            "url": "https://www.youtube.com/watch?v=oBt53YbR9Kk",
+            "seen": 4541.775068999742,
+            "total": 18601.941
+        }
+    }, {
+        "id": "bookmark-36ba3d2d-7582-4786-ad4f-012022313640",
+        "pin": "cyan",
+        "description": "<p><strong>CanSum function implementation</strong> (in Javascript)</p><p>&nbsp;</p><pre><code class=\"language-javascript\">/**\n* \"canSum\" function\n* function that takes in a targets and \n* an array of numbers as arguments.\n*/\nconst canSum = (targetSum, numbers) =&gt; {\n   // base case\n   if (targetSum === 0) return true;\n   for (num of numbers) {\n     const remainder = targetSum - num;\n     // call recursively\n     if(canSum(remainder, numbers) === true){\n       return true;\n     } \n   }\n   // we have exhausted our search\n   return false;\n};\n\nconsole.log(canSum(7,[2,3]);\nconsole.log(canSum(7,[5,3,4,7]);\nconsole.log(canSum(7,[2,4]);\nconsole.log(canSum(8,[2,3,5]);</code></pre><p>&nbsp;</p><p><strong>Space Time Complexity</strong><br>+ Time Complexity: O(Math.pow(n,m)) - It's not a binary tree, each child goes through the loop over and over again. So some nodes have 2 or 3 child nodes</p><p>+ Space Complexity: O(m) - Recursive call stack.</p>",
+        "start": 4598,
+        "position": 31,
+        "video": {
+            "id": "video-3ec3430f-1fb0-42aa-9cb5-4bc68016a074",
+            "url": "https://www.youtube.com/watch?v=oBt53YbR9Kk",
+            "seen": 4597.845938048393,
+            "total": 18601.941
+        }
+    }, {
+        "id": "bookmark-1cc3f732-1a2a-4b0e-aaec-3c98df94b4e7",
+        "description": "<p><strong>Space Time Complexity of the memoized solution</strong></p><p>Time Complexity: <strong>O(m*n) time</strong> - Because of the memo object. The values. will be upto the time of m. We don't have to re-approach the child nodes. But we have to loop through the arrays.</p><p>Space complexity: <strong>O(m)</strong> -&gt; Because of recursive call stack</p>",
+        "start": 5337,
+        "position": 32,
+        "video": {
+            "id": "video-8ace51fd-ce3d-4827-b23f-4bcd7a8bd008",
+            "url": "https://www.youtube.com/watch?v=oBt53YbR9Kk",
+            "seen": 5337.102102801007,
+            "total": 18601.941
+        }
+    }, {
+        "id": "bookmark-b5bece62-2b2a-45d7-8c47-c6fda48f738d",
+        "description": "<p>CanSum function with memoized approach</p><p>&nbsp;</p><p>+ When you have multiple arguments, always try to analyze which argument affects the output more. Use that as key for your memo</p><p>+ Remember - Your <strong>returns</strong> in recursive calls should be assigned to the memo not the recursive function</p><p>&nbsp;</p><pre><code class=\"language-javascript\">/**\n* CanSum function with memoized approach\n* @param {number} targetSum\n* @param {number[]} numbers\n* @param {Object} optional - memo\n* @returns {boolean} true or false\n*/ \nconst canSum = (targetSum, numbers, memo={}) =&gt; {\n   // retrieve from memo\n   if (targetSum in memo) return memo[targetSum];\n   // base case #1\n   if (targetSum === 0) return true;\n   // base case #2\n   if (targetSum &lt; 0) return false;\n   // loop\n   for (let num of numbers) {\n     // subtract from the targetSum\n     const remainder = targetSum - num;\n     // recursive check\n     if (canSum(remainder, numbers, memo) === true) {\n         // store in memo - NOTE: key is still - targetSum\n         memo[targetSum] = true;\n         return true;\n     }\n   }\n   // store in memo\n   memo[targetSum] = false;\n   return false;\n};\n\nconsole.log(canSum(300, [7,14]));</code></pre><p>&nbsp;</p><p>Space Time Complexity</p><p>&nbsp;</p><p>+ Time - <strong>O(n x m) </strong>- With memoized solution we at the least, travel through the child node heights</p><p>+ Space - <strong>O(n)</strong> - Recursive call stack</p><p>&nbsp;</p><p><i>Using Memoization, we've reduced the Time Complexity from Exponential to Linear !!</i></p><p>&nbsp;</p>",
+        "start": 5101,
+        "position": 33,
+        "video": {
+            "id": "video-f3f11c4e-34c0-4bd3-87b7-1c669a882de8",
+            "url": "https://www.youtube.com/watch?v=oBt53YbR9Kk",
+            "seen": 5100.94902318607,
+            "total": 18601.941
+        },
+        "pin": "cyan"
+    }, {
+        "id": "bookmark-3e99aa43-7030-4502-b44e-886a904f6ad4",
+        "description": "<p>CanSum - Brute force approach versus Memoized approach</p>",
+        "start": 5356,
+        "position": 34,
+        "video": {
+            "id": "video-5c640e48-8f24-4191-b0fa-1b61747bd58d",
+            "url": "https://www.youtube.com/watch?v=oBt53YbR9Kk",
+            "seen": 5356.482195971614,
+            "total": 18601.941
+        }
+    }, {
+        "id": "bookmark-43f2af27-5213-4e23-a8f2-fc7656ab96cf",
+        "description": "<p><strong>📜 Challenge #4 - HowSum function</strong></p><p>&nbsp;</p><p><i>Write a function howSum(targetSum, numbers) that takes in a targetSum &amp; an array of numbers as arguments.</i><br>&nbsp;</p><p>+ The function should return an array containing any combination of elements that add upto exactly the targetSum.&nbsp;<br>+ if there is no combination that adds to the targetSum, then return null.</p><p>&nbsp;</p><p>👉🏻 <i><strong>The Tree diagram is really beautifully explained here</strong></i></p>",
+        "start": 5373,
+        "position": 35,
+        "video": {
+            "id": "video-63bdbacc-5e9f-4236-a1e7-52b6564b6189",
+            "url": "https://www.youtube.com/watch?v=oBt53YbR9Kk",
+            "seen": 5372.707110791075,
+            "total": 18601.941
+        },
+        "pin": "yellow"
+    }, {
+        "id": "bookmark-ac2bedc9-5677-4d5a-9fdc-90892f7fd9c3",
+        "description": "<p>HowSum function implementation (Brute force approach)</p><p>&nbsp;</p><p>+ As in canSum, in this approach as well, we have 2 base case scenarios, if targetSum equals OR less than 0</p><p>+ if targetSum equals 0, return an empty [] (to start the bubble up process)</p><p>+ if targetSum &lt; 0, return null (terminate)</p><p>&nbsp;</p><pre><code class=\"language-javascript\">const howSum = (targetSum, numbers) =&gt; {\n  // base case #1\n  if (targetSum === 0) return [];\n  // base case #2\n  if (targetSum &lt; 0) return null;\n  for (num of numbers) {\n     const remainder = targetSum - num;\n     // new line, unlike canSum\n     const remainderResult = howSum(remainder, numbers);\n     if (remainderResult) {\n        return [...remainderResult, num];\n     }\n  }\n  \n  // completed loop check\n  return null;\n};\n\n// testing\nconsole.log(howSum(7,[2,3])); // [3,2,2]\nconsole.log(howSum(7,[5,3,4,7])); // null\nconosle.log(howSum(8,[2,3,5])); // [2,2,2,2]\nconsole.log(howSum(300,[7,14])); // null </code></pre><p>&nbsp;</p><p>Space Time Complexity</p><p>&nbsp;</p><p>+ Time Complexity <strong>O(Math.pow(n, m))</strong> -&gt; <strong>O(n^m)</strong> + O(m) ~ <strong>O(n^m)</strong> where is n is the number of child nodes each node, m is the height of the tree</p><p>+ Space Complexity: <strong>O(m)</strong> -&gt; Recursive call stack down the tree</p>",
+        "start": 5831,
+        "position": 36,
+        "video": {
+            "id": "video-d1650256-9343-4f12-a1f4-8d9bacf3080a",
+            "url": "https://www.youtube.com/watch?v=oBt53YbR9Kk",
+            "seen": 5831.44232921469,
+            "total": 18601.941
+        },
+        "pin": "cyan"
+    }, {
+        "id": "bookmark-9b43ce1f-0024-47e5-9b69-0ec119088f31",
+        "pin": "cyan",
+        "description": "<p>HowSum function with Memoization</p><p>&nbsp;</p><pre><code class=\"language-javascript\">const howSum = (targetSum, numbers, memo={}) =&gt; {\n  // retrieval - same as canSum\n  if (targetSum in memo) return memo[targetSum];\n  // base case #1\n  if (targetSum === 0) return [];\n  // base case #2\n  if (targetSum &lt; 0) return null;\n  for (num of numbers) {\n     const remainder = targetSum - num;\n     // new line, unlike canSum\n     const remainderResult = howSum(remainder, numbers);\n     if (remainderResult) {\n        // store in memo...\n        return [...remainderResult, num];\n     }\n  }\n  \n  // completed loop check\n  return null;\n};\n\n// testing\nconsole.log(howSum(7,[2,3])); // [3,2,2]\nconsole.log(howSum(7,[5,3,4,7])); // null\nconosle.log(howSum(8,[2,3,5])); // [2,2,2,2]\nconsole.log(howSum(300,[7,14])); // null </code></pre>",
+        "start": 6408,
+        "position": 37,
+        "video": {
+            "id": "video-eed60cd2-8826-456d-a61f-e4b10fa41102",
+            "url": "https://www.youtube.com/watch?v=oBt53YbR9Kk",
+            "seen": 6407.719839411832,
+            "total": 18601.941
         }
     }, {
         "id": "bookmark-c2d1d55c-aafe-4ffe-b390-99dd1d66795b",
         "description": "<p>50% Completed !!</p>",
         "start": 9005,
-        "position": 25,
+        "position": 38,
         "video": {
             "id": "video-bac8d8d2-e63d-45c5-ba65-9324466e6885",
             "url": "https://www.youtube.com/watch?v=oBt53YbR9Kk",
