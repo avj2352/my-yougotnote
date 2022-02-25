@@ -1,6 +1,6 @@
 {
-    "id": "playlist-63a36c13-ef2a-4664-9f80-e473e6b08df1",
-    "title": "Dynamic Programming Basics - Collection",
+    "id": "playlist-215d0130-46eb-4def-b9e7-5b5c1a0d29ba",
+    "title": "Dynamic Programming Basics - Memoization (Part I)",
     "createdBy": "",
     "bookmarks": [{
         "id": "bookmark-21339cfd-0cad-4a31-bdbd-168b750cd78c",
@@ -262,7 +262,7 @@
     }, {
         "id": "bookmark-e3e57698-9376-4f84-b411-0fb224cbe211",
         "pin": "cyan",
-        "description": "<p><strong>Classic implementation of Grid Traveler</strong> (w/o Memoization)</p><p>&nbsp;</p><p><strong>Brute Force approach</strong></p><p>&nbsp;</p><p>+ We'll implement the 2 base case scenarios</p><p>+ If both row and column are 1 then return 1</p><p>+ If either row or column are 0 then return 0 since there is no grid!</p><p>+ For all other scenario, we will follow the Tree (left and right) approach, so same as fibonacci</p><p>&nbsp;</p><pre><code class=\"language-javascript\">// basic implementation - w/o memo\nconst gridTraveler = (m,n) =&gt; {\n   // base case #1 - 1x1 grid\n   if (m===1 &amp;amp;&amp;amp; n===1) return 1;\n   // base case #2 - if either row or column is 0, answer is 0\n   if (m===0 || n===0) return 0;\n   // down and right (left and right nodes) of binary tree\n   // so same formula as fibonacci\n   return gridTraveler(m,n-1) + gridTraveler(m-1,n);\n};</code></pre>",
+        "description": "<p><strong>Classic implementation of Grid Traveler</strong> (w/o Memoization)</p><p>&nbsp;</p><p><strong>Brute Force approach</strong></p><p>&nbsp;</p><p>+ We'll implement the 2 base case scenarios</p><p>+ If both row and column are 1 then return 1</p><p>+ If either row or column are 0 then return 0 since there is no grid!</p><p>+ For all other scenario, we will follow the Tree (left and right) approach, so same as fibonacci</p><p>&nbsp;</p><pre><code class=\"language-javascript\">// basic implementation - w/o memo\nconst gridTraveler = (m,n) =&gt; {\n   // base case #1 - 1x1 grid\n   if (m===1 &amp;&amp; n===1) return 1;\n   // base case #2 - if either row or column is 0, answer is 0\n   if (m===0 || n===0) return 0;\n   // down and right (left and right nodes) of binary tree\n   // so same formula as fibonacci\n   return gridTraveler(m,n-1) + gridTraveler(m-1,n);\n};</code></pre>",
         "start": 2946,
         "position": 23,
         "video": {
@@ -316,7 +316,8 @@
             "url": "https://www.youtube.com/watch?v=oBt53YbR9Kk",
             "seen": 3894.542241437539,
             "total": 18602
-        }
+        },
+        "pin": "green"
     }, {
         "id": "bookmark-d1bff535-fa3b-4577-aee6-1a7b945ea5fb",
         "description": "<p><strong>📜 Challenge #3 - CanSum challenge</strong></p><p>&nbsp;</p><p>Write a function canSum(targetSum, numbers) that takes in a targets and an array of numbers as arguments.</p><p>&nbsp;</p><p>The function should return a boolean true or false indicating whether or not it is possible to generate the targetSum using numbers from the array.</p><p>&nbsp;</p><p>Constraints<br>+ You can use the elements of the array as many times as you want</p><p>+ All elements are non-negative numbers</p><p>&nbsp;</p>",
@@ -424,7 +425,7 @@
     }, {
         "id": "bookmark-9b43ce1f-0024-47e5-9b69-0ec119088f31",
         "pin": "cyan",
-        "description": "<p>HowSum function with Memoization</p><p>&nbsp;</p><pre><code class=\"language-javascript\">const howSum = (targetSum, numbers, memo={}) =&gt; {\n  // retrieval - same as canSum\n  if (targetSum in memo) return memo[targetSum];\n  // base case #1\n  if (targetSum === 0) return [];\n  // base case #2\n  if (targetSum &lt; 0) return null;\n  for (num of numbers) {\n     const remainder = targetSum - num;\n     // new line, unlike canSum\n     const remainderResult = howSum(remainder, numbers);\n     if (remainderResult) {\n        // store in memo...\n        return [...remainderResult, num];\n     }\n  }\n  \n  // completed loop check\n  return null;\n};\n\n// testing\nconsole.log(howSum(7,[2,3])); // [3,2,2]\nconsole.log(howSum(7,[5,3,4,7])); // null\nconosle.log(howSum(8,[2,3,5])); // [2,2,2,2]\nconsole.log(howSum(300,[7,14])); // null </code></pre>",
+        "description": "<p>HowSum function with Memoization</p><p>&nbsp;</p><pre><code class=\"language-javascript\">const howSum = (targetSum, numbers, memo={}) =&gt; {\n  // retrieval - same as canSum\n  if (targetSum in memo) return memo[targetSum];\n  // base case #1\n  if (targetSum === 0) return [];\n  // base case #2\n  if (targetSum &lt; 0) return null;\n  for (num of numbers) {\n     const remainder = targetSum - num;\n     // new line, unlike canSum\n     const remainderResult = howSum(remainder, numbers);\n     if (remainderResult) {\n        // store in memo...\n        return [...remainderResult, num];\n     }\n  }\n  \n  // completed loop check\n  memo[targetSum] = null;\n  return null;\n};\n\n// testing\nconsole.log(howSum(7,[2,3])); // [3,2,2]\nconsole.log(howSum(7,[5,3,4,7])); // null\nconosle.log(howSum(8,[2,3,5])); // [2,2,2,2]\nconsole.log(howSum(300,[7,14])); // null </code></pre><p>&nbsp;</p><p><strong>Space Time complexity</strong></p><p>+ Time Complexity : <strong>O(n * </strong><i><strong>m &nbsp;m) ~ O(n x m^2)</strong></i> -&gt; Because in each recursive call I need to copy the contents of the array into my memo, we multiply again by another memo</p><p>+ Space Complexity: <strong>O(m X m)</strong> -&gt; Because you have m keys now, with m values, therefore <strong>O(m^2)</strong></p>",
         "start": 6408,
         "position": 37,
         "video": {
@@ -434,16 +435,270 @@
             "total": 18601.941
         }
     }, {
-        "id": "bookmark-c2d1d55c-aafe-4ffe-b390-99dd1d66795b",
-        "description": "<p>50% Completed !!</p>",
-        "start": 9005,
+        "id": "bookmark-6426599f-6b15-4fd6-b8e6-7519caf6ab94",
+        "description": "<p>Comparing Brute Force approach with Memoization</p>",
+        "start": 6674,
         "position": 38,
         "video": {
-            "id": "video-bac8d8d2-e63d-45c5-ba65-9324466e6885",
+            "id": "video-4b5206a5-8535-451d-8818-22c976326920",
             "url": "https://www.youtube.com/watch?v=oBt53YbR9Kk",
-            "seen": 9004.920422982834,
+            "seen": 6674.418740986837,
+            "total": 18601.941
+        }
+    }, {
+        "id": "bookmark-6cc1c458-b1cc-45ae-94ee-81ac1b086de7",
+        "description": "<p><strong>📜 Challenge #5 - BestSum</strong></p><p>Write a function <strong>bestSum(targetSum, numbers)</strong> - that takes in a targetSum and an array of numbers as arguments</p><p>&nbsp;</p><p>+ The function should return an array containing the shortest combination of numbers that add upto exactly the targetSum</p><p>+ If there is a tie for the shortest combination, you may return any one of the shortest</p><p>&nbsp;</p><p><strong>NOTE</strong>: In order to best understand <strong>BestSum</strong> 😅 You need to first master - <strong>CanSum</strong> &amp; <strong>HowSum</strong></p>",
+        "start": 6723,
+        "position": 39,
+        "video": {
+            "id": "video-8a264748-d3a8-4c35-a45c-d2e8ddf3de09",
+            "url": "https://www.youtube.com/watch?v=oBt53YbR9Kk",
+            "seen": 6722.540297002255,
             "total": 18601.941
         },
-        "pin": "purple"
+        "pin": "yellow"
+    }, {
+        "id": "bookmark-74ee012c-c21b-49eb-a48e-22995d206658",
+        "pin": "cyan",
+        "description": "<p>Implement BestSum function (Brute force approach)<br><br>+ <strong>Warning</strong>: The BestSum is not always considering the Largest Number !!</p><p>+ You just have to explore the whole tree</p><p>&nbsp;</p><pre><code class=\"language-javascript\">const bestSum = (targetSum, numbers) =&gt; {\n    // base case #1\n    if (targetSum === 0) return [];\n    // base case #2\n    if (targetSum &lt; 0) return null;\n    let shortestCombination = null;\n    // recursive within loop\n    for (let num of numbers) {\n        const remainder = targetSum - num;\n        const remainderCombination = bestSum(remainder, numbers);\n        if (remainderCombination !== null) {\n            const combination =  [...remainderCombination, num];\n            if (shortestCombination === null || combination.length &lt; shortestCombination.length) {\n                shortestCombination = combination;\n            }\n        }\n    }\n    return shortestCombination;\n};\n\nconsole.log(bestSum(7, [5,3,4,7])); // 7\nconsole.log(bestSum(8, [2,3,5])); // [3,5]\nconsole.log(bestSum(8, [1,4,5])); // [4,4]\n// console.log(bestSum(100, [1,2,5,25])); // [25,25,25,25]</code></pre><p>&nbsp;</p><p><strong>Space Time Complexity</strong><br>Time Complexity - <strong>O(n^m * m)</strong> -&nbsp;</p><p>Space Complexity - <strong>O (m * m)</strong> - O(m^2) - because now in each of the stack frames, you need to store an array</p>",
+        "start": 7040,
+        "position": 40,
+        "video": {
+            "id": "video-867fbc25-1b9d-485b-a4f0-043fb9a035ce",
+            "url": "https://www.youtube.com/watch?v=oBt53YbR9Kk",
+            "seen": 7039.811691497227,
+            "total": 18601.941
+        }
+    }, {
+        "id": "bookmark-c2a865d0-f2b4-4d4d-8157-aea878d6605e",
+        "description": "<p>Best Sum Function with Memoization</p><p>&nbsp;</p><p>+ Remember, we have only one return function and therefore we need to add memo only there</p><p>&nbsp;</p><pre><code class=\"language-javascript\">const bestSum = (targetSum, numbers, memo={}) =&gt; {\n    // retrieve memo\n    if (targetSum in memo) return memo[targetSum];\n    // base case #1\n    if (targetSum === 0) return [];\n    // base case #2\n    if (targetSum &lt; 0) return null;\n    let shortestCombination = null;\n    // recursive within loop\n    for (let num of numbers) {\n        const remainder = targetSum - num;\n        const remainderCombination = bestSum(remainder, numbers, memo);\n        if (remainderCombination !== null) {\n            const combination =  [...remainderCombination, num];\n            if (shortestCombination === null || combination.length &lt; shortestCombination.length) {\n                shortestCombination = combination;\n            }\n        }\n    }\n    memo[targetSum] = shortestCombination;\n    return shortestCombination;\n};\n\nconsole.log(bestSum(7, [5,3,4,7])); // 7\nconsole.log(bestSum(8, [2,3,5])); // [3,5]\nconsole.log(bestSum(8, [1,4,5])); // [4,4]\nconsole.log(bestSum(100, [1,2,5,25])); // [25,25,25,25]</code></pre><p>&nbsp;</p><p><strong>Space Time complexity</strong></p><p>+ Time Complexity: <strong>O(m x n x m) ~ O(n * m^2)</strong></p><p>+ Space Complexity: <strong>O(m^2)</strong></p>",
+        "start": 7686,
+        "position": 41,
+        "video": {
+            "id": "video-f3b0ca7e-0f52-4433-9eb5-08ff3cd35c7a",
+            "url": "https://www.youtube.com/watch?v=oBt53YbR9Kk",
+            "seen": 7685.518165863925,
+            "total": 18601.941
+        },
+        "pin": "cyan"
+    }, {
+        "id": "bookmark-e25fbfc7-e195-4051-86b0-de5f3b570951",
+        "description": "<p>BestSum - Comparing Bruteforce and Memoization</p>",
+        "start": 7867,
+        "position": 42,
+        "video": {
+            "id": "video-651883b0-f9c4-4352-ab6b-b0d8a3dac0b2",
+            "url": "https://www.youtube.com/watch?v=oBt53YbR9Kk",
+            "seen": 7867.214132579,
+            "total": 18601.941
+        }
+    }, {
+        "id": "bookmark-d19998a5-681d-462f-a537-2f39a88adef0",
+        "description": "<p><i><strong>Summary of the - CanSum, HowSum &amp; BestSum problems</strong></i></p><p>&nbsp;</p><p>+ CanSum problem - \"Can you do it? yes/no\" (Decision problem)</p><p>+ HowSum problem - \"How will you do it?\" (Combinatory problem)</p><p>+ BestSum problem - \"What is the best way to do it?\" (Optimisation Problem)</p>",
+        "start": 7893,
+        "position": 43,
+        "video": {
+            "id": "video-41084e34-9361-41db-b1ef-86960562dbc3",
+            "url": "https://www.youtube.com/watch?v=oBt53YbR9Kk",
+            "seen": 7892.560275423312,
+            "total": 18601.941
+        }
+    }, {
+        "id": "bookmark-7391c4a5-6eb3-4f94-bd01-f91ebae6c5ec",
+        "description": "<p>📜 <strong>Challenge #6. - Function CanConstruct</strong></p><p>&nbsp;</p><p>Write a function called canConstruct(target, wordBank) that accepts the target strings &amp; an array of strings.<br><br>+ The function should return a boolean indicating whether or not the target can be constructed by concatenating elements of the wordBank array</p><p>+ You can use the elements of the wordBank as many times as needed</p><p>+ @returns boolean (Yes / No - is it possible to generate)</p><p>&nbsp;</p><pre><code class=\"language-plaintext\"># Example #1 \ncanConstruct(abcdef, [ab,bc,cd,de,ef,abc,def]); -&gt; true\n// abc + def\n\n# Example #2\ncanConstruct(skateboard, [b,ar,d,sk,ts,rd]); -&gt; false</code></pre><p>&nbsp;</p><p>&nbsp;</p>",
+        "start": 7966,
+        "position": 44,
+        "video": {
+            "id": "video-cf4a2eff-8f21-4016-a3ba-f600df9caa24",
+            "url": "https://www.youtube.com/watch?v=oBt53YbR9Kk",
+            "seen": 7965.939732103165,
+            "total": 18601.941
+        },
+        "pin": "yellow"
+    }, {
+        "id": "bookmark-0b243274-9a7f-45bd-a8de-7c2d7864bc55",
+        "description": "<p>Let's breakdown this challenge into understandable examples</p><p>&nbsp;</p><pre><code class=\"language-plaintext\">Example #1 \ncanConstruct('',[ab,bc,de]) -&gt; true\nbecause to generate an empty string, we need to take no elements</code></pre><p>&nbsp;</p>",
+        "start": 8076,
+        "position": 45,
+        "video": {
+            "id": "video-04145256-0e2b-4bd1-a774-b01f2aef086d",
+            "url": "https://www.youtube.com/watch?v=oBt53YbR9Kk",
+            "seen": 8076.3270734379585,
+            "total": 18601.941
+        }
+    }, {
+        "id": "bookmark-f33cb111-3ef6-4a4e-b276-9d8b60ee341e",
+        "description": "<p><strong>Visualise CanConstruct challenge using a Tree + Common Pitfalls</strong><br><br>+ ❌<strong>DONT</strong>: Donot remove from the middle of the target string. This will change the adjacent characters which makes it even more difficult to deduce the target string</p><p>+ ☑️ <strong>BEST APPROACH</strong>: Always remove from the starting index (or left most position or the prefixes) of the string</p><p>+ If the leaf nodes return true / face, then bubble up</p><p>+ Similar approach to CanSum function</p>",
+        "start": 8143,
+        "position": 46,
+        "video": {
+            "id": "video-cd175a6d-1092-4778-983d-465ecb7190d1",
+            "url": "https://www.youtube.com/watch?v=oBt53YbR9Kk",
+            "seen": 8143.174182053222,
+            "total": 18601.941
+        },
+        "pin": "red"
+    }, {
+        "id": "bookmark-be8e795d-e246-4ff1-ac07-a0164121a8cb",
+        "description": "<p><strong>Implementation of CanConstruct (Brute Force approach)</strong></p><p>&nbsp;</p><p>+ target.<strong>slice</strong>(word.length) - Will remove the entire word off the string - <strong>target</strong></p><p>&nbsp;</p><pre><code class=\"language-javascript\">/**\n * canCount - Brute force approach\n * @param {string} target \n * @param {string[]} wordBank \n * @returns {boolean} true or false\n */\nconst canConstruct = (target, wordBank) =&gt; {\n    if (target === '') return true;\n    // recursive\n    for (word of wordBank) {\n        if (target.indexOf(word) === 0) {\n            // starting of word, remove from target\n            const suffix = target.slice(word.length);\n            if (canConstruct(suffix, wordBank) === true) return true;\n        }\n    }\n    return false;\n};\n\nconsole.log(canConstruct('',['ab','abc','cd','def','abcd'])); // true\nconsole.log(canConstruct('skateboard',['bo','rd','ate','r','sk', 'boar'])); //false\nconsole.log(canConstruct('enterapotentpot', ['a', 'p', 'ent', 'enter', 'ot', 'o', 't'])); // true\n// console.log(canConstruct('eeeeeeeeeeeeeeeeeeeeeeeeeeeeeef', ['e','ee','eee','eeee','eeeeee','eeee'])); // false</code></pre>",
+        "start": 8564,
+        "position": 47,
+        "video": {
+            "id": "video-049508f2-ecee-4acb-aa91-6afe665845b2",
+            "url": "https://www.youtube.com/watch?v=oBt53YbR9Kk",
+            "seen": 8564.082166620701,
+            "total": 18601.941
+        },
+        "pin": "cyan"
+    }, {
+        "id": "bookmark-30e63c4c-e8f9-45bf-bc06-b63a256fc112",
+        "description": "<p><strong>Visualize Solution using Tree</strong></p><p>&nbsp;</p><p>+ Consider M (m) = target.length</p><p>+ Consider N (n) = wordBank.length</p><p>+ Both m &amp; n contribute to the Time complexity of this solution</p><p>+ Time Complexity - <strong>O(n^m x m) - </strong>Branching factor to the power of Height of the tree</p><p>+ Space Complexity - <strong>O(m x m) - </strong>call of each recursive call stack&nbsp;</p>",
+        "start": 8917,
+        "position": 48,
+        "video": {
+            "id": "video-20b7cbae-6c94-4257-a3d2-63e958cfca04",
+            "url": "https://www.youtube.com/watch?v=oBt53YbR9Kk",
+            "seen": 8916.750446276203,
+            "total": 18601.941
+        }
+    }, {
+        "id": "bookmark-06871663-f75f-497b-838e-4e6dc807a361",
+        "description": "<p>Improving the canCount function using Memoization</p><p>&nbsp;</p><p>+ We do see overlapping sub-problems</p><p>+ Always memoization key is the argument, not any logic implemented within the code</p><p>&nbsp;</p><pre><code class=\"language-javascript\">/**\n * canCount - Memoization\n * @param {string} target \n * @param {string[]} wordBank\n * @param {Object} memo \n * @returns {boolean} true or false\n */\nconst canConstruct = (target, wordBank, memo={}) =&gt; {\n    // retrieve\n    if (target in memo) return memo[target];\n    if (target === '') return true;\n    // recursive\n    for (word of wordBank) {\n        if (target.indexOf(word) === 0) {\n            // starting of word, remove from target\n            const suffix = target.slice(word.length);\n            if (canConstruct(suffix, wordBank, memo) === true) {\n              memo[target] = true;\n              return true;\n            }\n            \n        }\n    }\n    memo[target] = false;\n    return false;\n};\n\nconsole.log(canConstruct('',['ab','abc','cd','def','abcd'])); // true\nconsole.log(canConstruct('skateboard',['bo','rd','ate','r','sk', 'boar'])); //false\nconsole.log(canConstruct('enterapotentpot', ['a', 'p', 'ent', 'enter', 'ot', 'o', 't'])); // true\nconsole.log(canConstruct('eeeeeeeeeeeeeeeeeeeeeeeeeeeeeef', ['e','ee','eee','eeee','eeeeee','eeee'])); // false</code></pre><p>&nbsp;</p><p><strong>Space Time Complexity</strong></p><p>+ Time Complexity - <strong>O(n x m^2) -</strong> Note this is not necessarily exponential as we know the number of child nodes created now</p><p>+ Space Complexity - O(m x m) ~ <strong>O(m^2)</strong></p>",
+        "start": 9282,
+        "position": 49,
+        "video": {
+            "id": "video-4c570934-86c1-4de5-b676-649a0441ebfe",
+            "url": "https://www.youtube.com/watch?v=oBt53YbR9Kk",
+            "seen": 9281.50657804863,
+            "total": 18601.941
+        },
+        "pin": "cyan"
+    }, {
+        "id": "bookmark-a727d9e4-6b01-4903-bfb7-9ca860fc5ac2",
+        "description": "<p>Comparing Brute Force Approach with Memoized Solution</p>",
+        "start": 9484,
+        "position": 50,
+        "video": {
+            "id": "video-249307c0-cca6-4093-9eea-10e6bd78588a",
+            "url": "https://www.youtube.com/watch?v=oBt53YbR9Kk",
+            "seen": 9483.791623230001,
+            "total": 18601.941
+        }
+    }, {
+        "id": "bookmark-b2f3b09c-e929-4668-a701-db02629ec34c",
+        "description": "<p>📜Challenge # 7 - <strong>countConstruct </strong>function</p><p>&nbsp;</p><p>Write a function countConstruct(target, wordBank) that accepts a target string &amp; an array of string</p><p>&nbsp;</p><p>+ The function should return the number of ways that the target can be constructed by concatenating elements of the wordBank array</p><p>+ You may reuse elements of wordBank as many times as needed</p><p>+ @returns {number}</p><p>&nbsp;</p><pre><code class=\"language-plaintext\">countConstruct(abcdef, [ab,bc,cd,de,ef,abc,def]); -&gt; 1\n// abc+def</code></pre>",
+        "start": 9518,
+        "position": 51,
+        "video": {
+            "id": "video-33c250e1-57d4-41b3-b0c6-1c9da6d85319",
+            "url": "https://www.youtube.com/watch?v=oBt53YbR9Kk",
+            "seen": 9518.061501522834,
+            "total": 18601.941
+        },
+        "pin": "yellow"
+    }, {
+        "id": "bookmark-1585eda4-3d2c-45a5-9da8-329b0a91178a",
+        "description": "<p><strong>Implementation of countConstruct function</strong></p><p>&nbsp;</p><p>+ Same as canConstruct, slightly different</p><p>+ Base case returns 0</p><p>+ else keep a base count and append it to the return value of recursive calls</p><p>+ at the bottom of the function return the totalCount</p><p>&nbsp;</p><pre><code class=\"language-javascript\">/**\n * countConstruct - Brute force approach\n * @param {string} target \n * @param {string[]} wordBank \n * @returns {number}\n */\nconst countConstruct = (target, wordBank) =&gt; {\n    if (target === '') return 1;\n    let totalCount = 0;\n    // recursive\n    for (word of wordBank) {\n        if (target.indexOf(word) === 0) {\n            // starting of word, remove from target\n            const suffix = target.slice(word.length);\n            const numbWaysForRest = countConstruct(suffix, wordBank);\n            totalCount += numbWaysForRest;\n        }\n    }\n    return totalCount;\n};\n\nconsole.log(countConstruct('purple',['purp','p','le','ur','purpl'])); // 2\nconsole.log(countConstruct('',['ab','abc','cd','def','abcd'])); // 1\nconsole.log(countConstruct('skateboard',['bo','rd','ate','r','sk', 'boar'])); //0\nconsole.log(countConstruct('enterapotentpot', ['a', 'p', 'ent', 'enter', 'ot', 'o', 't'])); // 4\n// console.log(countConstruct('eeeeeeeeeeeeeeeeeeeeeeeeeeeeeef', ['e','ee','eee','eeee','eeeeee','eeee'])); // false</code></pre>",
+        "start": 9711,
+        "position": 52,
+        "video": {
+            "id": "video-6957aae2-277b-4132-ab19-b4b03ec2dc3a",
+            "url": "https://www.youtube.com/watch?v=oBt53YbR9Kk",
+            "seen": 9711.483210209,
+            "total": 18601.941
+        },
+        "pin": "cyan"
+    }, {
+        "id": "bookmark-4e1b6559-de7d-4fd3-afe7-024114d2eb48",
+        "description": "<p>Implementation of countConstruct using Memoization&nbsp;</p><p>&nbsp;</p><pre><code class=\"language-javascript\">/**\n * countConstruct - Brute force approach\n * @param {string} target \n * @param {string[]} wordBank \n * @returns {number}\n */\nconst countConstruct = (target, wordBank, memo={}) =&gt; {\n    // retrieval\n    if (target in memo) return memo[target];\n    if (target === '') return 1;\n    let totalCount = 0;\n    // recursive\n    for (word of wordBank) {\n        if (target.indexOf(word) === 0) {\n            // starting of word, remove from target\n            const suffix = target.slice(word.length);\n            const numbWaysForRest = countConstruct(suffix, wordBank, memo);\n            totalCount += numbWaysForRest;\n        }\n    }\n    memo[target] = totalCount;\n    return totalCount;\n};\n\nconsole.log(countConstruct('purple',['purp','p','le','ur','purpl'])); // 2\nconsole.log(countConstruct('',['ab','abc','cd','def','abcd'])); // 1\nconsole.log(countConstruct('skateboard',['bo','rd','ate','r','sk', 'boar'])); //0\nconsole.log(countConstruct('enterapotentpot', ['a', 'p', 'ent', 'enter', 'ot', 'o', 't'])); // 4\nconsole.log(countConstruct('eeeeeeeeeeeeeeeeeeeeeeeeeeeeeef', ['e','ee','eee','eeee','eeeeee','eeee'])); // 0</code></pre>",
+        "start": 9922,
+        "position": 53,
+        "video": {
+            "id": "video-f0f735a7-0c3d-42b9-a5a3-b583614e2561",
+            "url": "https://www.youtube.com/watch?v=oBt53YbR9Kk",
+            "seen": 9921.716846684867,
+            "total": 18601.941
+        },
+        "pin": "cyan"
+    }, {
+        "id": "bookmark-55f6ec7d-7e95-4749-8bfb-381204ae3cfd",
+        "description": "<p><strong>Space Time Complexity of CountConstruct Function</strong></p><p>&nbsp;</p><p><strong>Using Brute Force Approach</strong></p><p>+ Time Complexity: O(n^m x m) time</p><p>+ Space Complexity: O(m^2) space</p><p>&nbsp;</p><p><strong>Using Memoization</strong></p><p>+ Time Complexity: O(n x m^2) time</p><p>+ Space Complexity: O(m^2) space&nbsp;</p>",
+        "start": 10035,
+        "position": 54,
+        "video": {
+            "id": "video-044ea1ef-e630-4568-8a98-e38bd006420a",
+            "url": "https://www.youtube.com/watch?v=oBt53YbR9Kk",
+            "seen": 10034.891312326,
+            "total": 18601.941
+        }
+    }, {
+        "id": "bookmark-bff2cec1-6398-4914-8c02-41415fccc8af",
+        "description": "<p>📜Challenge #8 - AllConstruct function</p><p>&nbsp;</p><p>Write a function allConstruct(target, wordBank) that accepts a target string &amp; an array of string</p><p>&nbsp;</p><p>+ The function should return a 2D array containing all the ways the target can be constructed</p><p>+ By concatenating elements of the wordBank array</p><p>+ You can reuse elements of the wordBank array as many number of times as possible</p><p>&nbsp;</p>",
+        "start": 10049,
+        "position": 55,
+        "video": {
+            "id": "video-c74e869a-921a-45f9-8d96-dde1986e692a",
+            "url": "https://www.youtube.com/watch?v=oBt53YbR9Kk",
+            "seen": 10049.428801496355,
+            "total": 18601.941
+        },
+        "pin": "yellow"
+    }, {
+        "id": "bookmark-ba21899f-a763-46dd-bd6b-1d4e9403ded1",
+        "description": "<p>Let's breakdown the challenge and expectations</p><p>&nbsp;</p><p><strong>Consider edge cases</strong></p><p>&nbsp;</p><p>+ allConstruct(abcdef, [ab,abc,cd,def,abcd,ef,cj])<br>&nbsp; &nbsp; - &nbsp;This should return [[ab,cd,ef], [ab,c,def], [abc,def], [abcd,ef]]<br>+ allConstruct('', [ab,abc,cd]) -&gt; should return. [ [ ] ] -&gt; Because there are n possible ways to produce an empty string<br>+ allConstruct('Pramod', [ab,abc,cd]) -&gt; should return just [ ] -&gt; because there are NO possible ways to generate the target string</p><p>&nbsp;</p>",
+        "start": 10088,
+        "position": 56,
+        "video": {
+            "id": "video-c64b1ac8-ee01-437a-89ce-ae40b23b865a",
+            "url": "https://www.youtube.com/watch?v=oBt53YbR9Kk",
+            "seen": 10087.650943443223,
+            "total": 18602
+        }
+    }, {
+        "id": "bookmark-8363426c-5717-4866-b99a-9686cb61681c",
+        "description": "<p>Let's Visualise this challenge using a Tree</p>",
+        "start": 10237,
+        "position": 57,
+        "video": {
+            "id": "video-df9a1172-c8f8-4490-93a0-7b1a72ed431f",
+            "url": "https://www.youtube.com/watch?v=oBt53YbR9Kk",
+            "seen": 10237.058366428786,
+            "total": 18602
+        },
+        "pin": "red"
+    }, {
+        "id": "bookmark-19f59aa3-6d15-4a43-80f7-0af5a0f3a3fe",
+        "description": "<p><strong>Implementation of AllConstruct using Brute Force Approach</strong></p><p>&nbsp;</p><pre><code class=\"language-javascript\">/**\n* Show all ways to construct the target string\n* returns a 2d array if the target string is empty\n* returns a 1d array if the target string and wordBank don't match\n* @param {string} target\n* @param {string[]} wordBank\n* @return {string[][]} result\n*/\nconst allConstruct = (target, wordBank) =&gt; {\n    // base case #1\n    if (target === '') return [[]];\n    // kinda - base case #2\n    let totalWays = [];\n    // recursive case\n    for (let word of wordBank) {\n        // if the target begins with the word\n        if (target.indexOf(word) === 0) {\n            const suffix = target.slice(word.length);\n            const suffixWays = allConstruct(suffix, wordBank);\n            const targetWays = suffixWays.map(way =&gt; [word, ...way]);\n            totalWays.push(...targetWays);\n        }        \n    }\n    return totalWays;\n};\n\n\nconsole.log(allConstruct('purple',['purp','p','le','ur','purpl'])); // 2\nconsole.log(allConstruct('',['ab','abc','cd','def','abcd'])); // 1\nconsole.log(allConstruct('skateboard',['bo','rd','ate','r','sk', 'boar'])); //0\nconsole.log(allConstruct('enterapotentpot', ['a', 'p', 'ent', 'enter', 'ot', 'o', 't'])); // 4\n// console.log(allConstruct('eeeeeeeeeeeeeeeeeeeeeeeeeeeeeef', ['e','ee','eee','eeee','eeeeee','eeee'])); </code></pre>",
+        "start": 10589,
+        "position": 58,
+        "video": {
+            "id": "video-3a2173bd-1625-46e8-bc7b-fd16fc9426c2",
+            "url": "https://www.youtube.com/watch?v=oBt53YbR9Kk",
+            "seen": 10589.251780073113,
+            "total": 18602
+        },
+        "pin": "cyan"
+    }, {
+        "id": "bookmark-f709742b-a392-4e08-af19-544702eece9e",
+        "description": "<p>Let's discuss if we can make this Solution faster</p><p>&nbsp;</p><p>+ We basically require a full exploration</p><p>+ For this solution the last example is not a worst case anymore</p><p>+ You'd find some way to memoize it, but it won't affect the performance that much</p><p>&nbsp;</p><pre><code class=\"language-javascript\">/**\n* Show all ways to construct the target string\n* returns a 2d array if the target string is empty\n* returns a 1d array if the target string and wordBank don't match\n* @param {string} target\n* @param {string[]} wordBank\n* @return {string[][]} result\n*/\nconst allConstruct = (target, wordBank, memo={}) =&gt; {\n    // retrieve from memo\n    if (target in memo) return memo[target];\n    \n    // base case #1\n    if (target === '') return [[]];\n    \n    // kinda - base case #2\n    let totalWays = [];\n    \n    // recursive case\n    for (let word of wordBank) {\n        // if the target begins with the word\n        if (target.indexOf(word) === 0) {\n            const suffix = target.slice(word.length);\n            const suffixWays = allConstruct(suffix, wordBank, memo);\n            const targetWays = suffixWays.map(way =&gt; [word, ...way]);\n            totalWays.push(...targetWays);\n        }        \n    }\n    \n    memo[target] = totalWays;\n    return totalWays;\n};\n\n\nconsole.log(allConstruct('purple',['purp','p','le','ur','purpl'])); // 2\nconsole.log(allConstruct('',['ab','abc','cd','def','abcd'])); // 1\nconsole.log(allConstruct('skateboard',['bo','rd','ate','r','sk', 'boar'])); //0\nconsole.log(allConstruct('enterapotentpot', ['a', 'p', 'ent', 'enter', 'ot', 'o', 't'])); // 4\nconsole.log(allConstruct('eeeeeeeeeeeeeeeeeeeeeeeeeeeeeef', ['e','ee','eee','eeee','eeeeee','eeee'])); </code></pre>",
+        "start": 11172,
+        "position": 59,
+        "video": {
+            "id": "video-ac3c7af4-40c6-497f-b17f-000b2d187f79",
+            "url": "https://www.youtube.com/watch?v=oBt53YbR9Kk",
+            "seen": 11172.052078697725,
+            "total": 18602
+        }
+    }, {
+        "id": "bookmark-f8e9e5f8-b69f-4529-904a-c9c31f0218f5",
+        "description": "<p><strong>Summary of allConstruct</strong></p><p>&nbsp;</p><p>+ Consider <strong>m = target.length</strong> &amp; <strong>n = wordBank.length</strong></p><p>+ The base of the tree we'd have <strong>O(n^m)</strong> combinations</p><p>+ No matter what clever implementation we make, we can't do any better than exponential</p><p>+ Time Complexity: <strong>O(n^m)</strong></p><p>+ Space Complexity:<strong> O(m)</strong></p><p>&nbsp;</p>",
+        "start": 11318,
+        "position": 60,
+        "video": {
+            "id": "video-049c2d81-2b21-4903-a0ed-37758ffecbea",
+            "url": "https://www.youtube.com/watch?v=oBt53YbR9Kk",
+            "seen": 11318.38357056776,
+            "total": 18602
+        }
     }]
 }
