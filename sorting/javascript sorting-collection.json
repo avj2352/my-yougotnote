@@ -1,5 +1,5 @@
 {
-    "id": "playlist-73312d3e-bb84-4b85-a610-4735b855ea1f",
+    "id": "playlist-794ddfcc-b27c-4016-b085-32aed005f26d",
     "title": "All types Sorting in Javascript - Collection",
     "createdBy": "",
     "bookmarks": [{
@@ -301,8 +301,8 @@
         "pin": "yellow"
     }, {
         "id": "bookmark-c0738be1-b5cf-44ba-b086-12dd104cd45e",
-        "pin": "gray",
-        "description": "<p>Placeholder Bookmark #bookmark-713eb0fb-5dfb-468e-bb8a-d34bb2db0120</p><p>&nbsp;</p><pre><code class=\"language-javascript\">console.log('Placeholder code');</code></pre>",
+        "pin": "cyan",
+        "description": "<p>Implement Merge Sort</p><p>&nbsp;</p><pre><code class=\"language-javascript\">/**\n* Helper function to sort 2 arrays, combine \n* &amp; return them as one array\n* this function will be called recursively\n* @param {number[]} left array\n* @param {number[]} right array\n* @return {number[]}\n*/\nconst merge = (leftArr, rightArr) =&gt; {\n    const outputArr = [];\n    let leftIndex = 0;\n    let rightIndex = 0;\n    // loop iteratively\n    while (leftIndex &lt; leftArr.length &amp;&amp; rightIndex &lt; rightArr.length) {\n      const leftEl = leftArr[leftIndex];\n      const rightEl = rightArr[rightIndex];\n      if (leftEl &lt; rightEl) {\n        outputArr.push(leftEl);\n        leftIndex++;\n      } else {\n        outputArr.push(rightEl);\n        rightIndex++;\n      }\n    }\n    // add in the remaining values\n    // if we have used up either left / right array, then the slice will just return empty array\n    return [...outputArr, ...leftArr.slice(leftIndex), ...rightArr.slice(rightIndex)];\n  };\n  \n  \n  /**\n  * in place algorithm for merge sort\n  */\n  function mergeSort(array) {\n    // just return empty or single element array\n    if (array.length &lt;= 1) return array;\n    // as per merge sort, we need to divide the input array into 2\n    const middleIndex = Math.floor(array.length/2);\n    const leftArr = array.slice(0,middleIndex);\n    const rightArr = array.slice(middleIndex);\n    // call our helper function recursively\n    return merge(\n      mergeSort(leftArr),\n      mergeSort(rightArr)\n    );    \n  }\n  \n  // testing\n  console.log(mergeSort([1,4,2,8,345,123,43,32,5643,63,123]));</code></pre><p>&nbsp;</p>",
         "start": 184,
         "position": 26,
         "video": {
@@ -312,28 +312,16 @@
             "total": 1108.981
         }
     }, {
-        "id": "bookmark-63139571-5607-429f-90ad-28a5c5c4dbf0",
-        "pin": "gray",
-        "description": "<p>Placeholder Bookmark #bookmark-1ad77491-0e57-416e-a2ad-eb644a28fe4d</p><p>&nbsp;</p><pre><code class=\"language-javascript\">console.log('Placeholder code');</code></pre>",
-        "start": 295,
+        "id": "bookmark-ff150b4a-b497-45a7-90de-668d614a3ac3",
+        "description": "<p>Helper Function to Sort 2 arrays and combine them</p><p>&nbsp;</p><p>+ It will be a recursive function</p><p>+ Takes 2 arrays and returns a combined (sorted) array</p><p>+ This helper function is the \"meat\" of our Merge sort solution</p><p>&nbsp;</p><pre><code class=\"language-javascript\">/**\n* Helper function to sort 2 arrays, combine \n* &amp;amp; return them as one array\n* this function will be called recursively\n* @param {number[]} left array\n* @param {number[]} right array\n* @return {number[]}\n*/\nconst merge = (leftArr, rightArr) =&gt; {\n  const outputArr = [];\n  let leftIndex = 0;\n  let rightIndex = 0;\n  // loop iteratively\n  while (leftIndex &lt; leftArr.length &amp;&amp; rightIndex &lt; rightArr.length) {\n    const leftEl = leftArr[leftIndex];\n    const rightEl = rightArr[rightIndex];\n    if (leftEl &lt; rightEl) {\n      outputArr.push(leftEl);\n      leftIndex++;\n    } else {\n      outputArr.push(rightEl);\n      rightIndex++;\n    }\n  }\n  // add in the remaining values\n  // if we have used up either left / right array, then the slice will just return empty array\n  return [...outputArr, ...leftArr.slice(leftIndex), ...rightArr.slice(rightIndex)];\n};</code></pre>",
+        "start": 626,
         "position": 27,
         "video": {
-            "id": "video-f30873cc-9f2d-4e91-ba2f-816f1f3cfb3e",
+            "id": "video-f5d9c5c3-947e-4f78-8c2c-3274365e91ce",
             "url": "https://www.youtube.com/watch?v=x_Z9FcAPmbk",
-            "seen": 294.50294948657574,
+            "seen": 626.2869339455553,
             "total": 1108.981
-        }
-    }, {
-        "id": "bookmark-8cb5897c-9c2b-4264-846f-3989299a9630",
-        "pin": "gray",
-        "description": "<p>Placeholder Bookmark #bookmark-e9731c41-84d7-4d88-90bc-9f559c6e909e</p><p>&nbsp;</p><pre><code class=\"language-javascript\">console.log('Placeholder code');</code></pre>",
-        "start": 387,
-        "position": 28,
-        "video": {
-            "id": "video-b017971c-8212-42ca-9681-9223cc60bd44",
-            "url": "https://www.youtube.com/watch?v=x_Z9FcAPmbk",
-            "seen": 387.3147055573326,
-            "total": 1108.981
-        }
+        },
+        "pin": "cyan"
     }]
 }

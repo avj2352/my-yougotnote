@@ -21,7 +21,8 @@
 
 # My yougotnote playlists
 
-# - [Alvin - Dynamic Programming 2022-02-26T21:12:00](https://app.yougotnote.com/#/playlist/621acae0e33dcf0016c739dd)
+# - [Alvin - Dynamic Programming](https://app.yougotnote.com/#/playlist/621acae0e33dcf0016c739dd)
+# - [All types of Sorting in Javascript](https://app.yougotnote.com/#/playlist/621a43eae33dcf0016c739c0)
 
 # Important Links
 # - [Just Javascript](https://justjavascript.com/learn/01-mental-models)
