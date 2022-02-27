@@ -1,6 +1,6 @@
 {
-    "id": "playlist-215d0130-46eb-4def-b9e7-5b5c1a0d29ba",
-    "title": "Dynamic Programming Basics - Memoization (Part I)",
+    "id": "playlist-d45f215a-243b-4182-b9b9-2fd09f969dd8",
+    "title": "Dynamic Programming Basics - Alvin (Complete)",
     "createdBy": "",
     "bookmarks": [{
         "id": "bookmark-21339cfd-0cad-4a31-bdbd-168b750cd78c",
@@ -355,7 +355,7 @@
     }, {
         "id": "bookmark-36ba3d2d-7582-4786-ad4f-012022313640",
         "pin": "cyan",
-        "description": "<p><strong>CanSum function implementation</strong> (in Javascript)</p><p>&nbsp;</p><pre><code class=\"language-javascript\">/**\n* \"canSum\" function\n* function that takes in a targets and \n* an array of numbers as arguments.\n*/\nconst canSum = (targetSum, numbers) =&gt; {\n   // base case\n   if (targetSum === 0) return true;\n   for (num of numbers) {\n     const remainder = targetSum - num;\n     // call recursively\n     if(canSum(remainder, numbers) === true){\n       return true;\n     } \n   }\n   // we have exhausted our search\n   return false;\n};\n\nconsole.log(canSum(7,[2,3]);\nconsole.log(canSum(7,[5,3,4,7]);\nconsole.log(canSum(7,[2,4]);\nconsole.log(canSum(8,[2,3,5]);</code></pre><p>&nbsp;</p><p><strong>Space Time Complexity</strong><br>+ Time Complexity: O(Math.pow(n,m)) - It's not a binary tree, each child goes through the loop over and over again. So some nodes have 2 or 3 child nodes</p><p>+ Space Complexity: O(m) - Recursive call stack.</p>",
+        "description": "<p><strong>CanSum function implementation</strong> (in Javascript)</p><p>&nbsp;</p><pre><code class=\"language-javascript\">/**\n* \"canSum\" function\n* function that takes in a targets and \n* an array of numbers as arguments.\n*/\nconst canSum = (targetSum, numbers) =&gt; {\n   // base case\n   if (targetSum === 0) return true;\n   for (num of numbers) {\n     const remainder = targetSum - num;\n     // call recursively\n     if(canSum(remainder, numbers) === true){\n       return true;\n     } \n   }\n   // we have exhausted our search\n   return false;\n};\n\nconsole.log(canSum(7,[2,3]));\nconsole.log(canSum(7,[5,3,4,7]));\nconsole.log(canSum(7,[2,4]));\nconsole.log(canSum(8,[2,3,5]));</code></pre><p>&nbsp;</p><p><strong>Space Time Complexity</strong><br>+ Time Complexity: O(Math.pow(n,m)) - It's not a binary tree, each child goes through the loop over and over again. So some nodes have 2 or 3 child nodes</p><p>+ Space Complexity: O(m) - Recursive call stack.</p>",
         "start": 4598,
         "position": 31,
         "video": {
@@ -412,7 +412,7 @@
         "pin": "yellow"
     }, {
         "id": "bookmark-ac2bedc9-5677-4d5a-9fdc-90892f7fd9c3",
-        "description": "<p>HowSum function implementation (Brute force approach)</p><p>&nbsp;</p><p>+ As in canSum, in this approach as well, we have 2 base case scenarios, if targetSum equals OR less than 0</p><p>+ if targetSum equals 0, return an empty [] (to start the bubble up process)</p><p>+ if targetSum &lt; 0, return null (terminate)</p><p>&nbsp;</p><pre><code class=\"language-javascript\">const howSum = (targetSum, numbers) =&gt; {\n  // base case #1\n  if (targetSum === 0) return [];\n  // base case #2\n  if (targetSum &lt; 0) return null;\n  for (num of numbers) {\n     const remainder = targetSum - num;\n     // new line, unlike canSum\n     const remainderResult = howSum(remainder, numbers);\n     if (remainderResult) {\n        return [...remainderResult, num];\n     }\n  }\n  \n  // completed loop check\n  return null;\n};\n\n// testing\nconsole.log(howSum(7,[2,3])); // [3,2,2]\nconsole.log(howSum(7,[5,3,4,7])); // null\nconosle.log(howSum(8,[2,3,5])); // [2,2,2,2]\nconsole.log(howSum(300,[7,14])); // null </code></pre><p>&nbsp;</p><p>Space Time Complexity</p><p>&nbsp;</p><p>+ Time Complexity <strong>O(Math.pow(n, m))</strong> -&gt; <strong>O(n^m)</strong> + O(m) ~ <strong>O(n^m)</strong> where is n is the number of child nodes each node, m is the height of the tree</p><p>+ Space Complexity: <strong>O(m)</strong> -&gt; Recursive call stack down the tree</p>",
+        "description": "<p>HowSum function implementation (Brute force approach)</p><p>&nbsp;</p><p>+ As in canSum, in this approach as well, we have 2 base case scenarios, if targetSum equals OR less than 0</p><p>+ if targetSum equals 0, return an empty [] (to start the bubble up process)</p><p>+ if targetSum &lt; 0, return null (terminate)</p><p>&nbsp;</p><pre><code class=\"language-javascript\">const howSum = (targetSum, numbers) =&gt; {\n  // base case #1\n  if (targetSum === 0) return [];\n  // base case #2\n  if (targetSum &lt; 0) return null;\n  for (num of numbers) {\n     const remainder = targetSum - num;\n     // new line, unlike canSum\n     const remainderResult = howSum(remainder, numbers);\n     if (remainderResult) {\n        return [...remainderResult, num];\n     }\n  }\n  \n  // completed loop check\n  return null;\n};\n\n// testing\nconsole.log(howSum(7,[2,3])); // [3,2,2]\nconsole.log(howSum(7,[5,3,4,7])); // null\nconsole.log(howSum(8,[2,3,5])); // [2,2,2,2]\nconsole.log(howSum(300,[7,14])); // null </code></pre><p>&nbsp;</p><p>Space Time Complexity</p><p>&nbsp;</p><p>+ Time Complexity <strong>O(Math.pow(n, m))</strong> -&gt; <strong>O(n^m)</strong> + O(m) ~ <strong>O(n^m)</strong> where is n is the number of child nodes each node, m is the height of the tree</p><p>+ Space Complexity: <strong>O(m)</strong> -&gt; Recursive call stack down the tree</p>",
         "start": 5831,
         "position": 36,
         "video": {
@@ -540,7 +540,7 @@
         "pin": "red"
     }, {
         "id": "bookmark-be8e795d-e246-4ff1-ac07-a0164121a8cb",
-        "description": "<p><strong>Implementation of CanConstruct (Brute Force approach)</strong></p><p>&nbsp;</p><p>+ target.<strong>slice</strong>(word.length) - Will remove the entire word off the string - <strong>target</strong></p><p>&nbsp;</p><pre><code class=\"language-javascript\">/**\n * canCount - Brute force approach\n * @param {string} target \n * @param {string[]} wordBank \n * @returns {boolean} true or false\n */\nconst canConstruct = (target, wordBank) =&gt; {\n    if (target === '') return true;\n    // recursive\n    for (word of wordBank) {\n        if (target.indexOf(word) === 0) {\n            // starting of word, remove from target\n            const suffix = target.slice(word.length);\n            if (canConstruct(suffix, wordBank) === true) return true;\n        }\n    }\n    return false;\n};\n\nconsole.log(canConstruct('',['ab','abc','cd','def','abcd'])); // true\nconsole.log(canConstruct('skateboard',['bo','rd','ate','r','sk', 'boar'])); //false\nconsole.log(canConstruct('enterapotentpot', ['a', 'p', 'ent', 'enter', 'ot', 'o', 't'])); // true\n// console.log(canConstruct('eeeeeeeeeeeeeeeeeeeeeeeeeeeeeef', ['e','ee','eee','eeee','eeeeee','eeee'])); // false</code></pre>",
+        "description": "<p><strong>Implementation of CanConstruct (Brute Force approach)</strong></p><p>&nbsp;</p><p>+ target.<strong>slice</strong>(word.length) - Will remove the entire word off the string - <strong>target</strong></p><p>&nbsp;</p><pre><code class=\"language-javascript\">/**\n * canConstruct - Brute force approach\n * @param {string} target \n * @param {string[]} wordBank \n * @returns {boolean} true or false\n */\nconst canConstruct = (target, wordBank) =&gt; {\n    if (target === '') return true;\n    // recursive\n    for (word of wordBank) {\n        if (target.indexOf(word) === 0) {\n            // starting of word, remove from target\n            const suffix = target.slice(word.length);\n            if (canConstruct(suffix, wordBank) === true) return true;\n        }\n    }\n    return false;\n};\n\nconsole.log(canConstruct('',['ab','abc','cd','def','abcd'])); // true\nconsole.log(canConstruct('skateboard',['bo','rd','ate','r','sk', 'boar'])); //false\nconsole.log(canConstruct('enterapotentpot', ['a', 'p', 'ent', 'enter', 'ot', 'o', 't'])); // true\n// console.log(canConstruct('eeeeeeeeeeeeeeeeeeeeeeeeeeeeeef', ['e','ee','eee','eeee','eeeeee','eeee'])); // false</code></pre>",
         "start": 8564,
         "position": 47,
         "video": {
@@ -699,6 +699,266 @@
             "url": "https://www.youtube.com/watch?v=oBt53YbR9Kk",
             "seen": 11318.38357056776,
             "total": 18602
+        }
+    }, {
+        "id": "bookmark-d53ad1c2-0eb2-435d-9b9b-24b3254f167c",
+        "description": "<p>Introduction to the second approach to Solving Dynamic Programming problems&nbsp;</p><p>&nbsp;</p><p>✨<strong>TABULATION</strong> ✨<br>&nbsp;</p><p>+ Tabulation is all about building Tables&nbsp;<br>+ Space Time complexity of Fibonacci using Tabulation</p><p>&nbsp; &nbsp;- Time: O(n) -&gt; n is the input to fibonacci number</p><p>&nbsp; &nbsp;- Space: O(n) -&gt; n size array created in the process</p><p>+ We are still using Overlapping sub-problems to generate our table&nbsp;</p><p><br>👉🏻 Fibonacci using Tabulation</p>",
+        "start": 11466,
+        "position": 61,
+        "video": {
+            "id": "video-88553414-8a90-4fc9-97ab-c6e2d65a0207",
+            "url": "https://www.youtube.com/watch?v=oBt53YbR9Kk",
+            "seen": 11465.741380495,
+            "total": 18601.941
+        }
+    }, {
+        "id": "bookmark-4719b9f5-476a-46cd-ab32-b4c295e5d870",
+        "description": "<p>📜 Visualize <strong>fib(6)</strong> using Tabulation 👆🏻</p>",
+        "start": 11534,
+        "position": 62,
+        "video": {
+            "id": "video-09ad77e8-07fa-4816-9b83-f38dbc4e730b",
+            "url": "https://www.youtube.com/watch?v=oBt53YbR9Kk",
+            "seen": 11534.238349273404,
+            "total": 18601.941
+        },
+        "pin": "yellow"
+    }, {
+        "id": "bookmark-dc75ed7f-36c4-4af2-a744-7a1ef9b5dea7",
+        "description": "<p><strong>Implementing Fibonacci using Tabulation</strong></p><p>&nbsp;</p><p>+ We will implement an iterative process</p><p>+ Our table will always be n+1 size of the input number</p><p>+ Pre-fill the table values with a 0</p><p>+ Initialise table[1] = 1</p><p>+ Implement Tabulation logic using a for loop</p><p>+ Return the value of Table at nth position</p><p>&nbsp;</p><pre><code class=\"language-javascript\">const fib = (n) =&gt; {\n// table will always be n+1 size of the input number\nconst table = Array(n+1).fill(0);\ntable[1] = 1;\n// tabulation logic using a for loop\nfor (let i=0; i&lt;=n; i++) {\n  table[i+1] = table[i];\n  table[i+2] = table[i];\n}\n// return value of table at nth position\nreturn table[n];\n};\n\nconsole.log(fib(6)); // 8\nconsole.log(fib(7)); // 13\nconsole.log(fib(8)); // 21\nconsole.log(fib(50)); // 12586269025</code></pre><p>&nbsp;</p><p><strong>Space Time Complexity:</strong></p><p>&nbsp;</p><p>Time -&gt; O(n) ~ where n is the input number. Because we're following an iterative strategy</p><p>Space -&gt; O(n) ~ Although we can do without an array, for this example, we'll still go with an array</p>",
+        "start": 11854,
+        "position": 63,
+        "video": {
+            "id": "video-7f134462-95b5-47d0-b210-6141d9498342",
+            "url": "https://www.youtube.com/watch?v=oBt53YbR9Kk",
+            "seen": 11853.756346513206,
+            "total": 18601.941
+        },
+        "pin": "cyan"
+    }, {
+        "id": "bookmark-ede1ecdb-c031-468a-8672-a51f0591aa9f",
+        "description": "<p>📜 Grid Traveler revisited - Tabulation</p>",
+        "start": 12138,
+        "position": 64,
+        "video": {
+            "id": "video-abb04b15-296e-4658-b3eb-1d9c20f783c8",
+            "url": "https://www.youtube.com/watch?v=oBt53YbR9Kk",
+            "seen": 12138.243131096246,
+            "total": 18601.941
+        },
+        "pin": "yellow"
+    }, {
+        "id": "bookmark-4f6aa33b-9712-495c-859a-b5cf5917a6ac",
+        "description": "<p>Implementing GridTraveler using Tabulation</p><p>&nbsp;</p><p>Tabulation code strategy&nbsp;</p><p>+ Step 1: Pre-fill n+1 array</p><p>+ Step 2: Provide a seed value</p><p>+ Step 3: Come up with a logic for sub-problem to solve larger problem</p><p>+ Step 4: Return the final element to solve the problem</p><p>&nbsp;</p><pre><code class=\"language-javascript\">/**\n * Grid Traveler using Tabulation\n * @param {*} m \n * @param {*} n \n * @returns {number}\n */\nconst gridTraveler = (m,n) =&gt; {\n    // step1: pre-fill n+1 array\n    const table = Array(m+1).fill().map(() =&gt; Array(n+1).fill(0));\n    // step2: provide a seed value\n    table[1][1] = 1;\n    // step3: come up with a logic for sub-problem to solve large problem\n    for (let i=0; i&lt;=m; i++){\n      for(let j=0; j&lt;=n; j++) {\n        const current = table[i][j];\n        if (j+1&lt;=n) table[i][j+1] += current;\n        if (i+1&lt;=m) table[i+1][j] += current;\n      }\n    }\n    // step4: return the final element to solve the problem\n    return table[m][n];\n    };\n    \n    console.log(gridTraveler(1,1)); // 1\n    console.log(gridTraveler(2,3)); // 3\n    console.log(gridTraveler(3,2)); // 3\n    console.log(gridTraveler(3,3)); // 6\n    console.log(gridTraveler(18,18)); //</code></pre><p>&nbsp;</p><p>&nbsp;</p><p><strong>Space Time Complexity:</strong></p><p>+ Time -&gt; <strong>O(m * n)</strong> ~ where m &amp; n are the rows &amp; columns of the 2D grid</p><p>+ Space -&gt; <strong>O(m * n)</strong> ~ where m &amp; n are the rows &amp; columns of the 2D grid</p><p>&nbsp;</p>",
+        "start": 12432,
+        "position": 65,
+        "video": {
+            "id": "video-4d7620dc-fdff-4ac0-8ee1-da3b21f1a687",
+            "url": "https://www.youtube.com/watch?v=oBt53YbR9Kk",
+            "seen": 12432.294700608722,
+            "total": 18601.941
+        },
+        "pin": "cyan"
+    }, {
+        "id": "bookmark-9aa7325f-25cc-43d1-bc26-71274c5abce1",
+        "description": "<p><strong>Tabulation Recipe</strong></p><p>&nbsp;</p><p>+ Always first, Visualise the problem in the form of a table</p><p>+ Size of the table, is based on the input / target size + 1</p><p>+ Initialise the table with default values (depending upon the return values of the function)</p><p>+ Seed -&gt; Find the most trivial answer in the table (usually the smallest sub-problem which gives an immediate answer)</p><p>+ Iterate through the table&nbsp;</p><p>+ Fill further positions based on current position</p><p>+ When the function has multiple arguments, always find which of the argument changes throughout the function</p>",
+        "start": 12880,
+        "position": 66,
+        "video": {
+            "id": "video-d003195f-9bb7-4c56-ba1c-3c6bb1559728",
+            "url": "https://www.youtube.com/watch?v=oBt53YbR9Kk",
+            "seen": 12879.779403722874,
+            "total": 18601.941
+        },
+        "pin": "green"
+    }, {
+        "id": "bookmark-0826911f-eee4-4233-a7a1-e1694f836a5f",
+        "description": "<p><strong>📜 Can-Sum function using Tabulation</strong></p>",
+        "start": 13082,
+        "position": 67,
+        "video": {
+            "id": "video-ae28011b-2669-44c1-8273-10347d1096af",
+            "url": "https://www.youtube.com/watch?v=oBt53YbR9Kk",
+            "seen": 13082.097791063004,
+            "total": 18601.941
+        },
+        "pin": "yellow"
+    }, {
+        "id": "bookmark-88889e7f-3fae-44a6-87fe-dcd3115a744c",
+        "description": "<p><strong>CanSum function implementation using Tabulation</strong></p><p>&nbsp;</p><pre><code class=\"language-javascript\">/**\n * canSum function using Tabulation\n * @param {number} target \n * @param {number[]} numbers \n * @returns {boolean}\n */\nconst canSum = (target, numbers) =&gt; {\n    const table = Array(target+1).fill(false);\n    table[0] = true;\n    for (let i=0; i&lt;=target; i++){\n      if (table[i] === true) {\n        for (let num of numbers) {\n          table[i+num] = true;\n        }\n      }\n    }\n    return table[target];\n  };\n  \n  \nconsole.log(canSum(7,[2,3]));\nconsole.log(canSum(7,[5,3,4,7]));\nconsole.log(canSum(7,[2,4]));\nconsole.log(canSum(8,[2,3,5]));  \nconsole.log(canSum(300, [7,14]));</code></pre><p>&nbsp;</p><p><strong>Space Time Complexity</strong><br>&nbsp;</p><p>+ Time -&gt; O(n x m) ~ where n and m are the target and size of the array 'm'</p><p>+ Space -&gt; O(n+1) ~ Because we always create an array of the size - N+1</p>",
+        "start": 13595,
+        "position": 68,
+        "video": {
+            "id": "video-3a8e5cbc-2491-4346-9a64-01f820a87e10",
+            "url": "https://www.youtube.com/watch?v=oBt53YbR9Kk",
+            "seen": 13595.122989835409,
+            "total": 18601.941
+        },
+        "pin": "cyan"
+    }, {
+        "id": "bookmark-9472f45a-3bb3-4ec2-aaa7-ccc664f13753",
+        "description": "<p>📜 HowSum using Tabulation</p>",
+        "start": 14003,
+        "position": 69,
+        "video": {
+            "id": "video-c4a4fe1d-e3df-4bf1-97eb-d6ce7af920b6",
+            "url": "https://www.youtube.com/watch?v=oBt53YbR9Kk",
+            "seen": 14003.291603392334,
+            "total": 18601.941
+        },
+        "pin": "yellow"
+    }, {
+        "id": "bookmark-fec5a77c-01a1-4ee3-b011-4cd72f8d00fb",
+        "description": "<p><strong>Implementation of HowSum function (using Tabulation)</strong></p><p>&nbsp;</p><pre><code class=\"language-javascript\">/**\n* howSum using tabulation\n* @param {number} targetSum\n* @param {number[]} numbers\n* @returns {number[]}\n*/\nconst howSum = (targetSum, numbers) =&gt; {\n    const table = Array(targetSum + 1).fill(null);\n    table[0] = [];\n    for (let i=0; i&lt;=targetSum; i++) {\n       if (table[i]!==null){\n         for (let num of numbers) {\n          table[i+num] = [...table[i],num];\n         }\n       }\n    }\n    return table[targetSum];\n  };\n  \n  // testing\n  console.log(howSum(7,[2,3])); // [3,2,2]\n  console.log(howSum(7,[5,3,4,7])); // null\n  console.log(howSum(8,[2,3,5])); // [2,2,2,2]\n  console.log(howSum(300,[7,14])); // null \n</code></pre><p>&nbsp;</p><p>&nbsp;</p><p><strong>Space Time Complexity</strong></p><p>&nbsp;</p><p>+ Time -&gt; O( n x m x n) ~ O(n*m^2)</p><p>+ Space -&gt; O(m x m) ~ because we always generate an array, and inside the for loop we spread and append the num</p>",
+        "start": 14568,
+        "position": 70,
+        "video": {
+            "id": "video-b801ece1-5151-4754-827b-b624777d354a",
+            "url": "https://www.youtube.com/watch?v=oBt53YbR9Kk",
+            "seen": 14568.234626376003,
+            "total": 18601.941
+        },
+        "pin": "cyan"
+    }, {
+        "id": "bookmark-76a6054a-f57f-487b-ace3-b53a96281445",
+        "description": "<p>📜 BestSum using Tabulation</p>",
+        "start": 14845,
+        "position": 71,
+        "video": {
+            "id": "video-877caaa4-f640-4f5a-a0e6-90eb182d60a0",
+            "url": "https://www.youtube.com/watch?v=oBt53YbR9Kk",
+            "seen": 14844.581186039004,
+            "total": 18601.941
+        },
+        "pin": "yellow"
+    }, {
+        "id": "bookmark-8366bbae-06d7-469c-955d-d05f9fe657e9",
+        "description": "<p><strong>Implement BestSum using Tabulation</strong></p><p>&nbsp;</p><pre><code class=\"language-javascript\">/**\n* bestSum using tabulation\n* @param {number} targetSum\n* @param {number[]} numbers\n* @returns {number[]}\n*/\nconst bestSum = (targetSum, numbers) =&gt; {\n    // create table\n    const table = Array(targetSum + 1).fill(null);\n    // seed\n    table[0] = [];\n    for (let i=0; i&lt;=targetSum; i++) {\n       // iterative logic - tabulation\n       if (table[i]!==null){\n         for (let num of numbers) {\n          const combination = [...table[i],num];\n          // only replace if the combination is less than currently present element\n          if (!table[i+num] || table[i+num].length &gt; combination.length) {\n            table[i+num] = combination;\n          }\n         }\n       }\n    }\n    return table[targetSum];\n  };\n  \n  // testing\n  console.log(bestSum(7,[5,3,4,7])); // [7]\n  console.log(bestSum(8,[2,3,5])); // [3,5]\n  console.log(bestSum(8,[1,4,5])); // [4,4]\n  console.log(bestSum(100,[1,2,5,25])); // [25,25,25,25]</code></pre><p>&nbsp;</p><p><strong>Space Time Complexity</strong></p><p>&nbsp;</p><p>+ Time -&gt; O(n x m x m) ~ O(nm^2) -&gt; where n is the targetSum and m is the length of numbers</p><p>+ Space -&gt; O(m^2) -&gt; since we're using an array and again copying the array</p>",
+        "start": 15220,
+        "position": 72,
+        "video": {
+            "id": "video-47b5bd30-43e9-4ed7-bba8-ff3ecd6c3a1f",
+            "url": "https://www.youtube.com/watch?v=oBt53YbR9Kk",
+            "seen": 15220.492923477404,
+            "total": 18601.941
+        },
+        "pin": "cyan"
+    }, {
+        "id": "bookmark-f6a9aa69-648c-43ad-97e5-c37e2461c601",
+        "description": "<p>Comparing HowSum and BestSum Tabulation solutions 👆🏻</p>",
+        "start": 15618,
+        "position": 73,
+        "video": {
+            "id": "video-838475fe-0561-46ae-9428-ccfe683f5d87",
+            "url": "https://www.youtube.com/watch?v=oBt53YbR9Kk",
+            "seen": 15618.400491941347,
+            "total": 18601.941
+        }
+    }, {
+        "id": "bookmark-a5854520-2331-4e56-b002-f4e4f2d04944",
+        "description": "<p>📜 CanConstruct using Tabulation 👆🏻</p>",
+        "start": 15654,
+        "position": 74,
+        "video": {
+            "id": "video-2ccdb2fc-0c63-4af9-9493-97cc64473c8f",
+            "url": "https://www.youtube.com/watch?v=oBt53YbR9Kk",
+            "seen": 15654.158398667943,
+            "total": 18601.941
+        },
+        "pin": "yellow"
+    }, {
+        "id": "bookmark-172aaeef-b288-4011-a4b8-35b2258c7a9b",
+        "description": "<p>Implementing CanConstruct using Tabulation</p><p>&nbsp;</p><pre><code class=\"language-javascript\">/**\n * canConstuct - Tabulation\n * @param {string} target \n * @param {string[]} wordBank \n * @returns {boolean} true or false\n */\nconst canConstuct = (target, wordBank) =&gt; {\n  // pre-fill table\n  const table = Array(target.length+1).fill(false);\n  // seed\n  table[0] = true;\n  for(let i=0;i&lt;=target.length; i++) {\n    if (table[i] === true) {\n      for(let word of wordBank) {\n        // if the current word matches the characters starting at i\n        if (target.slice(i, i+word.length) === word) {\n          table[i+word.length] = true;\n        }\n      }\n    }\n  }\n  return table[target.length];\n};\n\nconsole.log(canConstruct('',['ab','abc','cd','def','abcd'])); // true\nconsole.log(canConstruct('skateboard',['bo','rd','ate','r','sk', 'boar'])); //false\nconsole.log(canConstruct('enterapotentpot', ['a', 'p', 'ent', 'enter', 'ot', 'o', 't'])); // true\nconsole.log(canConstruct('eeeeeeeeeeeeeeeeeeeeeeeeeeeeeef', ['e','ee','eee','eeee','eeeeee','eeee'])); // false</code></pre><p>&nbsp;</p><p><strong>Space Time Complexity:&nbsp;</strong></p><p>&nbsp;</p><p>+ Time -&gt; O(n x m^2) -&gt;&nbsp;<br>+ Space -&gt; O(m)</p><p>&nbsp;</p>",
+        "start": 16296,
+        "position": 75,
+        "video": {
+            "id": "video-fda1c1cf-2dd4-4761-9057-db8bb0b82126",
+            "url": "https://www.youtube.com/watch?v=oBt53YbR9Kk",
+            "seen": 16295.513538398167,
+            "total": 18601.941
+        },
+        "pin": "cyan"
+    }, {
+        "id": "bookmark-620b67d8-5807-44a6-a8d1-893d67eae7da",
+        "description": "<p>📜 CountConstruct challenge solved using Tabulation</p>",
+        "start": 16691,
+        "position": 76,
+        "video": {
+            "id": "video-1843405a-0717-40eb-93b5-a77e24addc26",
+            "url": "https://www.youtube.com/watch?v=oBt53YbR9Kk",
+            "seen": 16691.12886552121,
+            "total": 18601.941
+        },
+        "pin": "yellow"
+    }, {
+        "id": "bookmark-b4b197e7-8d63-4517-bab1-74a0ab5f784f",
+        "description": "<p>😍 Beautifully explained Tabulation logic 👆🏻</p>",
+        "start": 17157,
+        "position": 77,
+        "video": {
+            "id": "video-fd16b6aa-91cd-4ace-9233-f60eaddea53c",
+            "url": "https://www.youtube.com/watch?v=oBt53YbR9Kk",
+            "seen": 17157.149552562994,
+            "total": 18601.941
+        },
+        "pin": "green"
+    }, {
+        "id": "bookmark-3142ba4b-d8b6-4edb-a64a-411ec98a3f31",
+        "description": "<p><strong>Implement CountConstruct using Tabulation</strong></p><p>&nbsp;</p><pre><code class=\"language-javascript\">/**\n* countConstruct using Tabulation\n* @param {string} target string\n* @param {string[]} wordBank containing words\n* @return {number}\n*/\nconst countConstruct = (target, wordBank) =&gt; {\n  //pre-fill\n  const table = Array(target.length+1).fill(0);\n  //seed\n  table[0] = 1;\n  for (let i=0;i&lt;=target.length;i++) {\n    for(let word of wordBank) {\n       // if the word matches the characters present in the ith position\n       if (target.slice(i,i+word.length) === word) {\n          table[i+word.length] += table[I]; \n       }\n    }\n  }\n  return table[target.length];\n};\n\nconsole.log(countConstruct('purple',['purp','p','le','ur','purpl'])); // 2\nconsole.log(countConstruct('',['ab','abc','cd','def','abcd'])); // 1\nconsole.log(countConstruct('skateboard',['bo','rd','ate','r','sk', 'boar'])); //0\nconsole.log(countConstruct('enterapotentpot', ['a', 'p', 'ent', 'enter', 'ot', 'o', 't'])); // 4\nconsole.log(countConstruct('eeeeeeeeeeeeeeeeeeeeeeeeeeeeeef', ['e','ee','eee','eeee','eeeeee','eeee'])); // false</code></pre><p>&nbsp;</p><p><strong>Space Time Complexity</strong></p><p>&nbsp;</p><p>+ Time -&gt; O(m^2 x n) ~ where m is the length target and n is the wordBank.length</p><p>+ Space -&gt; O(m) ~ where m is the length of the target</p>",
+        "start": 17224,
+        "position": 78,
+        "video": {
+            "id": "video-2e2caf77-402c-43a4-b5b5-4f250ac6faa7",
+            "url": "https://www.youtube.com/watch?v=oBt53YbR9Kk",
+            "seen": 17223.90436959588,
+            "total": 18601.941
+        },
+        "pin": "cyan"
+    }, {
+        "id": "bookmark-f57ad190-d292-42fb-939c-75fcd1d55b22",
+        "description": "<p>Comparing CountConstruct tabulation with CanConstruct tabulation 👆🏻</p>",
+        "start": 17407,
+        "position": 79,
+        "video": {
+            "id": "video-9f82bcd7-9951-4980-a327-d4c79b8b8802",
+            "url": "https://www.youtube.com/watch?v=oBt53YbR9Kk",
+            "seen": 17407.479850855703,
+            "total": 18601.941
+        }
+    }, {
+        "id": "bookmark-2e142c08-9498-45e0-b557-220450dca3d1",
+        "description": "<p>📜 AllConstruct using Tabulation</p>",
+        "start": 17424,
+        "position": 80,
+        "video": {
+            "id": "video-e7dcf70d-6ec7-4a1a-a82d-9283339310e5",
+            "url": "https://www.youtube.com/watch?v=oBt53YbR9Kk",
+            "seen": 17424.023065574187,
+            "total": 18601.941
+        },
+        "pin": "yellow"
+    }, {
+        "id": "bookmark-d8ec5229-c882-4472-942d-c3ea998356ed",
+        "description": "<p><strong>Implement AllConstruct using Tabulation</strong></p><p>&nbsp;</p><pre><code class=\"language-javascript\">/**\n* allConstruct function using Tabulation\n* @param {string} target string\n* @param {string[]} wordBank array\n* @returns {string[][]}\n*/\nconst allConstruct = (target, wordBank) =&gt; {\n  //pre-fill our table - with arrays\n  const table = Array(target.length+1).fill().map(() =&gt; []);\n  // seed\n  table[0] = [];\n  for (let i=0; i&lt;=target.length; i++) {\n    let (word of wordBank) {\n      // if the word matches the characters in the ith position\n      if (target.slice(i,word.length+i) === word){\n        const newCombination = table[i].map(subArray =&gt; [...subArray, word]);\n        table[i+word.length].push(...newCombination);\n      }\n    }\n  }\n  return table[target.length];\n};\n\n\nconsole.log(allConstruct('purple',['purp','p','le','ur','purpl'])); // 2\nconsole.log(allConstruct('',['ab','abc','cd','def','abcd'])); // 1\nconsole.log(allConstruct('skateboard',['bo','rd','ate','r','sk', 'boar'])); //0\nconsole.log(allConstruct('enterapotentpot', ['a', 'p', 'ent', 'enter', 'ot', 'o', 't'])); // 4\nconsole.log(allConstruct('eeeeeeeeeeeeeeeeeeeeeeeeeeeeeef', ['e','ee','eee','eeee','eeeeee','eeee'])); </code></pre><p>&nbsp;</p><p><strong>Space Time Complexity</strong></p><p>&nbsp;</p><p>+ Time -&gt; O(n^m) Time ~ Exponential time !😶</p><p>+ Space -&gt; O(n^m) Space ~ Because we're creating a 3D array in each loop 😶</p>",
+        "start": 18078,
+        "position": 81,
+        "video": {
+            "id": "video-81213c72-00f8-4cb3-8eb0-ba39c9f008a6",
+            "url": "https://www.youtube.com/watch?v=oBt53YbR9Kk",
+            "seen": 18077.99068350646,
+            "total": 18601.941
+        },
+        "pin": "cyan"
+    }, {
+        "id": "bookmark-58a550a6-75e7-4b57-833e-0b9535058e66",
+        "description": "<p><strong>Final Advice on Dynamic Programming</strong></p><p>&nbsp;</p><p>+ 🤔 Ask yourself - Are there any overlapping sub-problems ?</p><p>+ 🤔 Decide what is the trivially smallest input</p><p>+ 🤔 Figure how to relate the base case (trivial input) to your larger problem</p><p>+ 🤔 Think recursively to use Memoization</p><p>+ 🤔 Think iteratively to use Tabulation</p><p>+ 🤗 Remember Memoization Recipe</p><p>+ 🤗 Remember Tabulation Recipe</p>",
+        "start": 18473,
+        "position": 82,
+        "video": {
+            "id": "video-25d8b542-bbb5-45dd-9986-b4fe77b1bba4",
+            "url": "https://www.youtube.com/watch?v=oBt53YbR9Kk",
+            "seen": 18472.76704902224,
+            "total": 18601.941
         }
     }]
 }
