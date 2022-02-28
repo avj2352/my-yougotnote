@@ -14,9 +14,11 @@
 
 
 # Amazon Interview Rounds
-(A) Keep Rebecca Updated on Linkedin +02.Emails @amazon {due:2022-02-27}
-(B) Keep Kavya updated on Google +02.Emails @google {due:2022-03-01}
+
+(A) Keep Rebecca Updated on Linkedin +02.Emails @amazon {due:2022-02-27} {cm:2022-02-28}
+(A) Keep Kavya updated on Google +02.Emails @google {due:2022-03-01}
 (B) Amazon Front-End Developer Coding Challenge - Hacker-rank +03.Interview @amazon {due:2022-03-02}
+(C) Update Rebecca After completing Amazon Assessment Round +02.Emails @amazon {due:2022-03-02} 
 
 
 # My yougotnote playlists
