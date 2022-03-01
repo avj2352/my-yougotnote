@@ -10,6 +10,9 @@ This repository has been reserved to store all notes from Yougotnote website
 ## 1. Customer Obsession
 Leaders start with the customer and work backwards. They work vigorously to earn and keep customer trust. Although leaders pay attention to competitors, they obsess over customers.
 
+- The thing we're looking for is that you consider and care about the customer. We've regularly made decisions at Amazon which lowered profit/sales, because it was the right thing to do for customers.
+- 
+
 ## 2. Ownership
 Leaders are owners. They think long term and don’t sacrifice long-term value for short-term results. They act on behalf of the entire company, beyond just their own team. They never say “that’s not my job."
 
