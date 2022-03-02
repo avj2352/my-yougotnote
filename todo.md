@@ -1,6 +1,4 @@
 # Amazon Prep Plan
-(C) Binary Tree Algos - 50% - Alvin +01.Freecodecamp @yougotnote {due:2022-03-01}
-(D) Binary Tree Algos - 100% - Alvin +01.Freecodecamp @yougotnote {due:2022-03-01}
 (E) Common Coding Interview Questions - Alvin +01.Freecodecamp @yougotnote {due:2022-03-01}
 (F) Linked List Youtube - Alvin +01.Freecodecamp @yougotnote {due:2022-03-02}
 (G) Recursions - Alvin + Simple Engineer +01.Freecodecamp @yougotnote {due:2022-03-01}
@@ -27,6 +25,12 @@
 
 # Important Links
 # - [Just Javascript](https://justjavascript.com/learn/01-mental-models)
+# - [Amazon Interview Questions](https://algomonster.medium.com/amazon-oa-2022-hackerrank-5d90e1fb46d4)
+# - [Javascript tricks & trips](https://medium.com/geekculture/10-clever-javascript-tricks-that-every-developer-should-know-e0be92bcfe9)
+# - [DS and Algos in Javascript - Freecodecamp](https://www.youtube.com/watch?v=t2CEgPsws3U)
+# - [Javascript - Array Tips & Tricks](https://www.youtube.com/watch?v=R8rmfD9Y5-c)
+# - [Popular Leetcode questions solved using Javascript](https://www.youtube.com/watch?v=IufUNRCQ37E&list=PLY5pAT_51eGyo4ixvdZgzY57N0_R1QMtb)
+
 
 
 # Google Prep Plan
@@ -36,3 +40,5 @@
 # (A) Dynamic Programming - Alvin +01.Freecodecamp @yougotnote {due:2022-03-02} {cm:2022-02-27}
 # (B) Graph Traversal Algorithms - 50% - Alvin +01.Freecodecamp @yougotnote {due:2022-03-01} {cm:2022-03-01}
 # (B) Graph Traversal Algorithms - 100% - Alvin +01.Freecodecamp @yougotnote {due:2022-03-01} {cm:2022-03-01}
+# (C) Binary Tree Algos - 50% - Alvin +01.Freecodecamp @yougotnote {due:2022-03-01} {cm:2022-03-02}
+# (D) Binary Tree Algos - 100% - Alvin +01.Freecodecamp @yougotnote {due:2022-03-01} {cm:2022-03-02}

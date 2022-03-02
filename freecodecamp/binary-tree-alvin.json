@@ -1,0 +1,277 @@
+{
+    "id": "playlist-cc507b4e-f3b7-42e2-8ccd-6246ccd429fc",
+    "title": "Binary Tree Algorithms - Playlist",
+    "createdBy": "",
+    "bookmarks": [{
+        "id": "bookmark-c2d03bae-3a32-473a-88b5-1f6ac50f770d",
+        "description": "<p><strong>📜 Binary Tree Algorithms - Alvin (Freecodecamp)</strong></p><p>&nbsp;</p><p>+ What is Tree ?&nbsp;</p><p>+ A Tree contains nodes (any number)</p><p>+ A Tree follows \"family\" relationships (Parent &gt; Child)</p><p>+ A Root is going to be a node which has no parent</p><p>+ A Leaf node is a node that has no children</p>",
+        "start": 20,
+        "position": 1,
+        "video": {
+            "id": "video-cd6b0f14-e3be-44f1-ad87-53d5276bd254",
+            "url": "https://www.youtube.com/watch?v=fAAZixBzIAI",
+            "seen": 19.838464203019022,
+            "total": 6533
+        },
+        "pin": "yellow"
+    }, {
+        "id": "bookmark-de46d924-bcbb-4f6a-abcd-603ed6abbf7a",
+        "description": "<p>Types of Binary Trees</p>",
+        "start": 414,
+        "position": 2,
+        "video": {
+            "id": "video-26432fc7-12fa-497c-b3c3-68c072e5e368",
+            "url": "https://www.youtube.com/watch?v=fAAZixBzIAI",
+            "seen": 413.8937611412947,
+            "total": 6533
+        },
+        "pin": "red"
+    }, {
+        "id": "bookmark-33eba2bd-d540-452f-acce-7414543b0be5",
+        "description": "<p>Represent Binary Tree (in Javascript)</p><p>&nbsp;</p><pre><code class=\"language-javascript\">// A Binary tree contains Node\nclass Node {\n  constructor (val) {\n    this.val = val;\n    this.left = null;\n    this.right = null;\n  }\n}\n\nconst a = new Node('a');\nconst b = new Node('b');\nconst c = new Node('c');\nconst d = new Node('d');\nconst e = new Node('e');\nconst f = new Node('f');\n\n//Creating a binary tree\na.left = b;\na.right = c;\nb.left = d;\nb.right = e;\nc.right = f;\n\n//       a\n//      / \\\n//     b   c\n//    / \\   \\\n//   d   e   f</code></pre><p>&nbsp;</p>",
+        "start": 685,
+        "position": 3,
+        "video": {
+            "id": "video-b49cf941-131f-44f9-9fec-2c98855b17c1",
+            "url": "https://www.youtube.com/watch?v=fAAZixBzIAI",
+            "seen": 684.658193494347,
+            "total": 6533
+        },
+        "pin": "cyan"
+    }, {
+        "id": "bookmark-1e9df584-bf00-4899-9e28-9ecff3ee0d93",
+        "description": "<p><strong>📜 Challenge #1 - Depth first values</strong></p><p>&nbsp;</p><p>Write a function, <i>depthFirstValues</i>, that takes in the root of a binary tree. The function should return an array containing all values of the tree in depth-first order.</p><p><i>Hey. This is our first binary tree problem, so you should be liberal with watching the Approach and Walkthrough. Be productive, not stubborn. -AZ</i></p><p>&nbsp;</p><p>+ Remember, in a Depth First Traversal Solution, we first go deep until we reach the left node, then we traverse right (adjacent nodes)</p><p>+ Go deeper before moving laterally</p><p>+ We know that for DFS, we use a <strong>Stack</strong></p><p>&nbsp;</p>",
+        "start": 865,
+        "position": 4,
+        "video": {
+            "id": "video-322382c1-4a37-4146-a6c4-4a51cf298c3c",
+            "url": "https://www.youtube.com/watch?v=fAAZixBzIAI",
+            "seen": 864.6789193462935,
+            "total": 6533
+        },
+        "pin": "yellow"
+    }, {
+        "id": "bookmark-f1324a4b-af59-4d74-a684-e4c28cb42b3c",
+        "description": "<p>Approach</p><p>&nbsp;</p><p>+ DFS use Data-structure like Stack</p><p>+ Stack follows LIFO so the methods to retrieve/ insert are either. - (pop() / push()) or (shift() / unshift())</p><p>+ Main flow for DFS first checks if the stack is empty</p><p>+ If not, then immediately remove from the stack (.pop() / .shift())</p><p>+ NOTE: always check if children exist before moving them to the Stack.<br><br>Space Time Complexity:<br>Time: O(n) ~ we're going to visit every node, but we're also getting them removed</p><p>Space: O(n) ~ Appending the call stack</p>",
+        "start": 956,
+        "position": 5,
+        "video": {
+            "id": "video-f27095b7-6544-41b6-a476-828f0638d950",
+            "url": "https://www.youtube.com/watch?v=fAAZixBzIAI",
+            "seen": 955.8550239510921,
+            "total": 6533
+        }
+    }, {
+        "id": "bookmark-ae025adb-0bf1-487a-a05f-4a2fbf281ae3",
+        "description": "<p><strong>Implement Depth first values using iteration then recursion</strong></p><p>&nbsp;</p><p><strong>Using Iterative - stack</strong></p><p>&nbsp;</p><pre><code class=\"language-javascript\">const depthFirstValue = (root) =&gt; {\n   // handle empty null object which is also a valid tree\n   if (root === null) return [];\n   const stack = [root];\n   const result = [];\n   while (stack.length &gt; 0) {\n     const current = stack.pop();\n     result.push(current.val);\n     // we push right first, so when it pops, it shows the output left -&gt; right\n     if (current.right) stack.push(current.right);     \n     if (current.left) stack.push(current.left);\n   }\n   return result;\n};</code></pre><p>&nbsp;</p><p><strong>Using Recursion</strong></p><p>&nbsp;</p><pre><code class=\"language-javascript\">const depthFirstValues = (root) =&gt; {\n  // base case #1\n  if (root === null) return [];\n  const leftValues = depthFirstValues(root.left); // [b,d,e]\n  const rightValues = depthFirstValues(root.right); // [c,f]\n  return [root.val, ...leftValues, ...rightValues];\n};</code></pre><p>&nbsp;</p><p><strong>Space Time Complexity:</strong><br>&nbsp;</p><p>+ Time: O(n) ~ we're going to visit every node, but we're also getting them removed</p><p>+ Space: O(n) ~ Appending the call stack</p>",
+        "start": 1267,
+        "position": 6,
+        "video": {
+            "id": "video-23d130fa-d4ab-4b8c-b0a9-bb66d7351ed2",
+            "url": "https://www.youtube.com/watch?v=fAAZixBzIAI",
+            "seen": 1267.3054666025914,
+            "total": 6533
+        },
+        "pin": "cyan"
+    }, {
+        "id": "bookmark-fc1b7609-8eb8-44be-a46d-694bc4b66297",
+        "description": "<p>📜 Challenge #2 - Breadth first values problem</p><p>&nbsp;</p><p>Write a function, <i>breadthFirstValues</i>, that takes in the root of a binary tree.&nbsp;</p><p>+ The function should return an array containing all values of the tree in breadth-first order.</p><p>+ Analyze the space time complexity of this problem</p><p>&nbsp;</p><p><strong>Test Case #1</strong></p><pre><code class=\"language-javascript\">const a = new Node('a');\nconst b = new Node('b');\nconst c = new Node('c');\nconst d = new Node('d');\nconst e = new Node('e');\nconst f = new Node('f');\n\na.left = b;\na.right = c;\nb.left = d;\nb.right = e;\nc.right = f;\n\n//      a\n//    /   \\\n//   b     c\n//  / \\     \\\n// d   e     f\n\nbreadthFirstValues(a); \n//    -&gt; ['a', 'b', 'c', 'd', 'e', 'f']\ntest_01:\n\nconst a = new Node('a');\nconst b = new Node('b');\nconst c = new Node('c');\nconst d = new Node('d');\nconst e = new Node('e');\nconst f = new Node('f');\nconst g = new Node('g');\nconst h = new Node('h');\n\na.left = b;\na.right = c;\nb.left = d;\nb.right = e;\nc.right = f;\ne.left = g;\nf.right = h;\n\n//      a\n//    /   \\\n//   b     c\n//  / \\     \\\n// d   e     f\n//    /       \\\n//   g         h\n\nbreadthFirstValues(a); \n//   -&gt; ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h']</code></pre><p>&nbsp;</p>",
+        "start": 2161,
+        "position": 7,
+        "video": {
+            "id": "video-1cb34e10-87e7-40ff-9cd7-86ee6a254a9d",
+            "url": "https://www.youtube.com/watch?v=fAAZixBzIAI",
+            "seen": 2161.09261868556,
+            "total": 6532.761
+        },
+        "pin": "yellow"
+    }, {
+        "id": "bookmark-63312ef8-bdb3-4d33-aeb3-05b14e2c209a",
+        "description": "<p>Visual Explanation of Breadth first traversal using Queue</p>",
+        "start": 2275,
+        "position": 8,
+        "video": {
+            "id": "video-2ea5beed-b4fe-40f8-b94d-a60c1a56ae08",
+            "url": "https://www.youtube.com/watch?v=fAAZixBzIAI",
+            "seen": 2275.1380678186883,
+            "total": 6532.761
+        }
+    }, {
+        "id": "bookmark-ce68d8a4-3c59-4314-902a-d043799ced3f",
+        "description": "<p>Implementing Breadth First Values using Javascript</p><p>&nbsp;</p><pre><code class=\"language-javascript\">// breadthFristValues using queue\nconst breadthFirstValues = (root) =&gt; {\n  // guard check for null valued tree\n  if (root === null) return [];\n  const queue = [root];\n  const result = [];\n  while (queue.length &gt; 0) {\n    const current = queue.shift();\n    result.push(current.val);\n    if (current.left) queue.push(current.left);\n    if (current.right) queue.push(current.right);\n  }\n  return result;\n};</code></pre><p><br><strong>NOTE:</strong> Remember breadfirsttraversal needs a Queue order. the queue ds will fight against the stack call of recursion, which means - in short, you can't solve any breadth first traversals using recursion</p><p><br><strong>Space Time Complexity:</strong><br>&nbsp;</p><p>+ Time: O(n) ~ we're going to visit every node, but we're also getting them removed</p><p>+ Space: O(n) ~ Appending the call stack</p>",
+        "start": 2539,
+        "position": 9,
+        "video": {
+            "id": "video-ce292b49-2ea3-4f5b-9027-063ec2b4f970",
+            "url": "https://www.youtube.com/watch?v=fAAZixBzIAI",
+            "seen": 2538.749207671483,
+            "total": 6532.761
+        },
+        "pin": "cyan"
+    }, {
+        "id": "bookmark-047d9f5e-12ed-493d-82be-451bbdf8230e",
+        "description": "<p>📜 Challenge #3 - Tree includes problem</p><p>&nbsp;</p><p>Write a function, <i>treeIncludes</i>, that takes in the root of a binary tree and a target value.&nbsp;<br>+ The function should return a boolean indicating whether or not the value is contained in the tree.<br>&nbsp;</p>",
+        "start": 2872,
+        "position": 10,
+        "video": {
+            "id": "video-1c83812c-d022-4c57-b7b6-ec798539cd47",
+            "url": "https://www.youtube.com/watch?v=fAAZixBzIAI",
+            "seen": 2872.190523034002,
+            "total": 6532.761
+        },
+        "pin": "yellow"
+    }, {
+        "id": "bookmark-07c4d081-4ed8-4a7b-83d1-b83fddaa2a76",
+        "description": "<p>Deciding which traversal algorithms to solve this problem</p><p>&nbsp;</p><p><strong>Option #1&nbsp;</strong> - &gt; Solving this using BFS (Queue)</p><p>&nbsp;</p><p><strong>Space time Complexity:</strong></p><p>Time: O(N) ~ Linear Complexity time</p><p>Space: O(N) ~ Linear space</p>",
+        "start": 2933,
+        "position": 11,
+        "video": {
+            "id": "video-92fdf3bf-0209-44f1-944a-750aa3eb591b",
+            "url": "https://www.youtube.com/watch?v=fAAZixBzIAI",
+            "seen": 2932.5103277738835,
+            "total": 6532.761
+        }
+    }, {
+        "id": "bookmark-ac6ba44a-71c6-4686-bf4b-821c20123e78",
+        "description": "<p><strong>Option #3</strong> - Depth First Traversal (recursion)</p><p>&nbsp;</p>",
+        "start": 3136,
+        "position": 12,
+        "video": {
+            "id": "video-37a4d97e-cfe3-4f48-83cb-ac3269f814d1",
+            "url": "https://www.youtube.com/watch?v=fAAZixBzIAI",
+            "seen": 3135.8746711390663,
+            "total": 6532.761
+        }
+    }, {
+        "id": "bookmark-44ebc9ed-437e-4c91-8880-7a42e7cf95be",
+        "description": "<p><strong>Implementation of Tree includes (BFS approach)</strong></p><p>&nbsp;</p><p>+ Using Breadth First Search&nbsp;<br>+ We use a Queue - Datastructure</p><p>+ We traverse through the tree iteratively</p><p>&nbsp;</p><pre><code class=\"language-javascript\">// BFS - queue (iterative)\nconst treeIncludes = (root, target) =&gt; {\n  // edge cases / base case\n  if (root === null) return false;\n  const queue = [root];\n  while (queue.length &gt; 0) {\n    const current = queue.shift();\n    if (current.val === target) return true;\n    if (current.left) queue.push(current.left);\n    if (current.right) queue.push(current.right);\n  }\n  return false;\n};</code></pre><p>&nbsp;</p><p><strong>Space Time Complexity:</strong></p><p>&nbsp;</p><p>+ Time: O(n) ~ we're going to visit every node, but we're also getting them removed (queue.shift and push)</p><p>+ Space: O(n) ~ using Queue data structure</p>",
+        "start": 3426,
+        "position": 13,
+        "video": {
+            "id": "video-d0e74efe-1e22-4367-959b-2494ebef9eee",
+            "url": "https://www.youtube.com/watch?v=fAAZixBzIAI",
+            "seen": 3425.7675996483827,
+            "total": 6532.761
+        },
+        "pin": "cyan"
+    }, {
+        "id": "bookmark-573a950c-f45a-4344-b00f-577a1eb72137",
+        "description": "<p>&nbsp;</p><p>Implementation of Tree Includes (using Recursion)</p><p>&nbsp;</p><p>+ Uses DFS using Stack Data-structure</p><p>+ Stack Data-structure is built internally into Recursive function call</p><p>&nbsp;</p><pre><code class=\"language-javascript\">// recursive - using stack (DFS builtin)\nconst treeIncludes = (root, target) =&gt; {\n   // base case #1\n  if (root === null) return false;\n  // base case #2\n  if (root.val === target) return true;\n  return treeIncludes(root.left, target) || treeIncludes(root.right, target);\n};</code></pre><p>&nbsp;</p><p><strong>Space Time Complexity:</strong></p><p>&nbsp;</p><p>+ Time: O(n) ~ we're going to visit every node, but we're also getting them removed</p><p>+ Space: O(n) ~ Appending the call stack</p><p>&nbsp;</p>",
+        "start": 3750,
+        "position": 14,
+        "video": {
+            "id": "video-6a61d922-2ab1-4b70-913a-d5f00952143e",
+            "url": "https://www.youtube.com/watch?v=fAAZixBzIAI",
+            "seen": 3749.6915875043933,
+            "total": 6532.761
+        },
+        "pin": "cyan"
+    }, {
+        "id": "bookmark-361a6ca3-0470-4d1c-a8f0-9889cbe8145d",
+        "description": "<p><strong>📜Challenge #4: Tree Sum - using Binary Tree</strong></p><p>&nbsp;</p><p>Write a function, <i>treeSum</i>, that takes in the root of a binary tree that contains number values.&nbsp;</p><p>+ The function should return the total sum of all values in the tree.</p>",
+        "start": 3936,
+        "position": 15,
+        "video": {
+            "id": "video-c5fe27cf-57f4-464f-925f-6dc076b2d7b8",
+            "url": "https://www.youtube.com/watch?v=fAAZixBzIAI",
+            "seen": 3936.4807779705,
+            "total": 6532.761
+        },
+        "pin": "yellow"
+    }, {
+        "id": "bookmark-b72df6e7-aa00-4d83-8fd7-1d1ef1f80915",
+        "description": "<p><strong>Implementation of Tree Sum (using Breadth First Traversal)</strong></p><p>&nbsp;</p><p>+ Uses Queue datastructure</p><p>+ Iterative approach</p><p>&nbsp;</p><pre><code class=\"language-javascript\">// using bfs - queue (iterative)\nconst treeSum = (root) =&gt; {\n    const queue = [root];\n    let sum = 0;\n    while (queue.length &gt; 0) {\n      const current = queue.shift();\n      if (current &amp;&amp; current.val) sum+= current.val;\n      if (current &amp;&amp; current.left) queue.push(current.left);\n      if (current &amp;&amp; current.right) queue.push(current.right);\n    }\n  return sum;\n};</code></pre><p>&nbsp;</p><p><strong>Space Time Complexity:</strong></p><p>&nbsp;</p><p>+ Time: O(n) ~ we're going to visit every node, but we're also getting them removed</p><p>+ Space: O(n) ~ Using the queue data-structure</p>",
+        "start": 4208,
+        "position": 16,
+        "video": {
+            "id": "video-4bbe45d4-fc9e-4197-84ce-9402e78a546c",
+            "url": "https://www.youtube.com/watch?v=fAAZixBzIAI",
+            "seen": 4207.594823125023,
+            "total": 6532.761
+        },
+        "pin": "cyan"
+    }, {
+        "id": "bookmark-a83805bb-14ee-463f-bbd7-7e94319fca36",
+        "description": "<p><strong>Implementation of Tree Sum (using Recursion)</strong></p><p>&nbsp;</p><p>+ Stack Data-structure (used internally as part of the call stack - recursion)</p><p>+ Recursion</p><p>&nbsp;</p><pre><code class=\"language-javascript\">// using recursion\nconst treeSum = (root) =&gt; {\n  // base case #1\n  if (root === null) return 0;\n  // recursive case\n  return root.val + treeSum(root.left) + treeSum(root.right);\n};</code></pre><p>&nbsp;</p><p><strong>Space Time Complexity:</strong></p><p>&nbsp;</p><p>+ Time: O(n) ~ we're going to visit every node, but we're also getting them removed</p><p>+ Space: O(n) ~ Appending the call stack</p>",
+        "start": 4329,
+        "position": 17,
+        "video": {
+            "id": "video-ca576067-2d1e-481c-aeab-eb59174c9e40",
+            "url": "https://www.youtube.com/watch?v=fAAZixBzIAI",
+            "seen": 4329.420594656411,
+            "total": 6532.761
+        },
+        "pin": "cyan"
+    }, {
+        "id": "bookmark-a5cdc249-1620-4651-abe7-605b9919ec50",
+        "description": "<p><strong>📜 Challenge #5: Tree Minimum Value Problem</strong></p><p>&nbsp;</p><p>Write a function, <i>treeMinValue</i>, that takes in the root of a binary tree that contains number values.&nbsp;</p><p>&nbsp;</p><p>+The function should return the minimum value within the tree.</p><p>+ You may assume that the input tree is non-empty.</p>",
+        "start": 4796,
+        "position": 18,
+        "video": {
+            "id": "video-8bf0ae69-32a2-4b02-ab46-4a0a9fe51eae",
+            "url": "https://www.youtube.com/watch?v=fAAZixBzIAI",
+            "seen": 4796.184194204764,
+            "total": 6532.761
+        },
+        "pin": "yellow"
+    }, {
+        "id": "bookmark-b4cac47c-76a2-40f5-bd31-ccb4d47991a3",
+        "description": "<p><strong>Implement TreeMin using Breadth First Traversal (Iterative)</strong></p><p>&nbsp;</p><p>+ We'll use a Queue Data-structure</p><p>+ The approach is Iterative</p><p>&nbsp;</p><pre><code class=\"language-javascript\">// using Breadth first Traversal (queue - iterative)\nconst treeMinValue = (root) =&gt; {\n  let minValue = Infinity;\n  const queue = [root];\n  while (queue.length &gt; 0) {\n    const current = queue.shift();\n    minValue = Math.min(current.val, minValue);\n    if (current.left) queue.push(current.left);\n    if (current.right) queue.push(current.right);\n  }\n  return minValue;\n};</code></pre><p>&nbsp;</p><p>&nbsp;</p><p><strong>Space Time Complexity:</strong></p><p>&nbsp;</p><p>+ <strong>NOTE</strong>: Technically the queue implemented in Javascript is in the form of array and <strong>array.shift() </strong>takes O(N) time itself. So the above solution is actually <strong>O(n^2)</strong></p><p>+ Time: O(n) ~ we're going to visit every node, but we're also getting them removed</p><p>+ Space: O(n) ~ Using the queue data-structure</p>",
+        "start": 5142,
+        "position": 19,
+        "video": {
+            "id": "video-5b0734f9-469c-4f41-9f52-4d0c2d090c6e",
+            "url": "https://www.youtube.com/watch?v=fAAZixBzIAI",
+            "seen": 5142.420484419741,
+            "total": 6532.761
+        },
+        "pin": "cyan"
+    }, {
+        "id": "bookmark-aeca03d7-b526-4bbb-84a7-d68fa862be59",
+        "description": "<p><strong>Implement TreeMin using Recursion</strong></p><p>&nbsp;</p><pre><code class=\"language-javascript\">// using recursion\nconst treeMinValue = (root) =&gt; {\n  if (root === null) return Infinity;  \n  return Math.min(\n    Math.min(root.val, treeMinValue(root.left)),\n    Math.min(root.val, treeMinValue(root.right))\n  );\n};</code></pre><p>&nbsp;</p><p><strong>Space Time Complexity:</strong></p><p>&nbsp;</p><p>+ Time: O(n) ~ we're going to visit every node, but we're also getting them removed</p><p>+ Space: O(n) ~ Appending the call stack</p>",
+        "start": 5451,
+        "position": 20,
+        "video": {
+            "id": "video-4636eb04-6bee-41ef-96b3-eaf340e06aa4",
+            "url": "https://www.youtube.com/watch?v=fAAZixBzIAI",
+            "seen": 5450.913228700365,
+            "total": 6532.761
+        },
+        "pin": "cyan"
+    }, {
+        "id": "bookmark-9ca3ce41-31ac-4c86-96be-009f877b5db5",
+        "description": "<p>📜<strong>Challenge #6: &nbsp;Max Path Sum</strong></p><p>&nbsp;</p><p>Write a function, <i>maxPathSum</i>, that takes in the root of a binary tree that contains number values.&nbsp;</p><p>&nbsp;</p><p>+ The function should return the maximum sum of any root to leaf path within the tree.</p><p>+ You may assume that the input tree is non-empty.</p>",
+        "start": 5663,
+        "position": 21,
+        "video": {
+            "id": "video-89b5f83f-e280-45ce-a951-bb565f2e1399",
+            "url": "https://www.youtube.com/watch?v=fAAZixBzIAI",
+            "seen": 5662.855556005014,
+            "total": 6532.761
+        },
+        "pin": "yellow"
+    }, {
+        "id": "bookmark-84078f86-3ef6-4456-a35a-73068dae9612",
+        "description": "<p>For Pathfinding, building Paths and summing up paths, your best bet is Recursion</p>",
+        "start": 5813,
+        "position": 22,
+        "video": {
+            "id": "video-8ae6f5a2-c61b-43db-aebe-9e1766726ac5",
+            "url": "https://www.youtube.com/watch?v=fAAZixBzIAI",
+            "seen": 5812.827038148896,
+            "total": 6532.761
+        }
+    }, {
+        "id": "bookmark-0643dfd2-beaa-49df-9abf-38f71dc6d8e6",
+        "description": "<p><strong>Implement Max root to left Path problem (a.k.a PathSum)</strong></p><p>&nbsp;</p><pre><code class=\"language-javascript\">const maxPathSum = (root) =&gt; {\n  // base case #2\n  if (root === null) return -Infinity;\n  // base case #1\n  if (root.left === null &amp;&amp; root.right === null) return root.val;\n  // recursive case  \n  const maxChildPathSum = Math.max(\n      maxPathSum(root.left), \n      maxPathSum(root.right)\n  );\n  return root.val + maxChildPathSum;\n};</code></pre><p>&nbsp;</p><p><strong>Space Time Complexity:</strong></p><p>&nbsp;</p><p>+ Time: O(n) ~ we're going to visit every node</p><p>+ Space: O(n) ~ due to recursive nature</p><p>&nbsp;</p>",
+        "start": 6191,
+        "position": 23,
+        "video": {
+            "id": "video-88cdcb5c-3572-4ed5-af6a-63b9acbad28e",
+            "url": "https://www.youtube.com/watch?v=fAAZixBzIAI",
+            "seen": 6191.105465521667,
+            "total": 6532.761
+        },
+        "pin": "cyan"
+    }]
+}

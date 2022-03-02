@@ -1,5 +1,24 @@
 # My Yougotnote notes export
 
+## Important Links
+- [Just Javascript](https://justjavascript.com/learn/01-mental-models)
+- [Amazon Interview Questions](https://algomonster.medium.com/amazon-oa-2022-hackerrank-5d90e1fb46d4)
+- [Javascript tricks & trips](https://medium.com/geekculture/10-clever-javascript-tricks-that-every-developer-should-know-e0be92bcfe9)
+- [DS and Algos in Javascript - Freecodecamp](https://www.youtube.com/watch?v=t2CEgPsws3U)
+- [Javascript - Array Tips & Tricks](https://www.youtube.com/watch?v=R8rmfD9Y5-c)
+- [Popular Leetcode questions solved using Javascript](https://www.youtube.com/watch?v=IufUNRCQ37E&list=PLY5pAT_51eGyo4ixvdZgzY57N0_R1QMtb)
+- [Github - Leetcode solutions in Javascript](https://github.com/lessfish/leetcode/tree/master/Algorithms)
+
+
+## Javascript Coding Channels
+
+- Coderbyte
+- ThinkFWD
+- Pheezx Coding
+- Freecodecamp - Alvin Series
+- Coding Decoded (Java but convertible)
+- KA Education
+
 This repository has been reserved to store all notes from Yougotnote website
 
 # Amazon Leadership principles (2021/2022)
