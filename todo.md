@@ -1,12 +1,13 @@
 # Amazon Prep Plan
-(E) Common Coding Interview Questions - Alvin +01.Freecodecamp @yougotnote {due:2022-03-01}
-(F) Linked List Youtube - Alvin +01.Freecodecamp @yougotnote {due:2022-03-02}
+(F) Linked List Youtube - Alvin +01.Freecodecamp @yougotnote {due:2022-03-03}
+(E) Common Coding Interview Questions - Alvin +01.Freecodecamp @yougotnote {due:2022-03-03}
 (G) Recursions - Alvin + Simple Engineer +01.Freecodecamp @yougotnote {due:2022-03-01}
 
 (H) Amazon Principles - Rebecca Link +03.Interview {due:2022-03-01}
 (I) Amazon Front-End Developer Coding Challenge +04.OnlineReading {due:2022-03-01}
 (J) JUST Javascript +04.OnlineReading {due:2022-03-01}
                         # https://justjavascript.com/learn/01-mental-models
+
 (K) Leetcode Amazon Coding Challenges - Frequency sorting +05.Leetcode @techquest {due:2022-03-02}
 
 
