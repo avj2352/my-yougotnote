@@ -2,7 +2,8 @@
     "id": "playlist-9e7bb8ef-f77d-4b15-8caf-13ec5085101c",
     "title": "Find Union Playlist (Easy - Hard)",
     "createdBy": "",
-    "bookmarks": [{
+    "bookmarks": [
+        {
         "id": "bookmark-335b47f5-877c-4c57-a1e0-e04241855fba",
         "description": "<p>Problem Statement &amp; Explanation</p>",
         "start": 7,
@@ -101,5 +102,6 @@
             "seen": 1.345799580028928,
             "total": 803.081
         }
-    }]
+    }
+]
 }

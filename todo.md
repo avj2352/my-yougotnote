@@ -1,14 +1,4 @@
 # Amazon Prep Plan
-# (A) Linked List Youtube - Alvin +04.Structy.net @tech-quest {due:2022-03-08} {cm:2022-03-05}
-# (B) linked list welcome - Alvin +04.Structy.net @tech-quest {due:2022-03-08} {cm:2022-03-05}
-# (C) linked list intro - Alvin +04.Structy.net @tech-quest {due:2022-03-08} {cm:2022-03-05}
-# (D) linked list warm up - Alvin +04.Structy.net @tech-quest {due:2022-03-08} {cm:2022-03-05}
-# (E) linked list values - Alvin +04.Structy.net @tech-quest {due:2022-03-08} {cm:2022-03-05}
-# (F) sum list - Alvin +04.Structy.net @tech-quest {due:2022-03-08} {cm:2022-03-05}
-# (G) linked list find - Alvin +04.Structy.net @tech-quest {due:2022-03-08} {cm:2022-03-05}
-(H) get node value - Alvin +04.Structy.net @tech-quest {due:2022-03-08} {cm:2022-03-05}
-(I) reverse list - Alvin +04.Structy.net @tech-quest {due:2022-03-08} {cm:2022-03-05}
-(J) zipper lists - Alvin +04.Structy.net @tech-quest {due:2022-03-08}
 (K) merge lists - Alvin +04.Structy.net @tech-quest {due:2022-03-08}
 (L) is univalue list - Alvin +04.Structy.net @tech-quest {due:2022-03-08}
 (M) longest streak - Alvin +04.Structy.net @tech-quest {due:2022-03-08}
@@ -18,8 +8,24 @@
 (Q) add lists - Alvin +04.Structy.net @tech-quest {due:2022-03-08}
 (R) linked list quiz - Alvin +04.Structy.net @tech-quest {due:2022-03-08}
 (S) linked list wrap up - Alvin +04.Structy.net @tech-quest {due:2022-03-08}
+
 # Google Prep - Leetcode
-(T) Google Prep Leetcode(https://leetcode.com/explore/featured/card/google/_ +05.Leetcode @tech-quest
+(T) Google Prep Leetcode (https://leetcode.com/explore/featured/card/google/_) +05.Leetcode @tech-quest
+
+
+# Structy.net completed
+# (A) Linked List Youtube - Alvin +04.Structy.net @tech-quest {due:2022-03-08} {cm:2022-03-05}
+# (B) linked list welcome - Alvin +04.Structy.net @tech-quest {due:2022-03-08} {cm:2022-03-05}
+# (C) linked list intro - Alvin +04.Structy.net @tech-quest {due:2022-03-08} {cm:2022-03-05}
+# (D) linked list warm up - Alvin +04.Structy.net @tech-quest {due:2022-03-08} {cm:2022-03-05}
+# (E) linked list values - Alvin +04.Structy.net @tech-quest {due:2022-03-08} {cm:2022-03-05}
+# (F) sum list - Alvin +04.Structy.net @tech-quest {due:2022-03-08} {cm:2022-03-05}
+# (G) linked list find - Alvin +04.Structy.net @tech-quest {due:2022-03-08} {cm:2022-03-05}
+# (H) get node value - Alvin +04.Structy.net @tech-quest {due:2022-03-08} {cm:2022-03-05}
+# (I) reverse list - Alvin +04.Structy.net @tech-quest {due:2022-03-08} {cm:2022-03-05}
+# (J) zipper lists - Alvin +04.Structy.net @tech-quest {due:2022-03-08} {cm:2022-03-06}
+
+
 
 # My yougotnote playlists
 
@@ -47,10 +53,10 @@
 # (D) Binary Tree Algos - 100% - Alvin +01.Freecodecamp @yougotnote {due:2022-03-01} {cm:2022-03-02}
 # Amazon Interview Rounds
 
-(A) Keep Rebecca Updated on Linkedin +02.Emails @amazon {due:2022-02-27} {cm:2022-02-28}
-(A) Keep Kavya updated on Google +02.Emails @google {due:2022-03-01} {cm:2022-03-01}
-(B) Amazon Front-End Developer Coding Challenge - Hacker-rank +03.Interview @amazon {due:2022-03-02} {cm:2022-03-05}
-(C) Update Rebecca After completing Amazon Assessment Round +02.Emails @amazon {due:2022-03-02}  {cm:2022-03-05}
+# (A) Keep Rebecca Updated on Linkedin +02.Emails @amazon {due:2022-02-27} {cm:2022-02-28}
+# (A) Keep Kavya updated on Google +02.Emails @google {due:2022-03-01} {cm:2022-03-01}
+# (B) Amazon Front-End Developer Coding Challenge - Hacker-rank +03.Interview @amazon {due:2022-03-02} {cm:2022-03-05}
+# (C) Update Rebecca After completing Amazon Assessment Round +02.Emails @amazon {due:2022-03-02}  {cm:2022-03-05}
 
 
 # Later

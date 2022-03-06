@@ -3,4 +3,4 @@
 - [All types of sorting in Javascript](https://app.yougotnote.com/#/playlist/621b87696f66cf0016e22ad3)
 - [Graph Interview Questions - Alvin (Freecodecamp)](https://app.yougotnote.com/#/playlist/621db62425aef300163ae770)
 - [Binary Tree Questions - Alvin](https://app.yougotnote.com/#/playlist/62200c1bf86d1700164c2448)
-- [Leetcode - March 2022 Playlist](https://app.yougotnote.com/#/playlist/6222dfacdd85bd001685c746)
+- [Leetcode - March 2022 Playlist](https://app.yougotnote.com/#/playlist/6224ae53e54f490016be0a73)
