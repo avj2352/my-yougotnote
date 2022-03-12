@@ -1,16 +1,27 @@
 # Amazon Prep Plan
-(K) merge lists - Alvin +04.Structy.net @tech-quest {due:2022-03-08}
-(L) is univalue list - Alvin +04.Structy.net @tech-quest {due:2022-03-08}
-(M) longest streak - Alvin +04.Structy.net @tech-quest {due:2022-03-08}
-(N) remove node - Alvin +04.Structy.net @tech-quest {due:2022-03-08}
-(O) insert node - Alvin +04.Structy.net @tech-quest {due:2022-03-08}
-(P) create linked list - Alvin +04.Structy.net @tech-quest {due:2022-03-08}
-(Q) add lists - Alvin +04.Structy.net @tech-quest {due:2022-03-08}
-(R) linked list quiz - Alvin +04.Structy.net @tech-quest {due:2022-03-08}
-(S) linked list wrap up - Alvin +04.Structy.net @tech-quest {due:2022-03-08}
+
+(A) binary tree welcome +04.Structy.net @tech-quest {due:2022-03-09} {cm:2022-03-08}
+(B) binary tree intro +04.Structy.net @tech-quest {due:2022-03-09} {cm:2022-03-08}
+(C) binary tree warm up +04.Structy.net @tech-quest {due:2022-03-09} {cm:2022-03-08}
+(D) depth first values +04.Structy.net @tech-quest {due:2022-03-09} {cm:2022-03-08}
+(E) breadth first values +04.Structy.net @tech-quest {due:2022-03-09} {cm:2022-03-08}
+(F) tree sum +04.Structy.net @tech-quest {due:2022-03-09} {cm:2022-03-08}
+(G) tree includes +04.Structy.net @tech-quest {due:2022-03-09} {cm:2022-03-08}
+(H) tree min value +04.Structy.net @tech-quest {due:2022-03-09} {cm:2022-03-08}
+(I) max root to leaf path sum +04.Structy.net @tech-quest {due:2022-03-09} {cm:2022-03-08}
+(J) tree path finder +04.Structy.net @tech-quest {due:2022-03-09}
+(K) tree value count +04.Structy.net @tech-quest {due:2022-03-09}
+(L) how high +04.Structy.net @tech-quest {due:2022-03-09}
+(M) bottom right value +04.Structy.net @tech-quest {due:2022-03-09}
+(N) all tree paths +04.Structy.net @tech-quest {due:2022-03-09}
+(O) tree levels +04.Structy.net @tech-quest {due:2022-03-09}
+(P) level averages +04.Structy.net @tech-quest {due:2022-03-09}
+(Q) leaf list +04.Structy.net @tech-quest {due:2022-03-09}
+(R) binary tree quiz +04.Structy.net @tech-quest {due:2022-03-09}
+(S) binary tree wrap up +04.Structy.net @tech-quest {due:2022-03-09}
 
 # Google Prep - Leetcode
-(T) Google Prep Leetcode (https://leetcode.com/explore/featured/card/google/_) +05.Leetcode @tech-quest
+# (T) Google Prep Leetcode (https://leetcode.com/explore/featured/card/google/_) +05.Leetcode @tech-quest
 
 
 # Structy.net completed
@@ -24,6 +35,15 @@
 # (H) get node value - Alvin +04.Structy.net @tech-quest {due:2022-03-08} {cm:2022-03-05}
 # (I) reverse list - Alvin +04.Structy.net @tech-quest {due:2022-03-08} {cm:2022-03-05}
 # (J) zipper lists - Alvin +04.Structy.net @tech-quest {due:2022-03-08} {cm:2022-03-06}
+# (K) merge lists - Alvin +04.Structy.net @tech-quest {due:2022-03-08} {cm:2022-03-06}
+# (L) is univalue list - Alvin +04.Structy.net @tech-quest {due:2022-03-08} {cm:2022-03-06}
+# (M) longest streak - Alvin +04.Structy.net @tech-quest {due:2022-03-08} {cm:2022-03-07}
+# (N) remove node - Alvin +04.Structy.net @tech-quest {due:2022-03-08} {cm:2022-03-07}
+# (O) insert node - Alvin +04.Structy.net @tech-quest {due:2022-03-08} {cm:2022-03-07}
+# (P) create linked list - Alvin +04.Structy.net @tech-quest {due:2022-03-08} {cm:2022-03-08}
+# (Q) add lists - Alvin +04.Structy.net @tech-quest {due:2022-03-08} {cm:2022-03-08}
+# (R) linked list quiz - Alvin +04.Structy.net @tech-quest {due:2022-03-08} {cm:2022-03-08}
+# (S) linked list wrap up - Alvin +04.Structy.net @tech-quest {due:2022-03-08} {cm:2022-03-08}
 
 
 
