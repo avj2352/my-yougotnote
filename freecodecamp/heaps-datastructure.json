@@ -1,43 +1,52 @@
 {
-  "id": "playlist-afd471e7-de09-4255-a83b-5347c767925f",
-  "title": "Heaps - Javascript (Playlist)",
-  "createdBy": "",
-  "bookmarks": [
-    {
-      "id": "bookmark-daed3334-5df0-4906-9d0f-9192effc98a5",
-      "description": "<p>Partially ordered Binary Tree which satisfies the \"Heap property\"</p><p>+ Some similarities to Binary tree</p><p>+ Max Heap -&gt; All Parent nodes are greater to or equal to child nodes</p><p>+ Min Heap -&gt; All Parent nodes are smaller to or equal to child nodes</p>",
-      "start": 3,
-      "position": 1,
-      "video": {
-        "id": "video-f37ae483-9b9a-4f6d-ad5c-63cf667039f1",
-        "url": "https://www.youtube.com/watch?v=dM_JHpfFITs",
-        "seen": 2.9954123745121475,
-        "total": 881.621
-      }
-    },
-    {
-      "id": "bookmark-8d22e727-2cd2-42b1-befa-bb834c1770df",
-      "description": "<p>Heaps, in Javascript - are more often implemented as Arrays</p><p><br>+ element at index 0 -&gt; -Infinity / null&nbsp;</p><p>+ Heap size -&gt; Length of the array</p><p>+ Left child -&gt; i*2</p><p>+ Right child -&gt; i*2+1</p><p>+ Parent node -&gt; Math.floor(i/2)</p>",
-      "start": 88,
-      "position": 2,
-      "vieo": {
-        "id": "video-2a720f83-6db0-4979-9ed0-11b49e350691",
-        "url": "https://www.youtube.com/watch?v=dM_JHpfFITs",
-        "seen": 88.21486307519987,
-        "total": 881.621
-      }
-    },
-    {
-      "id": "bookmark-69c47ec9-d78e-4f02-81ef-db3002f783ce",
-      "description": "<p>Representation of Min Heap (in Javascript)<br>&nbsp;</p><pre><code class=\"language-javascript\">/* Heaps */\n\n// left child: i * 2\n// right child: i * 2 + 1\n// parent: i / 2\n\nlet MinHeap = function() {\n\t\n\t// initialise the heap -&gt; -Infinity / null\n\tlet heap = [null];\n\t\n\t// a.k.a heapify\n\tthis.insert = function(num) {\n\t\theap.push(num);\n\t\t\n\t\t//If There is more than 1 item in the heap\n\t\tif (heap.length &gt; 2) {\n\t\t    // find the last index\n\t\t\tlet idx = heap.length - 1;\n\t\t\t\n\t\t\t// check if the element in last index is &lt; it's parent\n\t\t\twhile (heap[idx] &lt; heap[Math.floor(idx/2)]) {\n\t\t\t\tif (idx &gt;= 1) {\n\t\t\t\t\n\t\t\t\t    // swap the positions parent and last index\n\t\t\t\t\t[heap[Math.floor(idx/2)], heap[idx]] = [heap[idx], heap[Math.floor(idx/2)]];\n\t\t\t\t\t\n\t\t\t\t\t// if the parent node is NOT the root node\n\t\t\t\t\tif (Math.floor(idx/2) &gt; 1) {\n\t\t\t\t\t\tidx = Math.floor(idx/2);\n\t\t\t\t\t} else {\n\t\t\t\t\t\tbreak;\n\t\t\t\t\t};\n\t\t\t\t};\n\t\t\t};\n\t\t};\n\t};\n\t\n\tthis.remove = function() {\n\t\tlet smallest = heap[1];\n\t\tif (heap.length &gt; 2) {\n\t\t\theap[1] = heap[heap.length - 1];\n\t\t\theap.splice(heap.length - 1);\n\t\t\tif (heap.length == 3) {\n\t\t\t\tif (heap[1] &gt; heap[2]) {\n\t\t\t\t\t[heap[1], heap[2]] = [heap[2], heap[1]];\n\t\t\t\t};\n\t\t\t\treturn smallest;\n\t\t\t};\n\t\t\tlet i = 1;\n\t\t\tlet left = 2 * i;\n\t\t\tlet right = 2 * i + 1;\n\t\t\twhile (heap[i] &gt;= heap[left] || heap[i] &gt;= heap[right]) {\n\t\t\t\tif (heap[left] &lt; heap[right]) {\n\t\t\t\t\t[heap[i], heap[left]] = [heap[left], heap[i]];\n\t\t\t\t\ti = 2 * i\n\t\t\t\t} else {\n\t\t\t\t\t[heap[i], heap[right]] = [heap[right], heap[i]];\n\t\t\t\t\ti = 2 * i + 1;\n\t\t\t\t};\n\t\t\t\tleft = 2 * i;\n\t\t\t\tright = 2 * i + 1;\n\t\t\t\tif (heap[left] == undefined || heap[right] == undefined) {\n\t\t\t\t\tbreak;\n\t\t\t\t};\n\t\t\t};\n\t\t} else if (heap.length == 2) {\n\t\t\theap.splice(1, 1);\n\t\t} else {\n\t\t\treturn null;\n\t\t};\n\t\treturn smallest;\n\t};\n  \n\tthis.sort = function() {\n\t\tlet result = new Array();\n\t\twhile (heap.length &gt; 1) {\n\t\t\tresult.push(this.remove());\n\t\t};\n\t\treturn result;\n\t};\n\n};</code></pre>",
-      "start": 267,
-      "position": 3,
-      "video": {
-        "id": "video-3435f4cb-e7a3-465c-907f-61d16e6a0d70",
-        "url": "https://www.youtube.com/watch?v=dM_JHpfFITs",
-        "seen": 266.998685004971,
-        "total": 881.621
-      }
-    }
-  ]
+    "id": "playlist-afd471e7-de09-4255-a83b-5347c767925f",
+    "title": "Heaps - Javascript (Playlist)",
+    "createdBy": "",
+    "bookmarks": [{
+        "id": "bookmark-daed3334-5df0-4906-9d0f-9192effc98a5",
+        "description": "<p>📜 <strong>What is a Heap</strong><br><br>Partially ordered Binary Tree which satisfies the \"Heap property\"</p><p>+ Some similarities to Binary tree</p><p>+ Max Heap -&gt; All Parent nodes are greater to or equal to child nodes</p><p>+ Min Heap -&gt; All Parent nodes are smaller to or equal to child nodes</p>",
+        "start": 3,
+        "position": 1,
+        "video": {
+            "id": "video-f37ae483-9b9a-4f6d-ad5c-63cf667039f1",
+            "url": "https://www.youtube.com/watch?v=dM_JHpfFITs",
+            "seen": 2.9954123745121475,
+            "total": 881.621
+        }
+    }, {
+        "id": "bookmark-8d22e727-2cd2-42b1-befa-bb834c1770df",
+        "description": "<p>Heaps, in Javascript - are more often implemented as Arrays</p><p><br>+ element at index 0 -&gt; -Infinity / null&nbsp;</p><p>+ Heap size -&gt; Length of the array</p><p>+ Left child -&gt; i*2</p><p>+ Right child -&gt; i*2+1</p><p>+ Parent node -&gt; Math.floor(i/2)</p>",
+        "start": 88,
+        "position": 2,
+        "video": {
+            "id": "video-2a720f83-6db0-4979-9ed0-11b49e350691",
+            "url": "https://www.youtube.com/watch?v=dM_JHpfFITs",
+            "seen": 88.21486307519987,
+            "total": 881.621
+        }
+    }, {
+        "id": "bookmark-69c47ec9-d78e-4f02-81ef-db3002f783ce",
+        "description": "<p>Representation of Min Heap (in Javascript)<br>&nbsp;</p><pre><code class=\"language-javascript\">/* Heaps */\n\n// left child: i * 2\n// right child: i * 2 + 1\n// parent: i / 2\n\nlet MinHeap = function() {\n\t\n\t// initialise the heap -&gt; -Infinity / null\n\tlet heap = [null];\n\t\n\t// a.k.a heapify\n\tthis.insert = function(num) {\n\t\theap.push(num);\n\t\t\n\t\t//If There is more than 1 item in the heap\n\t\tif (heap.length &gt; 2) {\n\t\t    // find the last index\n\t\t\tlet idx = heap.length - 1;\n\t\t\t\n\t\t\t// check if the element in last index is &lt; it's parent\n\t\t\twhile (heap[idx] &lt; heap[Math.floor(idx/2)]) {\n\t\t\t\tif (idx &gt;= 1) {\n\t\t\t\t\n\t\t\t\t    // swap the positions parent and last index\n\t\t\t\t\t[heap[Math.floor(idx/2)], heap[idx]] = [heap[idx], heap[Math.floor(idx/2)]];\n\t\t\t\t\t\n\t\t\t\t\t// if the parent node is NOT the root node\n\t\t\t\t\tif (Math.floor(idx/2) &gt; 1) {\n\t\t\t\t\t\tidx = Math.floor(idx/2);\n\t\t\t\t\t} else {\n\t\t\t\t\t\tbreak;\n\t\t\t\t\t};\n\t\t\t\t};\n\t\t\t};\n\t\t};\n\t};\n\t\n\tthis.remove = function() {\n\t\tlet smallest = heap[1];\n\t\tif (heap.length &gt; 2) {\n\t\t\theap[1] = heap[heap.length - 1];\n\t\t\theap.splice(heap.length - 1);\n\t\t\tif (heap.length == 3) {\n\t\t\t\tif (heap[1] &gt; heap[2]) {\n\t\t\t\t\t[heap[1], heap[2]] = [heap[2], heap[1]];\n\t\t\t\t};\n\t\t\t\treturn smallest;\n\t\t\t};\n\t\t\tlet i = 1;\n\t\t\tlet left = 2 * i;\n\t\t\tlet right = 2 * i + 1;\n\t\t\twhile (heap[i] &gt;= heap[left] || heap[i] &gt;= heap[right]) {\n\t\t\t\tif (heap[left] &lt; heap[right]) {\n\t\t\t\t\t[heap[i], heap[left]] = [heap[left], heap[i]];\n\t\t\t\t\ti = 2 * i\n\t\t\t\t} else {\n\t\t\t\t\t[heap[i], heap[right]] = [heap[right], heap[i]];\n\t\t\t\t\ti = 2 * i + 1;\n\t\t\t\t};\n\t\t\t\tleft = 2 * i;\n\t\t\t\tright = 2 * i + 1;\n\t\t\t\tif (heap[left] == undefined || heap[right] == undefined) {\n\t\t\t\t\tbreak;\n\t\t\t\t};\n\t\t\t};\n\t\t} else if (heap.length == 2) {\n\t\t\theap.splice(1, 1);\n\t\t} else {\n\t\t\treturn null;\n\t\t};\n\t\treturn smallest;\n\t};\n  \n\tthis.sort = function() {\n\t\tlet result = new Array();\n\t\twhile (heap.length &gt; 1) {\n\t\t\tresult.push(this.remove());\n\t\t};\n\t\treturn result;\n\t};\n\n};</code></pre>",
+        "start": 267,
+        "position": 3,
+        "video": {
+            "id": "video-3435f4cb-e7a3-465c-907f-61d16e6a0d70",
+            "url": "https://www.youtube.com/watch?v=dM_JHpfFITs",
+            "seen": 266.998685004971,
+            "total": 881.621
+        },
+        "pin": "cyan"
+    }, {
+        "id": "bookmark-4a43ca7d-c782-4fe4-86f2-904d55cc1a9e",
+        "description": "<p><strong>Representation of Max Heap (in Javascript)</strong><br>&nbsp;</p><pre><code class=\"language-javascript\">/*\n* Max Heap datastructure\n*/\nlet MaxHeap = function() {\n\t\n\tlet heap = [null];\n\t\n\tthis.print = () =&gt; heap;\n\n\tthis.insert = function(num) {\n\t\theap.push(num);\n\t\tif (heap.length &gt; 2) {\n\t\t\tlet idx = heap.length - 1;\n\t\t\twhile (heap[idx] &gt; heap[Math.floor(idx/2)]) {\n\t\t\t\tif (idx &gt;= 1) {\n\t\t\t\t\t[heap[Math.floor(idx/2)], heap[idx]] = [heap[idx], heap[Math.floor(idx/2)]];\n\t\t\t\t\tif (Math.floor(idx/2) &gt; 1) {\n\t\t\t\t\t\tidx = Math.floor(idx/2);\n\t\t\t\t\t} else {\n\t\t\t\t\t\tbreak;\n\t\t\t\t\t};\n\t\t\t\t};\n\t\t\t};\n\t\t};\n\t};\n\t\n\tthis.remove = function() {\n\t\tlet smallest = heap[1];\n\t\tif (heap.length &gt; 2) {\n\t\t\theap[1] = heap[heap.length - 1];\n\t\t\theap.splice(heap.length - 1);\n\t\t\tif (heap.length == 3) {\n\t\t\t\tif (heap[1] &lt; heap[2]) {\n\t\t\t\t\t[heap[1], heap[2]] = [heap[2], heap[1]];\n\t\t\t\t};\n\t\t\t\treturn smallest;\n\t\t\t};\n\t\t\tlet i = 1;\n\t\t\tlet left = 2 * i;\n\t\t\tlet right = 2 * i + 1;\n\t\t\twhile (heap[i] &lt;= heap[left] || heap[i] &lt;= heap[right]) {\n\t\t\t\tif (heap[left] &gt; heap[right]) {\n\t\t\t\t\t[heap[i], heap[left]] = [heap[left], heap[i]];\n\t\t\t\t\ti = 2 * i\n\t\t\t\t} else {\n\t\t\t\t\t[heap[i], heap[right]] = [heap[right], heap[i]];\n\t\t\t\t\ti = 2 * i + 1;\n\t\t\t\t};\n\t\t\t\tleft = 2 * i;\n\t\t\t\tright = 2 * i + 1;\n\t\t\t\tif (heap[left] == undefined || heap[right] == undefined) {\n\t\t\t\t\tbreak;\n\t\t\t\t};\n\t\t\t};\n\t\t} else if (heap.length == 2) {\n\t\t\theap.splice(1, 1);\n\t\t} else {\n\t\t\treturn null;\n\t\t};\n\t\treturn smallest;\n\t};\n\n};</code></pre>",
+        "start": 429,
+        "position": 4,
+        "video": {
+            "id": "video-118174b9-853f-4011-9e83-7f58551b179b",
+            "url": "https://www.youtube.com/watch?v=dM_JHpfFITs",
+            "seen": 429.22319563250886,
+            "total": 881.621
+        },
+        "pin": "cyan"
+    }]
 }
