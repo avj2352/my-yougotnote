@@ -1,90 +1,98 @@
 {
-    "id": "playlist-22c949c9-0f97-4d09-b548-57642880252a",
-    "title": "Grokking Coding Interviews - Tips & Tricks",
-    "createdBy": "",
-    "bookmarks": [{
-        "id": "bookmark-ee2ecae8-7488-45c8-b548-6b89e73b999e",
-        "description": "<p style=\"margin-left:0px;\">How to use Leetcode effectively - <strong>Byte by Byte</strong></p><p style=\"margin-left:0px;\">&nbsp;</p><p style=\"margin-left:0px;\">+ Sort your Leetcode challenges by - <strong>Frequency</strong></p><p style=\"margin-left:0px;\">+ Start with Easy challenge Problems</p><p style=\"margin-left:0px;\">+ Write your solutions on a piece of paper first - Copy it \"letter\" for \"letter\" to leetcode</p><p style=\"margin-left:0px;\">+ Debug your solution on paper first</p><p style=\"margin-left:0px;\">+ Talk out loud when you're solving</p><p style=\"margin-left:0px;\">+ Add Review points</p>",
-        "start": 35,
-        "position": 2,
-        "video": {
-            "id": "video-e75719ea-0ecd-468f-8b56-1eb45e194c90",
-            "url": "https://www.youtube.com/watch?v=GbyXxUDVeAo",
-            "seen": 34.59065495803833,
-            "total": 752
-        },
-        "pin": "yellow"
-    }, {
-        "id": "bookmark-995bb97b-a9b9-4160-a608-95abc83cc503",
-        "description": "<p>5 Common Mistakes when using Leetcode - (Really useful advice) - <strong>Java Brains</strong></p><p>&nbsp;</p><p>&nbsp;</p>",
-        "start": 46,
-        "position": 2,
-        "video": {
-            "id": "video-9a7e2352-0f2f-4fac-a3a9-769e9b1844d4",
-            "url": "https://www.youtube.com/watch?v=Rv2aqJVRwaM",
-            "seen": 46.116904064849855,
-            "total": 890
-        },
-        "pin": "yellow"
-    }, {
-        "id": "bookmark-1f5ec8ac-0e0e-4873-92f1-3095ef26e136",
-        "description": "<p>Pitfall #1 - The details aren't always thre</p><p>&nbsp;</p><p>Unlike Leetcode Problem description, The Interviewer will give 1 sentence, maximum 2 sentence about the interview question</p><p>&nbsp;</p><p>+ Start with just the Problem statement / first sentence, nothing else. (Don't read through the whole problem)</p><p>+ Start asking out loud, - \"Clarifying questions\"</p><p>+ You're not practicing for solving Leetcode</p><p>+ Because you saw the problem on leetcode, if you're to say - <i>\"Hey I have seen the problem, I have solved it on leetcode\", </i>it will only work for your dis-advantage</p><p>&nbsp;</p><p><strong>You're expected to ask clarifying questions, you're expected to uncover hidden information in the problem.</strong></p>",
-        "start": 101,
-        "position": 3,
-        "video": {
-            "id": "video-bd34ebcc-1759-4b4d-885c-063f6659215e",
-            "url": "https://www.youtube.com/watch?v=Rv2aqJVRwaM",
-            "seen": 101.26541684359741,
-            "total": 890
-        },
-        "pin": "red"
-    }, {
-        "id": "bookmark-cc9fd635-612b-462d-b6e9-1f6028dd001f",
-        "description": "<p><strong>Pitfall #2 - Working code isn't everything</strong></p><p>&nbsp;</p><p><i>\"Is your code readable, is your code something the interviewer can understand, are the variables named correctly, code syntaxes, even pseudo code syntaxes\"</i></p><p>&nbsp;</p><p>+ When you're writing code using Leetcode, it verifies for accuracy</p><p>+ You can structure your code however you want, it will check out</p><p>+ When you're interviewing / white-boarding - working code, is just one of the several factors the interviewer is going to evaluate</p><p>+ Is my code readable, can the interviewer understand my code, how are variables named ?<br>+ You need to write sensible variable names!!!</p>",
-        "start": 337,
-        "position": 4,
-        "video": {
-            "id": "video-4be8b41a-7c8a-4ce9-b125-021b8bbb3d90",
-            "url": "https://www.youtube.com/watch?v=Rv2aqJVRwaM",
-            "seen": 336.8478790934601,
-            "total": 890
-        },
-        "pin": "red"
-    }, {
-        "id": "bookmark-4a8fa894-5cfd-4265-a577-4a10cc14cbc8",
-        "description": "<p><strong>Pitfall #3</strong> - Your code isn't evaluated, <strong>YOU ARE</strong> being evaluated</p><p>&nbsp;</p><p>+ In Leetcode, you're evaluated for your final output</p><p>+ In an interview, you're evaluated for your PROCESS you took to approach the solution</p><p>+ Speak out loud \"Think aloud\".</p><p>+ When you're writing code on leetcode, imagine someone sitting next to you and speak out loud</p><p>&nbsp;</p><p><i>\"Verbalize your process... you're evaluated for the PROCESS not the final outcome\"</i></p>",
-        "start": 467,
-        "position": 5,
-        "video": {
-            "id": "video-38e35cfb-5fd7-437a-9691-d5703e3fe034",
-            "url": "https://www.youtube.com/watch?v=Rv2aqJVRwaM",
-            "seen": 466.8232608989105,
-            "total": 890
-        },
-        "pin": "red"
-    }, {
-        "id": "bookmark-a0459676-0c4b-45d2-a4ac-a26f2a23c02a",
-        "description": "<p><strong>Pitfall # 4 </strong>- Focusing on things that don't matter</p><p>&nbsp;</p><p>+ Comparing performance and memory usage and trying to improve solution, B.S !!</p><p>+ It's super fun to tweak your program, in an interview that's not what people care about</p><p>+ Nobody compares your solution in an interview</p><p>+ They might ask if a different Data-structure can be used,&nbsp;</p><p>+ They expect you to reason about your solution</p><p>+ They might ask about Time complexity</p><p>&nbsp;</p><p><i>\"Don't care about speed, performance, Worry about time complexity, maybe datastructure\"</i></p>",
-        "start": 559,
-        "position": 6,
-        "video": {
-            "id": "video-fe59e7a8-f760-457a-9112-f38acb8edfa2",
-            "url": "https://www.youtube.com/watch?v=Rv2aqJVRwaM",
-            "seen": 558.5456449961853,
-            "total": 890
-        },
-        "pin": "red"
-    }, {
-        "id": "bookmark-050fe3ff-1f95-40fa-95e2-077314d15db7",
-        "description": "<p><strong>Pitfall # 5</strong> - Not practicing in the right setting</p><p>&nbsp;</p><p>+ Leetcode allows you to write on an editor, that's not the scenario during coding interviews</p><p>+ Typically coding interviews are white board interviews, or on a notepad (like google)</p><p>+ Write code on a piece of paper! <i>(truer words have not been spoken !!)</i></p>",
-        "start": 684,
-        "position": 7,
-        "video": {
-            "id": "video-e37b7680-7f01-4861-ab25-25edf651b194",
-            "url": "https://www.youtube.com/watch?v=Rv2aqJVRwaM",
-            "seen": 684.1041260972747,
-            "total": 890
-        },
-        "pin": "red"
-    }]
+  "id": "playlist-22c949c9-0f97-4d09-b548-57642880252a",
+  "title": "Grokking Coding Interviews - Tips & Tricks",
+  "createdBy": "",
+  "bookmarks": [
+    {
+      "id": "bookmark-ee2ecae8-7488-45c8-b548-6b89e73b999e",
+      "description": "<p style=\"margin-left:0px;\">How to use Leetcode effectively - <strong>Byte by Byte</strong></p><p style=\"margin-left:0px;\">&nbsp;</p><p style=\"margin-left:0px;\">+ Sort your Leetcode challenges by - <strong>Frequency</strong></p><p style=\"margin-left:0px;\">+ Start with Easy challenge Problems</p><p style=\"margin-left:0px;\">+ Write your solutions on a piece of paper first - Copy it \"letter\" for \"letter\" to leetcode</p><p style=\"margin-left:0px;\">+ Debug your solution on paper first</p><p style=\"margin-left:0px;\">+ Talk out loud when you're solving</p><p style=\"margin-left:0px;\">+ Add Review points</p>",
+      "start": 35,
+      "position": 2,
+      "video": {
+        "id": "video-e75719ea-0ecd-468f-8b56-1eb45e194c90",
+        "url": "https://www.youtube.com/watch?v=GbyXxUDVeAo",
+        "seen": 34.59065495803833,
+        "total": 752
+      },
+      "pin": "yellow"
+    },
+    {
+      "id": "bookmark-995bb97b-a9b9-4160-a608-95abc83cc503",
+      "description": "<p>5 Common Mistakes when using Leetcode - (Really useful advice) - <strong>Java Brains</strong></p><p>&nbsp;</p><p>&nbsp;</p>",
+      "start": 46,
+      "position": 2,
+      "video": {
+        "id": "video-9a7e2352-0f2f-4fac-a3a9-769e9b1844d4",
+        "url": "https://www.youtube.com/watch?v=Rv2aqJVRwaM",
+        "seen": 46.116904064849855,
+        "total": 890
+      },
+      "pin": "yellow"
+    },
+    {
+      "id": "bookmark-1f5ec8ac-0e0e-4873-92f1-3095ef26e136",
+      "description": "<p>Pitfall #1 - The details aren't always thre</p><p>&nbsp;</p><p>Unlike Leetcode Problem description, The Interviewer will give 1 sentence, maximum 2 sentence about the interview question</p><p>&nbsp;</p><p>+ Start with just the Problem statement / first sentence, nothing else. (Don't read through the whole problem)</p><p>+ Start asking out loud, - \"Clarifying questions\"</p><p>+ You're not practicing for solving Leetcode</p><p>+ Because you saw the problem on leetcode, if you're to say - <i>\"Hey I have seen the problem, I have solved it on leetcode\", </i>it will only work for your dis-advantage</p><p>&nbsp;</p><p><strong>You're expected to ask clarifying questions, you're expected to uncover hidden information in the problem.</strong></p>",
+      "start": 101,
+      "position": 3,
+      "video": {
+        "id": "video-bd34ebcc-1759-4b4d-885c-063f6659215e",
+        "url": "https://www.youtube.com/watch?v=Rv2aqJVRwaM",
+        "seen": 101.26541684359741,
+        "total": 890
+      },
+      "pin": "red"
+    },
+    {
+      "id": "bookmark-cc9fd635-612b-462d-b6e9-1f6028dd001f",
+      "description": "<p><strong>Pitfall #2 - Working code isn't everything</strong></p><p>&nbsp;</p><p><i>\"Is your code readable, is your code something the interviewer can understand, are the variables named correctly, code syntaxes, even pseudo code syntaxes\"</i></p><p>&nbsp;</p><p>+ When you're writing code using Leetcode, it verifies for accuracy</p><p>+ You can structure your code however you want, it will check out</p><p>+ When you're interviewing / white-boarding - working code, is just one of the several factors the interviewer is going to evaluate</p><p>+ Is my code readable, can the interviewer understand my code, how are variables named ?<br>+ You need to write sensible variable names!!!</p>",
+      "start": 337,
+      "position": 4,
+      "video": {
+        "id": "video-4be8b41a-7c8a-4ce9-b125-021b8bbb3d90",
+        "url": "https://www.youtube.com/watch?v=Rv2aqJVRwaM",
+        "seen": 336.8478790934601,
+        "total": 890
+      },
+      "pin": "red"
+    },
+    {
+      "id": "bookmark-4a8fa894-5cfd-4265-a577-4a10cc14cbc8",
+      "description": "<p><strong>Pitfall #3</strong> - Your code isn't evaluated, <strong>YOU ARE</strong> being evaluated</p><p>&nbsp;</p><p>+ In Leetcode, you're evaluated for your final output</p><p>+ In an interview, you're evaluated for your PROCESS you took to approach the solution</p><p>+ Speak out loud \"Think aloud\".</p><p>+ When you're writing code on leetcode, imagine someone sitting next to you and speak out loud</p><p>&nbsp;</p><p><i>\"Verbalize your process... you're evaluated for the PROCESS not the final outcome\"</i></p>",
+      "start": 467,
+      "position": 5,
+      "video": {
+        "id": "video-38e35cfb-5fd7-437a-9691-d5703e3fe034",
+        "url": "https://www.youtube.com/watch?v=Rv2aqJVRwaM",
+        "seen": 466.8232608989105,
+        "total": 890
+      },
+      "pin": "red"
+    },
+    {
+      "id": "bookmark-a0459676-0c4b-45d2-a4ac-a26f2a23c02a",
+      "description": "<p><strong>Pitfall # 4 </strong>- Focusing on things that don't matter</p><p>&nbsp;</p><p>+ Comparing performance and memory usage and trying to improve solution, B.S !!</p><p>+ It's super fun to tweak your program, in an interview that's not what people care about</p><p>+ Nobody compares your solution in an interview</p><p>+ They might ask if a different Data-structure can be used,&nbsp;</p><p>+ They expect you to reason about your solution</p><p>+ They might ask about Time complexity</p><p>&nbsp;</p><p><i>\"Don't care about speed, performance, Worry about time complexity, maybe datastructure\"</i></p>",
+      "start": 559,
+      "position": 6,
+      "video": {
+        "id": "video-fe59e7a8-f760-457a-9112-f38acb8edfa2",
+        "url": "https://www.youtube.com/watch?v=Rv2aqJVRwaM",
+        "seen": 558.5456449961853,
+        "total": 890
+      },
+      "pin": "red"
+    },
+    {
+      "id": "bookmark-050fe3ff-1f95-40fa-95e2-077314d15db7",
+      "description": "<p><strong>Pitfall # 5</strong> - Not practicing in the right setting</p><p>&nbsp;</p><p>+ Leetcode allows you to write on an editor, that's not the scenario during coding interviews</p><p>+ Typically coding interviews are white board interviews, or on a notepad (like google)</p><p>+ Write code on a piece of paper! <i>(truer words have not been spoken !!)</i></p>",
+      "start": 684,
+      "position": 7,
+      "video": {
+        "id": "video-e37b7680-7f01-4861-ab25-25edf651b194",
+        "url": "https://www.youtube.com/watch?v=Rv2aqJVRwaM",
+        "seen": 684.1041260972747,
+        "total": 890
+      },
+      "pin": "red"
+    }
+  ]
 }

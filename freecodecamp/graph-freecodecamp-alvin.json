@@ -1,334 +1,363 @@
 {
-    "id": "playlist-b4681e72-3d8d-46d8-bab7-fe4663a540e2",
-    "title": "Graph - Algorithms for Technical Interviews",
-    "createdBy": "",
-    "bookmarks": [{
-        "id": "bookmark-6cd169c3-0130-453b-b4a7-2e723ad03c1a",
-        "description": "<p>Alvin's - Graph Algorithms</p>",
-        "start": 9,
-        "position": 1,
-        "video": {
-            "id": "video-2b6ce318-4fe8-4522-9f55-80980c9c99a3",
-            "url": "https://www.youtube.com/watch?v=tWVWeAqZ0WU",
-            "seen": 9.035358106811524,
-            "total": 7939
-        }
-    }, {
-        "id": "bookmark-ab8b362a-ebd2-4e55-bcf8-5016732eb487",
-        "description": "<p><strong>Background about Graphs - Graph Basics</strong></p><p>&nbsp;</p><p>+ A graph is a collection of Nodes &amp; Edges</p><p>+ An Edge is a connection between Nodes</p><p>+ Node or Vertex : It's just a connection between vertices</p>",
-        "start": 145,
-        "position": 2,
-        "video": {
-            "id": "video-c2211870-c7d5-4828-9e29-67e9bd297334",
-            "url": "https://www.youtube.com/watch?v=tWVWeAqZ0WU",
-            "seen": 145.08855994277954,
-            "total": 7939
-        },
-        "pin": "yellow"
-    }, {
-        "id": "bookmark-bb0419e2-a238-4f33-9755-f05f3173f6a4",
-        "description": "<p>Directed Graph, Undirected Graph - explanation</p><p>&nbsp;</p><p>+ Directed Graph</p><p>+ Undirected Graph</p><p>+ Neighbors</p>",
-        "start": 222,
-        "position": 3,
-        "video": {
-            "id": "video-8e7ddc02-0bcf-486a-8157-44bfbd1fa837",
-            "url": "https://www.youtube.com/watch?v=tWVWeAqZ0WU",
-            "seen": 221.70955705149842,
-            "total": 7939
-        }
-    }, {
-        "id": "bookmark-f6b03740-9391-4668-9337-cbf3cdf7a7bc",
-        "description": "<p>When do we prefer DFS or a BFS ?</p>",
-        "start": 579,
-        "position": 4,
-        "video": {
-            "id": "video-357ceb03-0aa8-400d-a11e-7c5645a8414b",
-            "url": "https://www.youtube.com/watch?v=tWVWeAqZ0WU",
-            "seen": 578.8098558474121,
-            "total": 7939
-        },
-        "pin": "green"
-    }, {
-        "id": "bookmark-6f1a8870-0173-4780-a791-d85af5d55e11",
-        "description": "<p>Adjacency List - A Programmatic representation of a Graph information</p><p>&nbsp;</p><p>+ In Javascript, we represent a primitive of graph as an Object whose values are arrays</p><p>+ We can also create a Graph class with methods to add neighbor and traverse a graph</p><p>&nbsp;</p><pre><code class=\"language-javascript\">// Depth first traversal using iterative approach\r\n// DFT uses a Stack - LIFO\r\nfunction depthFirstTraversalIterative(graph, source) {\r\n    const stack = [source];\r\n    while (stack.length &gt; 0) {\r\n        const current = stack.shift();\r\n        console.log(current);\r\n        for (let n of graph[current]) {\r\n            stack.unshift(n);\r\n        }\r\n    }\r\n}\r\n\r\n\r\n// Depth first traversal can also be return  - Recursively\r\nfunction depthFirstTraversalRecursive(graph, source) {\r\n    console.log(source);\r\n    for (let n of graph[source]){\r\n        depthFirstTraversalRecursive(graph, n);        \r\n    }\r\n}\r\n\r\n\r\n// Breadth first traversal can only be written - Iteratively\r\n// BFT uses a Queue - FIFO\r\n// If you try to write Breadth First traversal recursively the recursive will always fight against the Queue\r\nfunction breadthFirstTraversalIterative(graph, source) {\r\n    const queue = [source];\r\n    while (queue.length &gt; 0) {\r\n        const current = queue.shift();\r\n        console.log(current);\r\n        for (let n of graph[current]){\r\n            queue.push(n);\r\n        }\r\n    }\r\n}\r\n\r\n// Graph datastructure\r\n// Nodes\r\nfunction createNode(key) {\r\n    const neighbors = [];\r\n    return {\r\n        key,\r\n        neighbors,\r\n        addNeighbor(key){\r\n            neighbors.push(key);\r\n        }\r\n    };\r\n}\r\n\r\n// Graph DS - directed / undirected\r\nfunction createGraph(directed = false) {\r\n    const nodes = [];\r\n    const edges = [];\r\n    return {\r\n        directed,\r\n        nodes,\r\n        edges,\r\n        addNode(key) {\r\n            return nodes.push(createNode(key));\r\n        },\r\n        getNode(key) {\r\n            return nodes.find(n =&gt; n.key === key);\r\n        },\r\n        addEdge(k1, k2) {\r\n            const node1 = this.getNode(k1);\r\n            const node2 = this.getNode(k2);\r\n            node1.addNeighbor(node2);\r\n            edges.push(`${k1}-${k2}`);\r\n            if(!directed) {\r\n                node2.addNeighbor(node1);                \r\n            }\r\n        },\r\n        print() {\r\n            return nodes.map(({key, neighbors})=&gt;{\r\n                let result = key;\r\n                if (Boolean( neighbors.length &gt; 0)) {\r\n                    result += `=&gt; ${neighbors.map(n =&gt; n.key).join(',')}`;\r\n                }\r\n                return result;\r\n            }).join('\\n');\r\n        },\r\n        printPrimitive() {\r\n            const result = {};\r\n            nodes.map(({key, neighbors}) =&gt; {\r\n                result[key] = neighbors.map(n =&gt; n.key);                \r\n            });\r\n            return result;\r\n        }\r\n    };\r\n}\r\n\r\nconst graphObj = createGraph(true);\r\n\r\n// TESTING\r\ngraphObj.addNode('a');\r\ngraphObj.addNode('b');\r\ngraphObj.addNode('c');\r\ngraphObj.addNode('d');\r\ngraphObj.addNode('e');\r\ngraphObj.addNode('f');\r\n\r\ngraphObj.addEdge('a','c');\r\ngraphObj.addEdge('a','b');\r\ngraphObj.addEdge('b','d');\r\ngraphObj.addEdge('c','e');\r\ngraphObj.addEdge('d','f');\r\n\r\n\r\nconsole.log('Graph is:', graphObj.print());\r\nconst graph = graphObj.printPrimitive();\r\n\r\n\r\n// Testin Traversals\r\nconsole.log('Primitive graph is:', JSON.stringify(graph));\r\nconsole.log('Depth First Traversal using Iterative approach is: '); \r\ndepthFirstTraversalIterative(graph, 'a');\r\nconsole.log('Depth First Traversal using Recursive approach is: '); \r\ndepthFirstTraversalRecursive(graph, 'a');\r\nconsole.log('Breadth First Traversal using Iterative approach is: '); \r\nbreadthFirstTraversalIterative(graph, 'a');\r\n\r\n// OUTPUT\r\n// Primitive graph is: {\"a\":[\"c\",\"b\"],\"b\":[\"d\"],\"c\":[\"e\"],\"d\":[\"f\"],\"e\":[],\"f\":[]}\r\n// Depth First Traversal using Iterative approach is: \r\n// a\r\n// b\r\n// d\r\n// f\r\n// c\r\n// e\r\n// Depth First Traversal using Recursive approach is: \r\n// a\r\n// c\r\n// e\r\n// b\r\n// d\r\n// f\r\n// Breadth First Traversal using Iterative approach is: \r\n// a\r\n// c\r\n// b\r\n// e\r\n// d\r\n// f</code></pre><p>&nbsp;</p>",
-        "start": 310,
-        "position": 5,
-        "video": {
-            "id": "video-691bbe2d-9cb6-44a3-b652-35b42e845b78",
-            "url": "https://www.youtube.com/watch?v=tWVWeAqZ0WU",
-            "seen": 309.57139190653993,
-            "total": 7939
-        },
-        "pin": "cyan"
-    }, {
-        "id": "bookmark-c2d86dc6-fd08-486d-bd9c-bd755c0f48c0",
-        "description": "<p>Implementation of BFS and DFS Algorithms</p><p>&nbsp;</p><p>+ <strong>NOTE:</strong> Remember that recursion (in the heart of it) uses a stack like call structure, so a BFS which uses a queue would have a tough time to implement using recursion</p><p>+ BFS is best implemented iteratively!</p><p>&nbsp;</p><pre><code class=\"language-javascript\">// Depth first traversal using iterative approach\n// DFT uses a Stack - LIFO\nfunction depthFirstTraversalIterative(graph, source) {\n    const stack = [source];\n    while (stack.length &gt; 0) {\n        const current = stack.shift();\n        console.log(current);\n        for (let n of graph[current]) {\n            stack.unshift(n);\n        }\n    }\n}\n\n\n// Depth first traversal can also be return  - Recursively\nfunction depthFirstTraversalRecursive(graph, source) {\n    console.log(source);\n    for (let n of graph[source]){\n        depthFirstTraversalRecursive(graph, n);        \n    }\n}\n\n\n// Breadth first traversal can only be written - Iteratively\n// BFT uses a Queue - FIFO\n// If you try to write Breadth First traversal recursively the recursive will always fight against the Queue\nfunction breadthFirstTraversalIterative(graph, source) {\n    const queue = [source];\n    while (queue.length &gt; 0) {\n        const current = queue.shift();\n        console.log(current);\n        for (let n of graph[current]){\n            queue.push(n);\n        }\n    }\n}</code></pre>",
-        "start": 1023,
-        "position": 6,
-        "video": {
-            "id": "video-17fbbb82-6a5a-4d3e-a967-dfa3cbd42c0c",
-            "url": "https://www.youtube.com/watch?v=tWVWeAqZ0WU",
-            "seen": 1022.9784289980927,
-            "total": 7939
-        },
-        "pin": "cyan"
-    }, {
-        "id": "bookmark-7393a41c-b7f4-42fe-a0f4-6c36d3fcb473",
-        "description": "<p>📜 <strong>Challenge #1</strong> : Has Path - <strong>Find if Path Exists in Graph</strong></p><p>&nbsp;</p><p><a href=\"https://leetcode.com/problems/find-if-path-exists-in-graph/\">Link to the Problem (Leetcode)</a></p><p>&nbsp;</p><p><i>There is a <strong>bi-directional</strong> graph with n vertices, where each vertex is labeled from 0 to n-1 (<strong>inclusive</strong>). The edges in the graph are represented as a 2D integer array edges, where each edge denotes a bi-directional edge between the 2 vertices. Every vertex pair is connected by <strong>at most one</strong> edge, and no vertex has an edge to itself.</i></p><p><i>You want to determine if there is a <strong>valid path</strong> that exists from vertex start to vertex end.</i></p><p>&nbsp;</p><p><i>Given edges and the integers n, start, and end, return <strong>true</strong> if there is a <strong>valid path</strong> from start to end, or false otherwise.</i></p><p>&nbsp;</p><p>+ Important: They also mention that the Graph is <strong>acyclic -</strong> which means there is no closed loop in the graph</p>",
-        "start": 1736,
-        "position": 7,
-        "video": {
-            "id": "video-ee990dc9-38e4-4dae-aad2-0c394443f184",
-            "url": "https://www.youtube.com/watch?v=tWVWeAqZ0WU",
-            "seen": 1736.2194800686646,
-            "total": 7939
-        },
-        "pin": "yellow"
-    }, {
-        "id": "bookmark-f15e4406-3cc1-42ec-8517-7448482bcad5",
-        "description": "<p><strong>Implementing using DFS Recursively</strong></p><p>&nbsp;</p><p>The advantage of using Depth First Traversal recursively is that we can leverage the underlying callstack as LIFO for the problem.</p><p>&nbsp;</p><pre><code class=\"language-javascript\">// Has Path using Depth first Traversal Recursively\nfunction hasPathDFSRecursive(graph, src, dst) {\n  if (src === dst) return true;\n  for (let neighbor of graph[src]) {\n   if (hasPathDFSRecursive(graph, neighbor, dst) === true) { return true }\n  }\n  return false;\n}\n\nconst graph = {\n  a: ['b','c'],\n  b: ['d'],\n  c: ['e'],\n  d: ['f'],\n  e: [],\n  f: []\n};\n\nconsole.log('console.log - DFS recursive', hasPathDFSRecursive(graph, 'a', 'f'));</code></pre><p>&nbsp;</p><p style=\"margin-left:0px;\"><strong>Time &amp; Space Complexity</strong></p><p style=\"margin-left:0px;\">&nbsp;</p><p style=\"margin-left:0px;\">+ Let the Nodes of the Graph be <strong>'n'</strong> and the Edges of the Graph be <strong>'e'.</strong>&nbsp;<br>+ Time Complexity : <strong>O(e) </strong>(We would traverse through all of the nodes in a worst case scenario, meaning move through all the edges at-least once)<br>+ Space Complexity: <strong>O(n) </strong>(This would be the size of the stack / queue which would at one point, hold all the nodes)</p>",
-        "start": 2096,
-        "position": 8,
-        "video": {
-            "id": "video-faf678a6-85f9-4aba-a699-7e65ee9da4bb",
-            "url": "https://www.youtube.com/watch?v=tWVWeAqZ0WU",
-            "seen": 2095.674269917984,
-            "total": 7939
-        },
-        "pin": "cyan"
-    }, {
-        "id": "bookmark-194708c3-9406-4960-b5bc-468efe97137f",
-        "pin": "cyan",
-        "description": "<p><strong>Implementing Has-Path using BFS Traversal Algorithm</strong></p><p>&nbsp;</p><pre><code class=\"language-javascript\">// Has Path using Breadth First using Iteratively\nfunction hasPathBFSIterative(graph, src, dst) {\n  const queue = [src];\n  \n  while (queue.length &gt; 0) {\n    const current = queue.pop();\n    if (current  === dst ) return true;\n    for (let n of graph[current]) {\n      queue.unshift(n);\n    }\n  }\n  return false;\n}\n\nconst graph = {\n  a: ['b','c'],\n  b: ['d'],\n  c: ['e'],\n  d: ['f'],\n  e: [],\n  f: []\n};\n\nconsole.log('console.log - BFS iterative', hasPathBFSIterative(graph, 'a', 'f'));</code></pre><p>&nbsp;</p><p><strong>Time &amp; Space Complexity</strong></p><p>&nbsp;</p><p>+ Let the Nodes of the Graph be <strong>'n'</strong> and the Edges of the Graph be <strong>'e'.</strong>&nbsp;<br>+ Time Complexity : <strong>O(e) </strong>(We would traverse through all of the nodes in a worst case scenario, meaning move through all the edges at-least once)<br>+ Space Complexity: <strong>O(n) </strong>(This would be the size of the stack / queue which would at one point, hold all the nodes)</p><p>&nbsp;</p><p>+ NOTE: Remember we can also implement in the same way above - A Depth First Traversal using iterative stack.&nbsp;</p><p>+ We just replace our queue with a stack</p>",
-        "start": 2304,
-        "position": 9,
-        "video": {
-            "id": "video-6bf57931-221f-4c6b-9bd6-f5a49d776c10",
-            "url": "https://www.youtube.com/watch?v=tWVWeAqZ0WU",
-            "seen": 2304.3270309961854,
-            "total": 7939
-        }
-    }, {
-        "id": "bookmark-6fabf6fc-6693-429f-b2be-7eae2aa30137",
-        "pin": "yellow",
-        "description": "<p><strong>📜 Challenge #2: Undirected Path</strong></p><p>&nbsp;</p><p><i>Write a function, <strong>undirectedPath</strong>, that takes in an array of edges for an undirected graph and two nodes (nodeA, nodeB).&nbsp;</i></p><p><i>+ The function should return a boolean indicating whether or not there exists a path between nodeA and nodeB.</i></p>",
-        "start": 2526,
-        "position": 10,
-        "video": {
-            "id": "video-49c65b57-d3df-4ba5-b47d-9c8a2c56595f",
-            "url": "https://www.youtube.com/watch?v=tWVWeAqZ0WU",
-            "seen": 2525.580243988556,
-            "total": 7939
-        }
-    }, {
-        "id": "bookmark-1fca2c7c-f0d6-4280-82fa-6ef99dbe0e1a",
-        "description": "<p>First Step: convert this edge list into a more favourable Adjacency list or graph datastructure</p><p>&nbsp;</p><pre><code class=\"language-javascript\">// Helper function - buildGraph\nfunction buildGraph(edges) {\n\tconst graph = {};\n\tfor (let edge of edges) {\n\t\t// since edge list consists of pair of values\n\t\t// just de-structure them\n\t\tconst [a, b] = edge;\n\t\tif (!(a in graph)) graph[a] = [];\n\t\tif (!(b in graph)) graph[b] = [];\n\t\tgraph[a].push(b);\n\t\t// since it's undirected\n\t\tgraph[b].push(a);\n\t}\n\treturn graph;\n}</code></pre>",
-        "start": 2560,
-        "position": 11,
-        "video": {
-            "id": "video-693a1245-abe5-44da-8301-0689b51fb476",
-            "url": "https://www.youtube.com/watch?v=tWVWeAqZ0WU",
-            "seen": 2559.7236309523164,
-            "total": 7938.261
-        },
-        "pin": "cyan"
-    }, {
-        "id": "bookmark-da80246a-b983-4477-b405-700c8cb88cf3",
-        "description": "<p><strong>How to handle a Cyclic Graph</strong></p><p>&nbsp;</p><p>+ A Simple way is to maintain a Set / Map in which we store the nodes that were visited</p><p>+ This visited (Set/Map) data structure is chosen because it needs to be retrieved in O(1) time</p><p>+ This will act like as in recursion - Memoized data-structure</p><p>&nbsp;</p><pre><code class=\"language-javascript\">// Recursive function - with visited parameter\n// visited is a new Set()\nfunction hasPath(graph, src, dst, visited) {\n    if (src === dst) return true;\n    // unlike memoized, we're not retrieving values, just returning false\n    if (visited.has(src)) return false;\n    // add to the visited set\n    visited.add(src);\n    for (let neighbor of graph[src]) {\n        // same approach as in memoization\n        if (hasPath(graph, neighbor, dst, visited) === true) return true;\n\n    }\n    return false;\n} </code></pre>",
-        "start": 2670,
-        "position": 12,
-        "video": {
-            "id": "video-9379d9fe-8ca6-4801-8e74-f6813181433d",
-            "url": "https://www.youtube.com/watch?v=tWVWeAqZ0WU",
-            "seen": 2670.155337967575,
-            "total": 7938.261
-        }
-    }, {
-        "id": "bookmark-a2a2bfa4-4e3f-4ecb-a100-083984336542",
-        "description": "<p>Space Time Complexity of Undirected Path</p><p>&nbsp;</p><p>Time Complexity: <strong>O(e)</strong> ~ where n is the number of nodes and e is the number of edges</p><p>Space Complexity: <strong>O(n)</strong> ~ where n is the number of nodes and e is the number of edges</p>",
-        "start": 2939,
-        "position": 13,
-        "video": {
-            "id": "video-27cb6e0a-2c47-487a-981d-1ce1cf16f8c7",
-            "url": "https://www.youtube.com/watch?v=tWVWeAqZ0WU",
-            "seen": 2938.6715923378115,
-            "total": 7938.261
-        }
-    }, {
-        "id": "bookmark-e0667d22-9764-4173-a14b-dead8746a88a",
-        "description": "<p>Implementation of Undirected Path</p><p>&nbsp;</p><p>+ We will first write our helper function for converting the edge list to a graph - <strong>buildGraph</strong></p><p>+ We will then write our <strong>hasPath</strong> function<br>+ With the above helper function, we now have a \"Adjacency List\" type graph<br>+ We will apply the same Recursive Traversal Algorithm here, but with an extra \"visited\" parameter<br>+ Visited parameter, is a Set, which helps us <strong>add</strong> and <strong>check </strong>at O(1)</p><p>&nbsp;</p><pre><code class=\"language-javascript\">// Helper function - buildGraph\nfunction buildGraph(edges) {\n\tconst graph = {};\n\tfor (let edge of edges) {\n\t\t// since edge list consists of pair of values\n\t\t// just de-structure them\n\t\tconst [a, b] = edge;\n\t\tif (!(a in graph)) graph[a] = [];\n\t\tif (!(b in graph)) graph[b] = [];\n\t\tgraph[a].push(b);\n\t\t// since it's undirected\n\t\tgraph[b].push(a);\n\t}\n\treturn graph;\n}\n\n// Recursive function - with visited parameter\nfunction hasPath(graph, src, dst, visited) {\n    if (src === dst) return true;\n    if (visited.has(src)) return false;\n    visited.add(src);\n    for (let neighbor of graph[src]) {\n        if (hasPath(graph, neighbor, dst, visited) === true) return true;\n\n    }\n    return false;\n} \n\n// main function\nconst undirectedPath = (edges, nodeA, nodeB) =&gt; {\n   const graph = buildGraph(edges);\n   // check hasPath\n   return hasPath(graph, nodeA, nodeB, newSet());\n};</code></pre>",
-        "start": 3040,
-        "position": 14,
-        "video": {
-            "id": "video-c5a13456-4472-4d9f-abcd-cb8ca0238d00",
-            "url": "https://www.youtube.com/watch?v=tWVWeAqZ0WU",
-            "seen": 3039.7760016171046,
-            "total": 7938.261
-        },
-        "pin": "cyan"
-    }, {
-        "id": "bookmark-616a1cc1-ae23-48f4-9588-f74fcc420109",
-        "description": "<p><strong>📜 Challenge #3: Connected components count</strong></p><p>&nbsp;</p><p><i>Write a function, connectedComponentsCount(), that takes in the adjacency list of an undirected graph. The function should return the number of connected components within the graph.</i></p><p>&nbsp;</p><p>+ In short, the number of Edges in a Graph</p><p>&nbsp;</p><p><strong>Approach</strong></p><p>&nbsp;</p><p>+ This is very similar to the other Graph Traversal Algorithms<br>+ Except, in this one - we maintain a set called visited<br>+ NOTE: Remember that in Javascript, primitive Object keys are always defaulted to string<br>&nbsp;</p><p><strong>Time &amp; Space Complexity</strong></p><p><i>Lets assume 'E' being the number of Edges in the Graph and 'N' being the number of Nodes</i><br><br>+ <strong>Time Complexity</strong>: O(E)<br>+ <strong>Space Complexity</strong>: O(N)</p>",
-        "start": 3642,
-        "position": 15,
-        "video": {
-            "id": "video-61b068dc-eef9-4f5e-81b6-283c74f8bb41",
-            "url": "https://www.youtube.com/watch?v=tWVWeAqZ0WU",
-            "seen": 3642.2933180499945,
-            "total": 7938.261
-        },
-        "pin": "yellow"
-    }, {
-        "id": "bookmark-3f2819b0-f750-4189-a3b0-bd7cbf1efaa2",
-        "description": "<p><strong>Implement a Connected Component Count problem (in Javascript)</strong></p><p><br>+ This is going to require - iterative code for traversal of every node</p><p>+ Another function explore(graph, node, visited) - is a recursive function to go in as deep as possible</p><p>+ We need a visited Set to account for a cyclic graph<br>&nbsp;</p><pre><code class=\"language-javascript\">// connection components\nfunction connectedComponentsCount (graph) {\n    const visited = new Set(); // O(1) lookup and add\n    let count = 0;\n    // we need iterative code\n    for (let node in graph) {\n        if(explore(graph, node, visited) === true) {\n            count +=1;\n        };\n    }\n    return count;   \n}\n\n// we need traveral code   \nfunction explore (graph, current, visited) {\n    if (visited.has(String(current))) return false;\n    // if not - add to the collection\n    visited.add(String(current));\n\n    for (let neighbor of graph[current]) {\n        explore(graph, neighbor, visited);\n    }\n\n    return true;\n}\n\n// testing\nconst result = connectedComponentsCount({\n    1: [2],\n    2: [1,8],\n    6: [7],\n    9: [8],\n    7: [6, 8],\n    8: [9, 7, 2]\n  }); // -&gt; 1\n\nconsole.log('Connected component Count: ', result); // -&gt; 1</code></pre><p>&nbsp;</p><p><strong>Space Time Complexity</strong></p><p>&nbsp;</p><p>+ Time Complexity: O(E) ~ where E is the number of edges &nbsp;in the Graph</p><p>+ Space Complexity: O(N) ~ where N is the number of nodes in the graph, we're going to explore each of the nodes</p><p>&nbsp;</p><p><i>So this solution is of Linear Space time complexity!</i></p>",
-        "start": 3931,
-        "position": 16,
-        "video": {
-            "id": "video-1e935869-b462-456f-b138-03e4e1b33768",
-            "url": "https://www.youtube.com/watch?v=tWVWeAqZ0WU",
-            "seen": 3930.7564172671887,
-            "total": 7938.261
-        },
-        "pin": "cyan"
-    }, {
-        "id": "bookmark-48f75647-437b-4ed8-80bb-03555175b70b",
-        "description": "<p><strong>📜 Challenge #4: Largest component size</strong></p><p><br>Write a function, largestComponent, that takes in the adjacency list of an undirected graph.The function should return the size of the largest connected component in the graph.</p><p><br>+ Largest Component size is the largest count of edges in a connected graph</p><p>+ This is a slight variation to the \"Connected component\" problem</p><p><br>Space time Complexity:</p><p>&nbsp;</p><p>Consider E to be edges and N to be nodes of the graph</p><p>&nbsp;</p><p>+ Time complexity: <strong>O(E) ~ </strong>Just like in the last challenge, we will explore using DFS (recursion) so we're basically traversing all the edges</p><p>+ Space complexity: <strong>O(N) ~ </strong>Because our stack (recursion function) is storing every node in the process</p>",
-        "start": 4410,
-        "position": 17,
-        "video": {
-            "id": "video-b2fa0373-6adf-4759-901a-5eba691a3ed0",
-            "url": "https://www.youtube.com/watch?v=tWVWeAqZ0WU",
-            "seen": 4409.715641857011,
-            "total": 7938.261
-        },
-        "pin": "yellow"
-    }, {
-        "id": "bookmark-c2b5d4d6-bbac-4d95-8966-780b70fbaf59",
-        "description": "<p>Implementation of Largest Component solution (in Javascript)<br><br>+ There is a hint in the problem, that it's an undirected graph, this means we need to maintain and check a \"visited\" Set</p><p>+ To represent uniqueness, we stringily our elements before inserting / reading of the Set</p><p>&nbsp;</p><pre><code class=\"language-javascript\">// main function - largestComponent\nfunction largestComponent(graph) {\n  let largest = 0;\n  // for cyclic graphs\n  const visited = new Set();\n  for (node in graph) {\n    const result = explore(graph, node, visited);\n    if (result &gt; 0) {\n      largest = Math.max(result, largest);\n    }\n  }\n  return largest;\n}\n\n// Our DFS explore helper function\n// We know its DFS because of the recursive nature\nfunction explore (graph, node, visited) {\n  if (visited.has(String(node))) return 0;\n  // else we have visited the node, so mark it visited\n  let size = 1;\n  visited.add(String(node));\n  for (let neighbor of graph[node]) {\n    size += explore(graph, neighbor, visited);\n  }\n  return size;\n}\n\n\n// testing\nconst result = largestComponent({\n  0: ['4', '7'],\n  1: [],\n  2: [],\n  3: ['6'],\n  4: ['0'],\n  6: ['3'],\n  7: ['0'],\n  8: []\n}); // -&gt; 3\n\nconsole.log('Connected component Count: ', result); // -&gt; 1</code></pre><p>&nbsp;</p><p><strong>Space Time Complexity:</strong></p><p><br>Consider E to be edges and N to be nodes of the graph</p><p>&nbsp;</p><p>+ Time complexity: O(E) ~ Just like in the last challenge, we will explore using DFS (recursion) so we're basically traversing all the edges</p><p>+ Space complexity: O(N) ~ Because our stack (recursion function) is storing every node in the process</p>",
-        "start": 4696,
-        "position": 18,
-        "video": {
-            "id": "video-67bb0c21-2e1a-457f-9673-36b26d309007",
-            "url": "https://www.youtube.com/watch?v=tWVWeAqZ0WU",
-            "seen": 4696.130228266713,
-            "total": 7938.261
-        },
-        "pin": "cyan"
-    }, {
-        "id": "bookmark-2edf3611-d219-4c3f-ba54-e1bb18349788",
-        "description": "<p><strong>📜 Challenge 5: Shortest Path</strong></p><p>&nbsp;</p><p><i>Write a function, shortestPath(), that takes in an array of edges for an undirected graph and two nodes (nodeA, nodeB).</i></p><p><br>+ The function should return the length of the shortest path between A and B.</p><p>+ Consider the length as the number of edges in the path, not the number of nodes.</p><p>+ If there is no path between A and B, then return -1.</p>",
-        "start": 5046,
-        "position": 19,
-        "video": {
-            "id": "video-e5e3b68a-7de8-42fd-904f-686adb7d65ac",
-            "url": "https://www.youtube.com/watch?v=tWVWeAqZ0WU",
-            "seen": 5045.778082479985,
-            "total": 7938.261
-        },
-        "pin": "yellow"
-    }, {
-        "id": "bookmark-5ce3ae7f-4bf7-48cf-b551-b73ee321598e",
-        "description": "<p><strong>Explanation of Approach</strong></p><p>&nbsp;</p><p>+ We're given an edge list, so we need to use our <strong>buildGraph() </strong>helper function to create an adjacency list</p><p>+ We can either choose either DFS or a BFS</p><p>+ When it comes to finding - shortest distance / path / minimum edges / minimum travel in graph, The best approach is to use - Breadth First Traversal</p><p>+ For this problem, We will be using a Queue (for BFT) and a Set (to keep track of visited nodes)</p><p>+ Important point here is that the Queue will be holding a list of pairs (node, distance)</p><p>+ NOTE: If there is no path between the source (nodeA) and the destination (nodeB), then the function should return -1</p><p>&nbsp;</p><p><strong>Space Time Complexity</strong>&nbsp;</p><p><br>+ Time: O(E) - E being the number of edges</p>",
-        "start": 5054,
-        "position": 20,
-        "video": {
-            "id": "video-0e6325b1-bc41-497c-bb52-32be21460d55",
-            "url": "https://www.youtube.com/watch?v=tWVWeAqZ0WU",
-            "seen": 5053.920532028985,
-            "total": 7938.261
-        }
-    }, {
-        "id": "bookmark-1ad6b0df-53bb-419f-9e90-8bff4aa29526",
-        "description": "<p><strong>Implementing the Shortest Path problem (in Javascript)</strong></p><p>&nbsp;</p><pre><code class=\"language-javascript\">/**\n* Breadth First Traversal is always the choice to calculate the shortestPath\n*/\nconst shortestPath = (edges, nodeA, nodeB) =&gt; {\n  const graph = buildGraph(edges);  // get graph object\n  // using BFS traversal approach\n  const queue = [[nodeA, 0]];\n  // Initializing a Set, requires an array as part of the constructor\n  // Set - O(1) lookup and add\n  const visited = new Set([nodeA]); \n  \n  // BFS using Iterative method + Queue\n  while (queue.length &gt; 0) {\n    const [node, distance] = queue.shift();\n    if (node === nodeB) return distance;\n    for (let neighbor of graph[node]) {\n      // before adding to the queue, check visited\n      if(!visited.has(neighbor)) {\n        // else add it to the visited set\n        visited.add(neighbor);\n        // add it to the queue\n        queue.push([neighbor, distance+1]); \n      }\n    }\n  }\n  \n  return -1;\n};\n\n// Converting optimized edges array to Graph Adjacency list\nfunction buildGraph(edges) {\n  const graph = {};\n  for (let edge of edges) {\n    const [a, b] = edge;\n    if (!(a in graph)) graph[a] = [];\n    if (!(b in graph)) graph[b] = [];\n    graph[a].push(b);\n    graph[b].push(a);\n  }\n  return graph;\n}</code></pre>",
-        "start": 5486,
-        "position": 21,
-        "video": {
-            "id": "video-22731cd7-98d3-418e-8e3e-8f1f5d0ea79b",
-            "url": "https://www.youtube.com/watch?v=tWVWeAqZ0WU",
-            "seen": 5485.622355529248,
-            "total": 7938.261
-        },
-        "pin": "cyan"
-    }, {
-        "id": "bookmark-efcff69e-7e47-4995-929b-4d0c9512aa49",
-        "description": "<p>📜 <strong>Challenge 6: Island Count 🏝</strong></p><p>&nbsp;</p><p><i>Write a function, islandCount(), that takes in a grid containing Ws and Ls. W represents water and L represents land. The function should return the number of islands on the grid. An island is a vertically or horizontally connected region of land.</i></p><p>&nbsp;</p><p>+ The given graph is what we call a - Grid Graph</p><p>+ A Grid Graph is a 2D array with MXN - M being Rows, N being elements</p><p>+ Not a square grid graph, this Grid Graph can be Asymmetric - meaning M !== N (see test_03)</p><p>+ The function should return a Number (ie., number of islands)</p><p>&nbsp;</p><pre><code class=\"language-javascript\">// test_00:\nconst grid = [\n  ['W', 'L', 'W', 'W', 'W'],\n  ['W', 'L', 'W', 'W', 'W'],\n  ['W', 'W', 'W', 'L', 'W'],\n  ['W', 'W', 'L', 'L', 'W'],\n  ['L', 'W', 'W', 'L', 'L'],\n  ['L', 'L', 'W', 'W', 'W'],\n];\n\nislandCount(grid); // -&gt; 3\n\n// test_01:\nconst grid = [\n  ['L', 'W', 'W', 'L', 'W'],\n  ['L', 'W', 'W', 'L', 'L'],\n  ['W', 'L', 'W', 'L', 'W'],\n  ['W', 'W', 'W', 'W', 'W'],\n  ['W', 'W', 'L', 'L', 'L'],\n];\n\nislandCount(grid); // -&gt; 4\n\n// test_02:\nconst grid = [\n  ['L', 'L', 'L'],\n  ['L', 'L', 'L'],\n  ['L', 'L', 'L'],\n];\n\nislandCount(grid); // -&gt; 1\n\n// test_03:\nconst grid = [\n  ['W', 'W'],\n  ['W', 'W'],\n  ['W', 'W'],\n];\n\nislandCount(grid); // -&gt; 0</code></pre>",
-        "start": 5978,
-        "position": 22,
-        "video": {
-            "id": "video-2ee319aa-a365-46bf-9378-7a8076867f39",
-            "url": "https://www.youtube.com/watch?v=tWVWeAqZ0WU",
-            "seen": 5978.015745339985,
-            "total": 7938.261
-        },
-        "pin": "yellow"
-    }, {
-        "id": "bookmark-1d2165df-f241-48ca-9f9f-bfa64a08a161",
-        "description": "<h2><strong>Approach</strong></h2><p>We need to consider the following facts about a Grid Graph</p><p>&nbsp;</p><p>🤔 <strong>Assumptions</strong></p><ul><li>Given any point in the graph, I can assume my node will have at-most - 4 neighbours</li><li>Any position neighbour can be represented by - <strong>rows</strong> &amp; <strong>columns</strong></li><li>Solution would contain Iterative code + Nested loops</li><li>Depth First Traversal (Stack) with Visited (Set) (so we aren't trapped in infinite cycles)</li><li>Also maintain a count variable for number of islands</li><li>My Depth First Traversal should avoid any of the following -<ul><li>Any Nodes with Water in them</li><li>Any Nodes visited before (by checking them against the Visited Set)</li></ul></li><li>❗<strong>NOTE: </strong>whenever you're to deal with an undirected graph, always guard with a <strong>Visited</strong> Set</li></ul>",
-        "start": 6062,
-        "position": 23,
-        "video": {
-            "id": "video-1124cd7d-2858-4311-a6b0-0547df00b089",
-            "url": "https://www.youtube.com/watch?v=tWVWeAqZ0WU",
-            "seen": 6061.836593719002,
-            "total": 7938.261
-        }
-    }, {
-        "id": "bookmark-151e89a7-c798-4f0d-8418-a005a9d1f708",
-        "description": "<p>Space Time Complexity:&nbsp;</p><p>&nbsp;</p><p>Consider R &amp; C the rows and columns of the grid since it's a 2D grid</p><p>&nbsp;</p><p>+ Time: O(<strong>rc</strong>) &nbsp;~ imagine have one large island and no water, then our time will be traversal throughout the grid</p><p>+ Space: O(<strong>rc</strong>)&nbsp;</p>",
-        "start": 6265,
-        "position": 24,
-        "video": {
-            "id": "video-2e8e26bf-8c8b-43b4-be9a-0e1976b17691",
-            "url": "https://www.youtube.com/watch?v=tWVWeAqZ0WU",
-            "seen": 6265.309956086076,
-            "total": 7938.261
-        }
-    }, {
-        "id": "bookmark-264cd5d0-b2b3-4e59-8667-aae5d6d88452",
-        "description": "<p>Implementing the Island Count (in Javascript)</p><p>&nbsp;</p><pre><code class=\"language-javascript\">// main\nconst islandCount = (grid) =&gt; {\n  // create visited\n  const visited = new Set();\n  let count = 0;\n  for (let r=0; r&lt;grid.length; r+=1) {\n    // graph can be asymmetric\n    for (let c=0; c&lt;grid[0].length; c+=1) {\n      if (explore(grid, r, c, visited) === true){\n        count += 1;\n      }\n    }\n  }\n  return count;\n};\n\n// recursive\nfunction explore (grid, r, c, visited) {\n  // base cases\n  // define boundaries\n  const rowBounds = 0 &lt;= r &amp;&amp; r &lt; grid.length;\n  const colBounds = 0 &lt;= c &amp;&amp; c &lt; grid[0].length;\n  // if out of bounds\n  if (!rowBounds || !colBounds) return false;\n  // check for water\n  if (grid[r][c] === 'W') return false;\n  // check visited\n  const pos = `${r},${c}`;\n  if (visited.has(pos)) return false;\n  visited.add(pos);\n  \n  // recursive case\n  explore(grid, r-1, c, visited);\n  explore(grid, r+1, c, visited);\n  explore(grid, r, c-1, visited);\n  explore(grid, r, c+1, visited);\n  \n  // by now explored all nodes and found islands \n  return true;\n}</code></pre><p>&nbsp;</p><p><strong>Space Time Complexity:</strong></p><p>&nbsp;</p><p>Consider R &amp; C the rows and columns of the grid since it's a 2D grid</p><p>&nbsp;</p><p>+ Time: <strong>O(rc)</strong> ~ imagine have one large island and no water, then our time will be traversal throughout the grid</p><p>+ Space: <strong>O(rc) </strong>~ for same reasons</p>",
-        "start": 6335,
-        "position": 25,
-        "video": {
-            "id": "video-5f1655b2-5caa-47ab-9360-eacbd73e8a0a",
-            "url": "https://www.youtube.com/watch?v=tWVWeAqZ0WU",
-            "seen": 6334.576217740306,
-            "total": 7938.261
-        },
-        "pin": "cyan"
-    }, {
-        "id": "bookmark-167224cf-bd63-4cb5-bca6-68d3d683e1a2",
-        "description": "<p>📜 <strong>Challenge #7: Minimum Island&nbsp;</strong></p><p>&nbsp;</p><p><i>Write a function, <strong>minimumIsland()</strong>, that takes in a grid containing <strong>Ws</strong> and <strong>Ls</strong>. <strong>W </strong>represents <strong>water</strong> and <strong>L</strong> represents <strong>land</strong>. The function should return the size of the smallest island. An island is a vertically or horizontally connected region of land.</i></p><p>&nbsp;</p><p><strong>NOTE:</strong> You may assume that the grid contains at least one island 🏝️</p>",
-        "start": 7130,
-        "position": 26,
-        "video": {
-            "id": "video-698eebbe-2c2b-452f-9ba4-d8848433f004",
-            "url": "https://www.youtube.com/watch?v=tWVWeAqZ0WU",
-            "seen": 7130.487059603011,
-            "total": 7938.261
-        },
-        "pin": "yellow"
-    }, {
-        "id": "bookmark-9ed811ac-7832-4b16-94a3-b26281ec0f01",
-        "description": "<p><strong>Approach to this problem</strong></p><p>&nbsp;</p><p><i>This solution follows the same logic as the \"Island Count\" problem</i><br>&nbsp;</p><p>+ Given any point in the graph, I can assume my node will have at-most - 4 neighbours</p><p>+ Any position neighbour can be represented by - rows &amp; columns</p><p>+ Solution would contain - Nested loops + Depth First Traversal</p><p>+ Depth First Traversal (Stack) with Visited (Set) (so we aren't trapped in infinite cycles)</p><p>+ Also maintain a count variable for number of islands</p><p>+ My Depth First Traversal should avoid any of the following -</p><p>+ Any Nodes with Water in them</p><p>+ Any Nodes visited before (by checking them against the Visited Set)</p><p>+❗NOTE: whenever you're to deal with an undirected graph, always guard with a Visited Set</p>",
-        "start": 7174,
-        "position": 27,
-        "video": {
-            "id": "video-95634bae-9f30-415b-96de-9da86a25281e",
-            "url": "https://www.youtube.com/watch?v=tWVWeAqZ0WU",
-            "seen": 7173.977329855779,
-            "total": 7938.261
-        }
-    }, {
-        "id": "bookmark-ce1816a7-719f-42fb-a475-bc5f9afcfef7",
-        "description": "<p><strong>Implementing the Minimum Island (using Javascript)</strong></p><p>&nbsp;</p><pre><code class=\"language-javascript\">// main\nconst minimumIsland = (grid) =&gt; {\n\n  const visited = new Set();  \n  let minCount = Infinity;\n  \n  // nest loop\n  for(let r=0; r&lt;grid.length; r+=1) {\n    for (let c=0; c&lt;grid[0].length; c+=1) {\n      const size = explore(grid, r, c, visited);\n      if (size &gt; 0 &amp;&amp; size &lt; minCount) minCount = size;\n    }\n  }\n  \n  return minCount;\n};\n\n// recursive - Depth first traversal\nfunction explore(grid, r, c, visited) {\n\n  // base case\n  // 1. check bounds\n  const rowBounds = 0 &lt;= r &amp;&amp; r &lt; grid.length;\n  const colBounds = 0 &lt;= c &amp;&amp; c &lt; grid[0].length;\n  if (!rowBounds || !colBounds) return 0;\n\n  // 2. if water return 0\n  if (grid[r][c] === 'W') return 0;\n\n  // 3. check visited\n  const pos = `${r},${c}`;\n  if (visited.has(pos) === true) return false;\n  visited.add(pos);\n  \n  let size = 1;\n  \n  // recurse\n  size += explore(grid, r-1, c, visited);\n  size += explore(grid, r+1, c, visited);\n  size += explore(grid, r, c-1, visited);\n  size += explore(grid, r, c+1, visited);\n  \n  return size;\n}</code></pre><p>&nbsp;</p><p><strong>Complexity:</strong></p><p><br>In a Grid Graph, With \"r\" - being the number of Rows and \"c\" - being number of Columns</p><p><br>+ Time Complexity: <strong>O(rc) ~ </strong>It is of linear time complexity where we traverse through the entire Grid. It is NOT quadratic cause we maintain a visited set</p><p>+ Space complexity: O(rc) ~ Same reason</p>",
-        "start": 7387,
-        "position": 28,
-        "video": {
-            "id": "video-4c907445-cfc3-4c7a-a2cb-379a296899d0",
-            "url": "https://www.youtube.com/watch?v=tWVWeAqZ0WU",
-            "seen": 7387.191951351953,
-            "total": 7938.261
-        },
-        "pin": "cyan"
-    }]
+  "id": "playlist-b4681e72-3d8d-46d8-bab7-fe4663a540e2",
+  "title": "Graph - Algorithms for Technical Interviews",
+  "createdBy": "",
+  "bookmarks": [
+    {
+      "id": "bookmark-6cd169c3-0130-453b-b4a7-2e723ad03c1a",
+      "description": "<p>Alvin's - Graph Algorithms</p>",
+      "start": 9,
+      "position": 1,
+      "video": {
+        "id": "video-2b6ce318-4fe8-4522-9f55-80980c9c99a3",
+        "url": "https://www.youtube.com/watch?v=tWVWeAqZ0WU",
+        "seen": 9.035358106811524,
+        "total": 7939
+      }
+    },
+    {
+      "id": "bookmark-ab8b362a-ebd2-4e55-bcf8-5016732eb487",
+      "description": "<p><strong>Background about Graphs - Graph Basics</strong></p><p>&nbsp;</p><p>+ A graph is a collection of Nodes &amp; Edges</p><p>+ An Edge is a connection between Nodes</p><p>+ Node or Vertex : It's just a connection between vertices</p>",
+      "start": 145,
+      "position": 2,
+      "video": {
+        "id": "video-c2211870-c7d5-4828-9e29-67e9bd297334",
+        "url": "https://www.youtube.com/watch?v=tWVWeAqZ0WU",
+        "seen": 145.08855994277954,
+        "total": 7939
+      },
+      "pin": "yellow"
+    },
+    {
+      "id": "bookmark-bb0419e2-a238-4f33-9755-f05f3173f6a4",
+      "description": "<p>Directed Graph, Undirected Graph - explanation</p><p>&nbsp;</p><p>+ Directed Graph</p><p>+ Undirected Graph</p><p>+ Neighbors</p>",
+      "start": 222,
+      "position": 3,
+      "video": {
+        "id": "video-8e7ddc02-0bcf-486a-8157-44bfbd1fa837",
+        "url": "https://www.youtube.com/watch?v=tWVWeAqZ0WU",
+        "seen": 221.70955705149842,
+        "total": 7939
+      }
+    },
+    {
+      "id": "bookmark-f6b03740-9391-4668-9337-cbf3cdf7a7bc",
+      "description": "<p>When do we prefer DFS or a BFS ?</p>",
+      "start": 579,
+      "position": 4,
+      "video": {
+        "id": "video-357ceb03-0aa8-400d-a11e-7c5645a8414b",
+        "url": "https://www.youtube.com/watch?v=tWVWeAqZ0WU",
+        "seen": 578.8098558474121,
+        "total": 7939
+      },
+      "pin": "green"
+    },
+    {
+      "id": "bookmark-6f1a8870-0173-4780-a791-d85af5d55e11",
+      "description": "<p>Adjacency List - A Programmatic representation of a Graph information</p><p>&nbsp;</p><p>+ In Javascript, we represent a primitive of graph as an Object whose values are arrays</p><p>+ We can also create a Graph class with methods to add neighbor and traverse a graph</p><p>&nbsp;</p><pre><code class=\"language-javascript\">// Depth first traversal using iterative approach\r\n// DFT uses a Stack - LIFO\r\nfunction depthFirstTraversalIterative(graph, source) {\r\n    const stack = [source];\r\n    while (stack.length &gt; 0) {\r\n        const current = stack.shift();\r\n        console.log(current);\r\n        for (let n of graph[current]) {\r\n            stack.unshift(n);\r\n        }\r\n    }\r\n}\r\n\r\n\r\n// Depth first traversal can also be return  - Recursively\r\nfunction depthFirstTraversalRecursive(graph, source) {\r\n    console.log(source);\r\n    for (let n of graph[source]){\r\n        depthFirstTraversalRecursive(graph, n);        \r\n    }\r\n}\r\n\r\n\r\n// Breadth first traversal can only be written - Iteratively\r\n// BFT uses a Queue - FIFO\r\n// If you try to write Breadth First traversal recursively the recursive will always fight against the Queue\r\nfunction breadthFirstTraversalIterative(graph, source) {\r\n    const queue = [source];\r\n    while (queue.length &gt; 0) {\r\n        const current = queue.shift();\r\n        console.log(current);\r\n        for (let n of graph[current]){\r\n            queue.push(n);\r\n        }\r\n    }\r\n}\r\n\r\n// Graph datastructure\r\n// Nodes\r\nfunction createNode(key) {\r\n    const neighbors = [];\r\n    return {\r\n        key,\r\n        neighbors,\r\n        addNeighbor(key){\r\n            neighbors.push(key);\r\n        }\r\n    };\r\n}\r\n\r\n// Graph DS - directed / undirected\r\nfunction createGraph(directed = false) {\r\n    const nodes = [];\r\n    const edges = [];\r\n    return {\r\n        directed,\r\n        nodes,\r\n        edges,\r\n        addNode(key) {\r\n            return nodes.push(createNode(key));\r\n        },\r\n        getNode(key) {\r\n            return nodes.find(n =&gt; n.key === key);\r\n        },\r\n        addEdge(k1, k2) {\r\n            const node1 = this.getNode(k1);\r\n            const node2 = this.getNode(k2);\r\n            node1.addNeighbor(node2);\r\n            edges.push(`${k1}-${k2}`);\r\n            if(!directed) {\r\n                node2.addNeighbor(node1);                \r\n            }\r\n        },\r\n        print() {\r\n            return nodes.map(({key, neighbors})=&gt;{\r\n                let result = key;\r\n                if (Boolean( neighbors.length &gt; 0)) {\r\n                    result += `=&gt; ${neighbors.map(n =&gt; n.key).join(',')}`;\r\n                }\r\n                return result;\r\n            }).join('\\n');\r\n        },\r\n        printPrimitive() {\r\n            const result = {};\r\n            nodes.map(({key, neighbors}) =&gt; {\r\n                result[key] = neighbors.map(n =&gt; n.key);                \r\n            });\r\n            return result;\r\n        }\r\n    };\r\n}\r\n\r\nconst graphObj = createGraph(true);\r\n\r\n// TESTING\r\ngraphObj.addNode('a');\r\ngraphObj.addNode('b');\r\ngraphObj.addNode('c');\r\ngraphObj.addNode('d');\r\ngraphObj.addNode('e');\r\ngraphObj.addNode('f');\r\n\r\ngraphObj.addEdge('a','c');\r\ngraphObj.addEdge('a','b');\r\ngraphObj.addEdge('b','d');\r\ngraphObj.addEdge('c','e');\r\ngraphObj.addEdge('d','f');\r\n\r\n\r\nconsole.log('Graph is:', graphObj.print());\r\nconst graph = graphObj.printPrimitive();\r\n\r\n\r\n// Testin Traversals\r\nconsole.log('Primitive graph is:', JSON.stringify(graph));\r\nconsole.log('Depth First Traversal using Iterative approach is: '); \r\ndepthFirstTraversalIterative(graph, 'a');\r\nconsole.log('Depth First Traversal using Recursive approach is: '); \r\ndepthFirstTraversalRecursive(graph, 'a');\r\nconsole.log('Breadth First Traversal using Iterative approach is: '); \r\nbreadthFirstTraversalIterative(graph, 'a');\r\n\r\n// OUTPUT\r\n// Primitive graph is: {\"a\":[\"c\",\"b\"],\"b\":[\"d\"],\"c\":[\"e\"],\"d\":[\"f\"],\"e\":[],\"f\":[]}\r\n// Depth First Traversal using Iterative approach is: \r\n// a\r\n// b\r\n// d\r\n// f\r\n// c\r\n// e\r\n// Depth First Traversal using Recursive approach is: \r\n// a\r\n// c\r\n// e\r\n// b\r\n// d\r\n// f\r\n// Breadth First Traversal using Iterative approach is: \r\n// a\r\n// c\r\n// b\r\n// e\r\n// d\r\n// f</code></pre><p>&nbsp;</p>",
+      "start": 310,
+      "position": 5,
+      "video": {
+        "id": "video-691bbe2d-9cb6-44a3-b652-35b42e845b78",
+        "url": "https://www.youtube.com/watch?v=tWVWeAqZ0WU",
+        "seen": 309.57139190653993,
+        "total": 7939
+      },
+      "pin": "cyan"
+    },
+    {
+      "id": "bookmark-c2d86dc6-fd08-486d-bd9c-bd755c0f48c0",
+      "description": "<p>Implementation of BFS and DFS Algorithms</p><p>&nbsp;</p><p>+ <strong>NOTE:</strong> Remember that recursion (in the heart of it) uses a stack like call structure, so a BFS which uses a queue would have a tough time to implement using recursion</p><p>+ BFS is best implemented iteratively!</p><p>&nbsp;</p><pre><code class=\"language-javascript\">// Depth first traversal using iterative approach\n// DFT uses a Stack - LIFO\nfunction depthFirstTraversalIterative(graph, source) {\n    const stack = [source];\n    while (stack.length &gt; 0) {\n        const current = stack.shift();\n        console.log(current);\n        for (let n of graph[current]) {\n            stack.unshift(n);\n        }\n    }\n}\n\n\n// Depth first traversal can also be return  - Recursively\nfunction depthFirstTraversalRecursive(graph, source) {\n    console.log(source);\n    for (let n of graph[source]){\n        depthFirstTraversalRecursive(graph, n);        \n    }\n}\n\n\n// Breadth first traversal can only be written - Iteratively\n// BFT uses a Queue - FIFO\n// If you try to write Breadth First traversal recursively the recursive will always fight against the Queue\nfunction breadthFirstTraversalIterative(graph, source) {\n    const queue = [source];\n    while (queue.length &gt; 0) {\n        const current = queue.shift();\n        console.log(current);\n        for (let n of graph[current]){\n            queue.push(n);\n        }\n    }\n}</code></pre>",
+      "start": 1023,
+      "position": 6,
+      "video": {
+        "id": "video-17fbbb82-6a5a-4d3e-a967-dfa3cbd42c0c",
+        "url": "https://www.youtube.com/watch?v=tWVWeAqZ0WU",
+        "seen": 1022.9784289980927,
+        "total": 7939
+      },
+      "pin": "cyan"
+    },
+    {
+      "id": "bookmark-7393a41c-b7f4-42fe-a0f4-6c36d3fcb473",
+      "description": "<p>📜 <strong>Challenge #1</strong> : Has Path - <strong>Find if Path Exists in Graph</strong></p><p>&nbsp;</p><p><a href=\"https://leetcode.com/problems/find-if-path-exists-in-graph/\">Link to the Problem (Leetcode)</a></p><p>&nbsp;</p><p><i>There is a <strong>bi-directional</strong> graph with n vertices, where each vertex is labeled from 0 to n-1 (<strong>inclusive</strong>). The edges in the graph are represented as a 2D integer array edges, where each edge denotes a bi-directional edge between the 2 vertices. Every vertex pair is connected by <strong>at most one</strong> edge, and no vertex has an edge to itself.</i></p><p><i>You want to determine if there is a <strong>valid path</strong> that exists from vertex start to vertex end.</i></p><p>&nbsp;</p><p><i>Given edges and the integers n, start, and end, return <strong>true</strong> if there is a <strong>valid path</strong> from start to end, or false otherwise.</i></p><p>&nbsp;</p><p>+ Important: They also mention that the Graph is <strong>acyclic -</strong> which means there is no closed loop in the graph</p>",
+      "start": 1736,
+      "position": 7,
+      "video": {
+        "id": "video-ee990dc9-38e4-4dae-aad2-0c394443f184",
+        "url": "https://www.youtube.com/watch?v=tWVWeAqZ0WU",
+        "seen": 1736.2194800686646,
+        "total": 7939
+      },
+      "pin": "yellow"
+    },
+    {
+      "id": "bookmark-f15e4406-3cc1-42ec-8517-7448482bcad5",
+      "description": "<p><strong>Implementing using DFS Recursively</strong></p><p>&nbsp;</p><p>The advantage of using Depth First Traversal recursively is that we can leverage the underlying callstack as LIFO for the problem.</p><p>&nbsp;</p><pre><code class=\"language-javascript\">// Has Path using Depth first Traversal Recursively\nfunction hasPathDFSRecursive(graph, src, dst) {\n  if (src === dst) return true;\n  for (let neighbor of graph[src]) {\n   if (hasPathDFSRecursive(graph, neighbor, dst) === true) { return true }\n  }\n  return false;\n}\n\nconst graph = {\n  a: ['b','c'],\n  b: ['d'],\n  c: ['e'],\n  d: ['f'],\n  e: [],\n  f: []\n};\n\nconsole.log('console.log - DFS recursive', hasPathDFSRecursive(graph, 'a', 'f'));</code></pre><p>&nbsp;</p><p style=\"margin-left:0px;\"><strong>Time &amp; Space Complexity</strong></p><p style=\"margin-left:0px;\">&nbsp;</p><p style=\"margin-left:0px;\">+ Let the Nodes of the Graph be <strong>'n'</strong> and the Edges of the Graph be <strong>'e'.</strong>&nbsp;<br>+ Time Complexity : <strong>O(e) </strong>(We would traverse through all of the nodes in a worst case scenario, meaning move through all the edges at-least once)<br>+ Space Complexity: <strong>O(n) </strong>(This would be the size of the stack / queue which would at one point, hold all the nodes)</p>",
+      "start": 2096,
+      "position": 8,
+      "video": {
+        "id": "video-faf678a6-85f9-4aba-a699-7e65ee9da4bb",
+        "url": "https://www.youtube.com/watch?v=tWVWeAqZ0WU",
+        "seen": 2095.674269917984,
+        "total": 7939
+      },
+      "pin": "cyan"
+    },
+    {
+      "id": "bookmark-194708c3-9406-4960-b5bc-468efe97137f",
+      "pin": "cyan",
+      "description": "<p><strong>Implementing Has-Path using BFS Traversal Algorithm</strong></p><p>&nbsp;</p><pre><code class=\"language-javascript\">// Has Path using Breadth First using Iteratively\nfunction hasPathBFSIterative(graph, src, dst) {\n  const queue = [src];\n  \n  while (queue.length &gt; 0) {\n    const current = queue.pop();\n    if (current  === dst ) return true;\n    for (let n of graph[current]) {\n      queue.unshift(n);\n    }\n  }\n  return false;\n}\n\nconst graph = {\n  a: ['b','c'],\n  b: ['d'],\n  c: ['e'],\n  d: ['f'],\n  e: [],\n  f: []\n};\n\nconsole.log('console.log - BFS iterative', hasPathBFSIterative(graph, 'a', 'f'));</code></pre><p>&nbsp;</p><p><strong>Time &amp; Space Complexity</strong></p><p>&nbsp;</p><p>+ Let the Nodes of the Graph be <strong>'n'</strong> and the Edges of the Graph be <strong>'e'.</strong>&nbsp;<br>+ Time Complexity : <strong>O(e) </strong>(We would traverse through all of the nodes in a worst case scenario, meaning move through all the edges at-least once)<br>+ Space Complexity: <strong>O(n) </strong>(This would be the size of the stack / queue which would at one point, hold all the nodes)</p><p>&nbsp;</p><p>+ NOTE: Remember we can also implement in the same way above - A Depth First Traversal using iterative stack.&nbsp;</p><p>+ We just replace our queue with a stack</p>",
+      "start": 2304,
+      "position": 9,
+      "video": {
+        "id": "video-6bf57931-221f-4c6b-9bd6-f5a49d776c10",
+        "url": "https://www.youtube.com/watch?v=tWVWeAqZ0WU",
+        "seen": 2304.3270309961854,
+        "total": 7939
+      }
+    },
+    {
+      "id": "bookmark-6fabf6fc-6693-429f-b2be-7eae2aa30137",
+      "pin": "yellow",
+      "description": "<p><strong>📜 Challenge #2: Undirected Path</strong></p><p>&nbsp;</p><p><i>Write a function, <strong>undirectedPath</strong>, that takes in an array of edges for an undirected graph and two nodes (nodeA, nodeB).&nbsp;</i></p><p><i>+ The function should return a boolean indicating whether or not there exists a path between nodeA and nodeB.</i></p>",
+      "start": 2526,
+      "position": 10,
+      "video": {
+        "id": "video-49c65b57-d3df-4ba5-b47d-9c8a2c56595f",
+        "url": "https://www.youtube.com/watch?v=tWVWeAqZ0WU",
+        "seen": 2525.580243988556,
+        "total": 7939
+      }
+    },
+    {
+      "id": "bookmark-1fca2c7c-f0d6-4280-82fa-6ef99dbe0e1a",
+      "description": "<p>First Step: convert this edge list into a more favourable Adjacency list or graph datastructure</p><p>&nbsp;</p><pre><code class=\"language-javascript\">// Helper function - buildGraph\nfunction buildGraph(edges) {\n\tconst graph = {};\n\tfor (let edge of edges) {\n\t\t// since edge list consists of pair of values\n\t\t// just de-structure them\n\t\tconst [a, b] = edge;\n\t\tif (!(a in graph)) graph[a] = [];\n\t\tif (!(b in graph)) graph[b] = [];\n\t\tgraph[a].push(b);\n\t\t// since it's undirected\n\t\tgraph[b].push(a);\n\t}\n\treturn graph;\n}</code></pre>",
+      "start": 2560,
+      "position": 11,
+      "video": {
+        "id": "video-693a1245-abe5-44da-8301-0689b51fb476",
+        "url": "https://www.youtube.com/watch?v=tWVWeAqZ0WU",
+        "seen": 2559.7236309523164,
+        "total": 7938.261
+      },
+      "pin": "cyan"
+    },
+    {
+      "id": "bookmark-da80246a-b983-4477-b405-700c8cb88cf3",
+      "description": "<p><strong>How to handle a Cyclic Graph</strong></p><p>&nbsp;</p><p>+ A Simple way is to maintain a Set / Map in which we store the nodes that were visited</p><p>+ This visited (Set/Map) data structure is chosen because it needs to be retrieved in O(1) time</p><p>+ This will act like as in recursion - Memoized data-structure</p><p>&nbsp;</p><pre><code class=\"language-javascript\">// Recursive function - with visited parameter\n// visited is a new Set()\nfunction hasPath(graph, src, dst, visited) {\n    if (src === dst) return true;\n    // unlike memoized, we're not retrieving values, just returning false\n    if (visited.has(src)) return false;\n    // add to the visited set\n    visited.add(src);\n    for (let neighbor of graph[src]) {\n        // same approach as in memoization\n        if (hasPath(graph, neighbor, dst, visited) === true) return true;\n\n    }\n    return false;\n} </code></pre>",
+      "start": 2670,
+      "position": 12,
+      "video": {
+        "id": "video-9379d9fe-8ca6-4801-8e74-f6813181433d",
+        "url": "https://www.youtube.com/watch?v=tWVWeAqZ0WU",
+        "seen": 2670.155337967575,
+        "total": 7938.261
+      }
+    },
+    {
+      "id": "bookmark-a2a2bfa4-4e3f-4ecb-a100-083984336542",
+      "description": "<p>Space Time Complexity of Undirected Path</p><p>&nbsp;</p><p>Time Complexity: <strong>O(e)</strong> ~ where n is the number of nodes and e is the number of edges</p><p>Space Complexity: <strong>O(n)</strong> ~ where n is the number of nodes and e is the number of edges</p>",
+      "start": 2939,
+      "position": 13,
+      "video": {
+        "id": "video-27cb6e0a-2c47-487a-981d-1ce1cf16f8c7",
+        "url": "https://www.youtube.com/watch?v=tWVWeAqZ0WU",
+        "seen": 2938.6715923378115,
+        "total": 7938.261
+      }
+    },
+    {
+      "id": "bookmark-e0667d22-9764-4173-a14b-dead8746a88a",
+      "description": "<p>Implementation of Undirected Path</p><p>&nbsp;</p><p>+ We will first write our helper function for converting the edge list to a graph - <strong>buildGraph</strong></p><p>+ We will then write our <strong>hasPath</strong> function<br>+ With the above helper function, we now have a \"Adjacency List\" type graph<br>+ We will apply the same Recursive Traversal Algorithm here, but with an extra \"visited\" parameter<br>+ Visited parameter, is a Set, which helps us <strong>add</strong> and <strong>check </strong>at O(1)</p><p>&nbsp;</p><pre><code class=\"language-javascript\">// Helper function - buildGraph\nfunction buildGraph(edges) {\n\tconst graph = {};\n\tfor (let edge of edges) {\n\t\t// since edge list consists of pair of values\n\t\t// just de-structure them\n\t\tconst [a, b] = edge;\n\t\tif (!(a in graph)) graph[a] = [];\n\t\tif (!(b in graph)) graph[b] = [];\n\t\tgraph[a].push(b);\n\t\t// since it's undirected\n\t\tgraph[b].push(a);\n\t}\n\treturn graph;\n}\n\n// Recursive function - with visited parameter\nfunction hasPath(graph, src, dst, visited) {\n    if (src === dst) return true;\n    if (visited.has(src)) return false;\n    visited.add(src);\n    for (let neighbor of graph[src]) {\n        if (hasPath(graph, neighbor, dst, visited) === true) return true;\n\n    }\n    return false;\n} \n\n// main function\nconst undirectedPath = (edges, nodeA, nodeB) =&gt; {\n   const graph = buildGraph(edges);\n   // check hasPath\n   return hasPath(graph, nodeA, nodeB, newSet());\n};</code></pre>",
+      "start": 3040,
+      "position": 14,
+      "video": {
+        "id": "video-c5a13456-4472-4d9f-abcd-cb8ca0238d00",
+        "url": "https://www.youtube.com/watch?v=tWVWeAqZ0WU",
+        "seen": 3039.7760016171046,
+        "total": 7938.261
+      },
+      "pin": "cyan"
+    },
+    {
+      "id": "bookmark-616a1cc1-ae23-48f4-9588-f74fcc420109",
+      "description": "<p><strong>📜 Challenge #3: Connected components count</strong></p><p>&nbsp;</p><p><i>Write a function, connectedComponentsCount(), that takes in the adjacency list of an undirected graph. The function should return the number of connected components within the graph.</i></p><p>&nbsp;</p><p>+ In short, the number of Edges in a Graph</p><p>&nbsp;</p><p><strong>Approach</strong></p><p>&nbsp;</p><p>+ This is very similar to the other Graph Traversal Algorithms<br>+ Except, in this one - we maintain a set called visited<br>+ NOTE: Remember that in Javascript, primitive Object keys are always defaulted to string<br>&nbsp;</p><p><strong>Time &amp; Space Complexity</strong></p><p><i>Lets assume 'E' being the number of Edges in the Graph and 'N' being the number of Nodes</i><br><br>+ <strong>Time Complexity</strong>: O(E)<br>+ <strong>Space Complexity</strong>: O(N)</p>",
+      "start": 3642,
+      "position": 15,
+      "video": {
+        "id": "video-61b068dc-eef9-4f5e-81b6-283c74f8bb41",
+        "url": "https://www.youtube.com/watch?v=tWVWeAqZ0WU",
+        "seen": 3642.2933180499945,
+        "total": 7938.261
+      },
+      "pin": "yellow"
+    },
+    {
+      "id": "bookmark-3f2819b0-f750-4189-a3b0-bd7cbf1efaa2",
+      "description": "<p><strong>Implement a Connected Component Count problem (in Javascript)</strong></p><p><br>+ This is going to require - iterative code for traversal of every node</p><p>+ Another function explore(graph, node, visited) - is a recursive function to go in as deep as possible</p><p>+ We need a visited Set to account for a cyclic graph<br>&nbsp;</p><pre><code class=\"language-javascript\">// connection components\nfunction connectedComponentsCount (graph) {\n    const visited = new Set(); // O(1) lookup and add\n    let count = 0;\n    // we need iterative code\n    for (let node in graph) {\n        if(explore(graph, node, visited) === true) {\n            count +=1;\n        };\n    }\n    return count;   \n}\n\n// we need traveral code   \nfunction explore (graph, current, visited) {\n    if (visited.has(String(current))) return false;\n    // if not - add to the collection\n    visited.add(String(current));\n\n    for (let neighbor of graph[current]) {\n        explore(graph, neighbor, visited);\n    }\n\n    return true;\n}\n\n// testing\nconst result = connectedComponentsCount({\n    1: [2],\n    2: [1,8],\n    6: [7],\n    9: [8],\n    7: [6, 8],\n    8: [9, 7, 2]\n  }); // -&gt; 1\n\nconsole.log('Connected component Count: ', result); // -&gt; 1</code></pre><p>&nbsp;</p><p><strong>Space Time Complexity</strong></p><p>&nbsp;</p><p>+ Time Complexity: O(E) ~ where E is the number of edges &nbsp;in the Graph</p><p>+ Space Complexity: O(N) ~ where N is the number of nodes in the graph, we're going to explore each of the nodes</p><p>&nbsp;</p><p><i>So this solution is of Linear Space time complexity!</i></p>",
+      "start": 3931,
+      "position": 16,
+      "video": {
+        "id": "video-1e935869-b462-456f-b138-03e4e1b33768",
+        "url": "https://www.youtube.com/watch?v=tWVWeAqZ0WU",
+        "seen": 3930.7564172671887,
+        "total": 7938.261
+      },
+      "pin": "cyan"
+    },
+    {
+      "id": "bookmark-48f75647-437b-4ed8-80bb-03555175b70b",
+      "description": "<p><strong>📜 Challenge #4: Largest component size</strong></p><p><br>Write a function, largestComponent, that takes in the adjacency list of an undirected graph.The function should return the size of the largest connected component in the graph.</p><p><br>+ Largest Component size is the largest count of edges in a connected graph</p><p>+ This is a slight variation to the \"Connected component\" problem</p><p><br>Space time Complexity:</p><p>&nbsp;</p><p>Consider E to be edges and N to be nodes of the graph</p><p>&nbsp;</p><p>+ Time complexity: <strong>O(E) ~ </strong>Just like in the last challenge, we will explore using DFS (recursion) so we're basically traversing all the edges</p><p>+ Space complexity: <strong>O(N) ~ </strong>Because our stack (recursion function) is storing every node in the process</p>",
+      "start": 4410,
+      "position": 17,
+      "video": {
+        "id": "video-b2fa0373-6adf-4759-901a-5eba691a3ed0",
+        "url": "https://www.youtube.com/watch?v=tWVWeAqZ0WU",
+        "seen": 4409.715641857011,
+        "total": 7938.261
+      },
+      "pin": "yellow"
+    },
+    {
+      "id": "bookmark-c2b5d4d6-bbac-4d95-8966-780b70fbaf59",
+      "description": "<p>Implementation of Largest Component solution (in Javascript)<br><br>+ There is a hint in the problem, that it's an undirected graph, this means we need to maintain and check a \"visited\" Set</p><p>+ To represent uniqueness, we stringily our elements before inserting / reading of the Set</p><p>&nbsp;</p><pre><code class=\"language-javascript\">// main function - largestComponent\nfunction largestComponent(graph) {\n  let largest = 0;\n  // for cyclic graphs\n  const visited = new Set();\n  for (node in graph) {\n    const result = explore(graph, node, visited);\n    if (result &gt; 0) {\n      largest = Math.max(result, largest);\n    }\n  }\n  return largest;\n}\n\n// Our DFS explore helper function\n// We know its DFS because of the recursive nature\nfunction explore (graph, node, visited) {\n  if (visited.has(String(node))) return 0;\n  // else we have visited the node, so mark it visited\n  let size = 1;\n  visited.add(String(node));\n  for (let neighbor of graph[node]) {\n    size += explore(graph, neighbor, visited);\n  }\n  return size;\n}\n\n\n// testing\nconst result = largestComponent({\n  0: ['4', '7'],\n  1: [],\n  2: [],\n  3: ['6'],\n  4: ['0'],\n  6: ['3'],\n  7: ['0'],\n  8: []\n}); // -&gt; 3\n\nconsole.log('Connected component Count: ', result); // -&gt; 1</code></pre><p>&nbsp;</p><p><strong>Space Time Complexity:</strong></p><p><br>Consider E to be edges and N to be nodes of the graph</p><p>&nbsp;</p><p>+ Time complexity: O(E) ~ Just like in the last challenge, we will explore using DFS (recursion) so we're basically traversing all the edges</p><p>+ Space complexity: O(N) ~ Because our stack (recursion function) is storing every node in the process</p>",
+      "start": 4696,
+      "position": 18,
+      "video": {
+        "id": "video-67bb0c21-2e1a-457f-9673-36b26d309007",
+        "url": "https://www.youtube.com/watch?v=tWVWeAqZ0WU",
+        "seen": 4696.130228266713,
+        "total": 7938.261
+      },
+      "pin": "cyan"
+    },
+    {
+      "id": "bookmark-2edf3611-d219-4c3f-ba54-e1bb18349788",
+      "description": "<p><strong>📜 Challenge 5: Shortest Path</strong></p><p>&nbsp;</p><p><i>Write a function, shortestPath(), that takes in an array of edges for an undirected graph and two nodes (nodeA, nodeB).</i></p><p><br>+ The function should return the length of the shortest path between A and B.</p><p>+ Consider the length as the number of edges in the path, not the number of nodes.</p><p>+ If there is no path between A and B, then return -1.</p>",
+      "start": 5046,
+      "position": 19,
+      "video": {
+        "id": "video-e5e3b68a-7de8-42fd-904f-686adb7d65ac",
+        "url": "https://www.youtube.com/watch?v=tWVWeAqZ0WU",
+        "seen": 5045.778082479985,
+        "total": 7938.261
+      },
+      "pin": "yellow"
+    },
+    {
+      "id": "bookmark-5ce3ae7f-4bf7-48cf-b551-b73ee321598e",
+      "description": "<p><strong>Explanation of Approach</strong></p><p>&nbsp;</p><p>+ We're given an edge list, so we need to use our <strong>buildGraph() </strong>helper function to create an adjacency list</p><p>+ We can either choose either DFS or a BFS</p><p>+ When it comes to finding - shortest distance / path / minimum edges / minimum travel in graph, The best approach is to use - Breadth First Traversal</p><p>+ For this problem, We will be using a Queue (for BFT) and a Set (to keep track of visited nodes)</p><p>+ Important point here is that the Queue will be holding a list of pairs (node, distance)</p><p>+ NOTE: If there is no path between the source (nodeA) and the destination (nodeB), then the function should return -1</p><p>&nbsp;</p><p><strong>Space Time Complexity</strong>&nbsp;</p><p><br>+ Time: O(E) - E being the number of edges</p>",
+      "start": 5054,
+      "position": 20,
+      "video": {
+        "id": "video-0e6325b1-bc41-497c-bb52-32be21460d55",
+        "url": "https://www.youtube.com/watch?v=tWVWeAqZ0WU",
+        "seen": 5053.920532028985,
+        "total": 7938.261
+      }
+    },
+    {
+      "id": "bookmark-1ad6b0df-53bb-419f-9e90-8bff4aa29526",
+      "description": "<p><strong>Implementing the Shortest Path problem (in Javascript)</strong></p><p>&nbsp;</p><pre><code class=\"language-javascript\">/**\n* Breadth First Traversal is always the choice to calculate the shortestPath\n*/\nconst shortestPath = (edges, nodeA, nodeB) =&gt; {\n  const graph = buildGraph(edges);  // get graph object\n  // using BFS traversal approach\n  const queue = [[nodeA, 0]];\n  // Initializing a Set, requires an array as part of the constructor\n  // Set - O(1) lookup and add\n  const visited = new Set([nodeA]); \n  \n  // BFS using Iterative method + Queue\n  while (queue.length &gt; 0) {\n    const [node, distance] = queue.shift();\n    if (node === nodeB) return distance;\n    for (let neighbor of graph[node]) {\n      // before adding to the queue, check visited\n      if(!visited.has(neighbor)) {\n        // else add it to the visited set\n        visited.add(neighbor);\n        // add it to the queue\n        queue.push([neighbor, distance+1]); \n      }\n    }\n  }\n  \n  return -1;\n};\n\n// Converting optimized edges array to Graph Adjacency list\nfunction buildGraph(edges) {\n  const graph = {};\n  for (let edge of edges) {\n    const [a, b] = edge;\n    if (!(a in graph)) graph[a] = [];\n    if (!(b in graph)) graph[b] = [];\n    graph[a].push(b);\n    graph[b].push(a);\n  }\n  return graph;\n}</code></pre>",
+      "start": 5486,
+      "position": 21,
+      "video": {
+        "id": "video-22731cd7-98d3-418e-8e3e-8f1f5d0ea79b",
+        "url": "https://www.youtube.com/watch?v=tWVWeAqZ0WU",
+        "seen": 5485.622355529248,
+        "total": 7938.261
+      },
+      "pin": "cyan"
+    },
+    {
+      "id": "bookmark-efcff69e-7e47-4995-929b-4d0c9512aa49",
+      "description": "<p>📜 <strong>Challenge 6: Island Count 🏝</strong></p><p>&nbsp;</p><p><i>Write a function, islandCount(), that takes in a grid containing Ws and Ls. W represents water and L represents land. The function should return the number of islands on the grid. An island is a vertically or horizontally connected region of land.</i></p><p>&nbsp;</p><p>+ The given graph is what we call a - Grid Graph</p><p>+ A Grid Graph is a 2D array with MXN - M being Rows, N being elements</p><p>+ Not a square grid graph, this Grid Graph can be Asymmetric - meaning M !== N (see test_03)</p><p>+ The function should return a Number (ie., number of islands)</p><p>&nbsp;</p><pre><code class=\"language-javascript\">// test_00:\nconst grid = [\n  ['W', 'L', 'W', 'W', 'W'],\n  ['W', 'L', 'W', 'W', 'W'],\n  ['W', 'W', 'W', 'L', 'W'],\n  ['W', 'W', 'L', 'L', 'W'],\n  ['L', 'W', 'W', 'L', 'L'],\n  ['L', 'L', 'W', 'W', 'W'],\n];\n\nislandCount(grid); // -&gt; 3\n\n// test_01:\nconst grid = [\n  ['L', 'W', 'W', 'L', 'W'],\n  ['L', 'W', 'W', 'L', 'L'],\n  ['W', 'L', 'W', 'L', 'W'],\n  ['W', 'W', 'W', 'W', 'W'],\n  ['W', 'W', 'L', 'L', 'L'],\n];\n\nislandCount(grid); // -&gt; 4\n\n// test_02:\nconst grid = [\n  ['L', 'L', 'L'],\n  ['L', 'L', 'L'],\n  ['L', 'L', 'L'],\n];\n\nislandCount(grid); // -&gt; 1\n\n// test_03:\nconst grid = [\n  ['W', 'W'],\n  ['W', 'W'],\n  ['W', 'W'],\n];\n\nislandCount(grid); // -&gt; 0</code></pre>",
+      "start": 5978,
+      "position": 22,
+      "video": {
+        "id": "video-2ee319aa-a365-46bf-9378-7a8076867f39",
+        "url": "https://www.youtube.com/watch?v=tWVWeAqZ0WU",
+        "seen": 5978.015745339985,
+        "total": 7938.261
+      },
+      "pin": "yellow"
+    },
+    {
+      "id": "bookmark-1d2165df-f241-48ca-9f9f-bfa64a08a161",
+      "description": "<h2><strong>Approach</strong></h2><p>We need to consider the following facts about a Grid Graph</p><p>&nbsp;</p><p>🤔 <strong>Assumptions</strong></p><ul><li>Given any point in the graph, I can assume my node will have at-most - 4 neighbours</li><li>Any position neighbour can be represented by - <strong>rows</strong> &amp; <strong>columns</strong></li><li>Solution would contain Iterative code + Nested loops</li><li>Depth First Traversal (Stack) with Visited (Set) (so we aren't trapped in infinite cycles)</li><li>Also maintain a count variable for number of islands</li><li>My Depth First Traversal should avoid any of the following -<ul><li>Any Nodes with Water in them</li><li>Any Nodes visited before (by checking them against the Visited Set)</li></ul></li><li>❗<strong>NOTE: </strong>whenever you're to deal with an undirected graph, always guard with a <strong>Visited</strong> Set</li></ul>",
+      "start": 6062,
+      "position": 23,
+      "video": {
+        "id": "video-1124cd7d-2858-4311-a6b0-0547df00b089",
+        "url": "https://www.youtube.com/watch?v=tWVWeAqZ0WU",
+        "seen": 6061.836593719002,
+        "total": 7938.261
+      }
+    },
+    {
+      "id": "bookmark-151e89a7-c798-4f0d-8418-a005a9d1f708",
+      "description": "<p>Space Time Complexity:&nbsp;</p><p>&nbsp;</p><p>Consider R &amp; C the rows and columns of the grid since it's a 2D grid</p><p>&nbsp;</p><p>+ Time: O(<strong>rc</strong>) &nbsp;~ imagine have one large island and no water, then our time will be traversal throughout the grid</p><p>+ Space: O(<strong>rc</strong>)&nbsp;</p>",
+      "start": 6265,
+      "position": 24,
+      "video": {
+        "id": "video-2e8e26bf-8c8b-43b4-be9a-0e1976b17691",
+        "url": "https://www.youtube.com/watch?v=tWVWeAqZ0WU",
+        "seen": 6265.309956086076,
+        "total": 7938.261
+      }
+    },
+    {
+      "id": "bookmark-264cd5d0-b2b3-4e59-8667-aae5d6d88452",
+      "description": "<p>Implementing the Island Count (in Javascript)</p><p>&nbsp;</p><pre><code class=\"language-javascript\">// main\nconst islandCount = (grid) =&gt; {\n  // create visited\n  const visited = new Set();\n  let count = 0;\n  for (let r=0; r&lt;grid.length; r+=1) {\n    // graph can be asymmetric\n    for (let c=0; c&lt;grid[0].length; c+=1) {\n      if (explore(grid, r, c, visited) === true){\n        count += 1;\n      }\n    }\n  }\n  return count;\n};\n\n// recursive\nfunction explore (grid, r, c, visited) {\n  // base cases\n  // define boundaries\n  const rowBounds = 0 &lt;= r &amp;&amp; r &lt; grid.length;\n  const colBounds = 0 &lt;= c &amp;&amp; c &lt; grid[0].length;\n  // if out of bounds\n  if (!rowBounds || !colBounds) return false;\n  // check for water\n  if (grid[r][c] === 'W') return false;\n  // check visited\n  const pos = `${r},${c}`;\n  if (visited.has(pos)) return false;\n  visited.add(pos);\n  \n  // recursive case\n  explore(grid, r-1, c, visited);\n  explore(grid, r+1, c, visited);\n  explore(grid, r, c-1, visited);\n  explore(grid, r, c+1, visited);\n  \n  // by now explored all nodes and found islands \n  return true;\n}</code></pre><p>&nbsp;</p><p><strong>Space Time Complexity:</strong></p><p>&nbsp;</p><p>Consider R &amp; C the rows and columns of the grid since it's a 2D grid</p><p>&nbsp;</p><p>+ Time: <strong>O(rc)</strong> ~ imagine have one large island and no water, then our time will be traversal throughout the grid</p><p>+ Space: <strong>O(rc) </strong>~ for same reasons</p>",
+      "start": 6335,
+      "position": 25,
+      "video": {
+        "id": "video-5f1655b2-5caa-47ab-9360-eacbd73e8a0a",
+        "url": "https://www.youtube.com/watch?v=tWVWeAqZ0WU",
+        "seen": 6334.576217740306,
+        "total": 7938.261
+      },
+      "pin": "cyan"
+    },
+    {
+      "id": "bookmark-167224cf-bd63-4cb5-bca6-68d3d683e1a2",
+      "description": "<p>📜 <strong>Challenge #7: Minimum Island&nbsp;</strong></p><p>&nbsp;</p><p><i>Write a function, <strong>minimumIsland()</strong>, that takes in a grid containing <strong>Ws</strong> and <strong>Ls</strong>. <strong>W </strong>represents <strong>water</strong> and <strong>L</strong> represents <strong>land</strong>. The function should return the size of the smallest island. An island is a vertically or horizontally connected region of land.</i></p><p>&nbsp;</p><p><strong>NOTE:</strong> You may assume that the grid contains at least one island 🏝️</p>",
+      "start": 7130,
+      "position": 26,
+      "video": {
+        "id": "video-698eebbe-2c2b-452f-9ba4-d8848433f004",
+        "url": "https://www.youtube.com/watch?v=tWVWeAqZ0WU",
+        "seen": 7130.487059603011,
+        "total": 7938.261
+      },
+      "pin": "yellow"
+    },
+    {
+      "id": "bookmark-9ed811ac-7832-4b16-94a3-b26281ec0f01",
+      "description": "<p><strong>Approach to this problem</strong></p><p>&nbsp;</p><p><i>This solution follows the same logic as the \"Island Count\" problem</i><br>&nbsp;</p><p>+ Given any point in the graph, I can assume my node will have at-most - 4 neighbours</p><p>+ Any position neighbour can be represented by - rows &amp; columns</p><p>+ Solution would contain - Nested loops + Depth First Traversal</p><p>+ Depth First Traversal (Stack) with Visited (Set) (so we aren't trapped in infinite cycles)</p><p>+ Also maintain a count variable for number of islands</p><p>+ My Depth First Traversal should avoid any of the following -</p><p>+ Any Nodes with Water in them</p><p>+ Any Nodes visited before (by checking them against the Visited Set)</p><p>+❗NOTE: whenever you're to deal with an undirected graph, always guard with a Visited Set</p>",
+      "start": 7174,
+      "position": 27,
+      "video": {
+        "id": "video-95634bae-9f30-415b-96de-9da86a25281e",
+        "url": "https://www.youtube.com/watch?v=tWVWeAqZ0WU",
+        "seen": 7173.977329855779,
+        "total": 7938.261
+      }
+    },
+    {
+      "id": "bookmark-ce1816a7-719f-42fb-a475-bc5f9afcfef7",
+      "description": "<p><strong>Implementing the Minimum Island (using Javascript)</strong></p><p>&nbsp;</p><pre><code class=\"language-javascript\">// main\nconst minimumIsland = (grid) =&gt; {\n\n  const visited = new Set();  \n  let minCount = Infinity;\n  \n  // nest loop\n  for(let r=0; r&lt;grid.length; r+=1) {\n    for (let c=0; c&lt;grid[0].length; c+=1) {\n      const size = explore(grid, r, c, visited);\n      if (size &gt; 0 &amp;&amp; size &lt; minCount) minCount = size;\n    }\n  }\n  \n  return minCount;\n};\n\n// recursive - Depth first traversal\nfunction explore(grid, r, c, visited) {\n\n  // base case\n  // 1. check bounds\n  const rowBounds = 0 &lt;= r &amp;&amp; r &lt; grid.length;\n  const colBounds = 0 &lt;= c &amp;&amp; c &lt; grid[0].length;\n  if (!rowBounds || !colBounds) return 0;\n\n  // 2. if water return 0\n  if (grid[r][c] === 'W') return 0;\n\n  // 3. check visited\n  const pos = `${r},${c}`;\n  if (visited.has(pos) === true) return false;\n  visited.add(pos);\n  \n  let size = 1;\n  \n  // recurse\n  size += explore(grid, r-1, c, visited);\n  size += explore(grid, r+1, c, visited);\n  size += explore(grid, r, c-1, visited);\n  size += explore(grid, r, c+1, visited);\n  \n  return size;\n}</code></pre><p>&nbsp;</p><p><strong>Complexity:</strong></p><p><br>In a Grid Graph, With \"r\" - being the number of Rows and \"c\" - being number of Columns</p><p><br>+ Time Complexity: <strong>O(rc) ~ </strong>It is of linear time complexity where we traverse through the entire Grid. It is NOT quadratic cause we maintain a visited set</p><p>+ Space complexity: O(rc) ~ Same reason</p>",
+      "start": 7387,
+      "position": 28,
+      "video": {
+        "id": "video-4c907445-cfc3-4c7a-a2cb-379a296899d0",
+        "url": "https://www.youtube.com/watch?v=tWVWeAqZ0WU",
+        "seen": 7387.191951351953,
+        "total": 7938.261
+      },
+      "pin": "cyan"
+    }
+  ]
 }

@@ -27,43 +27,40 @@ test_05:
 pairSum([6, 4, 2, 8 ], 12); // -> [1, 3]
 */
 
-// Space Time Complexity: 
+// Space Time Complexity:
 // Time: O(n^2) ~ where n is the length of numbers
 // Space: O(1) ~ coz we know the size of the result array
 // 2 pointers approach
-// const pairSum = (numbers, targetSum) => {  
+// const pairSum = (numbers, targetSum) => {
 //   const result = [];
 //   for (let i=0; i<numbers.length; i++) {
 //     for (let j=i+1; j<numbers.length; j++) {
 //       if (numbers[i] + numbers[j] === targetSum) {
-//         result.push(i); result.push(j);        
+//         result.push(i); result.push(j);
 //       }
 //     }
 //   }
 //   return result;
 // };
 
-
-// Space Time Complexity: 
+// Space Time Complexity:
 // Time: O(n) ~ we just iterate thru the array
 // Space: O(n) ~ using a map datastructure
 const pairSum = (numbers, targetSum) => {
-    const result = [];
-    const pairMap = {};
-    for (let i = 0; i < numbers.length; i++) {
-      const compliment = targetSum - numbers[i];
-      if (compliment in pairMap) {
-        result.push(pairMap[compliment]);
-        result.push(i);
-      } else {
-        pairMap[numbers[i]] = i;
-      }
+  const result = [];
+  const pairMap = {};
+  for (let i = 0; i < numbers.length; i++) {
+    const compliment = targetSum - numbers[i];
+    if (compliment in pairMap) {
+      result.push(pairMap[compliment]);
+      result.push(i);
+    } else {
+      pairMap[numbers[i]] = i;
     }
-    return result;
+  }
+  return result;
 };
 
-
-
 module.exports = {
-  pairSum
+  pairSum,
 };

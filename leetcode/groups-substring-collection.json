@@ -1,1 +1,103 @@
-{"id":"playlist-9e7bb8ef-f77d-4b15-8caf-13ec5085101c","title":"Groups of Strings / Substring - Collection","createdBy":"","bookmarks":[{"id":"bookmark-335b47f5-877c-4c57-a1e0-e04241855fba","description":"<p>Problem Statement &amp; Explanation</p>","start":7,"position":1,"video":{"id":"video-2313f1b1-1645-471e-b7e8-25b7b95d65b0","url":"https://www.youtube.com/watch?v=MGPHPadxhtQ","seen":6.64400030001683,"total":447.101}},{"id":"bookmark-876ecc8d-447d-427b-a410-51361ed674a7","description":"<p>Explaining the Problem Statement. Grouped &amp; Ungrouped substrings -&nbsp;</p><p>&nbsp;</p><pre><code class=\"language-javascript\">000111 // equal 1s and 0s &amp; grouped\n1010 // equal 1s and 0s but ungrouped</code></pre>","start":62,"position":2,"video":{"id":"video-3b855951-ee14-49f9-960d-83d5b9c01d8c","url":"https://www.youtube.com/watch?v=MGPHPadxhtQ","seen":62.08030520529658,"total":447.101}},{"id":"bookmark-86eafc88-8bf1-42a9-b8b5-f0a390da0fdd","description":"<p>How many substrings can be formed with equal number of 0s and 1s</p><p>&nbsp;</p><pre><code class=\"language-javascript\">Consider - 000111\n1 Substring - 01\n2 Substring - 0011\n3 Substring - 000111</code></pre>","start":129,"position":3,"video":{"id":"video-6ff25ca3-4613-41ac-bb1f-71d2bde6b4d2","url":"https://www.youtube.com/watch?v=MGPHPadxhtQ","seen":129.32271830447968,"total":447.101}},{"id":"bookmark-5deb4364-1f1c-45db-b28f-2d6b34ac75be","description":"<p>\"If new entry is added, then the number of substring is the Minimum number of countZeroes and countOnes\"</p><p>&nbsp;</p><p>How do we get this ?</p><p>&nbsp;</p><pre><code class=\"language-javascript\">Math.min(countZeroes, countOnes);</code></pre><p>&nbsp;</p><p>We know now the count of substrings in a string</p><p>&nbsp;</p>","start":163,"position":4,"video":{"id":"video-545adda0-bb2d-4cef-bd13-0302843e94c5","url":"https://www.youtube.com/watch?v=MGPHPadxhtQ","seen":163.42692148937635,"total":447.101}},{"id":"bookmark-e626f465-a07f-4a2c-add8-fb346bd59d93","description":"<p>Back to the problem statement -&nbsp;</p><blockquote><p><i>How many substrings are present in the below String with contiguous 0's &amp; 1''s &nbsp;?</i></p></blockquote><p>&nbsp;</p><p>+ We have 3 contiguous substrings</p><p>+ Some part of the previous substring is used in the current substring</p><p>+ We therefore need 2 variables - \"current\" &amp; \"previous'</p><p>+ count = Math.min(current, previous);</p><p>+ Output will be addition of the count</p><p>&nbsp;</p>","start":191,"position":5,"video":{"id":"video-8c1b202f-e824-4f1d-a3bf-e61b6cbbe729","url":"https://www.youtube.com/watch?v=MGPHPadxhtQ","seen":191.4655435108687,"total":447.101}},{"id":"bookmark-ee61a27d-75a3-448c-a3ae-c1c6a828248e","description":"<p><strong>Approach #1 - Using Sliding Window Technique - in Javascript</strong></p><p>&nbsp;</p><pre><code class=\"language-javascript\">/**\n* Using sliding window technique\n* @param {string} s\n* @return {number}\n*/\nconst countBinarySubstrings = (s) =&gt; {\n let count = 0;\n let i = 1;\n let prev = 0;\n let curr = 1;\n while (i &lt; s.length) {\n  if (s.charAt(i-1) !== s.charAt(i)) {\n   count+=Math.min(prev, curr);\n   prev = curr;\n   curr = 1;\n  } else {\n   curr++;\n  }\n  i++;\n }\n};</code></pre>","start":287,"position":6,"video":{"id":"video-5f1cac47-6f75-48b1-9447-bc59e92d8451","url":"https://www.youtube.com/watch?v=MGPHPadxhtQ","seen":287.2314226735007,"total":447.101}},{"id":"bookmark-1667ee5f-5c72-4291-8037-91ef926df4c5","description":"<p><strong>Space Time Complexity</strong></p><p>&nbsp;</p><p>+ Time : O(N) - We are iterating through the string, so N = size</p><p>+ Space: O(1) - We are using primitive variables, no data structures needed</p>","start":421,"position":7,"video":{"id":"video-52c16273-8734-459e-9055-0e1fce7d926e","url":"https://www.youtube.com/watch?v=MGPHPadxhtQ","seen":420.8825789378444,"total":447.101}},{"id":"bookmark-8adf6460-1499-4c56-9067-ab9549c02233","description":"<p><strong>Another approach #2 - Group by Character</strong></p><p>&nbsp;</p><pre><code class=\"language-javascript\">/**\n * @param {string} s\n * Approach #2\n * Group by Character [Accepted]\n * @return {number}\n */\nvar countBinarySubstrings = function(s) {\n    const groups = new Array(s.length);\n    let t = 0;\n    groups[0] = 1;\n    for (let i=1; i&lt;s.length; i++) {\n        if (s.charAt(i-1) !== s.charAt(i)) {\n            groups[++t] = 1;\n        } else {\n            groups[t]++;\n        }\n    }\n    let ans = 0;\n    for (let i=1; i&lt;=t; i++) {\n        ans += Math.min(groups[i-1], groups[i]);\n    }\n    return ans;\n};</code></pre><p>&nbsp;</p><p><strong>Space time complexity&nbsp;</strong></p><p>&nbsp;</p><p>+ Time - O(N)</p><p>+ Space - O(N)</p>","start":430,"position":8,"video":{"id":"video-cfebf030-0873-4e60-a0b8-c62798ddfd71","url":"https://www.youtube.com/watch?v=MGPHPadxhtQ","seen":430.0768023709961,"total":447.101}}]}
+{
+  "id": "playlist-9e7bb8ef-f77d-4b15-8caf-13ec5085101c",
+  "title": "Groups of Strings / Substring - Collection",
+  "createdBy": "",
+  "bookmarks": [
+    {
+      "id": "bookmark-335b47f5-877c-4c57-a1e0-e04241855fba",
+      "description": "<p>Problem Statement &amp; Explanation</p>",
+      "start": 7,
+      "position": 1,
+      "video": {
+        "id": "video-2313f1b1-1645-471e-b7e8-25b7b95d65b0",
+        "url": "https://www.youtube.com/watch?v=MGPHPadxhtQ",
+        "seen": 6.64400030001683,
+        "total": 447.101
+      }
+    },
+    {
+      "id": "bookmark-876ecc8d-447d-427b-a410-51361ed674a7",
+      "description": "<p>Explaining the Problem Statement. Grouped &amp; Ungrouped substrings -&nbsp;</p><p>&nbsp;</p><pre><code class=\"language-javascript\">000111 // equal 1s and 0s &amp; grouped\n1010 // equal 1s and 0s but ungrouped</code></pre>",
+      "start": 62,
+      "position": 2,
+      "video": {
+        "id": "video-3b855951-ee14-49f9-960d-83d5b9c01d8c",
+        "url": "https://www.youtube.com/watch?v=MGPHPadxhtQ",
+        "seen": 62.08030520529658,
+        "total": 447.101
+      }
+    },
+    {
+      "id": "bookmark-86eafc88-8bf1-42a9-b8b5-f0a390da0fdd",
+      "description": "<p>How many substrings can be formed with equal number of 0s and 1s</p><p>&nbsp;</p><pre><code class=\"language-javascript\">Consider - 000111\n1 Substring - 01\n2 Substring - 0011\n3 Substring - 000111</code></pre>",
+      "start": 129,
+      "position": 3,
+      "video": {
+        "id": "video-6ff25ca3-4613-41ac-bb1f-71d2bde6b4d2",
+        "url": "https://www.youtube.com/watch?v=MGPHPadxhtQ",
+        "seen": 129.32271830447968,
+        "total": 447.101
+      }
+    },
+    {
+      "id": "bookmark-5deb4364-1f1c-45db-b28f-2d6b34ac75be",
+      "description": "<p>\"If new entry is added, then the number of substring is the Minimum number of countZeroes and countOnes\"</p><p>&nbsp;</p><p>How do we get this ?</p><p>&nbsp;</p><pre><code class=\"language-javascript\">Math.min(countZeroes, countOnes);</code></pre><p>&nbsp;</p><p>We know now the count of substrings in a string</p><p>&nbsp;</p>",
+      "start": 163,
+      "position": 4,
+      "video": {
+        "id": "video-545adda0-bb2d-4cef-bd13-0302843e94c5",
+        "url": "https://www.youtube.com/watch?v=MGPHPadxhtQ",
+        "seen": 163.42692148937635,
+        "total": 447.101
+      }
+    },
+    {
+      "id": "bookmark-e626f465-a07f-4a2c-add8-fb346bd59d93",
+      "description": "<p>Back to the problem statement -&nbsp;</p><blockquote><p><i>How many substrings are present in the below String with contiguous 0's &amp; 1''s &nbsp;?</i></p></blockquote><p>&nbsp;</p><p>+ We have 3 contiguous substrings</p><p>+ Some part of the previous substring is used in the current substring</p><p>+ We therefore need 2 variables - \"current\" &amp; \"previous'</p><p>+ count = Math.min(current, previous);</p><p>+ Output will be addition of the count</p><p>&nbsp;</p>",
+      "start": 191,
+      "position": 5,
+      "video": {
+        "id": "video-8c1b202f-e824-4f1d-a3bf-e61b6cbbe729",
+        "url": "https://www.youtube.com/watch?v=MGPHPadxhtQ",
+        "seen": 191.4655435108687,
+        "total": 447.101
+      }
+    },
+    {
+      "id": "bookmark-ee61a27d-75a3-448c-a3ae-c1c6a828248e",
+      "description": "<p><strong>Approach #1 - Using Sliding Window Technique - in Javascript</strong></p><p>&nbsp;</p><pre><code class=\"language-javascript\">/**\n* Using sliding window technique\n* @param {string} s\n* @return {number}\n*/\nconst countBinarySubstrings = (s) =&gt; {\n let count = 0;\n let i = 1;\n let prev = 0;\n let curr = 1;\n while (i &lt; s.length) {\n  if (s.charAt(i-1) !== s.charAt(i)) {\n   count+=Math.min(prev, curr);\n   prev = curr;\n   curr = 1;\n  } else {\n   curr++;\n  }\n  i++;\n }\n};</code></pre>",
+      "start": 287,
+      "position": 6,
+      "video": {
+        "id": "video-5f1cac47-6f75-48b1-9447-bc59e92d8451",
+        "url": "https://www.youtube.com/watch?v=MGPHPadxhtQ",
+        "seen": 287.2314226735007,
+        "total": 447.101
+      }
+    },
+    {
+      "id": "bookmark-1667ee5f-5c72-4291-8037-91ef926df4c5",
+      "description": "<p><strong>Space Time Complexity</strong></p><p>&nbsp;</p><p>+ Time : O(N) - We are iterating through the string, so N = size</p><p>+ Space: O(1) - We are using primitive variables, no data structures needed</p>",
+      "start": 421,
+      "position": 7,
+      "video": {
+        "id": "video-52c16273-8734-459e-9055-0e1fce7d926e",
+        "url": "https://www.youtube.com/watch?v=MGPHPadxhtQ",
+        "seen": 420.8825789378444,
+        "total": 447.101
+      }
+    },
+    {
+      "id": "bookmark-8adf6460-1499-4c56-9067-ab9549c02233",
+      "description": "<p><strong>Another approach #2 - Group by Character</strong></p><p>&nbsp;</p><pre><code class=\"language-javascript\">/**\n * @param {string} s\n * Approach #2\n * Group by Character [Accepted]\n * @return {number}\n */\nvar countBinarySubstrings = function(s) {\n    const groups = new Array(s.length);\n    let t = 0;\n    groups[0] = 1;\n    for (let i=1; i&lt;s.length; i++) {\n        if (s.charAt(i-1) !== s.charAt(i)) {\n            groups[++t] = 1;\n        } else {\n            groups[t]++;\n        }\n    }\n    let ans = 0;\n    for (let i=1; i&lt;=t; i++) {\n        ans += Math.min(groups[i-1], groups[i]);\n    }\n    return ans;\n};</code></pre><p>&nbsp;</p><p><strong>Space time complexity&nbsp;</strong></p><p>&nbsp;</p><p>+ Time - O(N)</p><p>+ Space - O(N)</p>",
+      "start": 430,
+      "position": 8,
+      "video": {
+        "id": "video-cfebf030-0873-4e60-a0b8-c62798ddfd71",
+        "url": "https://www.youtube.com/watch?v=MGPHPadxhtQ",
+        "seen": 430.0768023709961,
+        "total": 447.101
+      }
+    }
+  ]
+}

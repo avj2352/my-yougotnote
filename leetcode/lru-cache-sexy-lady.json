@@ -1,76 +1,83 @@
 {
-    "id": "playlist-960c33c8-ffaf-4954-9410-6349f2fdedc1",
-    "title": "LRU Cache - Javascript",
-    "createdBy": "",
-    "bookmarks": [{
-        "id": "bookmark-41be6796-c173-4e54-9d91-5f7a5679851e",
-        "description": "<p>😍 Pretty Lady + She knows to solve Leetcode in Javascript ❤️</p><p>&nbsp;</p><p>...ahem</p><p>&nbsp;</p><p><strong>Design a data structure that follows the constraints of a Least Recently Used (LRU) cache.</strong></p><p>&nbsp;</p><p>Implement the LRUCache class:</p><p>&nbsp;</p><p>+ LRUCache(int capacity) - Initialize the LRU cache with positive size capacity.</p><p>+ int get(int key) - Return the value of the key if the key exists, otherwise return -1.</p><p>+ void put(int key, int value) - Update the value of the key if the key exists. Otherwise, add the key-value pair to the cache. If the number of keys exceeds the capacity from this + operation, evict the least recently used key.</p><p>+ The functions get and put must each run in O(1) average time complexity.</p><p>&nbsp;</p><pre><code class=\"language-javascript\"># Example 1:\n\nInput\n\n[\"LRUCache\", \"put\", \"put\", \"get\", \"put\", \"get\", \"put\", \"get\", \"get\", \"get\"]\n\n[[2], [1, 1], [2, 2], [1], [3, 3], [2], [4, 4], [1], [3], [4]]\n\nOutput\n\n[null, null, null, 1, null, -1, null, -1, 3, 4]\n\n\n\n# Explanation\n\nLRUCache lRUCache = new LRUCache(2);\n\nlRUCache.put(1, 1); // cache is {1=1}\n\nlRUCache.put(2, 2); // cache is {1=1, 2=2}\n\nlRUCache.get(1);    // return 1\n\nlRUCache.put(3, 3); // LRU key was 2, evicts key 2, cache is {1=1, 3=3}\n\nlRUCache.get(2);    // returns -1 (not found)\n\nlRUCache.put(4, 4); // LRU key was 1, evicts key 1, cache is {4=4, 3=3}\n\nlRUCache.get(1);    // return -1 (not found)\n\nlRUCache.get(3);    // return 3\n\nlRUCache.get(4);    // return 4</code></pre><p>&nbsp;</p><p><strong>Constraints:</strong></p><p>&nbsp;</p><pre><code class=\"language-javascript\">1 &lt;= capacity &lt;= 3000\n\n0 &lt;= key &lt;= 104\n\n0 &lt;= value &lt;= 105\n\nAt most 2 * 105 calls will be made to get and put.</code></pre><p>&nbsp;</p>",
-        "start": 16,
-        "position": 1,
-        "video": {
-            "id": "video-68dcb8c6-a7b3-44d0-abf4-484bbfc098d6",
-            "url": "https://www.youtube.com/watch?v=6NGIx1vfZR4",
-            "seen": 16.370561474407754,
-            "total": 921.081
-        },
-        "pin": "yellow"
-    }, {
-        "id": "bookmark-44cc4065-a5e2-467a-a839-df90958d66fc",
-        "description": "<p>When you visit a website, - first time it's slow, the next time it's fast</p><p>&nbsp;</p><p>Example of LRU cache implementation</p><p>&nbsp;</p><p>+ CloudFront</p><p>+ Redis</p><p>+ Browser cache</p>",
-        "start": 23,
-        "position": 2,
-        "video": {
-            "id": "video-d836d721-c8bd-4354-af32-bb0448c594cb",
-            "url": "https://www.youtube.com/watch?v=6NGIx1vfZR4",
-            "seen": 22.557343479867566,
-            "total": 921.081
-        }
-    }, {
-        "id": "bookmark-168024f6-7e8f-4581-a8f2-32b947d531cd",
-        "description": "<p>The tricky bit to the problem - The <strong>Least Recently Used</strong></p>",
-        "start": 90,
-        "position": 3,
-        "video": {
-            "id": "video-0e83d2ab-4398-4cdc-8f4b-572b6323d953",
-            "url": "https://www.youtube.com/watch?v=6NGIx1vfZR4",
-            "seen": 89.84136963314714,
-            "total": 922
-        },
-        "pin": "red"
-    }, {
-        "id": "bookmark-af516df5-cb96-4f7d-9aca-91c351629d38",
-        "description": "<p>+ Requirements</p><p>+ Insert, Delete&nbsp;</p><p>+ Big O Cheat Sheet<br>+ For O(1) -&gt; LinkedList for Insert and Delete<br>+ For O(1) -&gt; Map / Javascript Object for Fast Access</p>",
-        "start": 160,
-        "position": 4,
-        "video": {
-            "id": "video-5249e5ee-34fd-4d49-a768-72381aa6cc06",
-            "url": "https://www.youtube.com/watch?v=6NGIx1vfZR4",
-            "seen": 160.11244215132345,
-            "total": 922
-        }
-    }, {
-        "id": "bookmark-cad97797-1c01-4a86-bcfa-09b766e63f21",
-        "pin": "gray",
-        "description": "<p>Implement LRU Cache Datastructure</p><p>&nbsp;</p><pre><code class=\"language-javascript\">console.log('Placeholder code');</code></pre>",
-        "start": 305,
-        "position": 7,
-        "video": {
-            "id": "video-8ba4346f-78a4-4f3a-87ad-b8012d3d779c",
-            "url": "https://www.youtube.com/watch?v=6NGIx1vfZR4",
-            "seen": 305.10788746588383,
-            "total": 922
-        }
-    }, {
-        "id": "bookmark-fbbcd994-8349-4a68-99cf-359d6e89a0b6",
-        "pin": "gray",
-        "description": "<p>Implementing the <strong>Doubly linked List </strong>data structure for - <strong>Least Recently Used</strong> feature</p><p>&nbsp;</p><pre><code class=\"language-javascript\">console.log('Placeholder code');</code></pre>",
-        "start": 642,
-        "position": 8,
-        "video": {
-            "id": "video-ec3adb83-1870-4483-b786-f75e30121feb",
-            "url": "https://www.youtube.com/watch?v=6NGIx1vfZR4",
-            "seen": 642.2260576239728,
-            "total": 922
-        }
-    }]
+  "id": "playlist-960c33c8-ffaf-4954-9410-6349f2fdedc1",
+  "title": "LRU Cache - Javascript",
+  "createdBy": "",
+  "bookmarks": [
+    {
+      "id": "bookmark-41be6796-c173-4e54-9d91-5f7a5679851e",
+      "description": "<p>😍 Pretty Lady + She knows to solve Leetcode in Javascript ❤️</p><p>&nbsp;</p><p>...ahem</p><p>&nbsp;</p><p><strong>Design a data structure that follows the constraints of a Least Recently Used (LRU) cache.</strong></p><p>&nbsp;</p><p>Implement the LRUCache class:</p><p>&nbsp;</p><p>+ LRUCache(int capacity) - Initialize the LRU cache with positive size capacity.</p><p>+ int get(int key) - Return the value of the key if the key exists, otherwise return -1.</p><p>+ void put(int key, int value) - Update the value of the key if the key exists. Otherwise, add the key-value pair to the cache. If the number of keys exceeds the capacity from this + operation, evict the least recently used key.</p><p>+ The functions get and put must each run in O(1) average time complexity.</p><p>&nbsp;</p><pre><code class=\"language-javascript\"># Example 1:\n\nInput\n\n[\"LRUCache\", \"put\", \"put\", \"get\", \"put\", \"get\", \"put\", \"get\", \"get\", \"get\"]\n\n[[2], [1, 1], [2, 2], [1], [3, 3], [2], [4, 4], [1], [3], [4]]\n\nOutput\n\n[null, null, null, 1, null, -1, null, -1, 3, 4]\n\n\n\n# Explanation\n\nLRUCache lRUCache = new LRUCache(2);\n\nlRUCache.put(1, 1); // cache is {1=1}\n\nlRUCache.put(2, 2); // cache is {1=1, 2=2}\n\nlRUCache.get(1);    // return 1\n\nlRUCache.put(3, 3); // LRU key was 2, evicts key 2, cache is {1=1, 3=3}\n\nlRUCache.get(2);    // returns -1 (not found)\n\nlRUCache.put(4, 4); // LRU key was 1, evicts key 1, cache is {4=4, 3=3}\n\nlRUCache.get(1);    // return -1 (not found)\n\nlRUCache.get(3);    // return 3\n\nlRUCache.get(4);    // return 4</code></pre><p>&nbsp;</p><p><strong>Constraints:</strong></p><p>&nbsp;</p><pre><code class=\"language-javascript\">1 &lt;= capacity &lt;= 3000\n\n0 &lt;= key &lt;= 104\n\n0 &lt;= value &lt;= 105\n\nAt most 2 * 105 calls will be made to get and put.</code></pre><p>&nbsp;</p>",
+      "start": 16,
+      "position": 1,
+      "video": {
+        "id": "video-68dcb8c6-a7b3-44d0-abf4-484bbfc098d6",
+        "url": "https://www.youtube.com/watch?v=6NGIx1vfZR4",
+        "seen": 16.370561474407754,
+        "total": 921.081
+      },
+      "pin": "yellow"
+    },
+    {
+      "id": "bookmark-44cc4065-a5e2-467a-a839-df90958d66fc",
+      "description": "<p>When you visit a website, - first time it's slow, the next time it's fast</p><p>&nbsp;</p><p>Example of LRU cache implementation</p><p>&nbsp;</p><p>+ CloudFront</p><p>+ Redis</p><p>+ Browser cache</p>",
+      "start": 23,
+      "position": 2,
+      "video": {
+        "id": "video-d836d721-c8bd-4354-af32-bb0448c594cb",
+        "url": "https://www.youtube.com/watch?v=6NGIx1vfZR4",
+        "seen": 22.557343479867566,
+        "total": 921.081
+      }
+    },
+    {
+      "id": "bookmark-168024f6-7e8f-4581-a8f2-32b947d531cd",
+      "description": "<p>The tricky bit to the problem - The <strong>Least Recently Used</strong></p>",
+      "start": 90,
+      "position": 3,
+      "video": {
+        "id": "video-0e83d2ab-4398-4cdc-8f4b-572b6323d953",
+        "url": "https://www.youtube.com/watch?v=6NGIx1vfZR4",
+        "seen": 89.84136963314714,
+        "total": 922
+      },
+      "pin": "red"
+    },
+    {
+      "id": "bookmark-af516df5-cb96-4f7d-9aca-91c351629d38",
+      "description": "<p>+ Requirements</p><p>+ Insert, Delete&nbsp;</p><p>+ Big O Cheat Sheet<br>+ For O(1) -&gt; LinkedList for Insert and Delete<br>+ For O(1) -&gt; Map / Javascript Object for Fast Access</p>",
+      "start": 160,
+      "position": 4,
+      "video": {
+        "id": "video-5249e5ee-34fd-4d49-a768-72381aa6cc06",
+        "url": "https://www.youtube.com/watch?v=6NGIx1vfZR4",
+        "seen": 160.11244215132345,
+        "total": 922
+      }
+    },
+    {
+      "id": "bookmark-cad97797-1c01-4a86-bcfa-09b766e63f21",
+      "pin": "gray",
+      "description": "<p>Implement LRU Cache Datastructure</p><p>&nbsp;</p><pre><code class=\"language-javascript\">console.log('Placeholder code');</code></pre>",
+      "start": 305,
+      "position": 7,
+      "video": {
+        "id": "video-8ba4346f-78a4-4f3a-87ad-b8012d3d779c",
+        "url": "https://www.youtube.com/watch?v=6NGIx1vfZR4",
+        "seen": 305.10788746588383,
+        "total": 922
+      }
+    },
+    {
+      "id": "bookmark-fbbcd994-8349-4a68-99cf-359d6e89a0b6",
+      "pin": "gray",
+      "description": "<p>Implementing the <strong>Doubly linked List </strong>data structure for - <strong>Least Recently Used</strong> feature</p><p>&nbsp;</p><pre><code class=\"language-javascript\">console.log('Placeholder code');</code></pre>",
+      "start": 642,
+      "position": 8,
+      "video": {
+        "id": "video-ec3adb83-1870-4483-b786-f75e30121feb",
+        "url": "https://www.youtube.com/watch?v=6NGIx1vfZR4",
+        "seen": 642.2260576239728,
+        "total": 922
+      }
+    }
+  ]
 }
