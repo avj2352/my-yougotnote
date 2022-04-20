@@ -1,325 +1,964 @@
 {
-  "id": "playlist-e5922860-7e49-49d9-bf77-2e12e9d9cff6",
-  "title": "DynamoDB Modelling - Alex DebRie",
+  "id": "playlist-bedc2885-7af2-4caa-91ac-963a8c1f481f",
+  "title": "Dynamic Programming Basics - Alvin (Complete)",
   "createdBy": "",
-  "bookmarks": [
-    {
-      "id": "bookmark-bae7d0e5-2e83-47b5-9ac7-532679c5b143",
-      "description": "<p>Introduction to Dynamo DB</p>",
-      "start": 215,
-      "position": 1,
-      "video": {
-        "id": "video-8ce5bf85-ef78-4878-94d2-143afb09d6d6",
-        "url": "https://www.youtube.com/watch?v=Q6-qWdsa8a4",
-        "seen": 214.56559510288284,
-        "total": 4275.981
-      }
-    },
-    {
-      "id": "bookmark-85c83e6b-bac6-4261-a3d4-a7614ea0b651",
-      "description": "<p>Why Dynamo DB ?<br><br>People switching from RDBMS<br>- Connection model<br>- Hyper ephermal compute with Lambda<br>- VPC cold-start<br>- Connection limits to RDBMS Databases<br><br>Dynamo connection only on Network Layer (HTTP connection model)<br>- No connection limits</p>",
-      "start": 247,
-      "position": 2,
-      "video": {
-        "id": "video-e026b66a-1508-4e94-82b1-0f8a483a5c4d",
-        "url": "https://www.youtube.com/watch?v=Q6-qWdsa8a4",
-        "seen": 247.49071200907179,
-        "total": 4275.981
-      },
-      "pin": "red"
-    },
-    {
-      "id": "bookmark-9944cb13-00ab-4318-9a43-3efd1f4ac149",
-      "description": "<blockquote><p>\"We were doing Dynamo DB wrong!\"</p></blockquote><p>&nbsp;</p><p>+ How to use Access Patterns<br>+ How to make data fit into Dynamo DB</p><p>+ NoSQL getting better since 2016</p>",
-      "start": 321,
-      "position": 3,
-      "video": {
-        "id": "video-41c3ec83-81b4-4c98-8743-b1c4dc05d249",
-        "url": "https://www.youtube.com/watch?v=Q6-qWdsa8a4",
-        "seen": 321.04203568236045,
-        "total": 4275.981
-      },
-      "pin": "green"
-    },
-    {
-      "id": "bookmark-168df5f5-4c3e-4750-ab7a-4cb3afa36241",
-      "description": "<p>Background on Dynamo DB<br><br>+ Why choose Dynamo DB ?<br>+ Basics concepts of Dynamo DB<br>+ Single Table concepts</p>",
-      "start": 407,
-      "position": 4,
-      "video": {
-        "id": "video-607a3017-7efc-4b05-96f5-85d40285a386",
-        "url": "https://www.youtube.com/watch?v=Q6-qWdsa8a4",
-        "seen": 406.5813659657573,
-        "total": 4275.981
-      }
-    },
-    {
-      "id": "bookmark-a1c69fc7-3013-437c-b0ce-89b3ce00cd57",
-      "description": "<p>Compare Relational Databases to Dynamo DB<br><br>+ RDBMS - MySQL gets slower &amp; slower as data size increases (1GB - 1TB)<br>+ Dynamo DB - Consistent fast even if data reaches 1TB</p>",
-      "start": 450,
-      "position": 5,
-      "video": {
-        "id": "video-86f67010-3b17-494f-8861-acb74626554f",
-        "url": "https://www.youtube.com/watch?v=Q6-qWdsa8a4",
-        "seen": 450.29152004151877,
-        "total": 4275.981
-      }
-    },
-    {
-      "id": "bookmark-43e5bfe9-2135-4c48-bb05-516f7fb578fc",
-      "description": "<p>Data model with Access Patterns&nbsp;-<br><br>+ Primary Key - made up of PartitionKey &amp; SortKey<br>+ Primary Key needs to be unique<br>+ Primary Key is used to access the data<br>+ Attributes are read only (meaning you cannot query them, they come along for the ride when you access records using Primary key)<br><br>Best practices -<br><br>+ Keep your Partition key as PK &amp; your Sort Key as SK</p>",
-      "start": 598,
-      "position": 6,
-      "video": {
-        "id": "video-652ed2d9-1258-4042-a3e7-a850b7ed8365",
-        "url": "https://www.youtube.com/watch?v=Q6-qWdsa8a4",
-        "seen": 598.3006724135636,
-        "total": 4275.981
-      }
-    },
-    {
-      "id": "bookmark-bd220411-7656-42a5-959a-024830d486e5",
-      "description": "<p>We will create a Dynamo DB for an Instagram Clone<br><br>Entities<br>+ Users<br>+ Photos<br>+ Likes<br>+ Comments<br>+ Likes on comments, replies on comments</p>",
-      "start": 694,
-      "position": 7,
-      "video": {
-        "id": "video-f97f0a70-5283-4ea6-bce4-bdf9ed819de1",
-        "url": "https://www.youtube.com/watch?v=Q6-qWdsa8a4",
-        "seen": 694.0029897105675,
-        "total": 4276
-      }
-    },
-    {
-      "id": "bookmark-52b6fa28-b6e1-46c9-8527-59c790a629b1",
-      "description": "<p>Single Table with PK + SK =&gt; Type</p>",
-      "start": 711,
-      "position": 8,
-      "video": {
-        "id": "video-446fa7e1-185e-4555-a84b-811dcdb21ab7",
-        "url": "https://www.youtube.com/watch?v=Q6-qWdsa8a4",
-        "seen": 711.3921142561362,
-        "total": 4276
-      }
-    },
-    {
-      "id": "bookmark-99852b76-f034-4ac7-b35a-df84094a12f1",
-      "description": "<p>\"Why single Table ?\"<br><br>+ No Joins in Dynamo DB<br>+ Different entities can be accessed in single request<br>+ Put them in same table in same item collection<br>+ On Demand Mode - easier to maintain, provision capacity on one table than different tables<br>+ Forces you to think \"Dynamo DB\" - Makes you think Access Patterns beforehand</p>",
-      "start": 737,
-      "position": 9,
-      "video": {
-        "id": "video-84a313b1-9d19-4cb2-9545-b5abe6946f75",
-        "url": "https://www.youtube.com/watch?v=Q6-qWdsa8a4",
-        "seen": 736.5370272908996,
-        "total": 4275.981
-      },
-      "pin": "red"
-    },
-    {
-      "id": "bookmark-fc6dd2f4-3476-4f70-a203-be8c3e1a459f",
-      "description": "<p><strong>Modelling a Single Table in Dynamo DB</strong><br><br>+ <a href=\"https://github.com/alexdebrie/dynamodb-instagram\">[github repo](alexdebrie/dynamodb-instagram)</a><br>+ Terms, Concepts, Constraints<br>+ Plan your Access Patterns first<br>+ Consider how you will use API requests to access your Entities<br>+ Entity Chart (think what is PK, SK patterns)</p>",
-      "start": 949,
-      "position": 10,
-      "video": {
-        "id": "video-fa5220f7-160a-443c-a926-cbd898fc8529",
-        "url": "https://www.youtube.com/watch?v=Q6-qWdsa8a4",
-        "seen": 949.2982166149969,
-        "total": 4276
-      }
-    },
-    {
-      "id": "bookmark-549349de-dea7-42b1-bb9a-929660c90732",
-      "description": "<p>\"Can you explain what is difference between Partition Key &amp; Sort Key\"<br><br>There are 2 types of Primary Keys<br>+ Simple Primary Keys - has just Partition Key (key value type, gives you single item at a time)<br>+ Composite Primary Keys - is made up of Partition Key &amp; Sort Key (for complex access and for more scalable applications)<br>+ GSI You can create secondary indexes - gives you another Primary Key</p>",
-      "start": 1261,
-      "position": 11,
-      "video": {
-        "id": "video-b0b5784e-4ee3-47b8-9ba5-0ff2b24a2a5e",
-        "url": "https://www.youtube.com/watch?v=Q6-qWdsa8a4",
-        "seen": 1260.5162400043928,
-        "total": 4276
-      },
-      "pin": "red"
-    },
-    {
-      "id": "bookmark-058c0778-7cf9-40de-893f-30bd4ce27c07",
-      "description": "<p>Another important difference between RDBMS and NoSQL Dynamo DBs<br><br>+ Relational Databases - You normalise your data first then think about your Access Patterns<br>+ Dynamo DB - You think about your access patterns first, then design your entities within a single table</p>",
-      "start": 1533,
-      "position": 12,
-      "video": {
-        "id": "video-231e8061-220a-4771-883d-9d9003a4e7cf",
-        "url": "https://www.youtube.com/watch?v=Q6-qWdsa8a4",
-        "seen": 1532.8443409053646,
-        "total": 4275.981
-      },
-      "pin": "purple"
-    },
-    {
-      "id": "bookmark-52779265-7c14-4989-a432-795fcb4ea980",
-      "description": "<p>\"How do you keep up with applications that keep growing, changing, migrating &amp; plan your Access Patterns\"<br><br>Depends on the Type of Migrations -&nbsp;<br>+ Adding new attributes to existing items (simple - null, because Dynamo DB is schema-less)<br>+ When adding new Entity<br>+ Existing Data accessed in new ways (gets tricky..., update manually then create Secondary indexes - SCAN, IDENTIFY &amp; UPDATE)</p>",
-      "start": 1564,
-      "position": 13,
-      "video": {
-        "id": "video-890e4e03-6540-454c-8d6b-f7674df84924",
-        "url": "https://www.youtube.com/watch?v=Q6-qWdsa8a4",
-        "seen": 1564.284684472265,
-        "total": 4275.981
-      },
-      "pin": "red"
-    },
-    {
-      "id": "bookmark-74ad1e13-d29e-4376-ba95-204eda88b614",
-      "description": "<p>Infrastructure as Code, creating a Dynamo DB Table with Primary Keys<br><br>Configure a Composite Primary Key as follows -<br>&nbsp;</p><pre><code class=\"language-plaintext\">KeySchema\n- AttributeName: \"PK\"\n  KeyType: \"HASH\"\n- AttributeName: \"SK\"\n  KeyType: \"RANGE\"</code></pre><p>&nbsp;</p><p>In Serverless, its HASH &amp; RANGE where as in Dynamo DB is \"PARTITION\" and \"SORT\"</p>",
-      "start": 1938,
-      "position": 14,
-      "video": {
-        "id": "video-8781926f-a4db-4dca-b816-0aca96421e74",
-        "url": "https://www.youtube.com/watch?v=Q6-qWdsa8a4",
-        "seen": 1937.6093391349993,
-        "total": 4276
-      },
-      "pin": "red"
-    },
-    {
-      "id": "bookmark-6b5a7de6-b270-45db-aee8-c811a3942f2a",
-      "description": "<pre><code class=\"language-plaintext\">BillingMode: \"PAY_PER_REQUEST\"</code></pre><p><br><strong>Different type of Billing Modes in Dynamo DB</strong><br><br>+ Traditional Billing Mode - \"PROVISION_BY_CAPACITY\" - This is how many Read Units and Write Units I want, provisioned for you ahead of time<br>+ \"PAY_PER_REQUEST\" - You dont need to provision anything upfront in advance, They charge accordingly as your application scales.<br>+ \"PAY_PER_REQUEST\" - is more than \"PROVISION_BY_CAPACITY\" - Better than PROVISION, use it until your monthly bill scales up!</p>",
-      "start": 2051,
-      "position": 15,
-      "video": {
-        "id": "video-7cfbe495-d9e2-4137-a792-c9324090068f",
-        "url": "https://www.youtube.com/watch?v=Q6-qWdsa8a4",
-        "seen": 2050.65248622011,
-        "total": 4276
-      },
-      "pin": "red"
-    },
-    {
-      "id": "bookmark-b0cf8767-eb78-405a-9a90-485b280e5c07",
-      "description": "<p>Typescript - Abstract class to store a Record (Item) into a Dynamo DB Document&nbsp;<br><br><i><strong>🤔 Reason for this:&nbsp;</strong></i><br>Creating this Abstract class and then making all your Business Logic Entities inherit from this will separate your business logic entities from \"indexing\" entities</p><p>&nbsp;</p><pre><code class=\"language-javascript\">/**\n* src/data/base.ts\n* Abstract class to store a record / item into Dynamo DB\n* Defines a few important fields that every entity that sub-classes this class\n**/\nimport { DynamoDB } from \"aws-sdk\"\n\nexport abstract class Item {\n    abstract get pk(): string\n    abstract get sk(): string\n\n    public keys(): DynamoDB.Key {\n        return {\n            PK: { S: this.pk },\n            SK: { S: this.sk }\n        }\n    }\n    \n    // implement this method to store items to dynamo db\n    abstract toItem(): Record&lt;string, unknown&gt;\n}</code></pre>",
-      "start": 2315,
-      "position": 16,
-      "video": {
-        "id": "video-7809966f-4557-49b9-a4e3-7c0e6c30e875",
-        "url": "https://www.youtube.com/watch?v=Q6-qWdsa8a4",
-        "seen": 2315.1823045708334,
-        "total": 4276
-      },
-      "pin": "cyan"
-    },
-    {
-      "id": "bookmark-3a126adf-3ea1-47f0-adb6-8b8139335af8",
-      "description": "<p>Example of how an Entity - \"User\" inherits the base class and gets those indexing keys out-of-the-box</p><p>&nbsp;</p><pre><code class=\"language-javascript\">/**\n* User entity inherit Base.ts\n**/\n\nimport { DynamoDB } from \"aws-sdk\"\nimport { Item } from \"./base\"\nimport { getClient } from \"./client\"\n\nexport class User extends Item {\n    username: string\n    name: string\n    followerCount: number\n    followingCount: number\n\n    constructor(username: string, name?: string, followerCount?: number, followingCount?: number) {\n        super()\n        this.username = username\n        this.name = name || \"\"\n        this.followerCount = followerCount || 0\n        this.followingCount = followingCount || 0\n    }\n\n    // helper method to retrieve record from dynamo db and return as an instance\n    static fromItem(item?: DynamoDB.AttributeMap): User {\n        if (!item) throw new Error(\"No item!\")\n        return new User(item.username.S, item.name.S, Number(item.followerCount.N), Number(item.followingCount.N))\n    }\n\n    // here we define which of our indexing fields from User entity will be indexed\n    get pk(): string {\n        return `USER#${this.username}`\n    }\n\n    // here we define which of our indexing fields from User entity will be grouped\n    get sk(): string {\n        return `USER#${this.username}`\n    }\n\n    // implement abstract method to store to dynamo db\n    toItem(): Record&lt;string, unknown&gt; {\n        return {\n            ...this.keys(),\n            username: { S: this.username },\n            name: { S: this.name },\n            followerCount: { N: this.followerCount.toString() },\n            followingCount: { N: this.followingCount.toString() }\n        }\n    }\n}\n\nexport const createUser = async (user: User): Promise&lt;User&gt; =&gt; {\n    const client = getClient()\n\n    try {\n        await client\n            .putItem({\n                TableName: process.env.TABLE_NAME,\n                Item: user.toItem(),\n                ConditionExpression: \"attribute_not_exists(PK)\" // create guards to ensure uniqueness\n            })\n            .promise()\n        return user\n    } catch (error) {\n        console.log(error)\n        throw error\n    }\n}\n\nexport const getUser = async (username: string): Promise&lt;User&gt; =&gt; {\n    const client = getClient()\n    const user = new User(username, \"\")\n\n    try {\n        const resp = await client\n            .getItem({\n                TableName: process.env.TABLE_NAME,\n                Key: user.keys()\n            })\n            .promise()\n        return User.fromItem(resp.Item)\n    } catch (error) {\n        console.log(error)\n        throw error\n    }\n}</code></pre>",
-      "start": 2519,
-      "position": 17,
-      "video": {
-        "id": "video-f8ccdc84-3b3e-4bc0-8c78-1ee319c2a9b8",
-        "url": "https://www.youtube.com/watch?v=Q6-qWdsa8a4",
-        "seen": 2518.522982684006,
-        "total": 4275.981
-      },
-      "pin": "cyan"
-    },
-    {
-      "id": "bookmark-7704d222-9fbc-43a9-906a-c88fade3b567",
-      "description": "<p>What is a <strong>Condition Expression</strong> ?&nbsp;</p><p>&nbsp;</p><p>+ A Condition Expression is like a guard statement. It evaluates to a true or false<br>+ Whenever you do a \"<strong>write</strong>\" operation to dynamo or you <strong>update the state</strong> of a record in dynamo db<br>+ The condition expression is evaluated before the <strong>write</strong>. false will cancel out the <strong>write</strong><br>+ Write operations - put item, update item, delete item<br>+ it's atomic, no race conditions</p>",
-      "start": 2620,
-      "position": 18,
-      "video": {
-        "id": "video-fb18e068-f47f-4193-ae9e-9b28c30a9136",
-        "url": "https://www.youtube.com/watch?v=Q6-qWdsa8a4",
-        "seen": 2620.142104755618,
-        "total": 4275.981
-      },
-      "pin": "red"
-    },
-    {
-      "id": "bookmark-5eea73f7-5a28-4079-a37c-bb4d5d8840c0",
-      "description": "<p>Helper function (can also be a helper class) to fetch Dynamo DB Document client. Other reasons -</p><p>&nbsp;</p><p>+ When creating dynamo db client, certain parameters - <strong>connectTimeout</strong> &amp; request <strong>timeout</strong><br>+ Cutting of connectTimeout - 1000<br>+ Cutting of request timeout - 1000<br>+ Default timeout is 30 seconds - 30000<br>+ Also caches the client, creates a singleton class. every class uses the same reference</p><p>&nbsp;</p><pre><code class=\"language-javascript\">/**\n* Helper method / class to fetch Dynamo DB Document client\n**/\nimport { DynamoDB } from \"aws-sdk\";\n\nlet client = null\n\nexport const getClient = (): DynamoDB =&gt; {\n    if (client) return client\n    client = new DynamoDB({\n        httpOptions: {\n            connectTimeout: 1000,\n            timeout: 1000\n        }\n    })\n    return client\n}</code></pre>",
-      "start": 2757,
-      "position": 19,
-      "video": {
-        "id": "video-baf77159-0f8f-4de0-8479-23cafff6136a",
-        "url": "https://www.youtube.com/watch?v=Q6-qWdsa8a4",
-        "seen": 2756.5853248444296,
-        "total": 4275.981
-      },
-      "pin": "cyan"
-    },
-    {
-      "id": "bookmark-4515199b-a385-4019-93f0-63193f86223e",
-      "description": "<p>How do you test this / locally or mock the service. Recommended or not ?<br><br>+ Different people like different things<br>+ API Gateway, Lambda, Dynamo DB - these resources CAN be tested locally easily<br>+ Other parts - SQS, EventBridge, Kinesis - a lot of this cannot be tested locally, recommended to test in cloud</p>",
-      "start": 2905,
-      "position": 20,
-      "video": {
-        "id": "video-5de6a9c6-1a90-48e4-8c1c-12b6f680c54b",
-        "url": "https://www.youtube.com/watch?v=Q6-qWdsa8a4",
-        "seen": 2905.1452529543512,
-        "total": 4275.981
-      },
-      "pin": "purple"
-    },
-    {
-      "id": "bookmark-1f70f69e-3f4b-4029-9da0-22eb75f522b3",
-      "description": "<p>Important Library to use for Constructing APIs&nbsp;</p><p>&nbsp;</p><pre><code class=\"language-plaintext\">npm i ulid</code></pre><p>&nbsp;</p><p>+ They support every major language<br>+ Uniqueness of <strong>uuid </strong>but prefixed with a <strong>timestamp</strong><br>+ You will get sorting as well as uniqueness<br>+ Another alternative - <strong>ksid</strong></p>",
-      "start": 3130,
-      "position": 21,
-      "video": {
-        "id": "video-062f766b-c2c0-42cd-9d08-576bb6ea0108",
-        "url": "https://www.youtube.com/watch?v=Q6-qWdsa8a4",
-        "seen": 3130.348766658739,
-        "total": 4275.981
-      },
-      "pin": "green"
-    },
-    {
-      "id": "bookmark-f83db96f-299c-490c-afed-bbe6358637ac",
-      "description": "<p>Introduction to <strong>Transactions</strong> in Dynamo DB<br><br>+ New feature as of AWS:Reinvent 2018<br>+ Can perform multiple write operation at once in a single transaction operation / single request<br>+ If one of the operation fails, all of them will fail.&nbsp;<br>+ This will make them more atomic<br>+ Transactions can also target multiple tables</p><p>&nbsp;</p><pre><code class=\"language-javascript\">/**\n* src/data/like.ts\n* The following method will add a record as well as update the like counter\n**/\nexport const likePhoto = async (photo: Photo, likingUsername: string): Promise&lt;Like&gt; =&gt; {\n    const client = getClient()\n    const like = new Like(likingUsername, photo.photoId)\n\n    try {\n        await executeTransactWrite({\n            client,\n            params: {\n                TransactItems: [\n                    {\n                        Put: {\n                            TableName: process.env.TABLE_NAME,\n                            Item: like.toItem(),\n                            ConditionExpression: \"attribute_not_exists(PK)\"\n                        }\n                    },\n                    {\n                        Update: {\n                            TableName: process.env.TABLE_NAME,\n                            Key: photo.keys(),\n                            ConditionExpression: \"attribute_exists(PK)\",\n                            UpdateExpression: \"SET #likesCount = #likesCount + :inc\",\n                            ExpressionAttributeNames: {\n                                \"#likesCount\": \"likesCount\"\n                            },\n                            ExpressionAttributeValues: {\n                                \":inc\": { N: \"1\" }\n                            }\n                        }\n                    }\n                ]\n            }\n        })\n        return like\n    } catch (error) {\n        console.log(error)\n        throw error\n    }\n}</code></pre>",
-      "start": 3422,
-      "position": 22,
-      "video": {
-        "id": "video-04d13112-719e-4710-be9d-f684f4981fc3",
-        "url": "https://www.youtube.com/watch?v=Q6-qWdsa8a4",
-        "seen": 3421.6294742542304,
-        "total": 4275.981
-      },
-      "pin": "cyan"
-    },
-    {
-      "id": "bookmark-086ddd00-8f34-42d8-8258-3f324d2d1706",
-      "description": "<p>Using <strong>Query</strong> operation<br><br>+ Can query a list of records<br>+ Can sort by time, get latest by time<br>+ Can do a little \"search\" (sort of)<br>+ If you only know \"part\" of the primary key, you can use query in that case</p><p>&nbsp;</p><pre><code class=\"language-javascript\">/**\n* Queries a secondary index\n**/\nexport const listLikesForPhoto = async (photoId: string): Promise&lt;Like[]&gt; =&gt; {\n    const client = getClient()\n    const like = new Like(\"\", photoId)\n\n    try {\n        const resp = await client\n            .query({\n                TableName: process.env.TABLE_NAME,\n                IndexName: \"GSI1\",\n                KeyConditionExpression: \"GSI1PK = :gsi1pk\",\n                ExpressionAttributeValues: {\n                    \":gsi1pk\": { S: like.gsi1pk }\n                },\n                ScanIndexForward: false\n            })\n            .promise()\n        return resp.Items.map((item) =&gt; Like.fromItem(item))\n    } catch (error) {\n        console.log(error)\n        throw error\n    }\n}</code></pre>",
-      "start": 3697,
-      "position": 23,
-      "video": {
-        "id": "video-6626de6f-91d7-4b72-a938-e6e415092135",
-        "url": "https://www.youtube.com/watch?v=Q6-qWdsa8a4",
-        "seen": 3697.496279405578,
-        "total": 4275.981
-      },
-      "pin": "cyan"
-    },
-    {
-      "id": "bookmark-8260042d-926f-4211-9e76-bcdfabe6e04a",
-      "description": "<p>One more important Operation - <strong>batchGetItem&nbsp;</strong></p><p>&nbsp;</p><p>+ This operation will replace multiple reads using a loop to a Database&nbsp;</p><p>&nbsp;</p><pre><code class=\"language-javascript\">// instead of reading multiple times using a loop, use - batchGetItem\ntry {\n        const resp = await client.batchGetItem({\n            RequestItems: {\n                [process.env.TABLE_NAME]: {\n                    Keys: keys\n                }\n            }\n        }).promise()\n        return resp.Responses[process.env.TABLE_NAME].map((item) =&gt; User.fromItem(item))\n    } catch (error) {\n        console.log(error)\n        throw error\n    } </code></pre>",
-      "start": 3832,
-      "position": 24,
-      "video": {
-        "id": "video-fd23103a-3bb0-461e-90c7-f61d56f08e0b",
-        "url": "https://www.youtube.com/watch?v=Q6-qWdsa8a4",
-        "seen": 3831.5910566184916,
-        "total": 4275.981
-      },
-      "pin": "cyan"
-    },
-    {
-      "id": "bookmark-87e6293a-a2af-4a53-962e-e42c05c74891",
-      "description": "<p><strong>OUTRO</strong><br><br>+ Github repo of the project: <a href=\"https://github.com/alexdebrie/dynamodb-instagram\">https://github.com/alexdebrie/dynamodb-instagram</a><br>+ Look into the Dynamo Documentation<br>+ Follow Alex DebRie on twitter: <a href=\"https://twitter.com/alexbdebrie\">https://twitter.com/alexbdebrie</a><br>+ The DynamoDB book: <a href=\"https://www.dynamodbbook.com/\">https://www.dynamodbbook.com/</a></p>",
-      "start": 4112,
-      "position": 25,
-      "video": {
-        "id": "video-9f432ab0-49c2-4d85-9dfd-d8bf70cfacb3",
-        "url": "https://www.youtube.com/watch?v=Q6-qWdsa8a4",
-        "seen": 4111.530922276667,
-        "total": 4275.981
-      },
-      "pin": "green"
+  "bookmarks": [{
+    "id": "bookmark-21339cfd-0cad-4a31-bdbd-168b750cd78c",
+    "description": "<p>Hey Programmers, I am Alvin</p><p>&nbsp;</p><p>Welcome to - <strong>Dynamic Programming Course</strong></p>",
+    "start": 6,
+    "position": 1,
+    "video": {
+      "id": "video-355f99c0-4a3f-4697-9f68-74bd889ad203",
+      "url": "https://www.youtube.com/watch?v=oBt53YbR9Kk",
+      "seen": 5.821207,
+      "total": 18602
     }
-  ]
+  }, {
+    "id": "bookmark-5329c162-967b-4460-9dea-5989aafc9e45",
+    "description": "<p><i>Problems we're going to solve in this course -</i><br>&nbsp;</p><p>1. Calculate the 40th number of fibonacci sequence</p><p>2. Count the number of different ways to move through a 6x9 grid</p><p>3. Given a set of coins, how can we make 27 cents in the least number of coins</p><p>4. Given a set of substrings, what're the possible ways to construct the string <strong>\"potentpot\"</strong></p>",
+    "start": 49,
+    "position": 2,
+    "video": {
+      "id": "video-e8affe11-dd9b-4db6-a7b2-3a9773d5e14a",
+      "url": "https://www.youtube.com/watch?v=oBt53YbR9Kk",
+      "seen": 48.78339704005432,
+      "total": 18602
+    },
+    "pin": "green"
+  }, {
+    "id": "bookmark-87c3f6d2-33b1-440d-8879-76de4363d436",
+    "description": "<p>Visualize algorithms</p>",
+    "start": 102,
+    "position": 3,
+    "video": {
+      "id": "video-3ebdb82d-8a2a-43cc-9d28-07bb6ebb7340",
+      "url": "https://www.youtube.com/watch?v=oBt53YbR9Kk",
+      "seen": 101.85076303814698,
+      "total": 18602
+    }
+  }, {
+    "id": "bookmark-cee30b07-8d9b-49ff-9f41-93268e1f7ce2",
+    "description": "<p><i>Dynamic Programming concepts - <strong>solving Overlapping Sub-problems</strong> &nbsp;techniques covered -</i><br><br>Part 1: Memoization<br>Part 2: Tabulation<br><br><i>Pre-requisite required</i><br><br>1. Basics of Recursion<br>2. Basics of Complexity Analysis</p>",
+    "start": 166,
+    "position": 4,
+    "video": {
+      "id": "video-b8a8124f-766a-4646-92fc-2543a2793d9e",
+      "url": "https://www.youtube.com/watch?v=oBt53YbR9Kk",
+      "seen": 166.10665610681153,
+      "total": 18602
+    },
+    "pin": "green"
+  }, {
+    "id": "bookmark-d7dbb6d0-c065-41c9-8995-0cf845315ed2",
+    "description": "<p>📜 <strong>Challenge #1 - program a fibonacci using memoization</strong><br><br><i>Write a function fib(n) that takes in a number as an argument. The function should return the nth number of the Fibonacci sequence</i><br><br>+ The 1st &amp; 2nd number of the sequence is 1.<br>+ To generate the next number of the sequence, we sum the previous two<br>&nbsp;</p>",
+    "start": 206,
+    "position": 5,
+    "video": {
+      "id": "video-3ac0215e-3858-4175-9f09-dcbeb40b6c77",
+      "url": "https://www.youtube.com/watch?v=oBt53YbR9Kk",
+      "seen": 205.677969,
+      "total": 18602
+    },
+    "pin": "yellow"
+  }, {
+    "id": "bookmark-782c2eb7-86c1-4301-977c-5240cd562485",
+    "description": "<p>Classic implementation</p><pre><code class=\"language-javascript\">// Classic implementation (w/o memoization)\nconst fib = (n) =&gt; {\n // base-case\n if (n&lt;=2) return 1;\n // recursive case\n return fib(n-1) + fib(n-2);\n};\n\nconsole.log(fib(6)); // 8\nconsole.log(fib(7)); // 13\nconsole.log(fib(8)); // 21\nconsole.log(fib(50)); // takes a looong time</code></pre><p>&nbsp;</p><p><strong>Review: </strong>Problem with this approach - We are re-visiting already visited / computed numbers</p>",
+    "start": 275,
+    "position": 6,
+    "video": {
+      "id": "video-a5c31f2e-fd3e-4158-9854-d5d8974441eb",
+      "url": "https://www.youtube.com/watch?v=oBt53YbR9Kk",
+      "seen": 275.45966992370603,
+      "total": 18602
+    },
+    "pin": "cyan"
+  }, {
+    "id": "bookmark-218122a5-67ef-41a4-97a4-d808348f05a3",
+    "description": "<p>Students need to work on drawing things....</p>",
+    "start": 406,
+    "position": 7,
+    "video": {
+      "id": "video-e55ae7e7-7965-4344-a3a1-a0362d7a9c57",
+      "url": "https://www.youtube.com/watch?v=oBt53YbR9Kk",
+      "seen": 405.7348070190735,
+      "total": 18602
+    }
+  }, {
+    "id": "bookmark-c1dd9097-4480-44af-a728-b0f7b8c509cc",
+    "description": "<p>Drawing a tree to explain optimization approach</p>",
+    "start": 457,
+    "position": 8,
+    "video": {
+      "id": "video-86e46e83-fee0-46d4-a26d-bb7170662be8",
+      "url": "https://www.youtube.com/watch?v=oBt53YbR9Kk",
+      "seen": 456.75220912016295,
+      "total": 18602
+    },
+    "pin": "red"
+  }, {
+    "id": "bookmark-6258308c-10da-417f-bf81-50f641666264",
+    "description": "<p>The Above solution approach is explained...<br><br>+ For all of these base cases, I know they return 1 to their parent<br>+ and all the parent nodes add up these base cases</p>",
+    "start": 615,
+    "position": 9,
+    "video": {
+      "id": "video-138b84b9-e006-40bc-9126-ccc0eb130930",
+      "url": "https://www.youtube.com/watch?v=oBt53YbR9Kk",
+      "seen": 615.4869470267029,
+      "total": 18602
+    }
+  }, {
+    "id": "bookmark-32c3daf8-3ace-49b9-a815-2137210e5aa3",
+    "description": "<p>Time Complexity<br><br>+ Off-hand people mention that a Fibonacci recursive implementation Big-O is - <strong>2^n</strong><br>+ This drawing is asymmetric.<br>+ Students have a real hard time convincing themselves on this <strong>2^n</strong></p>",
+    "start": 646,
+    "position": 10,
+    "video": {
+      "id": "video-0beb427f-cc06-425c-befe-99b4fdb20f66",
+      "url": "https://www.youtube.com/watch?v=oBt53YbR9Kk",
+      "seen": 646.2404470267029,
+      "total": 18601.941
+    }
+  }, {
+    "id": "bookmark-209abced-658e-439d-8b59-db51cbe7cede",
+    "description": "<p><strong>Basic refresher of Space Time Complexity for Recursion -</strong><br><br><strong>Example #1</strong><br>&nbsp;</p><pre><code class=\"language-javascript\">const foo = (n) =&gt; {\n if(n&lt;=1) return;\n foo(n-1);\n};</code></pre><p>&nbsp;</p><p>+ Time Complexity - <strong>O(n) - </strong>Takes n time to go through recursion</p><p>+ Space Complexity - <strong>O(n) </strong>- N times the function is called - Stacks function therefore <strong>O(n)</strong></p><p>&nbsp;</p><p><strong>Example #2</strong></p><p>&nbsp;</p><pre><code class=\"language-javascript\">const bar = (n) =&gt; {\n if(n&lt;=1) return;\n foo(n-2);\n};</code></pre><p>&nbsp;</p><p>+ Time Complexity - O(n/2) ~ O(n)<br>+ Space Complexity - O(n/2) ~ O(n)</p>",
+    "start": 685,
+    "position": 11,
+    "video": {
+      "id": "video-1146e212-beaf-4e4c-83e3-ff6611fb5f69",
+      "url": "https://www.youtube.com/watch?v=oBt53YbR9Kk",
+      "seen": 684.8481930648499,
+      "total": 18601.941
+    },
+    "pin": "cyan"
+  }, {
+    "id": "bookmark-d86014c4-8f9a-454d-9303-645488c602a9",
+    "description": "<p><strong>Example #3</strong></p><p>&nbsp;</p><pre><code class=\"language-javascript\">// produces a symmetric tree\nconst dib = (n) =&gt; {\n if (n&lt;=1) return;\n dib(n-1); // left child\n dib(n-1); // right child\n};</code></pre><p><br>+ Time Complexity - <strong>O(2^n)</strong><br>&nbsp; &nbsp; &nbsp;- First consider one of the paths, that will also be the height of the tree<br>&nbsp; &nbsp; &nbsp;- Height is also called - Levels<br>&nbsp; &nbsp; &nbsp;- The number of nodes doubles every level<br>+ Space Complexity - <strong>O(n)</strong><br>&nbsp; &nbsp; - Students always assume Space = Time when it comes to recursive function<br>&nbsp; &nbsp; - At any given time, the number of stacks is same as that of the height of the tree</p>",
+    "start": 853,
+    "position": 12,
+    "video": {
+      "id": "video-8505f7e9-b4e4-4278-805a-576019c3635e",
+      "url": "https://www.youtube.com/watch?v=oBt53YbR9Kk",
+      "seen": 853.1214597959137,
+      "total": 18601.941
+    },
+    "pin": "red"
+  }, {
+    "id": "bookmark-ca47d8b2-00d3-45d9-bd0f-a6c8de9949db",
+    "description": "<p><strong>Example #4</strong></p><p>&nbsp;</p><pre><code class=\"language-javascript\">// produces a symmetric tree\nconst lib = (n) =&gt; {\n if (n&lt;=1) return;\n dib(n-2); // left child\n dib(n-2); // right child\n};</code></pre><p><br>+ Time Complexity - <strong>O(2^n/2) ~ O(2^n)</strong><br>&nbsp; &nbsp; &nbsp;- First consider one of the paths, that will also be the height of the tree<br>&nbsp; &nbsp; &nbsp;- Height is also called - Levels<br>&nbsp; &nbsp; &nbsp;- The number of nodes SKIPS two steps every level so the height is halved.<br>+ Space Complexity - <strong>O(n/2) ~ O(n)</strong><br>&nbsp; &nbsp; - Students always assume Space = Time when it comes to recursive function<br>&nbsp; &nbsp; - At any given time, the number of stacks is half as that of the height of the tree</p>",
+    "start": 1200,
+    "position": 13,
+    "video": {
+      "id": "video-f5286d4f-8d77-4bc3-8d87-0107539602ef",
+      "url": "https://www.youtube.com/watch?v=oBt53YbR9Kk",
+      "seen": 1199.664206885559,
+      "total": 18602
+    },
+    "pin": "cyan"
+  }, {
+    "id": "bookmark-a425bb55-5a97-447c-b038-e70239523f8f",
+    "description": "<p>Where does our Fibonacci fit in these 4 examples ?</p><p>&nbsp;</p><pre><code class=\"language-plaintext\">Time - O(dib) &lt;= O(fib) &lt;= O(lib)</code></pre>",
+    "start": 1281,
+    "position": 14,
+    "video": {
+      "id": "video-786219cd-2368-48a2-8b94-13c611d4d912",
+      "url": "https://www.youtube.com/watch?v=oBt53YbR9Kk",
+      "seen": 1281.149031049591,
+      "total": 18602
+    }
+  }, {
+    "id": "bookmark-139055ac-b2f2-469d-aa0e-d04ece62e6df",
+    "description": "<p>O(2^n) is not a good Time Complexity (explained)...<br><br>+ Consider fib(50) ~ 2^50<br>+ if we just bring up the calculator &amp; do a 2 raised to 50 = <strong>1,1,25,899,906,842,624</strong> steps !!&nbsp;<br>+ One quadrillion steps</p>",
+    "start": 1356,
+    "position": 15,
+    "video": {
+      "id": "video-4b57cc6a-2bf1-424b-827b-6c30891bae9a",
+      "url": "https://www.youtube.com/watch?v=oBt53YbR9Kk",
+      "seen": 1356.2389128550415,
+      "total": 18602
+    },
+    "pin": "red"
+  }, {
+    "id": "bookmark-8c14283f-cfd8-4322-8bce-44db1958babd",
+    "description": "<p><strong>Overlapping Sub-problems explained...</strong></p><p>&nbsp;</p><p>+ A lot of duplicates in my subtree</p><p>+ I know my previous number fibonacci doesn't change</p><p>&nbsp;</p><p><i>Solving these kind of Overlapping Sub-problems is the core of <strong>\"Dynamic Programming\"</strong></i></p><p>&nbsp;</p><p>+ Any instance where we have a larger problem, We decompose it into smaller sub-problems</p><p>+ We also have overlapping sub-problems</p><p>+ Identify which of the sub-problem is &nbsp;a duplicate</p>",
+    "start": 1441,
+    "position": 16,
+    "video": {
+      "id": "video-069e5147-48c4-4a8a-8c3c-09f3c0cce75b",
+      "url": "https://www.youtube.com/watch?v=oBt53YbR9Kk",
+      "seen": 1440.895907956131,
+      "total": 18602
+    },
+    "pin": "red"
+  }, {
+    "id": "bookmark-78ea8ed9-3cd0-4fef-95d6-b701b38e3f99",
+    "description": "<p><strong>Solution to optimize Class Fibonacci implementation (Javascript)</strong></p><p>&nbsp;</p><p>+ Create a memo (fast access - HashMap / Map / Object in Javascript)</p><p>+ keys to the memo will be the argument to the function</p><p>+ first check the memo</p><p>+ else instead of returning your recursive case, store it in memo then return</p><p>&nbsp;</p><pre><code class=\"language-javascript\">/**\r\n * memoization\r\n * js object, keys will be arg to fn, value will be return value\r\n * @param {*} n \r\n * @param {*} memo ?\r\n */\r\nconst fib = (n, memo={}) =&gt; {\r\n    // first check memo\r\n    if (n in memo) return memo[n];    \r\n    if (n&lt;=2) return 1;\r\n    // store in memo\r\n    memo[n] = fib(n-1, memo) + fib(n-2, memo);\r\n    return memo[n];\r\n};\r\n\r\nconsole.log(fib(50));</code></pre><p>&nbsp;</p>",
+    "start": 1558,
+    "position": 17,
+    "video": {
+      "id": "video-8c1a3202-d95a-4181-9f27-249630ec0a04",
+      "url": "https://www.youtube.com/watch?v=oBt53YbR9Kk",
+      "seen": 1557.9886851296997,
+      "total": 18602
+    },
+    "pin": "cyan"
+  }, {
+    "id": "bookmark-f93c5096-fe36-4529-9c22-56ed05dfbe51",
+    "description": "<p>Understand the optimized code using Memoization (using Tree diagram)</p>",
+    "start": 1904,
+    "position": 18,
+    "video": {
+      "id": "video-0007f953-2a30-4986-b9b9-245f34369f96",
+      "url": "https://www.youtube.com/watch?v=oBt53YbR9Kk",
+      "seen": 1904.3894609141694,
+      "total": 18602
+    },
+    "pin": "green"
+  }, {
+    "id": "bookmark-0c78e606-7f98-4372-9d65-397e5a58a97b",
+    "pin": "green",
+    "description": "<p><strong>Space Time Complexity using Memoization</strong></p><p>&nbsp;</p><p>+ We definitely cut down the whole runtime of the Fibonacci series</p><p>+ New Time Complexity: <strong>O(n)</strong> = where n is the height of the tree</p><p>+ New Space Complexity: <strong>O(n)</strong> = where n is the number of stacks called</p><p>&nbsp;</p><p><i>Using Memoization, we brought down the Time complexity from being exponential to a linear time complexity - Pretty powerful</i></p>",
+    "start": 2142,
+    "position": 19,
+    "video": {
+      "id": "video-25204ecf-fb2b-4ef0-ab99-6ea6bd4df84a",
+      "url": "https://www.youtube.com/watch?v=oBt53YbR9Kk",
+      "seen": 2141.7331049980926,
+      "total": 18601.941
+    }
+  }, {
+    "id": "bookmark-999fca94-7bb9-4a4d-8094-bb10da92278c",
+    "description": "<p><strong>📜 Challenge #2: Grid Traveler</strong></p><p><br><strong>Problem Statement</strong></p><p><i>\"Say that you're a traveler in a 2D grid. You begin in the top-left corner &amp; your goal is to travel to the bottom-right corner. You may only move down or right\"</i></p><p><i>\"In how many ways can you travel to the goal on a grid with dimensions mxn\"</i></p><p>&nbsp;</p><pre><code class=\"language-plaintext\">gridTraveler(m,n); // where m is the number of rows, n - number of columns</code></pre><p>&nbsp;</p><p><strong>Step 1: Ask clarifying question</strong></p><p>+ Is the grid a square grid (MxM) or a rectangular grid (MxN) - <i>Can be a rectangle also, not necessarily a square</i></p><p>+ Explain with a diagram</p><p>+ Ask - what happens if our grid is zero ?</p>",
+    "start": 2321,
+    "position": 20,
+    "video": {
+      "id": "video-66afde5e-8d4e-4ee8-9766-b1a005eefba3",
+      "url": "https://www.youtube.com/watch?v=oBt53YbR9Kk",
+      "seen": 2320.855694830246,
+      "total": 18601.941
+    },
+    "pin": "yellow"
+  }, {
+    "id": "bookmark-df3f6c39-abc0-455c-ae1e-8bd6b7986248",
+    "description": "<p>Breaking down the problem into sub-problems</p><p>&nbsp;</p><p>+ Try to frame the problem using relatively small units ?</p><p>+ What does it mean to have a 0x0 grid ?</p><p>&nbsp;</p><pre><code class=\"language-javascript\">gridTraveler (1,1) -&gt; 0\ngridTraveler (1,0) -&gt; 0\ngridTraveler (0,1) -&gt; 0\ngridTraveler (0,0) -&gt; 0\ngridTraveler (M,0) -&gt; 0\ngridTraveler (0,N) -&gt; 0</code></pre><p>&nbsp;</p><p>+ We have now some edge cases we can code</p>",
+    "start": 2423,
+    "position": 21,
+    "video": {
+      "id": "video-99bc1a94-2baa-435c-8ba8-856f251b99ad",
+      "url": "https://www.youtube.com/watch?v=oBt53YbR9Kk",
+      "seen": 2422.977149032425,
+      "total": 18601.941
+    }
+  }, {
+    "id": "bookmark-7614af0b-375d-496e-a892-9216855a1ad4",
+    "description": "<p><strong>Let's consider a grid - 3x3</strong></p><p>&nbsp;</p><p>+ Consider how we can decrease the problem size</p><p>+ We know we always travel from <strong>top-left</strong> to <strong>bottom-right</strong></p><p>+ We know we have overlapping sub-problem</p><p>+ Using a tree makes sense since we only need to consider 2 directions -&gt; <strong>down</strong> and <strong>right</strong></p><p>+ Left node of the tree (Down) -&gt; means reduce the row M by 1 (M-1)</p><p>+ Right node of tree (Right) -&gt; means reduce the column N by 1 (N-1)</p><p>&nbsp;</p><pre><code class=\"language-javascript\">gridTraveler (3,3) -&gt; gridTraveler(2,3) -&gt; gridTraveler(1,3) -&gt; gridTraveler(1,2) -&gt; gridTraveler(1,1) which is our base case</code></pre>",
+    "start": 2524,
+    "position": 22,
+    "video": {
+      "id": "video-e51a4e29-670c-46a3-b6bf-4bb9954a3615",
+      "url": "https://www.youtube.com/watch?v=oBt53YbR9Kk",
+      "seen": 2523.7752299923704,
+      "total": 18601.941
+    },
+    "pin": "red"
+  }, {
+    "id": "bookmark-e3e57698-9376-4f84-b411-0fb224cbe211",
+    "pin": "cyan",
+    "description": "<p><strong>Classic implementation of Grid Traveler</strong> (w/o Memoization)</p><p>&nbsp;</p><p><strong>Brute Force approach</strong></p><p>&nbsp;</p><p>+ We'll implement the 2 base case scenarios</p><p>+ If both row and column are 1 then return 1</p><p>+ If either row or column are 0 then return 0 since there is no grid!</p><p>+ For all other scenario, we will follow the Tree (left and right) approach, so same as fibonacci</p><p>&nbsp;</p><pre><code class=\"language-javascript\">// basic implementation - w/o memo\nconst gridTraveler = (m,n) =&gt; {\n   // base case #1 - 1x1 grid\n   if (m===1 &amp;&amp; n===1) return 1;\n   // base case #2 - if either row or column is 0, answer is 0\n   if (m===0 || n===0) return 0;\n   // down and right (left and right nodes) of binary tree\n   // so same formula as fibonacci\n   return gridTraveler(m,n-1) + gridTraveler(m-1,n);\n};</code></pre>",
+    "start": 2946,
+    "position": 23,
+    "video": {
+      "id": "video-220b2a53-2f41-432f-a13d-8f301d122146",
+      "url": "https://www.youtube.com/watch?v=oBt53YbR9Kk",
+      "seen": 2945.7773759732972,
+      "total": 18602
+    }
+  }, {
+    "id": "bookmark-5fae6ff6-8e82-458e-bad8-9f4adde33fb8",
+    "description": "<p><strong>Drawing board - analysis of brute force solution</strong></p><p>&nbsp;</p><p><strong>Space Time complexity</strong></p><p>+ Time = <strong>O(Math.pow(2, (n+m))</strong> -&gt; where m is rows and n is columns, since its a rectangular grid, worst case time complexity will be O(Math.pow(2,n)) -&gt; Exponential</p><p>+ Space = <strong>O(n+m)</strong> -&gt; for same reasons</p><p>&nbsp;</p>",
+    "start": 3054,
+    "position": 24,
+    "video": {
+      "id": "video-f2abc5fc-7516-4b07-a12b-10919c5cf6b9",
+      "url": "https://www.youtube.com/watch?v=oBt53YbR9Kk",
+      "seen": 3054.450121994278,
+      "total": 18602
+    },
+    "pin": "red"
+  }, {
+    "id": "bookmark-8b97fea3-bcfc-4b70-aba4-f0359d7968bf",
+    "pin": "cyan",
+    "description": "<p><strong>Grid Traveler Problem with Memoization</strong></p><p>&nbsp;</p><p><i>Same Grid Traveler problem with Memoization</i><br>&nbsp;</p><pre><code class=\"language-javascript\">\n/**\n * function to find number of ways to travel from top left\n * to bottom right in a MxN grid\n * constraints - can only travel down / right\n * @param {number} m \n * @param {number} n \n * @param {Object || null} memo \n */\nconst gridTraveler = (m,n,memo={}) =&gt; {\n    // prep a unique key\n    const rowCol = `${m}:${n}`;\n    if (rowCol in memo) return memo[rowCol];\n    if (m === 1 &amp;amp;&amp;amp; n === 1) return 1;\n    if (m === 0 || n === 0) return 0;\n    memo[rowCol] = gridTraveler(m-1, n, memo) + gridTraveler(m,n-1, memo);\n    return memo[rowCol];\n};\n\n[m,n] = [18,18];\nconsole.log(`Number of ways in a ${m} x ${n} is: `, gridTraveler(m,n));\n\n\n// Space Time Complexity\n// Time = O(N*M) -&gt; since we're always memoizing one side of the binary tree\n// Space = O(N+M) -&gt; We are calling the stacks recursively and going through one height at a time</code></pre>",
+    "start": 3380,
+    "position": 25,
+    "video": {
+      "id": "video-d9dd924a-2880-44cc-8cf4-e5f9045f8bc2",
+      "url": "https://www.youtube.com/watch?v=oBt53YbR9Kk",
+      "seen": 3380.0638141956456,
+      "total": 18602
+    }
+  }, {
+    "id": "bookmark-c26f284b-7b76-443a-ad17-b0d6e3b1bbd2",
+    "description": "<p><strong>Drawing board to analyze our memoized code</strong></p><p>&nbsp;</p><p><strong>Space Time Complexity</strong></p><p>+ Time Complexity -&gt; O(n*m) =&gt; where n is the number of rows and m, the number of columns</p><p>+ Space Complexity -&gt; O(n+m) =&gt; where n is the number of rows and m, the number of columns</p>",
+    "start": 3704,
+    "position": 26,
+    "video": {
+      "id": "video-d3450886-af5f-4ae7-916e-4aa3b9d19b27",
+      "url": "https://www.youtube.com/watch?v=oBt53YbR9Kk",
+      "seen": 3704.3700115020574,
+      "total": 18602
+    }
+  }, {
+    "id": "bookmark-cdbf76b7-1495-4ecc-a3dd-77a7dd584f0b",
+    "description": "<p><strong>✨Alvin's Memoization Recipe✨</strong></p><p><br>Here are few tips on attaining a Memoized code solution -</p><p>&nbsp;</p><p>+ Make your brute force approach work</p><p>+ Make It efficient later</p><p>+ Use Javascript Object as memo</p><p>+ Make checking &amp; retrieving the first line of code in your recursive function</p><p>+ Then comes the base case(s)</p><p>+ Your recursive case must be assigned to the memo</p><p>+ If your solution involves a tree, try to visualise the \"leaf\" ☘️ as the base case of your recursion</p><p>+ Test your brute force solution</p><p>&nbsp;</p>",
+    "start": 3895,
+    "position": 27,
+    "video": {
+      "id": "video-0ea9fc01-de81-46b0-a64f-30a7b962c6e0",
+      "url": "https://www.youtube.com/watch?v=oBt53YbR9Kk",
+      "seen": 3894.542241437539,
+      "total": 18602
+    },
+    "pin": "green"
+  }, {
+    "id": "bookmark-d1bff535-fa3b-4577-aee6-1a7b945ea5fb",
+    "description": "<p><strong>📜 Challenge #3 - CanSum challenge</strong></p><p>&nbsp;</p><p>Write a function canSum(targetSum, numbers) that takes in a targets and an array of numbers as arguments.</p><p>&nbsp;</p><p>The function should return a boolean true or false indicating whether or not it is possible to generate the targetSum using numbers from the array.</p><p>&nbsp;</p><p>Constraints<br>+ You can use the elements of the array as many times as you want</p><p>+ All elements are non-negative numbers</p><p>&nbsp;</p>",
+    "start": 4199,
+    "position": 28,
+    "video": {
+      "id": "video-2d9d0965-e56d-40fb-953b-525494b7f4b8",
+      "url": "https://www.youtube.com/watch?v=oBt53YbR9Kk",
+      "seen": 4199.019655075076,
+      "total": 18601.941
+    },
+    "pin": "yellow"
+  }, {
+    "id": "bookmark-d88443f4-8051-441b-9d6d-20e52ca7e61a",
+    "description": "<p>Visualize the problem using a Tree diagram</p>",
+    "start": 4295,
+    "position": 29,
+    "video": {
+      "id": "video-646fd4fd-358a-4fec-862c-9c410ae4d786",
+      "url": "https://www.youtube.com/watch?v=oBt53YbR9Kk",
+      "seen": 4295.286632984529,
+      "total": 18601.941
+    }
+  }, {
+    "id": "bookmark-a912b03d-d685-477f-b9f0-0fd8eb4ec4ce",
+    "description": "<p>Visualize Another example using a Tree</p>",
+    "start": 4542,
+    "position": 30,
+    "video": {
+      "id": "video-79858bcc-e9a4-499e-92c7-5aba0eaec3d1",
+      "url": "https://www.youtube.com/watch?v=oBt53YbR9Kk",
+      "seen": 4541.775068999742,
+      "total": 18601.941
+    }
+  }, {
+    "id": "bookmark-36ba3d2d-7582-4786-ad4f-012022313640",
+    "pin": "cyan",
+    "description": "<p><strong>CanSum function implementation</strong> (in Javascript)</p><p>&nbsp;</p><pre><code class=\"language-javascript\">/**\n* \"canSum\" function\n* function that takes in a targets and \n* an array of numbers as arguments.\n*/\nconst canSum = (targetSum, numbers) =&gt; {\n   // base case\n   if (targetSum === 0) return true;\n   for (num of numbers) {\n     const remainder = targetSum - num;\n     // call recursively\n     if(canSum(remainder, numbers) === true){\n       return true;\n     } \n   }\n   // we have exhausted our search\n   return false;\n};\n\nconsole.log(canSum(7,[2,3]));\nconsole.log(canSum(7,[5,3,4,7]));\nconsole.log(canSum(7,[2,4]));\nconsole.log(canSum(8,[2,3,5]));</code></pre><p>&nbsp;</p><p><strong>Space Time Complexity</strong><br>+ Time Complexity: O(Math.pow(n,m)) - It's not a binary tree, each child goes through the loop over and over again. So some nodes have 2 or 3 child nodes</p><p>+ Space Complexity: O(m) - Recursive call stack.</p>",
+    "start": 4598,
+    "position": 31,
+    "video": {
+      "id": "video-3ec3430f-1fb0-42aa-9cb5-4bc68016a074",
+      "url": "https://www.youtube.com/watch?v=oBt53YbR9Kk",
+      "seen": 4597.845938048393,
+      "total": 18601.941
+    }
+  }, {
+    "id": "bookmark-1cc3f732-1a2a-4b0e-aaec-3c98df94b4e7",
+    "description": "<p><strong>Space Time Complexity of the memoized solution</strong></p><p>Time Complexity: <strong>O(m*n) time</strong> - Because of the memo object. The values. will be upto the time of m. We don't have to re-approach the child nodes. But we have to loop through the arrays.</p><p>Space complexity: <strong>O(m)</strong> -&gt; Because of recursive call stack</p>",
+    "start": 5337,
+    "position": 32,
+    "video": {
+      "id": "video-8ace51fd-ce3d-4827-b23f-4bcd7a8bd008",
+      "url": "https://www.youtube.com/watch?v=oBt53YbR9Kk",
+      "seen": 5337.102102801007,
+      "total": 18601.941
+    }
+  }, {
+    "id": "bookmark-b5bece62-2b2a-45d7-8c47-c6fda48f738d",
+    "description": "<p>CanSum function with memoized approach</p><p>&nbsp;</p><p>+ When you have multiple arguments, always try to analyze which argument affects the output more. Use that as key for your memo</p><p>+ Remember - Your <strong>returns</strong> in recursive calls should be assigned to the memo not the recursive function</p><p>&nbsp;</p><pre><code class=\"language-javascript\">/**\n* CanSum function with memoized approach\n* @param {number} targetSum\n* @param {number[]} numbers\n* @param {Object} optional - memo\n* @returns {boolean} true or false\n*/ \nconst canSum = (targetSum, numbers, memo={}) =&gt; {\n   // retrieve from memo\n   if (targetSum in memo) return memo[targetSum];\n   // base case #1\n   if (targetSum === 0) return true;\n   // base case #2\n   if (targetSum &lt; 0) return false;\n   // loop\n   for (let num of numbers) {\n     // subtract from the targetSum\n     const remainder = targetSum - num;\n     // recursive check\n     if (canSum(remainder, numbers, memo) === true) {\n         // store in memo - NOTE: key is still - targetSum\n         memo[targetSum] = true;\n         return true;\n     }\n   }\n   // store in memo\n   memo[targetSum] = false;\n   return false;\n};\n\nconsole.log(canSum(300, [7,14]));</code></pre><p>&nbsp;</p><p>Space Time Complexity</p><p>&nbsp;</p><p>+ Time - <strong>O(n x m) </strong>- With memoized solution we at the least, travel through the child node heights</p><p>+ Space - <strong>O(n)</strong> - Recursive call stack</p><p>&nbsp;</p><p><i>Using Memoization, we've reduced the Time Complexity from Exponential to Linear !!</i></p><p>&nbsp;</p>",
+    "start": 5101,
+    "position": 33,
+    "video": {
+      "id": "video-f3f11c4e-34c0-4bd3-87b7-1c669a882de8",
+      "url": "https://www.youtube.com/watch?v=oBt53YbR9Kk",
+      "seen": 5100.94902318607,
+      "total": 18601.941
+    },
+    "pin": "cyan"
+  }, {
+    "id": "bookmark-3e99aa43-7030-4502-b44e-886a904f6ad4",
+    "description": "<p>CanSum - Brute force approach versus Memoized approach</p>",
+    "start": 5356,
+    "position": 34,
+    "video": {
+      "id": "video-5c640e48-8f24-4191-b0fa-1b61747bd58d",
+      "url": "https://www.youtube.com/watch?v=oBt53YbR9Kk",
+      "seen": 5356.482195971614,
+      "total": 18601.941
+    }
+  }, {
+    "id": "bookmark-43f2af27-5213-4e23-a8f2-fc7656ab96cf",
+    "description": "<p><strong>📜 Challenge #4 - HowSum function</strong></p><p>&nbsp;</p><p><i>Write a function howSum(targetSum, numbers) that takes in a targetSum &amp; an array of numbers as arguments.</i><br>&nbsp;</p><p>+ The function should return an array containing any combination of elements that add upto exactly the targetSum.&nbsp;<br>+ if there is no combination that adds to the targetSum, then return null.</p><p>&nbsp;</p><p>👉🏻 <i><strong>The Tree diagram is really beautifully explained here</strong></i></p>",
+    "start": 5373,
+    "position": 35,
+    "video": {
+      "id": "video-63bdbacc-5e9f-4236-a1e7-52b6564b6189",
+      "url": "https://www.youtube.com/watch?v=oBt53YbR9Kk",
+      "seen": 5372.707110791075,
+      "total": 18601.941
+    },
+    "pin": "yellow"
+  }, {
+    "id": "bookmark-ac2bedc9-5677-4d5a-9fdc-90892f7fd9c3",
+    "description": "<p>HowSum function implementation (Brute force approach)</p><p>&nbsp;</p><p>+ As in canSum, in this approach as well, we have 2 base case scenarios, if targetSum equals OR less than 0</p><p>+ if targetSum equals 0, return an empty [] (to start the bubble up process)</p><p>+ if targetSum &lt; 0, return null (terminate)</p><p>&nbsp;</p><pre><code class=\"language-javascript\">const howSum = (targetSum, numbers) =&gt; {\n  // base case #1\n  if (targetSum === 0) return [];\n  // base case #2\n  if (targetSum &lt; 0) return null;\n  for (num of numbers) {\n     const remainder = targetSum - num;\n     // new line, unlike canSum\n     const remainderResult = howSum(remainder, numbers);\n     if (remainderResult) {\n        return [...remainderResult, num];\n     }\n  }\n  \n  // completed loop check\n  return null;\n};\n\n// testing\nconsole.log(howSum(7,[2,3])); // [3,2,2]\nconsole.log(howSum(7,[5,3,4,7])); // null\nconsole.log(howSum(8,[2,3,5])); // [2,2,2,2]\nconsole.log(howSum(300,[7,14])); // null </code></pre><p>&nbsp;</p><p>Space Time Complexity</p><p>&nbsp;</p><p>+ Time Complexity <strong>O(Math.pow(n, m))</strong> -&gt; <strong>O(n^m)</strong> + O(m) ~ <strong>O(n^m)</strong> where is n is the number of child nodes each node, m is the height of the tree</p><p>+ Space Complexity: <strong>O(m)</strong> -&gt; Recursive call stack down the tree</p>",
+    "start": 5831,
+    "position": 36,
+    "video": {
+      "id": "video-d1650256-9343-4f12-a1f4-8d9bacf3080a",
+      "url": "https://www.youtube.com/watch?v=oBt53YbR9Kk",
+      "seen": 5831.44232921469,
+      "total": 18601.941
+    },
+    "pin": "cyan"
+  }, {
+    "id": "bookmark-9b43ce1f-0024-47e5-9b69-0ec119088f31",
+    "pin": "cyan",
+    "description": "<p>HowSum function with Memoization</p><p>&nbsp;</p><pre><code class=\"language-javascript\">const howSum = (targetSum, numbers, memo={}) =&gt; {\n  // retrieval - same as canSum\n  if (targetSum in memo) return memo[targetSum];\n  // base case #1\n  if (targetSum === 0) return [];\n  // base case #2\n  if (targetSum &lt; 0) return null;\n  for (num of numbers) {\n     const remainder = targetSum - num;\n     // new line, unlike canSum\n     const remainderResult = howSum(remainder, numbers);\n     if (remainderResult) {\n        // store in memo...\n        return [...remainderResult, num];\n     }\n  }\n  \n  // completed loop check\n  memo[targetSum] = null;\n  return null;\n};\n\n// testing\nconsole.log(howSum(7,[2,3])); // [3,2,2]\nconsole.log(howSum(7,[5,3,4,7])); // null\nconosle.log(howSum(8,[2,3,5])); // [2,2,2,2]\nconsole.log(howSum(300,[7,14])); // null </code></pre><p>&nbsp;</p><p><strong>Space Time complexity</strong></p><p>+ Time Complexity : <strong>O(n * </strong><i><strong>m &nbsp;m) ~ O(n x m^2)</strong></i> -&gt; Because in each recursive call I need to copy the contents of the array into my memo, we multiply again by another memo</p><p>+ Space Complexity: <strong>O(m X m)</strong> -&gt; Because you have m keys now, with m values, therefore <strong>O(m^2)</strong></p>",
+    "start": 6408,
+    "position": 37,
+    "video": {
+      "id": "video-eed60cd2-8826-456d-a61f-e4b10fa41102",
+      "url": "https://www.youtube.com/watch?v=oBt53YbR9Kk",
+      "seen": 6407.719839411832,
+      "total": 18601.941
+    }
+  }, {
+    "id": "bookmark-6426599f-6b15-4fd6-b8e6-7519caf6ab94",
+    "description": "<p>Comparing Brute Force approach with Memoization</p>",
+    "start": 6674,
+    "position": 38,
+    "video": {
+      "id": "video-4b5206a5-8535-451d-8818-22c976326920",
+      "url": "https://www.youtube.com/watch?v=oBt53YbR9Kk",
+      "seen": 6674.418740986837,
+      "total": 18601.941
+    }
+  }, {
+    "id": "bookmark-6cc1c458-b1cc-45ae-94ee-81ac1b086de7",
+    "description": "<p><strong>📜 Challenge #5 - BestSum</strong></p><p>Write a function <strong>bestSum(targetSum, numbers)</strong> - that takes in a targetSum and an array of numbers as arguments</p><p>&nbsp;</p><p>+ The function should return an array containing the shortest combination of numbers that add upto exactly the targetSum</p><p>+ If there is a tie for the shortest combination, you may return any one of the shortest</p><p>&nbsp;</p><p><strong>NOTE</strong>: In order to best understand <strong>BestSum</strong> 😅 You need to first master - <strong>CanSum</strong> &amp; <strong>HowSum</strong></p>",
+    "start": 6723,
+    "position": 39,
+    "video": {
+      "id": "video-8a264748-d3a8-4c35-a45c-d2e8ddf3de09",
+      "url": "https://www.youtube.com/watch?v=oBt53YbR9Kk",
+      "seen": 6722.540297002255,
+      "total": 18601.941
+    },
+    "pin": "yellow"
+  }, {
+    "id": "bookmark-74ee012c-c21b-49eb-a48e-22995d206658",
+    "pin": "cyan",
+    "description": "<p>Implement BestSum function (Brute force approach)<br><br>+ <strong>Warning</strong>: The BestSum is not always considering the Largest Number !!</p><p>+ You just have to explore the whole tree</p><p>&nbsp;</p><pre><code class=\"language-javascript\">const bestSum = (targetSum, numbers) =&gt; {\n    // base case #1\n    if (targetSum === 0) return [];\n    // base case #2\n    if (targetSum &lt; 0) return null;\n    let shortestCombination = null;\n    // recursive within loop\n    for (let num of numbers) {\n        const remainder = targetSum - num;\n        const remainderCombination = bestSum(remainder, numbers);\n        if (remainderCombination !== null) {\n            const combination =  [...remainderCombination, num];\n            if (shortestCombination === null || combination.length &lt; shortestCombination.length) {\n                shortestCombination = combination;\n            }\n        }\n    }\n    return shortestCombination;\n};\n\nconsole.log(bestSum(7, [5,3,4,7])); // 7\nconsole.log(bestSum(8, [2,3,5])); // [3,5]\nconsole.log(bestSum(8, [1,4,5])); // [4,4]\n// console.log(bestSum(100, [1,2,5,25])); // [25,25,25,25]</code></pre><p>&nbsp;</p><p><strong>Space Time Complexity</strong><br>Time Complexity - <strong>O(n^m * m)</strong> -&nbsp;</p><p>Space Complexity - <strong>O (m * m)</strong> - O(m^2) - because now in each of the stack frames, you need to store an array</p>",
+    "start": 7040,
+    "position": 40,
+    "video": {
+      "id": "video-867fbc25-1b9d-485b-a4f0-043fb9a035ce",
+      "url": "https://www.youtube.com/watch?v=oBt53YbR9Kk",
+      "seen": 7039.811691497227,
+      "total": 18601.941
+    }
+  }, {
+    "id": "bookmark-c2a865d0-f2b4-4d4d-8157-aea878d6605e",
+    "description": "<p>Best Sum Function with Memoization</p><p>&nbsp;</p><p>+ Remember, we have only one return function and therefore we need to add memo only there</p><p>&nbsp;</p><pre><code class=\"language-javascript\">const bestSum = (targetSum, numbers, memo={}) =&gt; {\n    // retrieve memo\n    if (targetSum in memo) return memo[targetSum];\n    // base case #1\n    if (targetSum === 0) return [];\n    // base case #2\n    if (targetSum &lt; 0) return null;\n    let shortestCombination = null;\n    // recursive within loop\n    for (let num of numbers) {\n        const remainder = targetSum - num;\n        const remainderCombination = bestSum(remainder, numbers, memo);\n        if (remainderCombination !== null) {\n            const combination =  [...remainderCombination, num];\n            if (shortestCombination === null || combination.length &lt; shortestCombination.length) {\n                shortestCombination = combination;\n            }\n        }\n    }\n    memo[targetSum] = shortestCombination;\n    return shortestCombination;\n};\n\nconsole.log(bestSum(7, [5,3,4,7])); // 7\nconsole.log(bestSum(8, [2,3,5])); // [3,5]\nconsole.log(bestSum(8, [1,4,5])); // [4,4]\nconsole.log(bestSum(100, [1,2,5,25])); // [25,25,25,25]</code></pre><p>&nbsp;</p><p><strong>Space Time complexity</strong></p><p>+ Time Complexity: <strong>O(m x n x m) ~ O(n * m^2)</strong></p><p>+ Space Complexity: <strong>O(m^2)</strong></p>",
+    "start": 7686,
+    "position": 41,
+    "video": {
+      "id": "video-f3b0ca7e-0f52-4433-9eb5-08ff3cd35c7a",
+      "url": "https://www.youtube.com/watch?v=oBt53YbR9Kk",
+      "seen": 7685.518165863925,
+      "total": 18601.941
+    },
+    "pin": "cyan"
+  }, {
+    "id": "bookmark-e25fbfc7-e195-4051-86b0-de5f3b570951",
+    "description": "<p>BestSum - Comparing Bruteforce and Memoization</p>",
+    "start": 7867,
+    "position": 42,
+    "video": {
+      "id": "video-651883b0-f9c4-4352-ab6b-b0d8a3dac0b2",
+      "url": "https://www.youtube.com/watch?v=oBt53YbR9Kk",
+      "seen": 7867.214132579,
+      "total": 18601.941
+    }
+  }, {
+    "id": "bookmark-d19998a5-681d-462f-a537-2f39a88adef0",
+    "description": "<p><i><strong>Summary of the - CanSum, HowSum &amp; BestSum problems</strong></i></p><p>&nbsp;</p><p>+ CanSum problem - \"Can you do it? yes/no\" (Decision problem)</p><p>+ HowSum problem - \"How will you do it?\" (Combinatory problem)</p><p>+ BestSum problem - \"What is the best way to do it?\" (Optimisation Problem)</p>",
+    "start": 7893,
+    "position": 43,
+    "video": {
+      "id": "video-41084e34-9361-41db-b1ef-86960562dbc3",
+      "url": "https://www.youtube.com/watch?v=oBt53YbR9Kk",
+      "seen": 7892.560275423312,
+      "total": 18601.941
+    }
+  }, {
+    "id": "bookmark-7391c4a5-6eb3-4f94-bd01-f91ebae6c5ec",
+    "description": "<p>📜 <strong>Challenge #6. - Function CanConstruct</strong></p><p>&nbsp;</p><p>Write a function called canConstruct(target, wordBank) that accepts the target strings &amp; an array of strings.<br><br>+ The function should return a boolean indicating whether or not the target can be constructed by concatenating elements of the wordBank array</p><p>+ You can use the elements of the wordBank as many times as needed</p><p>+ @returns boolean (Yes / No - is it possible to generate)</p><p>&nbsp;</p><pre><code class=\"language-plaintext\"># Example #1 \ncanConstruct(abcdef, [ab,bc,cd,de,ef,abc,def]); -&gt; true\n// abc + def\n\n# Example #2\ncanConstruct(skateboard, [b,ar,d,sk,ts,rd]); -&gt; false</code></pre><p>&nbsp;</p><p>&nbsp;</p>",
+    "start": 7966,
+    "position": 44,
+    "video": {
+      "id": "video-cf4a2eff-8f21-4016-a3ba-f600df9caa24",
+      "url": "https://www.youtube.com/watch?v=oBt53YbR9Kk",
+      "seen": 7965.939732103165,
+      "total": 18601.941
+    },
+    "pin": "yellow"
+  }, {
+    "id": "bookmark-0b243274-9a7f-45bd-a8de-7c2d7864bc55",
+    "description": "<p>Let's breakdown this challenge into understandable examples</p><p>&nbsp;</p><pre><code class=\"language-plaintext\">Example #1 \ncanConstruct('',[ab,bc,de]) -&gt; true\nbecause to generate an empty string, we need to take no elements</code></pre><p>&nbsp;</p>",
+    "start": 8076,
+    "position": 45,
+    "video": {
+      "id": "video-04145256-0e2b-4bd1-a774-b01f2aef086d",
+      "url": "https://www.youtube.com/watch?v=oBt53YbR9Kk",
+      "seen": 8076.3270734379585,
+      "total": 18601.941
+    }
+  }, {
+    "id": "bookmark-f33cb111-3ef6-4a4e-b276-9d8b60ee341e",
+    "description": "<p><strong>Visualise CanConstruct challenge using a Tree + Common Pitfalls</strong><br><br>+ ❌<strong>DONT</strong>: Donot remove from the middle of the target string. This will change the adjacent characters which makes it even more difficult to deduce the target string</p><p>+ ☑️ <strong>BEST APPROACH</strong>: Always remove from the starting index (or left most position or the prefixes) of the string</p><p>+ If the leaf nodes return true / face, then bubble up</p><p>+ Similar approach to CanSum function</p>",
+    "start": 8143,
+    "position": 46,
+    "video": {
+      "id": "video-cd175a6d-1092-4778-983d-465ecb7190d1",
+      "url": "https://www.youtube.com/watch?v=oBt53YbR9Kk",
+      "seen": 8143.174182053222,
+      "total": 18601.941
+    },
+    "pin": "red"
+  }, {
+    "id": "bookmark-be8e795d-e246-4ff1-ac07-a0164121a8cb",
+    "description": "<p><strong>Implementation of CanConstruct (Brute Force approach)</strong></p><p>&nbsp;</p><p>+ target.<strong>slice</strong>(word.length) - Will remove the entire word off the string - <strong>target</strong></p><p>&nbsp;</p><pre><code class=\"language-javascript\">/**\n * canConstruct - Brute force approach\n * @param {string} target \n * @param {string[]} wordBank \n * @returns {boolean} true or false\n */\nconst canConstruct = (target, wordBank) =&gt; {\n    if (target === '') return true;\n    // recursive\n    for (word of wordBank) {\n        if (target.indexOf(word) === 0) {\n            // starting of word, remove from target\n            const suffix = target.slice(word.length);\n            if (canConstruct(suffix, wordBank) === true) return true;\n        }\n    }\n    return false;\n};\n\nconsole.log(canConstruct('',['ab','abc','cd','def','abcd'])); // true\nconsole.log(canConstruct('skateboard',['bo','rd','ate','r','sk', 'boar'])); //false\nconsole.log(canConstruct('enterapotentpot', ['a', 'p', 'ent', 'enter', 'ot', 'o', 't'])); // true\n// console.log(canConstruct('eeeeeeeeeeeeeeeeeeeeeeeeeeeeeef', ['e','ee','eee','eeee','eeeeee','eeee'])); // false</code></pre>",
+    "start": 8564,
+    "position": 47,
+    "video": {
+      "id": "video-049508f2-ecee-4acb-aa91-6afe665845b2",
+      "url": "https://www.youtube.com/watch?v=oBt53YbR9Kk",
+      "seen": 8564.082166620701,
+      "total": 18601.941
+    },
+    "pin": "cyan"
+  }, {
+    "id": "bookmark-30e63c4c-e8f9-45bf-bc06-b63a256fc112",
+    "description": "<p><strong>Visualize Solution using Tree</strong></p><p>&nbsp;</p><p>+ Consider M (m) = target.length</p><p>+ Consider N (n) = wordBank.length</p><p>+ Both m &amp; n contribute to the Time complexity of this solution</p><p>+ Time Complexity - <strong>O(n^m x m) - </strong>Branching factor to the power of Height of the tree</p><p>+ Space Complexity - <strong>O(m x m) - </strong>call of each recursive call stack&nbsp;</p>",
+    "start": 8917,
+    "position": 48,
+    "video": {
+      "id": "video-20b7cbae-6c94-4257-a3d2-63e958cfca04",
+      "url": "https://www.youtube.com/watch?v=oBt53YbR9Kk",
+      "seen": 8916.750446276203,
+      "total": 18601.941
+    }
+  }, {
+    "id": "bookmark-06871663-f75f-497b-838e-4e6dc807a361",
+    "description": "<p>Improving the canCount function using Memoization</p><p>&nbsp;</p><p>+ We do see overlapping sub-problems</p><p>+ Always memoization key is the argument, not any logic implemented within the code</p><p>&nbsp;</p><pre><code class=\"language-javascript\">/**\n * canCount - Memoization\n * @param {string} target \n * @param {string[]} wordBank\n * @param {Object} memo \n * @returns {boolean} true or false\n */\nconst canConstruct = (target, wordBank, memo={}) =&gt; {\n    // retrieve\n    if (target in memo) return memo[target];\n    if (target === '') return true;\n    // recursive\n    for (word of wordBank) {\n        if (target.indexOf(word) === 0) {\n            // starting of word, remove from target\n            const suffix = target.slice(word.length);\n            if (canConstruct(suffix, wordBank, memo) === true) {\n              memo[target] = true;\n              return true;\n            }\n            \n        }\n    }\n    memo[target] = false;\n    return false;\n};\n\nconsole.log(canConstruct('',['ab','abc','cd','def','abcd'])); // true\nconsole.log(canConstruct('skateboard',['bo','rd','ate','r','sk', 'boar'])); //false\nconsole.log(canConstruct('enterapotentpot', ['a', 'p', 'ent', 'enter', 'ot', 'o', 't'])); // true\nconsole.log(canConstruct('eeeeeeeeeeeeeeeeeeeeeeeeeeeeeef', ['e','ee','eee','eeee','eeeeee','eeee'])); // false</code></pre><p>&nbsp;</p><p><strong>Space Time Complexity</strong></p><p>+ Time Complexity - <strong>O(n x m^2) -</strong> Note this is not necessarily exponential as we know the number of child nodes created now</p><p>+ Space Complexity - O(m x m) ~ <strong>O(m^2)</strong></p>",
+    "start": 9282,
+    "position": 49,
+    "video": {
+      "id": "video-4c570934-86c1-4de5-b676-649a0441ebfe",
+      "url": "https://www.youtube.com/watch?v=oBt53YbR9Kk",
+      "seen": 9281.50657804863,
+      "total": 18601.941
+    },
+    "pin": "cyan"
+  }, {
+    "id": "bookmark-a727d9e4-6b01-4903-bfb7-9ca860fc5ac2",
+    "description": "<p>Comparing Brute Force Approach with Memoized Solution</p>",
+    "start": 9484,
+    "position": 50,
+    "video": {
+      "id": "video-249307c0-cca6-4093-9eea-10e6bd78588a",
+      "url": "https://www.youtube.com/watch?v=oBt53YbR9Kk",
+      "seen": 9483.791623230001,
+      "total": 18601.941
+    }
+  }, {
+    "id": "bookmark-b2f3b09c-e929-4668-a701-db02629ec34c",
+    "description": "<p>📜Challenge # 7 - <strong>countConstruct </strong>function</p><p>&nbsp;</p><p>Write a function countConstruct(target, wordBank) that accepts a target string &amp; an array of string</p><p>&nbsp;</p><p>+ The function should return the number of ways that the target can be constructed by concatenating elements of the wordBank array</p><p>+ You may reuse elements of wordBank as many times as needed</p><p>+ @returns {number}</p><p>&nbsp;</p><pre><code class=\"language-plaintext\">countConstruct(abcdef, [ab,bc,cd,de,ef,abc,def]); -&gt; 1\n// abc+def</code></pre>",
+    "start": 9518,
+    "position": 51,
+    "video": {
+      "id": "video-33c250e1-57d4-41b3-b0c6-1c9da6d85319",
+      "url": "https://www.youtube.com/watch?v=oBt53YbR9Kk",
+      "seen": 9518.061501522834,
+      "total": 18601.941
+    },
+    "pin": "yellow"
+  }, {
+    "id": "bookmark-1585eda4-3d2c-45a5-9da8-329b0a91178a",
+    "description": "<p><strong>Implementation of countConstruct function</strong></p><p>&nbsp;</p><p>+ Same as canConstruct, slightly different</p><p>+ Base case returns 0</p><p>+ else keep a base count and append it to the return value of recursive calls</p><p>+ at the bottom of the function return the totalCount</p><p>&nbsp;</p><pre><code class=\"language-javascript\">/**\n * countConstruct - Brute force approach\n * @param {string} target \n * @param {string[]} wordBank \n * @returns {number}\n */\nconst countConstruct = (target, wordBank) =&gt; {\n    if (target === '') return 1;\n    let totalCount = 0;\n    // recursive\n    for (word of wordBank) {\n        if (target.indexOf(word) === 0) {\n            // starting of word, remove from target\n            const suffix = target.slice(word.length);\n            const numbWaysForRest = countConstruct(suffix, wordBank);\n            totalCount += numbWaysForRest;\n        }\n    }\n    return totalCount;\n};\n\nconsole.log(countConstruct('purple',['purp','p','le','ur','purpl'])); // 2\nconsole.log(countConstruct('',['ab','abc','cd','def','abcd'])); // 1\nconsole.log(countConstruct('skateboard',['bo','rd','ate','r','sk', 'boar'])); //0\nconsole.log(countConstruct('enterapotentpot', ['a', 'p', 'ent', 'enter', 'ot', 'o', 't'])); // 4\n// console.log(countConstruct('eeeeeeeeeeeeeeeeeeeeeeeeeeeeeef', ['e','ee','eee','eeee','eeeeee','eeee'])); // false</code></pre>",
+    "start": 9711,
+    "position": 52,
+    "video": {
+      "id": "video-6957aae2-277b-4132-ab19-b4b03ec2dc3a",
+      "url": "https://www.youtube.com/watch?v=oBt53YbR9Kk",
+      "seen": 9711.483210209,
+      "total": 18601.941
+    },
+    "pin": "cyan"
+  }, {
+    "id": "bookmark-4e1b6559-de7d-4fd3-afe7-024114d2eb48",
+    "description": "<p>Implementation of countConstruct using Memoization&nbsp;</p><p>&nbsp;</p><pre><code class=\"language-javascript\">/**\n * countConstruct - Brute force approach\n * @param {string} target \n * @param {string[]} wordBank \n * @returns {number}\n */\nconst countConstruct = (target, wordBank, memo={}) =&gt; {\n    // retrieval\n    if (target in memo) return memo[target];\n    if (target === '') return 1;\n    let totalCount = 0;\n    // recursive\n    for (word of wordBank) {\n        if (target.indexOf(word) === 0) {\n            // starting of word, remove from target\n            const suffix = target.slice(word.length);\n            const numbWaysForRest = countConstruct(suffix, wordBank, memo);\n            totalCount += numbWaysForRest;\n        }\n    }\n    memo[target] = totalCount;\n    return totalCount;\n};\n\nconsole.log(countConstruct('purple',['purp','p','le','ur','purpl'])); // 2\nconsole.log(countConstruct('',['ab','abc','cd','def','abcd'])); // 1\nconsole.log(countConstruct('skateboard',['bo','rd','ate','r','sk', 'boar'])); //0\nconsole.log(countConstruct('enterapotentpot', ['a', 'p', 'ent', 'enter', 'ot', 'o', 't'])); // 4\nconsole.log(countConstruct('eeeeeeeeeeeeeeeeeeeeeeeeeeeeeef', ['e','ee','eee','eeee','eeeeee','eeee'])); // 0</code></pre>",
+    "start": 9922,
+    "position": 53,
+    "video": {
+      "id": "video-f0f735a7-0c3d-42b9-a5a3-b583614e2561",
+      "url": "https://www.youtube.com/watch?v=oBt53YbR9Kk",
+      "seen": 9921.716846684867,
+      "total": 18601.941
+    },
+    "pin": "cyan"
+  }, {
+    "id": "bookmark-55f6ec7d-7e95-4749-8bfb-381204ae3cfd",
+    "description": "<p><strong>Space Time Complexity of CountConstruct Function</strong></p><p>&nbsp;</p><p><strong>Using Brute Force Approach</strong></p><p>+ Time Complexity: O(n^m x m) time</p><p>+ Space Complexity: O(m^2) space</p><p>&nbsp;</p><p><strong>Using Memoization</strong></p><p>+ Time Complexity: O(n x m^2) time</p><p>+ Space Complexity: O(m^2) space&nbsp;</p>",
+    "start": 10035,
+    "position": 54,
+    "video": {
+      "id": "video-044ea1ef-e630-4568-8a98-e38bd006420a",
+      "url": "https://www.youtube.com/watch?v=oBt53YbR9Kk",
+      "seen": 10034.891312326,
+      "total": 18601.941
+    }
+  }, {
+    "id": "bookmark-bff2cec1-6398-4914-8c02-41415fccc8af",
+    "description": "<p>📜Challenge #8 - AllConstruct function</p><p>&nbsp;</p><p>Write a function allConstruct(target, wordBank) that accepts a target string &amp; an array of string</p><p>&nbsp;</p><p>+ The function should return a 2D array containing all the ways the target can be constructed</p><p>+ By concatenating elements of the wordBank array</p><p>+ You can reuse elements of the wordBank array as many number of times as possible</p><p>&nbsp;</p>",
+    "start": 10049,
+    "position": 55,
+    "video": {
+      "id": "video-c74e869a-921a-45f9-8d96-dde1986e692a",
+      "url": "https://www.youtube.com/watch?v=oBt53YbR9Kk",
+      "seen": 10049.428801496355,
+      "total": 18601.941
+    },
+    "pin": "yellow"
+  }, {
+    "id": "bookmark-ba21899f-a763-46dd-bd6b-1d4e9403ded1",
+    "description": "<p>Let's breakdown the challenge and expectations</p><p>&nbsp;</p><p><strong>Consider edge cases</strong></p><p>&nbsp;</p><p>+ allConstruct(abcdef, [ab,abc,cd,def,abcd,ef,cj])<br>&nbsp; &nbsp; - &nbsp;This should return [[ab,cd,ef], [ab,c,def], [abc,def], [abcd,ef]]<br>+ allConstruct('', [ab,abc,cd]) -&gt; should return. [ [ ] ] -&gt; Because there are n possible ways to produce an empty string<br>+ allConstruct('Pramod', [ab,abc,cd]) -&gt; should return just [ ] -&gt; because there are NO possible ways to generate the target string</p><p>&nbsp;</p>",
+    "start": 10088,
+    "position": 56,
+    "video": {
+      "id": "video-c64b1ac8-ee01-437a-89ce-ae40b23b865a",
+      "url": "https://www.youtube.com/watch?v=oBt53YbR9Kk",
+      "seen": 10087.650943443223,
+      "total": 18602
+    }
+  }, {
+    "id": "bookmark-8363426c-5717-4866-b99a-9686cb61681c",
+    "description": "<p>Let's Visualise this challenge using a Tree</p>",
+    "start": 10237,
+    "position": 57,
+    "video": {
+      "id": "video-df9a1172-c8f8-4490-93a0-7b1a72ed431f",
+      "url": "https://www.youtube.com/watch?v=oBt53YbR9Kk",
+      "seen": 10237.058366428786,
+      "total": 18602
+    },
+    "pin": "red"
+  }, {
+    "id": "bookmark-19f59aa3-6d15-4a43-80f7-0af5a0f3a3fe",
+    "description": "<p><strong>Implementation of AllConstruct using Brute Force Approach</strong></p><p>&nbsp;</p><pre><code class=\"language-javascript\">/**\n* Show all ways to construct the target string\n* returns a 2d array if the target string is empty\n* returns a 1d array if the target string and wordBank don't match\n* @param {string} target\n* @param {string[]} wordBank\n* @return {string[][]} result\n*/\nconst allConstruct = (target, wordBank) =&gt; {\n    // base case #1\n    if (target === '') return [[]];\n    // kinda - base case #2\n    let totalWays = [];\n    // recursive case\n    for (let word of wordBank) {\n        // if the target begins with the word\n        if (target.indexOf(word) === 0) {\n            const suffix = target.slice(word.length);\n            const suffixWays = allConstruct(suffix, wordBank);\n            const targetWays = suffixWays.map(way =&gt; [word, ...way]);\n            totalWays.push(...targetWays);\n        }        \n    }\n    return totalWays;\n};\n\n\nconsole.log(allConstruct('purple',['purp','p','le','ur','purpl'])); // 2\nconsole.log(allConstruct('',['ab','abc','cd','def','abcd'])); // 1\nconsole.log(allConstruct('skateboard',['bo','rd','ate','r','sk', 'boar'])); //0\nconsole.log(allConstruct('enterapotentpot', ['a', 'p', 'ent', 'enter', 'ot', 'o', 't'])); // 4\n// console.log(allConstruct('eeeeeeeeeeeeeeeeeeeeeeeeeeeeeef', ['e','ee','eee','eeee','eeeeee','eeee'])); </code></pre>",
+    "start": 10589,
+    "position": 58,
+    "video": {
+      "id": "video-3a2173bd-1625-46e8-bc7b-fd16fc9426c2",
+      "url": "https://www.youtube.com/watch?v=oBt53YbR9Kk",
+      "seen": 10589.251780073113,
+      "total": 18602
+    },
+    "pin": "cyan"
+  }, {
+    "id": "bookmark-f709742b-a392-4e08-af19-544702eece9e",
+    "description": "<p>Let's discuss if we can make this Solution faster</p><p>&nbsp;</p><p>+ We basically require a full exploration</p><p>+ For this solution the last example is not a worst case anymore</p><p>+ You'd find some way to memoize it, but it won't affect the performance that much</p><p>&nbsp;</p><pre><code class=\"language-javascript\">/**\n* Show all ways to construct the target string\n* returns a 2d array if the target string is empty\n* returns a 1d array if the target string and wordBank don't match\n* @param {string} target\n* @param {string[]} wordBank\n* @return {string[][]} result\n*/\nconst allConstruct = (target, wordBank, memo={}) =&gt; {\n    // retrieve from memo\n    if (target in memo) return memo[target];\n    \n    // base case #1\n    if (target === '') return [[]];\n    \n    // kinda - base case #2\n    let totalWays = [];\n    \n    // recursive case\n    for (let word of wordBank) {\n        // if the target begins with the word\n        if (target.indexOf(word) === 0) {\n            const suffix = target.slice(word.length);\n            const suffixWays = allConstruct(suffix, wordBank, memo);\n            const targetWays = suffixWays.map(way =&gt; [word, ...way]);\n            totalWays.push(...targetWays);\n        }        \n    }\n    \n    memo[target] = totalWays;\n    return totalWays;\n};\n\n\nconsole.log(allConstruct('purple',['purp','p','le','ur','purpl'])); // 2\nconsole.log(allConstruct('',['ab','abc','cd','def','abcd'])); // 1\nconsole.log(allConstruct('skateboard',['bo','rd','ate','r','sk', 'boar'])); //0\nconsole.log(allConstruct('enterapotentpot', ['a', 'p', 'ent', 'enter', 'ot', 'o', 't'])); // 4\nconsole.log(allConstruct('eeeeeeeeeeeeeeeeeeeeeeeeeeeeeef', ['e','ee','eee','eeee','eeeeee','eeee'])); </code></pre>",
+    "start": 11172,
+    "position": 59,
+    "video": {
+      "id": "video-ac3c7af4-40c6-497f-b17f-000b2d187f79",
+      "url": "https://www.youtube.com/watch?v=oBt53YbR9Kk",
+      "seen": 11172.052078697725,
+      "total": 18602
+    }
+  }, {
+    "id": "bookmark-f8e9e5f8-b69f-4529-904a-c9c31f0218f5",
+    "description": "<p><strong>Summary of allConstruct</strong></p><p>&nbsp;</p><p>+ Consider <strong>m = target.length</strong> &amp; <strong>n = wordBank.length</strong></p><p>+ The base of the tree we'd have <strong>O(n^m)</strong> combinations</p><p>+ No matter what clever implementation we make, we can't do any better than exponential</p><p>+ Time Complexity: <strong>O(n^m)</strong></p><p>+ Space Complexity:<strong> O(m)</strong></p><p>&nbsp;</p>",
+    "start": 11318,
+    "position": 60,
+    "video": {
+      "id": "video-049c2d81-2b21-4903-a0ed-37758ffecbea",
+      "url": "https://www.youtube.com/watch?v=oBt53YbR9Kk",
+      "seen": 11318.38357056776,
+      "total": 18602
+    }
+  }, {
+    "id": "bookmark-d53ad1c2-0eb2-435d-9b9b-24b3254f167c",
+    "description": "<p>Introduction to the second approach to Solving Dynamic Programming problems&nbsp;</p><p>&nbsp;</p><p>✨<strong>TABULATION</strong> ✨<br>&nbsp;</p><p>+ Tabulation is all about building Tables&nbsp;<br>+ Space Time complexity of Fibonacci using Tabulation</p><p>&nbsp; &nbsp;- Time: O(n) -&gt; n is the input to fibonacci number</p><p>&nbsp; &nbsp;- Space: O(n) -&gt; n size array created in the process</p><p>+ We are still using Overlapping sub-problems to generate our table&nbsp;</p><p><br>👉🏻 Fibonacci using Tabulation</p>",
+    "start": 11466,
+    "position": 61,
+    "video": {
+      "id": "video-88553414-8a90-4fc9-97ab-c6e2d65a0207",
+      "url": "https://www.youtube.com/watch?v=oBt53YbR9Kk",
+      "seen": 11465.741380495,
+      "total": 18601.941
+    }
+  }, {
+    "id": "bookmark-4719b9f5-476a-46cd-ab32-b4c295e5d870",
+    "description": "<p>📜 Visualize <strong>fib(6)</strong> using Tabulation 👆🏻</p>",
+    "start": 11534,
+    "position": 62,
+    "video": {
+      "id": "video-09ad77e8-07fa-4816-9b83-f38dbc4e730b",
+      "url": "https://www.youtube.com/watch?v=oBt53YbR9Kk",
+      "seen": 11534.238349273404,
+      "total": 18601.941
+    },
+    "pin": "yellow"
+  }, {
+    "id": "bookmark-dc75ed7f-36c4-4af2-a744-7a1ef9b5dea7",
+    "description": "<p><strong>Implementing Fibonacci using Tabulation</strong></p><p>&nbsp;</p><p>+ We will implement an iterative process</p><p>+ Our table will always be n+1 size of the input number</p><p>+ Pre-fill the table values with a 0</p><p>+ Initialise table[1] = 1</p><p>+ Implement Tabulation logic using a for loop</p><p>+ Return the value of Table at nth position</p><p>&nbsp;</p><pre><code class=\"language-javascript\">const fib = (n) =&gt; {\n// table will always be n+1 size of the input number\nconst table = Array(n+1).fill(0);\ntable[1] = 1;\n// tabulation logic using a for loop\nfor (let i=0; i&lt;=n; i++) {\n  table[i+1] = table[i];\n  table[i+2] = table[i];\n}\n// return value of table at nth position\nreturn table[n];\n};\n\nconsole.log(fib(6)); // 8\nconsole.log(fib(7)); // 13\nconsole.log(fib(8)); // 21\nconsole.log(fib(50)); // 12586269025</code></pre><p>&nbsp;</p><p><strong>Space Time Complexity:</strong></p><p>&nbsp;</p><p>Time -&gt; O(n) ~ where n is the input number. Because we're following an iterative strategy</p><p>Space -&gt; O(n) ~ Although we can do without an array, for this example, we'll still go with an array</p>",
+    "start": 11854,
+    "position": 63,
+    "video": {
+      "id": "video-7f134462-95b5-47d0-b210-6141d9498342",
+      "url": "https://www.youtube.com/watch?v=oBt53YbR9Kk",
+      "seen": 11853.756346513206,
+      "total": 18601.941
+    },
+    "pin": "cyan"
+  }, {
+    "id": "bookmark-ede1ecdb-c031-468a-8672-a51f0591aa9f",
+    "description": "<p>📜 Grid Traveler revisited - Tabulation</p>",
+    "start": 12138,
+    "position": 64,
+    "video": {
+      "id": "video-abb04b15-296e-4658-b3eb-1d9c20f783c8",
+      "url": "https://www.youtube.com/watch?v=oBt53YbR9Kk",
+      "seen": 12138.243131096246,
+      "total": 18601.941
+    },
+    "pin": "yellow"
+  }, {
+    "id": "bookmark-4f6aa33b-9712-495c-859a-b5cf5917a6ac",
+    "description": "<p>Implementing GridTraveler using Tabulation</p><p>&nbsp;</p><p>Tabulation code strategy&nbsp;</p><p>+ Step 1: Pre-fill n+1 array</p><p>+ Step 2: Provide a seed value</p><p>+ Step 3: Come up with a logic for sub-problem to solve larger problem</p><p>+ Step 4: Return the final element to solve the problem</p><p>&nbsp;</p><pre><code class=\"language-javascript\">/**\n * Grid Traveler using Tabulation\n * @param {*} m \n * @param {*} n \n * @returns {number}\n */\nconst gridTraveler = (m,n) =&gt; {\n    // step1: pre-fill n+1 array\n    const table = Array(m+1).fill().map(() =&gt; Array(n+1).fill(0));\n    // step2: provide a seed value\n    table[1][1] = 1;\n    // step3: come up with a logic for sub-problem to solve large problem\n    for (let i=0; i&lt;=m; i++){\n      for(let j=0; j&lt;=n; j++) {\n        const current = table[i][j];\n        if (j+1&lt;=n) table[i][j+1] += current;\n        if (i+1&lt;=m) table[i+1][j] += current;\n      }\n    }\n    // step4: return the final element to solve the problem\n    return table[m][n];\n    };\n    \n    console.log(gridTraveler(1,1)); // 1\n    console.log(gridTraveler(2,3)); // 3\n    console.log(gridTraveler(3,2)); // 3\n    console.log(gridTraveler(3,3)); // 6\n    console.log(gridTraveler(18,18)); //</code></pre><p>&nbsp;</p><p>&nbsp;</p><p><strong>Space Time Complexity:</strong></p><p>+ Time -&gt; <strong>O(m * n)</strong> ~ where m &amp; n are the rows &amp; columns of the 2D grid</p><p>+ Space -&gt; <strong>O(m * n)</strong> ~ where m &amp; n are the rows &amp; columns of the 2D grid</p><p>&nbsp;</p>",
+    "start": 12432,
+    "position": 65,
+    "video": {
+      "id": "video-4d7620dc-fdff-4ac0-8ee1-da3b21f1a687",
+      "url": "https://www.youtube.com/watch?v=oBt53YbR9Kk",
+      "seen": 12432.294700608722,
+      "total": 18601.941
+    },
+    "pin": "cyan"
+  }, {
+    "id": "bookmark-9aa7325f-25cc-43d1-bc26-71274c5abce1",
+    "description": "<p><strong>Tabulation Recipe</strong></p><p>&nbsp;</p><p>+ Always first, Visualise the problem in the form of a table</p><p>+ Size of the table, is based on the input / target size + 1</p><p>+ Initialise the table with default values (depending upon the return values of the function)</p><p>+ Seed -&gt; Find the most trivial answer in the table (usually the smallest sub-problem which gives an immediate answer)</p><p>+ Iterate through the table&nbsp;</p><p>+ Fill further positions based on current position</p><p>+ When the function has multiple arguments, always find which of the argument changes throughout the function</p>",
+    "start": 12880,
+    "position": 66,
+    "video": {
+      "id": "video-d003195f-9bb7-4c56-ba1c-3c6bb1559728",
+      "url": "https://www.youtube.com/watch?v=oBt53YbR9Kk",
+      "seen": 12879.779403722874,
+      "total": 18601.941
+    },
+    "pin": "green"
+  }, {
+    "id": "bookmark-0826911f-eee4-4233-a7a1-e1694f836a5f",
+    "description": "<p><strong>📜 Can-Sum function using Tabulation</strong></p>",
+    "start": 13082,
+    "position": 67,
+    "video": {
+      "id": "video-ae28011b-2669-44c1-8273-10347d1096af",
+      "url": "https://www.youtube.com/watch?v=oBt53YbR9Kk",
+      "seen": 13082.097791063004,
+      "total": 18601.941
+    },
+    "pin": "yellow"
+  }, {
+    "id": "bookmark-88889e7f-3fae-44a6-87fe-dcd3115a744c",
+    "description": "<p><strong>CanSum function implementation using Tabulation</strong></p><p>&nbsp;</p><pre><code class=\"language-javascript\">/**\n * canSum function using Tabulation\n * @param {number} target \n * @param {number[]} numbers \n * @returns {boolean}\n */\nconst canSum = (target, numbers) =&gt; {\n    const table = Array(target+1).fill(false);\n    table[0] = true;\n    for (let i=0; i&lt;=target; i++){\n      if (table[i] === true) {\n        for (let num of numbers) {\n          table[i+num] = true;\n        }\n      }\n    }\n    return table[target];\n  };\n  \n  \nconsole.log(canSum(7,[2,3]));\nconsole.log(canSum(7,[5,3,4,7]));\nconsole.log(canSum(7,[2,4]));\nconsole.log(canSum(8,[2,3,5]));  \nconsole.log(canSum(300, [7,14]));</code></pre><p>&nbsp;</p><p><strong>Space Time Complexity</strong><br>&nbsp;</p><p>+ Time -&gt; O(n x m) ~ where n and m are the target and size of the array 'm'</p><p>+ Space -&gt; O(n+1) ~ Because we always create an array of the size - N+1</p>",
+    "start": 13595,
+    "position": 68,
+    "video": {
+      "id": "video-3a8e5cbc-2491-4346-9a64-01f820a87e10",
+      "url": "https://www.youtube.com/watch?v=oBt53YbR9Kk",
+      "seen": 13595.122989835409,
+      "total": 18601.941
+    },
+    "pin": "cyan"
+  }, {
+    "id": "bookmark-9472f45a-3bb3-4ec2-aaa7-ccc664f13753",
+    "description": "<p>📜 HowSum using Tabulation</p>",
+    "start": 14003,
+    "position": 69,
+    "video": {
+      "id": "video-c4a4fe1d-e3df-4bf1-97eb-d6ce7af920b6",
+      "url": "https://www.youtube.com/watch?v=oBt53YbR9Kk",
+      "seen": 14003.291603392334,
+      "total": 18601.941
+    },
+    "pin": "yellow"
+  }, {
+    "id": "bookmark-fec5a77c-01a1-4ee3-b011-4cd72f8d00fb",
+    "description": "<p><strong>Implementation of HowSum function (using Tabulation)</strong></p><p>&nbsp;</p><pre><code class=\"language-javascript\">/**\n* howSum using tabulation\n* @param {number} targetSum\n* @param {number[]} numbers\n* @returns {number[]}\n*/\nconst howSum = (targetSum, numbers) =&gt; {\n    const table = Array(targetSum + 1).fill(null);\n    table[0] = [];\n    for (let i=0; i&lt;=targetSum; i++) {\n       if (table[i]!==null){\n         for (let num of numbers) {\n          table[i+num] = [...table[i],num];\n         }\n       }\n    }\n    return table[targetSum];\n  };\n  \n  // testing\n  console.log(howSum(7,[2,3])); // [3,2,2]\n  console.log(howSum(7,[5,3,4,7])); // null\n  console.log(howSum(8,[2,3,5])); // [2,2,2,2]\n  console.log(howSum(300,[7,14])); // null \n</code></pre><p>&nbsp;</p><p>&nbsp;</p><p><strong>Space Time Complexity</strong></p><p>&nbsp;</p><p>+ Time -&gt; O( n x m x n) ~ O(n*m^2)</p><p>+ Space -&gt; O(m x m) ~ because we always generate an array, and inside the for loop we spread and append the num</p>",
+    "start": 14568,
+    "position": 70,
+    "video": {
+      "id": "video-b801ece1-5151-4754-827b-b624777d354a",
+      "url": "https://www.youtube.com/watch?v=oBt53YbR9Kk",
+      "seen": 14568.234626376003,
+      "total": 18601.941
+    },
+    "pin": "cyan"
+  }, {
+    "id": "bookmark-76a6054a-f57f-487b-ace3-b53a96281445",
+    "description": "<p>📜 BestSum using Tabulation</p>",
+    "start": 14845,
+    "position": 71,
+    "video": {
+      "id": "video-877caaa4-f640-4f5a-a0e6-90eb182d60a0",
+      "url": "https://www.youtube.com/watch?v=oBt53YbR9Kk",
+      "seen": 14844.581186039004,
+      "total": 18601.941
+    },
+    "pin": "yellow"
+  }, {
+    "id": "bookmark-8366bbae-06d7-469c-955d-d05f9fe657e9",
+    "description": "<p><strong>Implement BestSum using Tabulation</strong></p><p>&nbsp;</p><pre><code class=\"language-javascript\">/**\n* bestSum using tabulation\n* @param {number} targetSum\n* @param {number[]} numbers\n* @returns {number[]}\n*/\nconst bestSum = (targetSum, numbers) =&gt; {\n    // create table\n    const table = Array(targetSum + 1).fill(null);\n    // seed\n    table[0] = [];\n    for (let i=0; i&lt;=targetSum; i++) {\n       // iterative logic - tabulation\n       if (table[i]!==null){\n         for (let num of numbers) {\n          const combination = [...table[i],num];\n          // only replace if the combination is less than currently present element\n          if (!table[i+num] || table[i+num].length &gt; combination.length) {\n            table[i+num] = combination;\n          }\n         }\n       }\n    }\n    return table[targetSum];\n  };\n  \n  // testing\n  console.log(bestSum(7,[5,3,4,7])); // [7]\n  console.log(bestSum(8,[2,3,5])); // [3,5]\n  console.log(bestSum(8,[1,4,5])); // [4,4]\n  console.log(bestSum(100,[1,2,5,25])); // [25,25,25,25]</code></pre><p>&nbsp;</p><p><strong>Space Time Complexity</strong></p><p>&nbsp;</p><p>+ Time -&gt; O(n x m x m) ~ O(nm^2) -&gt; where n is the targetSum and m is the length of numbers</p><p>+ Space -&gt; O(m^2) -&gt; since we're using an array and again copying the array</p>",
+    "start": 15220,
+    "position": 72,
+    "video": {
+      "id": "video-47b5bd30-43e9-4ed7-bba8-ff3ecd6c3a1f",
+      "url": "https://www.youtube.com/watch?v=oBt53YbR9Kk",
+      "seen": 15220.492923477404,
+      "total": 18601.941
+    },
+    "pin": "cyan"
+  }, {
+    "id": "bookmark-f6a9aa69-648c-43ad-97e5-c37e2461c601",
+    "description": "<p>Comparing HowSum and BestSum Tabulation solutions 👆🏻</p>",
+    "start": 15618,
+    "position": 73,
+    "video": {
+      "id": "video-838475fe-0561-46ae-9428-ccfe683f5d87",
+      "url": "https://www.youtube.com/watch?v=oBt53YbR9Kk",
+      "seen": 15618.400491941347,
+      "total": 18601.941
+    }
+  }, {
+    "id": "bookmark-a5854520-2331-4e56-b002-f4e4f2d04944",
+    "description": "<p>📜 CanConstruct using Tabulation 👆🏻</p>",
+    "start": 15654,
+    "position": 74,
+    "video": {
+      "id": "video-2ccdb2fc-0c63-4af9-9493-97cc64473c8f",
+      "url": "https://www.youtube.com/watch?v=oBt53YbR9Kk",
+      "seen": 15654.158398667943,
+      "total": 18601.941
+    },
+    "pin": "yellow"
+  }, {
+    "id": "bookmark-172aaeef-b288-4011-a4b8-35b2258c7a9b",
+    "description": "<p>Implementing CanConstruct using Tabulation</p><p>&nbsp;</p><pre><code class=\"language-javascript\">/**\n * canConstuct - Tabulation\n * @param {string} target \n * @param {string[]} wordBank \n * @returns {boolean} true or false\n */\nconst canConstuct = (target, wordBank) =&gt; {\n  // pre-fill table\n  const table = Array(target.length+1).fill(false);\n  // seed\n  table[0] = true;\n  for(let i=0;i&lt;=target.length; i++) {\n    if (table[i] === true) {\n      for(let word of wordBank) {\n        // if the current word matches the characters starting at i\n        if (target.slice(i, i+word.length) === word) {\n          table[i+word.length] = true;\n        }\n      }\n    }\n  }\n  return table[target.length];\n};\n\nconsole.log(canConstruct('',['ab','abc','cd','def','abcd'])); // true\nconsole.log(canConstruct('skateboard',['bo','rd','ate','r','sk', 'boar'])); //false\nconsole.log(canConstruct('enterapotentpot', ['a', 'p', 'ent', 'enter', 'ot', 'o', 't'])); // true\nconsole.log(canConstruct('eeeeeeeeeeeeeeeeeeeeeeeeeeeeeef', ['e','ee','eee','eeee','eeeeee','eeee'])); // false</code></pre><p>&nbsp;</p><p><strong>Space Time Complexity:&nbsp;</strong></p><p>&nbsp;</p><p>+ Time -&gt; O(n x m^2) -&gt;&nbsp;<br>+ Space -&gt; O(m)</p><p>&nbsp;</p>",
+    "start": 16296,
+    "position": 75,
+    "video": {
+      "id": "video-fda1c1cf-2dd4-4761-9057-db8bb0b82126",
+      "url": "https://www.youtube.com/watch?v=oBt53YbR9Kk",
+      "seen": 16295.513538398167,
+      "total": 18601.941
+    },
+    "pin": "cyan"
+  }, {
+    "id": "bookmark-620b67d8-5807-44a6-a8d1-893d67eae7da",
+    "description": "<p>📜 CountConstruct challenge solved using Tabulation</p>",
+    "start": 16691,
+    "position": 76,
+    "video": {
+      "id": "video-1843405a-0717-40eb-93b5-a77e24addc26",
+      "url": "https://www.youtube.com/watch?v=oBt53YbR9Kk",
+      "seen": 16691.12886552121,
+      "total": 18601.941
+    },
+    "pin": "yellow"
+  }, {
+    "id": "bookmark-b4b197e7-8d63-4517-bab1-74a0ab5f784f",
+    "description": "<p>😍 Beautifully explained Tabulation logic 👆🏻</p>",
+    "start": 17157,
+    "position": 77,
+    "video": {
+      "id": "video-fd16b6aa-91cd-4ace-9233-f60eaddea53c",
+      "url": "https://www.youtube.com/watch?v=oBt53YbR9Kk",
+      "seen": 17157.149552562994,
+      "total": 18601.941
+    },
+    "pin": "green"
+  }, {
+    "id": "bookmark-3142ba4b-d8b6-4edb-a64a-411ec98a3f31",
+    "description": "<p><strong>Implement CountConstruct using Tabulation</strong></p><p>&nbsp;</p><pre><code class=\"language-javascript\">/**\n* countConstruct using Tabulation\n* @param {string} target string\n* @param {string[]} wordBank containing words\n* @return {number}\n*/\nconst countConstruct = (target, wordBank) =&gt; {\n  //pre-fill\n  const table = Array(target.length+1).fill(0);\n  //seed\n  table[0] = 1;\n  for (let i=0;i&lt;=target.length;i++) {\n    for(let word of wordBank) {\n       // if the word matches the characters present in the ith position\n       if (target.slice(i,i+word.length) === word) {\n          table[i+word.length] += table[I]; \n       }\n    }\n  }\n  return table[target.length];\n};\n\nconsole.log(countConstruct('purple',['purp','p','le','ur','purpl'])); // 2\nconsole.log(countConstruct('',['ab','abc','cd','def','abcd'])); // 1\nconsole.log(countConstruct('skateboard',['bo','rd','ate','r','sk', 'boar'])); //0\nconsole.log(countConstruct('enterapotentpot', ['a', 'p', 'ent', 'enter', 'ot', 'o', 't'])); // 4\nconsole.log(countConstruct('eeeeeeeeeeeeeeeeeeeeeeeeeeeeeef', ['e','ee','eee','eeee','eeeeee','eeee'])); // false</code></pre><p>&nbsp;</p><p><strong>Space Time Complexity</strong></p><p>&nbsp;</p><p>+ Time -&gt; O(m^2 x n) ~ where m is the length target and n is the wordBank.length</p><p>+ Space -&gt; O(m) ~ where m is the length of the target</p>",
+    "start": 17224,
+    "position": 78,
+    "video": {
+      "id": "video-2e2caf77-402c-43a4-b5b5-4f250ac6faa7",
+      "url": "https://www.youtube.com/watch?v=oBt53YbR9Kk",
+      "seen": 17223.90436959588,
+      "total": 18601.941
+    },
+    "pin": "cyan"
+  }, {
+    "id": "bookmark-f57ad190-d292-42fb-939c-75fcd1d55b22",
+    "description": "<p>Comparing CountConstruct tabulation with CanConstruct tabulation 👆🏻</p>",
+    "start": 17407,
+    "position": 79,
+    "video": {
+      "id": "video-9f82bcd7-9951-4980-a327-d4c79b8b8802",
+      "url": "https://www.youtube.com/watch?v=oBt53YbR9Kk",
+      "seen": 17407.479850855703,
+      "total": 18601.941
+    }
+  }, {
+    "id": "bookmark-2e142c08-9498-45e0-b557-220450dca3d1",
+    "description": "<p>📜 AllConstruct using Tabulation</p>",
+    "start": 17424,
+    "position": 80,
+    "video": {
+      "id": "video-e7dcf70d-6ec7-4a1a-a82d-9283339310e5",
+      "url": "https://www.youtube.com/watch?v=oBt53YbR9Kk",
+      "seen": 17424.023065574187,
+      "total": 18601.941
+    },
+    "pin": "yellow"
+  }, {
+    "id": "bookmark-d8ec5229-c882-4472-942d-c3ea998356ed",
+    "description": "<p><strong>Implement AllConstruct using Tabulation</strong></p><p>&nbsp;</p><pre><code class=\"language-javascript\">/**\n* allConstruct function using Tabulation\n* @param {string} target string\n* @param {string[]} wordBank array\n* @returns {string[][]}\n*/\nconst allConstruct = (target, wordBank) =&gt; {\n  //pre-fill our table - with arrays\n  const table = Array(target.length+1).fill().map(() =&gt; []);\n  // seed\n  table[0] = [];\n  for (let i=0; i&lt;=target.length; i++) {\n    let (word of wordBank) {\n      // if the word matches the characters in the ith position\n      if (target.slice(i,word.length+i) === word){\n        const newCombination = table[i].map(subArray =&gt; [...subArray, word]);\n        table[i+word.length].push(...newCombination);\n      }\n    }\n  }\n  return table[target.length];\n};\n\n\nconsole.log(allConstruct('purple',['purp','p','le','ur','purpl'])); // 2\nconsole.log(allConstruct('',['ab','abc','cd','def','abcd'])); // 1\nconsole.log(allConstruct('skateboard',['bo','rd','ate','r','sk', 'boar'])); //0\nconsole.log(allConstruct('enterapotentpot', ['a', 'p', 'ent', 'enter', 'ot', 'o', 't'])); // 4\nconsole.log(allConstruct('eeeeeeeeeeeeeeeeeeeeeeeeeeeeeef', ['e','ee','eee','eeee','eeeeee','eeee'])); </code></pre><p>&nbsp;</p><p><strong>Space Time Complexity</strong></p><p>&nbsp;</p><p>+ Time -&gt; O(n^m) Time ~ Exponential time !😶</p><p>+ Space -&gt; O(n^m) Space ~ Because we're creating a 3D array in each loop 😶</p>",
+    "start": 18078,
+    "position": 81,
+    "video": {
+      "id": "video-81213c72-00f8-4cb3-8eb0-ba39c9f008a6",
+      "url": "https://www.youtube.com/watch?v=oBt53YbR9Kk",
+      "seen": 18077.99068350646,
+      "total": 18601.941
+    },
+    "pin": "cyan"
+  }, {
+    "id": "bookmark-58a550a6-75e7-4b57-833e-0b9535058e66",
+    "description": "<p><strong>Final Advice on Dynamic Programming</strong></p><p>&nbsp;</p><p>+ 🤔 Ask yourself - Are there any overlapping sub-problems ?</p><p>+ 🤔 Decide what is the trivially smallest input</p><p>+ 🤔 Figure how to relate the base case (trivial input) to your larger problem</p><p>+ 🤔 Think recursively to use Memoization</p><p>+ 🤔 Think iteratively to use Tabulation</p><p>+ 🤗 Remember Memoization Recipe</p><p>+ 🤗 Remember Tabulation Recipe</p>",
+    "start": 18473,
+    "position": 82,
+    "video": {
+      "id": "video-25d8b542-bbb5-45dd-9986-b4fe77b1bba4",
+      "url": "https://www.youtube.com/watch?v=oBt53YbR9Kk",
+      "seen": 18472.76704902224,
+      "total": 18601.941
+    }
+  }]
 }
