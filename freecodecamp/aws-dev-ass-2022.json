@@ -1,0 +1,199 @@
+{
+    "id": "playlist-27fbb063-7329-4648-8e58-16d5e60521e5",
+    "title": "AWS Certified Dev Associate - Playlist 2022",
+    "createdBy": "",
+    "bookmarks": [{
+        "id": "bookmark-4eadc51f-74ef-4918-a97f-2f471f34f161",
+        "description": "<p><strong>📖 AWS Certified Developer Associate 2020 Freecodecamp</strong></p>",
+        "start": 0,
+        "position": 1,
+        "video": {
+            "id": "video-3cb005c1-9c2c-486a-8077-8c255d3c190d",
+            "url": "https://www.youtube.com/watch?v=RrKRN9zRBWs",
+            "seen": 0,
+            "total": 43116
+        },
+        "pin": "yellow"
+    }, {
+        "id": "bookmark-a620421d-3c79-4b46-85b0-56c61a5cab12",
+        "description": "<p>Who and Why ?</p>",
+        "start": 49,
+        "position": 2,
+        "video": {
+            "id": "video-a6395245-9de3-4bcd-9080-407cae7dcd77",
+            "url": "https://www.youtube.com/watch?v=RrKRN9zRBWs",
+            "seen": 48.778133555935234,
+            "total": 43116.021
+        }
+    }, {
+        "id": "bookmark-d18e21a7-1b99-457b-a54e-03a58d6aeb0f",
+        "description": "<p>How much, how long and how many questions ?<br><br>+ $150 USD<br>+ 130 minutes<br>+ 65 questions<br>+ ~72% passing score</p>",
+        "start": 228,
+        "position": 3,
+        "video": {
+            "id": "video-9cb73e40-b26b-4c5b-98ce-b5af3e7f8869",
+            "url": "https://www.youtube.com/watch?v=RrKRN9zRBWs",
+            "seen": 227.63432846876492,
+            "total": 43116.021
+        },
+        "pin": "green"
+    }, {
+        "id": "bookmark-c201a1a6-fcfe-40a7-9c95-484901739b91",
+        "description": "<p>📜 Exam Guide Overview - <strong>DVA-C01</strong><br><br>+ Passing Grade is 720/1000<br>+ Need 72% to pass</p><p>+ 65 Questions (you can only get 18 questions wrong)<br>+ Duration - 130 mins (you get 2 mins per question)<br><br><strong>📖 Categories / Domain</strong><br><br>+ Deployment (22%) - 14.3 questions<br>+ Security (26%) - 16.9 questions<br>+ Development with AWS services (30%) - 19.5 questions<br>+ Refactoring (10%) - 6.5 questions<br>+ Monitoring &amp; Troubleshooting (12%) - 7.8 questions</p>",
+        "start": 271,
+        "position": 4,
+        "video": {
+            "id": "video-591f8e15-5795-4d5c-9f9a-338b722faa74",
+            "url": "https://www.youtube.com/watch?v=RrKRN9zRBWs",
+            "seen": 270.6878742317954,
+            "total": 43116.021
+        }
+    }, {
+        "id": "bookmark-b55f968b-abdc-4881-a57f-c636a0c54562",
+        "description": "<p>📜Recommended Whitepapers to read</p><p><br><a href=\"https://aws.amazon.com/whitepapers/?whitepapers-main.sort-by=item.additionalFields.sortDate&amp;whitepapers-main.sort-order=desc&amp;awsf.whitepapers-content-type=*all&amp;awsf.whitepapers-tech-category=*all&amp;awsf.whitepapers-industries=*all&amp;awsf.whitepapers-business-category=*all&amp;awsf.whitepapers-global-methodology=*all\">Link to AWS Whitepapers &amp; guides</a><br><br>+ Oct 2018 - Architecting for the cloud: AWS Best practices<br>+ Jun 2017 - Practicing continuous integration &amp; continuous delivery on AWS Accelerating Software Delivery with DevOps<br>+ Sept 2017 - Microservices on AWS<br>+ Nov 2017 - Serverless Architecture with AWS Lambda<br>+ Apr 2019 - Optimising Enterprise Economics with Serverless Architecture<br>+ Nov 2017 - Running Containerized Microservices on AWS<br>+ Aug 2016 - Blue/Green Deployment on AWS<br><br>+ Link: <a href=\"https://explore.skillbuilder.aws/\">AWS Skillbuilder</a></p><p>+ Link: <a href=\"https://d1.awsstatic.com/training-and-certification/docs-dev-associate/AWS-Certified-Developer-Associate_Exam-Guide.pdf\">AWS Certified Developer Associate Exam guide (PDF)</a></p>",
+        "start": 489,
+        "position": 5,
+        "video": {
+            "id": "video-961b87c5-236b-449c-8ef9-6a5aa40873c4",
+            "url": "https://www.youtube.com/watch?v=RrKRN9zRBWs",
+            "seen": 488.98092124325996,
+            "total": 43116.021
+        },
+        "pin": "green"
+    }, {
+        "id": "bookmark-bdb5e093-4da2-4919-8caa-2a19676ae582",
+        "description": "<p><strong>📖Intro to Elastic Beanstalk - EB</strong></p><p><br>+ PAAS - Platform As A Service<br>+ Think of EB as Heroku for AWS<br>+ Powered by CloudFormation templates</p>",
+        "start": 1182,
+        "position": 6,
+        "video": {
+            "id": "video-667721d4-f444-4ef4-a272-8af6649e8727",
+            "url": "https://www.youtube.com/watch?v=RrKRN9zRBWs",
+            "seen": 1182.4417075132146,
+            "total": 43116.021
+        },
+        "pin": "yellow"
+    }, {
+        "id": "bookmark-7ba339f5-290e-4a37-b934-a7ad4c962c31",
+        "description": "<p>📜Elastic Beanstalk - Web versus Worker Environment<br><br>+ Web env - if you need to build a Web Application</p><p>+ Worker env - if you need to build background jobs</p>",
+        "start": 1415,
+        "position": 7,
+        "video": {
+            "id": "video-c4f71ead-c47c-42ab-a744-ba85495c3b94",
+            "url": "https://www.youtube.com/watch?v=RrKRN9zRBWs",
+            "seen": 1414.7571591519275,
+            "total": 43116.021
+        }
+    }, {
+        "id": "bookmark-87a68fa2-8f3e-41b9-a230-6f2defdbf534",
+        "description": "<p><strong>+ Web Environment Types</strong><br>+ 1. Load Balanced Environment - Uses ASG and set to scale<br>+ 2. Single Instance Environment - Still uses ASG but desired capacity is set to 1, public IP address to route traffic to server<br><br><strong>+ Deployment Policies</strong><br><br>+ All at once<br>+ Rolling<br>+ Rolling with additional batch<br>+ Immutable<br>+ Blue/Green deployment</p>",
+        "start": 1527,
+        "position": 8,
+        "video": {
+            "id": "video-c86ce800-aaa5-419d-9a58-118e4535d53c",
+            "url": "https://www.youtube.com/watch?v=RrKRN9zRBWs",
+            "seen": 1526.8878415813815,
+            "total": 43116.021
+        }
+    }, {
+        "id": "bookmark-bc0039af-c018-4864-92e9-74297db151e1",
+        "description": "<p>🎯 EB Deployment Methods - Table</p>",
+        "start": 1957,
+        "position": 9,
+        "video": {
+            "id": "video-eb61f692-6adb-4232-bfc9-beb40683ae33",
+            "url": "https://www.youtube.com/watch?v=RrKRN9zRBWs",
+            "seen": 1957.3413774376359,
+            "total": 43116.021
+        },
+        "pin": "green"
+    }, {
+        "id": "bookmark-5a81a122-f6fd-4b4a-a0bf-2d9cafb9d145",
+        "description": "<p><strong>In-place versus Blue Green Deployment</strong></p>",
+        "start": 2300,
+        "position": 10,
+        "video": {
+            "id": "video-2151f182-574d-4f9f-b0ed-1005a43eccdd",
+            "url": "https://www.youtube.com/watch?v=RrKRN9zRBWs",
+            "seen": 2299.652473714917,
+            "total": 43116.021
+        }
+    }, {
+        "id": "bookmark-316c7fc7-92ca-420b-acaf-cf514366b225",
+        "description": "<p><strong>In-place vs Blue Green Deployment - Part 2</strong><br><br>+ In place: It's in the context of EB container<br>+ The mechanism of our deploy is happening within EB container<br><br>+ EB defined Blue Gree as swapping EB environments&nbsp;<br>+ this occurs at DNS level swapping out of the EB container</p>",
+        "start": 2475,
+        "position": 11,
+        "video": {
+            "id": "video-9c01049d-ad1d-498a-9956-e7570e5385d6",
+            "url": "https://www.youtube.com/watch?v=RrKRN9zRBWs",
+            "seen": 2474.689324822802,
+            "total": 43116.021
+        }
+    }, {
+        "id": "bookmark-31c1fa80-1918-4c16-bf3f-15305df104da",
+        "description": "<p>📜EB Configuration Files<br><br>+ <i>.ebextensions</i><br>+ <i>.config</i><br>+ env.yml - default env properties when creating new EB environments<br>&nbsp;</p>",
+        "start": 2663,
+        "position": 12,
+        "video": {
+            "id": "video-67deb258-ab02-4cfe-ba79-6267e73243f8",
+            "url": "https://www.youtube.com/watch?v=RrKRN9zRBWs",
+            "seen": 2663.480503059191,
+            "total": 43116.021
+        }
+    }, {
+        "id": "bookmark-8ccab36f-af8d-408a-bd2f-7dc6778c5375",
+        "description": "<p>📜EB Server configuration</p>",
+        "start": 2818,
+        "position": 13,
+        "video": {
+            "id": "video-d59474ba-bac4-4a9b-945f-15b8ed0867db",
+            "url": "https://www.youtube.com/watch?v=RrKRN9zRBWs",
+            "seen": 2818.2863410781692,
+            "total": 43116.021
+        }
+    }, {
+        "id": "bookmark-c80b0505-3e6a-4823-b96f-73124efd96ae",
+        "description": "<p><strong>📜EB CLI</strong></p>",
+        "start": 2945,
+        "position": 14,
+        "video": {
+            "id": "video-721180a9-31e9-4c89-9756-a7b356c420a2",
+            "url": "https://www.youtube.com/watch?v=RrKRN9zRBWs",
+            "seen": 2944.9629473677705,
+            "total": 43116.021
+        }
+    }, {
+        "id": "bookmark-c724ed79-0389-4983-90ad-baac21980462",
+        "description": "<p>📜EB Custom Image</p>",
+        "start": 3077,
+        "position": 15,
+        "video": {
+            "id": "video-a78134e5-daf8-46ca-87cf-6f667d84d608",
+            "url": "https://www.youtube.com/watch?v=RrKRN9zRBWs",
+            "seen": 3076.6012799320642,
+            "total": 43116.021
+        }
+    }, {
+        "id": "bookmark-5ad15f30-ae4f-4ade-9769-ba4137dfb519",
+        "description": "<p><strong>📜Configuration RDS with EB</strong><br><br>+ Databases can be configured inside or outside your EB env<br>+ Internal - When EB env is terminated, the DB is also terminated - for development purpose only<br>+ External - Create database from RDS separate from EB - for production env</p>",
+        "start": 3198,
+        "position": 16,
+        "video": {
+            "id": "video-ab4da867-8f2e-4d92-a99b-3c7433558784",
+            "url": "https://www.youtube.com/watch?v=RrKRN9zRBWs",
+            "seen": 3197.644657059944,
+            "total": 43116.021
+        }
+    }, {
+        "id": "bookmark-a9dbf9bb-fee0-4d72-ba0e-b138c3e4565a",
+        "description": "<p><strong>🎯EB Cheat Sheet</strong><br><br>+ EB handles the deployment, from capacity provisioning, load balancing, auto-scaling to app health monitoring<br>+ When you want to run a web app and don't want to think about underlying infrastructure<br>+ Costs nothing<br>+ Recommended for test or dev apps. Not recommended for production use<br>+ Preconfigured platforms - Node JS<br>+ Run using Single / Multiple container<br>+ Web vs Worker env<br>+ EB Deployment Policies<br>+ In-place: All deployment policies are in-place<br>+ Blue/Green deployment: When EB containers are swapped. Happens at DNS level<br>+ Configuration Files</p>",
+        "start": 3302,
+        "position": 17,
+        "video": {
+            "id": "video-e16448c0-d2a1-4354-ba5b-3c7735c9980e",
+            "url": "https://www.youtube.com/watch?v=RrKRN9zRBWs",
+            "seen": 3301.9562954486983,
+            "total": 43116
+        },
+        "pin": "green"
+    }]
+}
