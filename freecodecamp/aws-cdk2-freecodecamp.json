@@ -1,0 +1,382 @@
+{
+  "id": "playlist-269fd8fe-579f-43ea-8deb-ed7139cab258",
+  "title": "AWS CDK v2 - Freecodecamp",
+  "createdBy": "",
+  "bookmarks": [
+    {
+      "id": "bookmark-7578731a-903f-42c4-8660-7930e54ed75d",
+      "description": "<p>📜 Matt Martz created this course. He is an engineer, AWS Community Builder, and CDK fanboy.</p>",
+      "start": 2,
+      "position": 1,
+      "video": {
+        "id": "video-e7d102d1-718c-4dc7-893f-a7027920083e",
+        "url": "https://www.youtube.com/watch?v=T-H4nJQyMig",
+        "seen": 1.5333511735687255,
+        "total": 3658.561
+      },
+      "pin": "yellow"
+    },
+    {
+      "id": "bookmark-7021a148-a276-455a-8c90-ad33bfdf0751",
+      "description": "<p>+ CDK Version 2 generally available in December 2021</p><p>+ One stable npm module to install</p><p>+ re:Invent 2021 CTO keynote<br>+ CDK book released in 2021</p>",
+      "start": 35,
+      "position": 2,
+      "video": {
+        "id": "video-9a89d871-6fa4-4e52-ac4b-c28f8a625fd2",
+        "url": "https://www.youtube.com/watch?v=T-H4nJQyMig",
+        "seen": 34.78778999809265,
+        "total": 3658.561
+      }
+    },
+    {
+      "id": "bookmark-c461afbf-5c8a-490f-8ef6-6aa5309428e6",
+      "description": "<p><strong>CDK Resources</strong><br>+ Community on Slack - <a href=\"https://cdk.dev\">https://cdk.dev</a></p><p>+ CDK book - <a href=\"https://thecdkbook.com\">https://thecdkbook.com</a></p><p>+ CDKDay - <a href=\"https://cdkday.com\">https://cdkday.com</a></p><p>+ CDK Developer Guide: <a href=\"https://www.youtube.com/redirect?event=video_description&amp;redir_token=QUFFLUhqbHZyRTdvZTJ3SkFTZE4xckFmNFd0elBjV3FnQXxBQ3Jtc0ttbW5TUmpMZ041Rmg5eXo0cHlXV2Y5RTFXSXVjS1pYM0tVYVBseVEwRVQ3RkNvTTl6djRnVlhfWVRqX2t2UGE2cUlKZ2ZILUw3WTd1MmJRR09lVE1kVENUZmVZSlNXdlBDR25zTkRqbGtXWUZ1VjZGZw&amp;q=https%3A%2F%2Fdocs.aws.amazon.com%2Fcdk%2Fv2%2Fguide%2Fhome.html&amp;v=T-H4nJQyMig\">youtube.com</a></p><p>+ <a href=\"https://docs.aws.amazon.com/cdk/v2/guide/best-practices.html\">Best practices for developing and deploying cloud infrastructure with the AWS CDK - AWS Cloud Development Kit (CDK) v2 (amazon.com)</a></p><p>&nbsp;</p>",
+      "start": 157,
+      "position": 3,
+      "video": {
+        "id": "video-fb44278f-5a22-471e-a1be-e5b096470582",
+        "url": "https://www.youtube.com/watch?v=T-H4nJQyMig",
+        "seen": 156.72626404959107,
+        "total": 3658.561
+      }
+    },
+    {
+      "id": "bookmark-0204989d-c16a-4a69-914b-631e1ecdbf2b",
+      "description": "<p>What is CDK ?</p><p>&nbsp;</p><p>+ AWS Cloud Development Kit (AWS CDK)&nbsp;<br>+ Write IMPERATIVE (tested) code to generate DECLARATIVE cloud formation templates</p><p>+ Supports - Javascript, Typescript, Python, Java, C# &amp; Go</p><p>+ CDK itself is Node JS based, executed using Node JS. Node JS is required</p><p>&nbsp;</p><p>What is CloudFormation ?<br>&nbsp;</p><p>+ AWS service that provisions AWS resources in Stacks</p><p>+ A Stack (in AWS CDK context) is a collection of AWS resources<br>+ Stack templates are usually written / generated using YAML / JSON formats<br>+ Templates are declarative code</p><p>+ AWS Cloudformation creates AWS resources from these templates</p><p>+ Cloudformation is best example of IAAS (Infrastructure As a Service)</p>",
+      "start": 197,
+      "position": 4,
+      "video": {
+        "id": "video-85698b4e-79ba-46a4-b5fc-1acd540aabd1",
+        "url": "https://www.youtube.com/watch?v=T-H4nJQyMig",
+        "seen": 197.24917193133544,
+        "total": 3658.561
+      }
+    },
+    {
+      "id": "bookmark-b51e96ee-5837-4901-9592-60bacf879b67",
+      "description": "<p>NOTE: When you updated Cloudformation template. It creates a CHANGESET. A Changeset is a preview of changes that is executed by Stack operations to CREATE, UPDATE, REMOVE resources</p>",
+      "start": 293,
+      "position": 5,
+      "video": {
+        "id": "video-df9d0552-75f8-49ef-832e-54b239083949",
+        "url": "https://www.youtube.com/watch?v=T-H4nJQyMig",
+        "seen": 292.72719290463255,
+        "total": 3659
+      }
+    },
+    {
+      "id": "bookmark-dd04a5a3-c8f2-422d-b896-d791eb0109db",
+      "description": "<p>Layers of a CDK App<br><br>+ App : no CloudFormation equivalent of an App<br>+ Stack: 1-1 equivalent of a Cloudformation Stack<br>+ You can have multiple Apps</p><p>+ Apps can have multiple Stacks (constructs)<br><br>CDK App lifecycle<br><br>+ App is a special root Construct</p><p>+ Orchestrates the lifecycle of the stacks and resources within it</p><p>+ App lifecycle consists of : 1. Construct, 2. Prepare, 3. Validate, 4. Synthesize, 5. Deploy<br>+ Link to lifecycle: <a href=\"https://docs.aws.amazon.com/cdk/v2/guite/apps.html\">AWS Docs</a></p>",
+      "start": 317,
+      "position": 6,
+      "video": {
+        "id": "video-cd6cd8ab-873c-4c83-9ce4-37746455e2a0",
+        "url": "https://www.youtube.com/watch?v=T-H4nJQyMig",
+        "seen": 317.1539339046326,
+        "total": 3659
+      }
+    },
+    {
+      "id": "bookmark-b08e0ce6-4ddf-453c-b679-35f248da5322",
+      "description": "<p>📜 What are CDK Constructs ?<br><br>There are 4 levels of constructs<br>+ Level 0 - Basic Resource (no Type)<br>+ Level 1 - Cloudformation Resource (1:1 mapping) - These are pre-fixed with Cfn in the CDK API<br>&nbsp; &nbsp; + Think of Cloudformation code (YAML / JSON) as Level 1 construct<br>+ Level 2 - Improved L1 constructs<br>&nbsp; &nbsp;+ Provided by CDK Team<br>&nbsp; &nbsp;+ Include helper methods and sensible defaults<br>&nbsp; &nbsp;+ Available as <strong>aws-cdk</strong> npm library<br>+ Level 3 - Combinations of Constructs<br>&nbsp; &nbsp; + CDK Templates in github provide LEVEL 3 constructs<br><br>NOTE: Some Resources still don't have a Level 2 constructs yet. Pretty much ALL Level 1 construct exist to use in AWS-CDK<br>&nbsp;</p>",
+      "start": 452,
+      "position": 7,
+      "video": {
+        "id": "video-5a9e4081-8fa8-4f21-a187-e55b0ca64a98",
+        "url": "https://www.youtube.com/watch?v=T-H4nJQyMig",
+        "seen": 452.2600099866486,
+        "total": 3659
+      },
+      "pin": "red"
+    },
+    {
+      "id": "bookmark-45992520-d4e3-4866-8011-275222f53032",
+      "description": "<p>Level 1 Construct Example - AccessAnalyzer construct.&nbsp;<br><br>NOTE: Every level construct is pre-fixed as <strong>\"Cfn\"</strong></p>",
+      "start": 534,
+      "position": 8,
+      "video": {
+        "id": "video-6f70d66a-cf71-4ae5-91ec-fa8d1160b9ea",
+        "url": "https://www.youtube.com/watch?v=T-H4nJQyMig",
+        "seen": 533.9220840209808,
+        "total": 3659
+      }
+    },
+    {
+      "id": "bookmark-7db37e83-3bf7-49cd-beaf-7a9db7abd97e",
+      "description": "<p>Level 2 Construct Example - Dynamo DB Table Construct</p>",
+      "start": 572,
+      "position": 9,
+      "video": {
+        "id": "video-bc427b35-9dd2-4950-832b-a24655c1ae66",
+        "url": "https://www.youtube.com/watch?v=T-H4nJQyMig",
+        "seen": 571.5284751392364,
+        "total": 3659
+      }
+    },
+    {
+      "id": "bookmark-eda15fc7-b454-4e9c-8458-300dd70b39d4",
+      "description": "<p>Level 3 Construct Example - These are available as templates / libraries in CDK Community</p>",
+      "start": 617,
+      "position": 10,
+      "video": {
+        "id": "video-c538e8a2-c7d2-4d71-a312-c4584850c835",
+        "url": "https://www.youtube.com/watch?v=T-H4nJQyMig",
+        "seen": 617.3269551220703,
+        "total": 3659
+      }
+    },
+    {
+      "id": "bookmark-c3b20d75-125d-4ac4-b8b3-ceeab384ee43",
+      "description": "<p>AWS CDK Synthesis<br><br>+ How do we generate cloudformation template ?<br>+ Inorder to do that run - cdk synth<br>+ Assets get generated end up in cdk.out</p>",
+      "start": 730,
+      "position": 11,
+      "video": {
+        "id": "video-4f24f0cc-da65-4ebb-82e5-96a8a1880712",
+        "url": "https://www.youtube.com/watch?v=T-H4nJQyMig",
+        "seen": 729.7312269637604,
+        "total": 3659
+      }
+    },
+    {
+      "id": "bookmark-efe7195a-66e0-4249-bd4f-5635ece20bbe",
+      "description": "<p>CDK Bootstrap<br><br>+ Bootstrap creates a CDK Toolkit that gets deployed to your account<br>+ Running - cdk bootstrap, deploys a CDKToolkit Cloudformation stack into your AWS Dashboard account!<br>+ Require for Assets and Cloudformation templates &gt; 50 kb</p>",
+      "start": 799,
+      "position": 12,
+      "video": {
+        "id": "video-edb24276-ee1c-47a9-bfbc-bea7d25cad19",
+        "url": "https://www.youtube.com/watch?v=T-H4nJQyMig",
+        "seen": 799.4620609713897,
+        "total": 3659
+      }
+    },
+    {
+      "id": "bookmark-8553016d-a765-446f-a403-8d945c57bc23",
+      "description": "<p>CDK Deploy</p>",
+      "start": 848,
+      "position": 13,
+      "video": {
+        "id": "video-040c748e-3d23-4906-8d05-51e7e86ecdca",
+        "url": "https://www.youtube.com/watch?v=T-H4nJQyMig",
+        "seen": 848.162175049591,
+        "total": 3659
+      }
+    },
+    {
+      "id": "bookmark-c330fd29-9b89-4a17-82bf-cead67b919eb",
+      "pin": "cyan",
+      "description": "<p>Create a AWS CDK Project with boiler scaffolding CDK template</p><p>&nbsp;</p><pre><code class=\"language-javascript\">cdk init sample-app --language typescript</code></pre>",
+      "start": 1281,
+      "position": 14,
+      "video": {
+        "id": "video-6a9cb7a9-03bb-4ed1-ae2c-7a48789f1225",
+        "url": "https://www.youtube.com/watch?v=T-H4nJQyMig",
+        "seen": 1281.3079549885558,
+        "total": 3659
+      }
+    },
+    {
+      "id": "bookmark-28a9d7a4-fa40-46aa-a03a-9a33df7acd71",
+      "description": "<p>CDK Project structure<br><br>+ CDK starts with -&gt; bin/cdk-workshop.ts<br>+ This configuration can be changed in -&gt; cdk.json<br>+ Your first Construct (Stack) is available under the \"lib\" folder -&gt; lib/cdk-workshop-stack.ts</p><p>+ Remember CDK Construct is idempotent -&gt; Given the same input, it will generate the same output<br>&nbsp;</p>",
+      "start": 1378,
+      "position": 15,
+      "video": {
+        "id": "video-b378b465-acf3-492c-8053-e61f3b25b3de",
+        "url": "https://www.youtube.com/watch?v=T-H4nJQyMig",
+        "seen": 1378.3147269160766,
+        "total": 3659
+      }
+    },
+    {
+      "id": "bookmark-196b0cc8-e0bf-4e86-9d4d-1cd9624a0e65",
+      "description": "<p><strong>CDK Diff:</strong> It compares the newly constructed YAML from the existing YAML (cloudformation template)<br>&nbsp;</p><pre><code class=\"language-javascript\">cdk diff</code></pre>",
+      "start": 1730,
+      "position": 16,
+      "video": {
+        "id": "video-dd415735-99b3-408e-b80c-138da85e2ae7",
+        "url": "https://www.youtube.com/watch?v=T-H4nJQyMig",
+        "seen": 1729.5580278397827,
+        "total": 3659
+      },
+      "pin": "cyan"
+    },
+    {
+      "id": "bookmark-f02678f0-00b9-4662-a88a-76c825b51db2",
+      "description": "<p>📜 AWS CDK - Create a Simple Lambda Code inside a Construct</p>",
+      "start": 1804,
+      "position": 17,
+      "video": {
+        "id": "video-714bbdee-8061-4c24-ae92-9b25c011895b",
+        "url": "https://www.youtube.com/watch?v=T-H4nJQyMig",
+        "seen": 1804.2939648779297,
+        "total": 3659
+      },
+      "pin": "yellow"
+    },
+    {
+      "id": "bookmark-3e52a135-dd5d-42c6-be10-0a10ec0dc4b8",
+      "description": "<p>Adding a API Gateway inside a CDK Construct.&nbsp;<br><br><strong>+ NOTE:</strong> There are different types of API Gateway<br>+ <strong>LambdaRestApi </strong>- Acts a like a \"greedy\" proxy, Sends everything (context, payload, params, queryURLString) to the lambda as part of a <strong>context </strong>object</p>",
+      "start": 1985,
+      "position": 18,
+      "video": {
+        "id": "video-c06d2f11-2a85-45fa-bc74-216ee2bc4b18",
+        "url": "https://www.youtube.com/watch?v=T-H4nJQyMig",
+        "seen": 1985.4275918893738,
+        "total": 3659
+      },
+      "pin": "green"
+    },
+    {
+      "id": "bookmark-0b3d023a-e466-4b89-987c-3e651373d2be",
+      "description": "<p>Creating a Custom Level 3 Construct</p>",
+      "start": 2156,
+      "position": 19,
+      "video": {
+        "id": "video-9332bf9a-94db-40e6-99e0-bd3e3168591d",
+        "url": "https://www.youtube.com/watch?v=T-H4nJQyMig",
+        "seen": 2156.4446280877382,
+        "total": 3659
+      },
+      "pin": "red"
+    },
+    {
+      "id": "bookmark-dbaec6b9-182b-425c-adf8-4fa982281e49",
+      "description": "<p>Creating an Interceptor Lambda function CDK Construct</p>",
+      "start": 2183,
+      "position": 20,
+      "video": {
+        "id": "video-2ea8d0a9-4d65-4453-b3d4-58e15e8c7a1b",
+        "url": "https://www.youtube.com/watch?v=T-H4nJQyMig",
+        "seen": 2182.6946581125335,
+        "total": 3659
+      },
+      "pin": "red"
+    },
+    {
+      "id": "bookmark-10b29dbf-622a-482f-9eb6-d7444e12b0b3",
+      "description": "<p>Integrating our Level 3 Interceptor Lambda Construct in the App main stack</p>",
+      "start": 2346,
+      "position": 21,
+      "video": {
+        "id": "video-43467e44-007c-4ed4-9a67-4797fe1f650f",
+        "url": "https://www.youtube.com/watch?v=T-H4nJQyMig",
+        "seen": 2345.9424080247954,
+        "total": 3659
+      },
+      "pin": "red"
+    },
+    {
+      "id": "bookmark-dc5c46d2-f0a8-4a6f-8b10-b136d220b139",
+      "description": "<p>Providing permissions to the Level 3 Construct to access the Dynamo DB Table</p>",
+      "start": 2482,
+      "position": 22,
+      "video": {
+        "id": "video-6cfeabb8-b32e-471e-bfca-40e2d85bbecc",
+        "url": "https://www.youtube.com/watch?v=T-H4nJQyMig",
+        "seen": 2482.326639179291,
+        "total": 3659
+      }
+    },
+    {
+      "id": "bookmark-2a17a2fb-0486-411b-9f38-d5da1c7a4f41",
+      "description": "<p>Useful: Import dynamodb table viewer Construct</p>",
+      "start": 2554,
+      "position": 23,
+      "video": {
+        "id": "video-288b76ed-f172-4621-9b9b-91d07d15d76a",
+        "url": "https://www.youtube.com/watch?v=T-H4nJQyMig",
+        "seen": 2554.3900650095366,
+        "total": 3659
+      },
+      "pin": "red"
+    },
+    {
+      "id": "bookmark-2396c31e-d9fc-4fbb-ba60-a24ee0f0673e",
+      "description": "<p>📜 CDK Testing - Testing our CDK Constructs (Stacks)</p>",
+      "start": 2656,
+      "position": 24,
+      "video": {
+        "id": "video-6042963b-4fb3-4727-977a-f65e574e8fad",
+        "url": "https://www.youtube.com/watch?v=T-H4nJQyMig",
+        "seen": 2656.2517268321535,
+        "total": 3659
+      },
+      "pin": "yellow"
+    },
+    {
+      "id": "bookmark-fc5f90c4-ecf6-43a6-9cca-7437d83e5b30",
+      "description": "<p>📜 Advanced CDK concepts</p>",
+      "start": 2931,
+      "position": 25,
+      "video": {
+        "id": "video-d5ad7bb9-1d27-4bb9-b0f3-15f09a82f947",
+        "url": "https://www.youtube.com/watch?v=T-H4nJQyMig",
+        "seen": 2931.3832549256135,
+        "total": 3659
+      },
+      "pin": "yellow"
+    },
+    {
+      "id": "bookmark-2f22ba15-2676-4399-8d66-4ec5cbb25e18",
+      "description": "<p>CDK Provider Framework - Integration Testing with Custom resources !</p>",
+      "start": 3033,
+      "position": 26,
+      "video": {
+        "id": "video-8a9be6a2-6cae-4142-841f-a056415ff172",
+        "url": "https://www.youtube.com/watch?v=T-H4nJQyMig",
+        "seen": 3033.088804979019,
+        "total": 3659
+      }
+    },
+    {
+      "id": "bookmark-e57e1a2c-599a-45f7-862c-28158ae19484",
+      "description": "<p>📜 CDK Aspects<br><br>+ Aspects are a way to apply an operation to all constructs in a given scope</p><p>+ Think of Aspects as &nbsp;- A Group method / class which will modify / apply operations to a group of constructs</p><p>+ Apects have a <strong>visit</strong> method - which will go through AWS Constructs</p>",
+      "start": 3094,
+      "position": 27,
+      "video": {
+        "id": "video-626c8083-7f94-4407-bf33-0af99ab11742",
+        "url": "https://www.youtube.com/watch?v=T-H4nJQyMig",
+        "seen": 3093.9087798340606,
+        "total": 3659
+      }
+    },
+    {
+      "id": "bookmark-03d5a5ad-1afc-42bd-9c4f-9d300f3b94fa",
+      "description": "<p>📜 AWS CDK Best practices<br><br>+ Organization<br>+ Coding&nbsp;<br>+ Construct<br>+ Application</p>",
+      "start": 3177,
+      "position": 28,
+      "video": {
+        "id": "video-702e25ee-b56e-447b-be32-3dcb10eed561",
+        "url": "https://www.youtube.com/watch?v=T-H4nJQyMig",
+        "seen": 3177.307834116348,
+        "total": 3659
+      },
+      "pin": "yellow"
+    },
+    {
+      "id": "bookmark-44048566-a299-4bf7-a7ab-e3b16b1c3428",
+      "description": "<p>📜 Constructs Best Practices<br><br>+ Model with constructs, deploy with stacks<br>+ Reuse stacks into constructs<br>+ <strong>NOTE:</strong> Environment variable lookup <strong>should ALWAYS happen at the top level of your Project</strong> (the bin/app.ts) &nbsp;and then pass the asserted values into your constructs<br>+ Configure / Share between constructs - with properties and methods</p><p>+ Always Unit Test !<br>+ Don't change Logical IDs often,&nbsp;<br><br><strong>What is a Logical ID ?</strong><br>Ans: The Logical ID is the second parameter ID that you pass to a construct, make sure your Logical IDs are always unique and meaningful.<br>+ Changing a logical ID means your resource WILL get replaced in the next deploy !</p><p><br>+ Constructs aren't enough for compliance !</p><p>&nbsp;</p>",
+      "start": 3294,
+      "position": 29,
+      "video": {
+        "id": "video-223e8294-5eab-4648-bd34-8456710d7074",
+        "url": "https://www.youtube.com/watch?v=T-H4nJQyMig",
+        "seen": 3294.468454009537,
+        "total": 3659
+      },
+      "pin": "red"
+    },
+    {
+      "id": "bookmark-59855b7d-cfb3-4c33-b615-24e260af2f86",
+      "description": "<p><strong>More CDK Resources</strong><br><br><strong>This Video source codes are available here &nbsp;-&gt; </strong>[14] <strong>CDK Workshop</strong>: <a href=\"https://www.youtube.com/redirect?event=video_description&amp;redir_token=QUFFLUhqa015YXhDb1p3VU9CYlFrZzBWMTZpSzVkX3p0QXxBQ3Jtc0tub3haNGlDd1JrSmVKdlI5T3FKYzlMNXp4dDNvSlJvTjYySzZBVlhmUzRMc0gxUkJ2NEF2RFRFblhxVnFoZ3dva0ZrdTgzTmlEeXBsVHI1eFZtcDBZUWREeXN4U2ZDNzd5eDJzdWw5RTRBUFo2LU9YSQ&amp;q=https%3A%2F%2Fcdkworkshop.com&amp;v=T-H4nJQyMig\">https://cdkworkshop.com</a>&nbsp;<br><br><strong>CDK Developer Guide</strong>: <a href=\"https://www.youtube.com/redirect?event=video_description&amp;redir_token=QUFFLUhqbHZyRTdvZTJ3SkFTZE4xckFmNFd0elBjV3FnQXxBQ3Jtc0ttbW5TUmpMZ041Rmg5eXo0cHlXV2Y5RTFXSXVjS1pYM0tVYVBseVEwRVQ3RkNvTTl6djRnVlhfWVRqX2t2UGE2cUlKZ2ZILUw3WTd1MmJRR09lVE1kVENUZmVZSlNXdlBDR25zTkRqbGtXWUZ1VjZGZw&amp;q=https%3A%2F%2Fdocs.aws.amazon.com%2Fcdk%2Fv2%2Fguide%2Fhome.html&amp;v=T-H4nJQyMig\">https://docs.aws.amazon.com/cdk/v2/gu...</a>&nbsp;<br>[1] <strong>CDK Slack</strong>: <a href=\"https://www.youtube.com/redirect?event=video_description&amp;redir_token=QUFFLUhqa2QxRXg1Um9RUC1MQjM1YmFXbGtndVFTdkI3d3xBQ3Jtc0tubXNxa2VmMzM5Q18tVnJ3YVN2ek4yRjV0eTVwWllZTnhraVR3dElHYXlrRUtjOWh0Q1F4LWM2RWRBX1BER2xHc3lkTDc4RU1fNE04SWVoOXd1LTFLYXA0Q2M4VVk1czFDc2lUanYza0htUHJuRjhlUQ&amp;q=https%3A%2F%2Fcdk.dev&amp;v=T-H4nJQyMig\">https://cdk.dev</a>&nbsp;<br>[2] <strong>The CDK Book</strong>: <a href=\"https://www.youtube.com/redirect?event=video_description&amp;redir_token=QUFFLUhqazU0UGVydEdMRW1fa2xCRS1mVmlzSzY1SVVEZ3xBQ3Jtc0tra1JjYUMyRk9nVlJsNWJEeklGRDlBSFFhRGVEUml4cFFMNU81a1p5MVlGRVViZTZHVXRMQlJpSkMyeXZlakFlZUtVMFM3SUNKLU00MmlEM1lXS3RsRlJ3d0VBU1k4MjBWV2dpbHRzVUI1aDZxTENPMA&amp;q=https%3A%2F%2Fthecdkbook.com&amp;v=T-H4nJQyMig\">https://thecdkbook.com</a>&nbsp;<br>[3] <strong>CDKDay</strong>: <a href=\"https://www.youtube.com/redirect?event=video_description&amp;redir_token=QUFFLUhqbEN1QUhTLWFreFIwR3Y0dlN5T3B6ODJqYzFQZ3xBQ3Jtc0trS1VwVldVSUZlbE12WlY5THE3VEdaS0hiNVNoVEV1RWpiSk5KdGJYdk80NFB0UEsybkk0OGRWSGc0UEU2ZXhEVUlSWDQ1SjRhQ1dSMEgwMWdwTTM4OHc1NlYwUXVFVnVlbl9Mc21OTGRHVElyUjdLOA&amp;q=https%3A%2F%2Fcdkday.com&amp;v=T-H4nJQyMig\">https://cdkday.com</a>&nbsp;<br>[4] <strong>CDKDay talk</strong>: Creating Verifiable JSON Web Tokens with AWS CDK <a href=\"https://www.youtube.com/watch?v=v9116ZS3QPc&amp;t=0s\">https://www.youtube.com/watch?v=v9116...</a>&nbsp;<br>[5] <strong>App Lifecycle</strong>: <a href=\"https://www.youtube.com/redirect?event=video_description&amp;redir_token=QUFFLUhqbnBXbVU3Nmh6Nlc2UTk5cFMwQTRpYTB1V201QXxBQ3Jtc0trQW9BYzItdkRvUVhBVGxkS09QQ0RRWW16aXdXNTBobnB6QUdvTnEyWjFGcXJMZ2tjb2tubW1hMmNVNk5xT2JDOFkzTFY4SFIyVWdSMjQwU3lGSUd4SjBEZFNpN3hhQVVoNTRZcHdaSW1xczd4djR0RQ&amp;q=https%3A%2F%2Fdocs.aws.amazon.com%2Fcdk%2Fv2%2Fguide%2Fapps.html&amp;v=T-H4nJQyMig\">https://docs.aws.amazon.com/cdk/v2/gu...</a>&nbsp;<br>[6] <strong>CDK API Reference</strong>: <a href=\"https://www.youtube.com/redirect?event=video_description&amp;redir_token=QUFFLUhqbnREa3o0SjJoX1pTZFlVanlySlBLN0FPR3Y5QXxBQ3Jtc0tsZ3pid0lKSkhvR0VxRGxOMjV0dEpOTWpqUHpOa1Ytc2NRSTlsLVpHYWE5VWZjVG95OEcwYzQzY240dEd0X1VfSWh4TjhLTWxGTHJrSWo3dnFMZEgxa2lfMEhrZzRUMW1mSDhQOVp1VkRQVDNQeUhiRQ&amp;q=https%3A%2F%2Fdocs.aws.amazon.com%2Fcdk%2Fapi%2Fv2%2Fdocs%2Faws-construct-library.html&amp;v=T-H4nJQyMig\">https://docs.aws.amazon.com/cdk/api/v...</a>&nbsp;<br>[7] <strong>Access Analyzer L1 Construct</strong>: <a href=\"https://www.youtube.com/redirect?event=video_description&amp;redir_token=QUFFLUhqblRWQS1Cc2tNZzg2WTNUd24taWtaZU5IbjA5QXxBQ3Jtc0tucHBMbjJsaXNVTlVtdy1fQ2JWRXdGczFEUWxxREpsY3R6bUliVGFOd2Nhc014cE9EMVhlb1RPaVlmTzlkeWNGS2YtUU9EbDNEZXBuU2pubHVzaVh2dU1VVVRGUEc0MnF0U0k1b3ZkZkJWdHNkMEdlRQ&amp;q=https%3A%2F%2Fdocs.aws.amazon.com%2Fcdk%2Fapi%2Fv2%2Fdocs%2Faws-cdk-lib.aws_accessanalyzer.CfnAnalyzer.html&amp;v=T-H4nJQyMig\">https://docs.aws.amazon.com/cdk/api/v...</a>&nbsp;<br>[8] <strong>Access Analyzer CloudFormation API</strong>: <a href=\"https://www.youtube.com/redirect?event=video_description&amp;redir_token=QUFFLUhqbW1ONTA4RTV2R2Z4UVptZFpkRmlWZE1NRk1LUXxBQ3Jtc0tsTW4yWEhlRWIwaFNseHVucDAxcDRLWU9BX3FDc29Uc013aTlueXEzeTVmaHl6Y2JJLXpqbnFrTUVtQng0MnV4Mk9ELW1kdEl6OTJUZ01rSEF4dzdIMm4xY0dEaVZLWHk4UjNoYlBOSmRsa1l4SkxNVQ&amp;q=https%3A%2F%2Fdocs.aws.amazon.com%2FAWSCloudFormation%2Flatest%2FUserGuide%2Faws-resource-accessanalyzer-analyzer.html&amp;v=T-H4nJQyMig\">https://docs.aws.amazon.com/AWSCloudF...</a>&nbsp;<br>[9] <strong>DynamoDB Table L2 Construct</strong>: <a href=\"https://www.youtube.com/redirect?event=video_description&amp;redir_token=QUFFLUhqbFhHckludzdMMVhKcnFyZXFkU1ZUTlNReFN1d3xBQ3Jtc0trZUdpQmNXUm5weko5SklHRnk3ZlN0VThPMkQtT3lsQzlpMVQ4UjhLQzAyenhNNWRKU1RLbHlNdXhuSzJVQ3JOa2ZxbXdocGR5ODRsaUV3dGJMaTVSYkZmWDNWaFRjaUowVWM4ZHNkYVVLUFNTN0dZTQ&amp;q=https%3A%2F%2Fdocs.aws.amazon.com%2Fcdk%2Fapi%2Fv2%2Fdocs%2Faws-cdk-lib.aws_dynamodb.Table.html&amp;v=T-H4nJQyMig\">https://docs.aws.amazon.com/cdk/api/v...</a>&nbsp;<br>[10] <strong>DynamoDB Table CloudFormation API</strong>: <a href=\"https://www.youtube.com/redirect?event=video_description&amp;redir_token=QUFFLUhqbXFPaFk2a1FSZUJlM1oxd1Znak9sMFJmZGd6d3xBQ3Jtc0tuN0NELUNXVy1icGVpanZ2a3YwVHBGYndEOV9VbVlSU2FGb3k2ZG1Lc2JPWFY5TlNfS2xIY001Wmg5SWF4LW5QLU9SYXluanBiMVgxVGxCMy05eloyWUt6MXoxVXFUbGlvdVZkeF9JWWtzZUdvS1AzQQ&amp;q=https%3A%2F%2Fdocs.aws.amazon.com%2FAWSCloudFormation%2Flatest%2FUserGuide%2Faws-resource-dynamodb-table.html&amp;v=T-H4nJQyMig\">https://docs.aws.amazon.com/AWSCloudF...</a>&nbsp;<br>[11] <strong>CDKPatterns.com</strong>: <a href=\"https://www.youtube.com/redirect?event=video_description&amp;redir_token=QUFFLUhqbTh3U0hyYkpRRDlXRHNQZ1JGRHRJSHhscVQ3QXxBQ3Jtc0trNTFWMEhxY2hLQWkyc1hjMnBMaEJlWHVKbHgyQnJIYkpWMlNkaTBRUVJZNTY0dVFDV0VrYlB0cmVvMFdHVnhrNHg4anBBRUdOWVg3ek5jSzZEbDRuXzFadHRRRzNibU9FQnc1czdmV1NiREJBS0dFcw&amp;q=https%3A%2F%2Fcdkpatterns.com&amp;v=T-H4nJQyMig\">https://cdkpatterns.com</a>&nbsp;<br>[12] <strong>AWS Solutions Constructs</strong>: <a href=\"https://www.youtube.com/redirect?event=video_description&amp;redir_token=QUFFLUhqbURZVDRnYjhVV0JSU1dQekFrUjFNVklWamFFZ3xBQ3Jtc0trWjdKLUJvS1V5NDVPZ2dhcG5aWVRSS3kzS1dUd2s0bzRodkZRR0puNFdrVVNMSkRWdGhIU3VIYVRaUXNSc2RVd0Ywa2NwOEtqdEoySktaemRQcVdwRjdWNGJRQVVIdE9qbnVMajFMMVUwa2lXazR6Yw&amp;q=https%3A%2F%2Fdocs.aws.amazon.com%2Fsolutions%2Flatest%2Fconstructs%2Fwelcome.html&amp;v=T-H4nJQyMig\">https://docs.aws.amazon.com/solutions...</a>&nbsp;<br>[13] <strong>Construct Hub</strong>: <a href=\"https://www.youtube.com/redirect?event=video_description&amp;redir_token=QUFFLUhqbTNtbWIxNmJmaTN0ZEViSlBYS3RiczNIQWpKZ3xBQ3Jtc0tsQWJ3M3pzM2pvVkhPenN6VTNYQU93MkVTYWZkWFV5cEhhTW9FcTFYTGhub0s5cVR0cm9ad1g2TWZYdVU1VUFZM253eFFvYzF3S0pMaDduOUlqSTQxbElXcEtKVUNpVFB0YmE5OVNWZ1BLb3MxRzNqQQ&amp;q=https%3A%2F%2Fconstructs.dev&amp;v=T-H4nJQyMig\">https://constructs.dev</a>&nbsp;<br>[14] <strong>CDK Workshop</strong>: <a href=\"https://www.youtube.com/redirect?event=video_description&amp;redir_token=QUFFLUhqa015YXhDb1p3VU9CYlFrZzBWMTZpSzVkX3p0QXxBQ3Jtc0tub3haNGlDd1JrSmVKdlI5T3FKYzlMNXp4dDNvSlJvTjYySzZBVlhmUzRMc0gxUkJ2NEF2RFRFblhxVnFoZ3dva0ZrdTgzTmlEeXBsVHI1eFZtcDBZUWREeXN4U2ZDNzd5eDJzdWw5RTRBUFo2LU9YSQ&amp;q=https%3A%2F%2Fcdkworkshop.com&amp;v=T-H4nJQyMig\">https://cdkworkshop.com</a>&nbsp;<br>[15] <strong>Cross-account CI/CD Pipeline with CDK Pipelines</strong>: <a href=\"https://www.youtube.com/redirect?event=video_description&amp;redir_token=QUFFLUhqa0RFaTBmdUU0RzhwUGxpUFp2bk5PZFd0M2w5d3xBQ3Jtc0tuU19GU3djTGJONl9QZEVCRktKeERyLUtXYUtXbkFLOEVtbDVTbW03NWozQnlNQ242SlNJTWVsRGsyRjlaa0lBVXQtN2JFUUNIcGljbHlLTWgwZWZPcFpnb241RXJWR0V3ZkhnNWxRODhXNzA1M3JzZw&amp;q=https%3A%2F%2Fcatalog.us-east-1.prod.workshops.aws%2Fv2%2Fworkshops%2F874d349f-85f6-495d-9475-ff7b7b23201f%2Fen-US&amp;v=T-H4nJQyMig\">https://catalog.us-east-1.prod.worksh...</a>&nbsp;<br>[16] <strong>CloudFormation Custom Resources</strong>: <a href=\"https://www.youtube.com/redirect?event=video_description&amp;redir_token=QUFFLUhqbmZJNzdqekJhQUhBMEtSUG9ibzItUDYxeG9IQXxBQ3Jtc0trbUt6RzEwZDREbVhlTGl0aHhIU05LQ0MyWEJOQXBQemNNVk1zZFQwZ0FMckdLaFlLUmVTeVdZb3lwdHNMb1ZnMWthWG9EVzlESGtkTVNtd2xmUnNYSzkyb2YzaGxQOWQ5dF84NDRmRHFDQVFGNjM2Zw&amp;q=https%3A%2F%2Fdocs.aws.amazon.com%2FAWSCloudFormation%2Flatest%2FUserGuide%2Ftemplate-custom-resources.html&amp;v=T-H4nJQyMig\">https://docs.aws.amazon.com/AWSCloudF...</a>&nbsp;<br>[17] <strong>CDK Provider Framework</strong>: <a href=\"https://www.youtube.com/redirect?event=video_description&amp;redir_token=QUFFLUhqbEVOcWh1XzJUMFZvWFFUUDVIRUVrSEFoM3ZoQXxBQ3Jtc0tsakdOQXYxSlY1X09HVG54Yldfa0JnSEZySFZySFgxY1VnRzREX1VXZVc5emt5d19ucUthcHRYZWpSMjJ3YlY3Y1loR2RVVlVONV9vWUlHU0s3a1diRkpnX0NhSzk0Z1JveVRZNHB2YjkzMHIzRHhZZw&amp;q=https%3A%2F%2Fdocs.aws.amazon.com%2Fcdk%2Fapi%2Fv2%2F%2Fdocs%2Faws-cdk-lib.custom_resources-readme.html&amp;v=T-H4nJQyMig\">https://docs.aws.amazon.com/cdk/api/v...</a>&nbsp;<br>[18] <strong>Testing the Async Cloud with AWS CDK</strong>: <a href=\"https://www.youtube.com/redirect?event=video_description&amp;redir_token=QUFFLUhqbDM1bGxqNm9XZzZGYWlqNnZua0huWGdXanMtQXxBQ3Jtc0tuSXZTX1RCSWg1bTdvelBzR0w1Y21OTC1tWlllTGRyWUppX1VqaXhibHZWaFVRczNwSjVnTl9sQ19wWUpnVWNUdWlkVUZVNk41cXYxaXBraUxMMWV2b0huRjJVeGRwd2lmUk1hZ1JDMHU2dGdmcFB4VQ&amp;q=https%3A%2F%2Fdev.to%2Faws-builders%2Ftesting-the-async-cloud-with-aws-cdk-33aj&amp;v=T-H4nJQyMig\">https://dev.to/aws-builders/testing-t...</a>&nbsp;<br>[19] <strong>CDK Aspects</strong>: <a href=\"https://www.youtube.com/redirect?event=video_description&amp;redir_token=QUFFLUhqa2lGTE5wRExzV3hwc0IzUHlQODhZdDZNVXBIQXxBQ3Jtc0tuUkh3WVpyekpxeUp5YUQyMUZxdUhVMWdWQVJLWHo5QzBpR19jZnNtQ0EySnpSWnZqbThPdUxqVzhhM2t6bGhTQlQ5dUM4MXRGY2dDSTczRlFzSnljUGdnem9qNEFPemJZWVdtdE9CV0s1d1VHYVhIOA&amp;q=https%3A%2F%2Fdocs.aws.amazon.com%2Fcdk%2Fv2%2Fguide%2Faspects.html&amp;v=T-H4nJQyMig\">https://docs.aws.amazon.com/cdk/v2/gu...</a>&nbsp;<br>[20] <strong>Best Practices</strong>: <a href=\"https://www.youtube.com/redirect?event=video_description&amp;redir_token=QUFFLUhqbGt4QllscWRwMFFQT2Fya3IyRUFmQXVlalRTZ3xBQ3Jtc0tucUN3QnZxVWlSZXRYRGprS0IzZmRtLVZyQTl3NDEtNnFjRHJOYWlXLXo0aDVHUmExVFJnMTZmTERPZXY3RW5Sel9qdEdTUExBSmR6TlhiTmRGaTVjbGZDRWRfNTIwZTRPQ3dDdkk0d01fVzRiWVRSWQ&amp;q=https%3A%2F%2Fdocs.aws.amazon.com%2Fcdk%2Fv2%2Fguide%2Fbest-practices.html&amp;v=T-H4nJQyMig\">https://docs.aws.amazon.com/cdk/v2/gu...</a>&nbsp;<br>[21] <strong>freeCodeCamp</strong>: <strong>AWS CDK v2 Tutorial</strong>: <a href=\"https://www.youtube.com/redirect?event=video_description&amp;redir_token=QUFFLUhqazgwcWJXbnNoVjNjdEJMOHRHN0NEMVpPU1kxQXxBQ3Jtc0tscGlnTUdxTXN4NTVDeXNjTFNnOTJsX1c1amRqQVBhWENhWUljYzlHYU4zV1dGTTN6aVV4d1hyTzZrZnlnMUQ5WUJVSnp0NkljeldSaXNUbkhMa0lHUWN2QlBCRTlXY2pMaHY4MHZBdGlFZ3FYQ1FSNA&amp;q=https%3A%2F%2Fwww.freecodecamp.org%2Fnews%2Faws-cdk-v2-three-tier-serverless-application%2F&amp;v=T-H4nJQyMig\">https://www.freecodecamp.org/news/aws...</a>&nbsp;<br>[22] <strong>OpenAPI Specs Without Deploying First</strong>: <a href=\"https://www.youtube.com/redirect?event=video_description&amp;redir_token=QUFFLUhqbTRnOTkwQWpqb1B5dnhDOG5WY0ZIOHFjSDh1d3xBQ3Jtc0trbjYxVl95TTZQZ0FON1hjcUg3cE5MZWt3NTRZMWpVT2xUMThoOFd6c0pJSm9xckpGT2h0Y0FjZ1dIN09EX2gxcjY1ZGh3cW9pbUNHZWl4dGxfY0xMX19rZDlGVmNwMHJvMG5MT0dkWVkzNC0tczZFNA&amp;q=https%3A%2F%2Fmatt.martz.codes%2Fopenapi-specs-from-cdk-stack-without-deploying-first&amp;v=T-H4nJQyMig\">https://matt.martz.codes/openapi-spec...</a>&nbsp;<br>[23] <strong>Serverless Stack Framework</strong>: <a href=\"https://www.youtube.com/redirect?event=video_description&amp;redir_token=QUFFLUhqa2QzMm9fZE9DRWNrNjU1M2JOQVpqeXRrR0VoUXxBQ3Jtc0ttbGFBTWdycUY2ajhCMVp5ZnVIWUt6VkhpckQ1TXRMaElISGJqWmZxZVpleC1YVFdENTNNbHh5RDV2YnJUNU1LakdiX2VOSnJOYlFSYzJ0TkI1QWdSMERpaEFvMzZsOGZCdi1Lal82X2dwelFIOTk2dw&amp;q=https%3A%2F%2Fserverless-stack.com&amp;v=T-H4nJQyMig\">https://serverless-stack.com</a></p>",
+      "start": 3582,
+      "position": 30,
+      "video": {
+        "id": "video-6e4e4015-c8a3-4dd2-a9bc-13c2722b9b78",
+        "url": "https://www.youtube.com/watch?v=T-H4nJQyMig",
+        "seen": 3581.725403,
+        "total": 3659
+      },
+      "pin": "green"
+    }
+  ]
+}
