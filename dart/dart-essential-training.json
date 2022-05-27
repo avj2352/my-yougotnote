@@ -1,0 +1,167 @@
+{
+  "id": "playlist-4d676770-b901-45ac-a08e-826777f12c92",
+  "title": "Dart SDK - Essential Training",
+  "createdBy": "",
+  "bookmarks": [{
+    "id": "bookmark-d8f62ed6-a321-42ae-8eee-6224b8ad4350",
+    "description": "<p>Dart in 100 seconds - Fireship</p>",
+    "start": 1,
+    "position": 1,
+    "video": {
+      "id": "video-2fffbc11-445d-4a0a-bb70-fb5bbe8ba747",
+      "url": "https://www.youtube.com/watch?v=NrO0CJCbYLA",
+      "seen": 1.0148940305175782,
+      "total": 150.341
+    },
+    "pin": "yellow"
+  }, {
+    "id": "bookmark-2d33a372-654b-4bd5-b466-946450d389ba",
+    "description": "<p>Dart - Novice to Expert (WCKD)</p>",
+    "start": 2,
+    "position": 2,
+    "video": {
+      "id": "video-77d361af-c08b-4db3-8440-c890857967a4",
+      "url": "https://www.youtube.com/watch?v=F3JuuYuOUK4",
+      "seen": 1.9163189980926514,
+      "total": 28983.221
+    },
+    "pin": "yellow"
+  }, {
+    "id": "bookmark-7d291a2b-b743-4c01-95ef-ef5f1cda8e7b",
+    "description": "<h2><strong>Content Overview</strong></h2><p>+ What is Dart ?</p><p>+ Type safety</p><p>+ Soundness</p><p>+ Type inference</p><p>+ Null safety</p><p>+ Dart compilers</p>",
+    "start": 181,
+    "position": 3,
+    "video": {
+      "id": "video-d70ca761-2756-4e4f-9466-5cdb5f65a25f",
+      "url": "https://www.youtube.com/watch?v=F3JuuYuOUK4",
+      "seen": 181.2205901296997,
+      "total": 28983.221
+    }
+  }, {
+    "id": "bookmark-66306dbc-4eba-4c89-a097-c03cdda03ee2",
+    "description": "<p><strong>What is Dart ?</strong></p><p>+ Dart is a type safe language<br>+ The only operations that can be performed on data of the language are those allowed by the type of the data<br>+ Dart sound type system = Static type check (by compiler) + Runtime check</p>",
+    "start": 365,
+    "position": 4,
+    "video": {
+      "id": "video-6615cef5-7836-4f6c-8d7e-f9e90f93ec8d",
+      "url": "https://www.youtube.com/watch?v=F3JuuYuOUK4",
+      "seen": 364.533752,
+      "total": 28983.221
+    }
+  }, {
+    "id": "bookmark-a8b51ff2-c30f-4f34-bf66-858c47a60707",
+    "description": "<p>Why is it called \"Sound\" type system ?</p>",
+    "start": 439,
+    "position": 5,
+    "video": {
+      "id": "video-1a8477a8-ef40-4912-9891-203a2ea5edd8",
+      "url": "https://www.youtube.com/watch?v=F3JuuYuOUK4",
+      "seen": 439.49739013160706,
+      "total": 28983.221
+    }
+  }, {
+    "id": "bookmark-d8c7202f-b9d1-4790-84f6-192682e22754",
+    "description": "<p>\"dynamic\" versus \"var\" keyword in Dart</p><p><br>+ Dart allows you to write dynamic code</p><p>+ using the keyword - dynamic</p><p>+ whenever you use the \"dynamic\" type, the static analyser won't care about the variable anymore</p><p>+ Dart can also infer types - by using the \"var\" keyword</p><p>+ for the rest of it's life, it is always of the type since it's inference</p><p>+ Dart will check for \"var\" during compile time</p><p>+ Once again, if you want the type to be checked on runtime - \"dynamic\"</p>",
+    "start": 585,
+    "position": 6,
+    "video": {
+      "id": "video-b702812d-b383-43c0-974f-4bb8bfa4887b",
+      "url": "https://www.youtube.com/watch?v=F3JuuYuOUK4",
+      "seen": 585.254094,
+      "total": 28983.221
+    },
+    "pin": "red"
+  }, {
+    "id": "bookmark-f68c7dde-58f3-45b2-b74b-fc1cfc48391e",
+    "description": "<p><strong>Example of dynamic and var keyword</strong></p><p>&nbsp;</p><pre><code class=\"language-javascript\">// *A value of type 'double' can't be assigned to a variable of type 'String'.\nvoid main() {\n  dynamic name = 'pramod';\n  name = 1;\n  var anotherName = 'shwetha';\n  print ('Name is: ${name}');\n  print ('Type of name is ${name.runtimeType}'); // int\n  print ('Another name: ${anotherName}');\n  print ('Type of anotherName is: ${anotherName.runtimeType}'); // String\n  anotherName = 2.0; //error* - anotherName is inferred as String already\n  print ('Type of anotherName is: ${anotherName.runtimeType}');\n}</code></pre>",
+    "start": 694,
+    "position": 7,
+    "video": {
+      "id": "video-cc26149d-f5c5-45a4-865c-4c86b1862f62",
+      "url": "https://www.youtube.com/watch?v=F3JuuYuOUK4",
+      "seen": 693.505501,
+      "total": 28984
+    },
+    "pin": "cyan"
+  }, {
+    "id": "bookmark-9d32e50a-eedd-4583-972c-14b9e3321800",
+    "description": "<p>Sound Null Safety</p><p>&nbsp;</p><p>+ Values can't be null, unless you say them to be<br>+ What it basically means is throughout the lifecycle of Dart, a variable can EITHER be Null or Non-null, but never BOTH</p>",
+    "start": 782,
+    "position": 8,
+    "video": {
+      "id": "video-3c5156fa-5633-4ab1-a7d0-4b2ad6783357",
+      "url": "https://www.youtube.com/watch?v=F3JuuYuOUK4",
+      "seen": 782.3540290591278,
+      "total": 28984
+    }
+  }, {
+    "id": "bookmark-b2f807b6-bd22-4bc6-9c48-c66c2c833250",
+    "description": "<p><strong>Dart Compilation</strong><br><br>Dart compile compiles Dart source code to - Intermediate languages / machine code<br><br>+ for CPU architectures - ARM32, ARM64, X86_64<br>&nbsp; &nbsp;+ JIT - Just Intime Compiler<br>&nbsp; &nbsp;+ AOT - Ahead of Time Compiler<br>+ For web application<br>&nbsp; &nbsp;+ dartdevc - Dart development compiler</p><p>&nbsp; &nbsp;+ dart2js - Dart to Javascript</p>",
+    "start": 853,
+    "position": 9,
+    "video": {
+      "id": "video-02891e57-9b40-4ab2-9b71-eda0f64cff5c",
+      "url": "https://www.youtube.com/watch?v=F3JuuYuOUK4",
+      "seen": 852.6219278340607,
+      "total": 28984
+    }
+  }, {
+    "id": "bookmark-1aff305b-e82a-4dc4-a996-d2d586d18ffa",
+    "description": "<p><strong>JIT - Just Intime Compiler</strong></p><p><br>Compiles the code it needs, only compiles the modified the code needed<br>+ Hot deployment</p><p>+ For development purposes<br>+ Not the best, nor the most optimal<br>+ JIT does not transform the Dart code into Machine code<br>+ It compiles into an Intermediary Language for faster development cycles<br>+ is run by Dart VM only</p>",
+    "start": 951,
+    "position": 10,
+    "video": {
+      "id": "video-5bd32f23-4f83-4a89-ad72-962ff6c723e8",
+      "url": "https://www.youtube.com/watch?v=F3JuuYuOUK4",
+      "seen": 950.7335339523163,
+      "total": 28984
+    },
+    "pin": "green"
+  }, {
+    "id": "bookmark-930bb675-739a-4d56-9009-b5e6f2191409",
+    "description": "<p><strong>AOT - Ahead of Time Compiler</strong><br><br>Compiles the entire codebase into machine code, supported by the native device it's deployed on<br>+ Ahead of time<br>+ AOT compiles the code into platform specific machine code<br>+ AOT makes sure the build is the best most optimal version of it<br>+ You don't need Dart VM to run it, can be run as an executable on the platform it's compiled on</p>",
+    "start": 1073,
+    "position": 11,
+    "video": {
+      "id": "video-d2e9e495-0d4e-40d9-bee7-61450eaeef70",
+      "url": "https://www.youtube.com/watch?v=F3JuuYuOUK4",
+      "seen": 1072.6983719866485,
+      "total": 28984
+    },
+    "pin": "green"
+  }, {
+    "id": "bookmark-d578e487-e215-4f16-a239-9b0936eba4e1",
+    "description": "<p><strong>www - For Web Development</strong><br><br>+ For Developing on web platforms - dartdevc (Dart dev compiler)<br>+ For Production phase - Dart to Javascript Compiler</p>",
+    "start": 1125,
+    "position": 12,
+    "video": {
+      "id": "video-b74d82bb-67fe-4732-b8b0-edf4ddf6c953",
+      "url": "https://www.youtube.com/watch?v=F3JuuYuOUK4",
+      "seen": 1125.3277348569488,
+      "total": 28984
+    },
+    "pin": "green"
+  }, {
+    "id": "bookmark-f5703a2a-fe2d-4b94-9e28-320b306d6420",
+    "description": "<p>Installing Dart SDK on windows - using Chocolatey</p>",
+    "start": 1516,
+    "position": 13,
+    "video": {
+      "id": "video-25a5bd74-2abf-4432-9378-e9b75069c895",
+      "url": "https://www.youtube.com/watch?v=F3JuuYuOUK4",
+      "seen": 1516.2500158149871,
+      "total": 28984
+    }
+  }, {
+    "id": "bookmark-c58c0ec0-989e-4bb3-9e59-c18a010f6be6",
+    "description": "<p>Installing Dart SDK on Mac - using Homebrew</p>",
+    "start": 1677,
+    "position": 14,
+    "video": {
+      "id": "video-43a736d7-52ae-4737-9051-2b6abc619769",
+      "url": "https://www.youtube.com/watch?v=F3JuuYuOUK4",
+      "seen": 1676.9293228970032,
+      "total": 28984
+    }
+  }]
+}
