@@ -120,8 +120,6 @@ Null a; // this is not good practice
   
   - dart2js - Dart to Javascript
 
-
-
 ## JIT - Just Intime Compiler
 
 Compiles the code it needs, only compiles the modified the code needed
@@ -138,11 +136,7 @@ Compiles the code it needs, only compiles the modified the code needed
 
 - run by Dart VM only
 
-
-
 When used in Production, the customer (user) doesn't care about the JIT features, - like fast testing, debugging, or hot-reload. all they care about us for the app to start and run as fast as it can on their devices
-
-
 
 ## AOT - Ahead of Time Compiler
 
@@ -154,15 +148,11 @@ Compiles the entire codebase into machine code, supported by the native device i
 
 - AOT makes sure the build is the best most optimal version of it
 
-
-
 ## www - For Web Development
 
 - For Developing on web platforms - dartdevc (Dart dev compiler)
 
 - For Production phase - Dart to Javascript Compiler
-
-
 
 ## Setup project using CLI
 
@@ -205,3 +195,65 @@ This will create the following folder structure
   - README.md
 
 ---
+
+# First Simple Dart Program
+
+The following prints - Hello World, includes a module from lib folder & prints the numbers separated by space
+
+```dart
+import 'package:excercise/excercise.dart' as excercise;
+
+void main(List<String> arguments) {
+	print('Hello world: ${excercise.calculate()}!');
+	try {
+		int result = arguments.fold<int>(0, (prev, el)=>prev + int.parse(el));
+		print('Argument sum is ${result}');
+	} catch (err) {
+		print('Atleast one argument of type int is required');
+	}
+}
+```
+
+## Dart Dev Tools plugin
+
+In order to activate dart dev tools, run the following dart command
+
+```bash
+dart pub global activate devtools
+```
+
+### For Mac
+
+For Mac users, you need to add the following line into your **.bashrc** file
+
+```bash
+export PATH="$PATH":"$HOME/.pub-cache/bin"
+```
+
+In order to add it use vim, nvim
+
+```bash
+nvim ~/.bashrc
+```
+
+### For Windows
+
+For Windows users, you need to add the following to your **PATH** env variable
+
+```bash
+~\AppData\Local\Pub\Cache\bin
+```
+
+### Debugging using Devtools
+
+In order to execute the program using devtools, run the following dart command
+
+```bash
+dart run --observe --pause-isolates-on-start
+```
+
+Inorder to open devtools on your browser run the following dart command
+
+```bash
+devtools
+```
