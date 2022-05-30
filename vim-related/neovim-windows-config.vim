@@ -43,5 +43,5 @@ let g:NERDTreeDirArrowCollapsible="~"
 
 
 " override some color schemes
-let g:sonokai_colors_override = {'fg': ['#D8D8D8', '255'], 'grey': ['#183465', '255']}
+let g:sonokai_colors_override = {'fg': ['#D8D8D8', '255'], 'grey': ['#21A291', '255']}
 colorscheme sonokai
