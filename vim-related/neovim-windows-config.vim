@@ -41,7 +41,15 @@ let g:NERDTreeDirArrowCollapsible="~"
 " source ~/.config/nvim/themes/dracula.vim
 " source ~/.config/nvim/themes/onedark.vim
 
+" Important!!
+if has('termguicolors')
+	set termguicolors
+endif
+" The configuration options should be placed before `colorscheme sonokai`.
+let g:sonokai_style = 'andromeda'
+let g:sonokai_better_performance = 1
+
 
 " override some color schemes
-let g:sonokai_colors_override = {'fg': ['#D8D8D8', '255'], 'grey': ['#21A291', '255']}
+let g:sonokai_colors_override = {'fg': ['#D8D8D8', '255'], 'grey': ['#49D6C4', '255']}
 colorscheme sonokai
