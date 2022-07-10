@@ -26,6 +26,32 @@ Plug 'dart-lang/dart-vim-plugin'
 Plug 'google/vim-searchindex'
 Plug 'sainnhe/sonokai' "Sonokai dark theme
 
+" mac related plugins
+Plug 'https://github.com/vim-airline/vim-airline' " Status Bar colorized
+Plug 'https://github.com/preservim/nerdtree' " Nerdtree / Project explorer
+Plug 'https://github.com/ryanoasis/vim-devicons' "Developer icons
+Plug 'christoomey/vim-system-copy' "System copy plugin
+Plug 'luochen1990/rainbow' "Rainbow brackets plugin
+Plug 'joshdick/onedark.vim' "Onedark vim colorscheme
+Plug 'Mofiqul/dracula.nvim' "Dracular vim colorscheme
+Plug 'marko-cerovac/material.nvim' "Material vim colorcheme
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'} "Install TreeSitter
+Plug 'mg979/vim-visual-multi', {'branch': 'master'} "Install multiple cursor plugin for neovim
+" Plug 'https://github.com/airblade/vim-gitgutter.git' "Support for Git
+Plug 'https://github.com/leafgarland/typescript-vim.git' "Typescript support
+Plug 'pangloss/vim-javascript' "Javascript support
+Plug 'https://github.com/hail2u/vim-css3-syntax.git' "vim css3 syntax support
+Plug 'mxw/vim-jsx' "vim jsx support
+Plug 'vim-scripts/loremipsum'
+Plug 'dart-lang/dart-vim-plugin'
+Plug 'altercation/vim-colors-solarized'
+Plug 'google/vim-searchindex'
+Plug 'flowtype/vim-flow'
+Plug 'mg979/vim-visual-multi' "vscode multi cursor plugin
+Plug 'miyakogi/vim-dartanalyzer' "vim plugin for dart analyzer
+Plug 'sainnhe/sonokai' "Sonokai dark theme
+
+
 call plug#end()
 
 " Keyboard bindings
