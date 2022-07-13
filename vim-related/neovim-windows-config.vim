@@ -25,7 +25,7 @@ Plug 'honza/vim-snippets'
 Plug 'dart-lang/dart-vim-plugin'
 Plug 'google/vim-searchindex'
 Plug 'sainnhe/sonokai' "Sonokai dark theme
-Plugin 'mg979/vim-visual-multi' "VSCode type multi cursor select
+Plug 'mg979/vim-visual-multi' "VSCode type multi cursor select
 
 
 call plug#end()
