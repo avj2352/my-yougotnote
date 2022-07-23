@@ -16,23 +16,22 @@ Plug 'joshdick/onedark.vim' "Onedark vim colorscheme
 Plug 'Mofiqul/dracula.nvim' "Dracular vim colorscheme
 Plug 'marko-cerovac/material.nvim' "Material vim colorcheme
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'} "Install TreeSitter
-Plug 'https://github.com/airblade/vim-gitgutter.git'
-Plug 'https://github.com/leafgarland/typescript-vim.git'
-Plug 'pangloss/vim-javascript'
-Plug 'https://github.com/hail2u/vim-css3-syntax.git'
-Plug 'mxw/vim-jsx'
-Plug 'flowtype/vim-flow'
+Plug 'mg979/vim-visual-multi', {'branch': 'master'} "Install multiple cursor plugin for neovim
+Plug 'https://github.com/airblade/vim-gitgutter.git' "Support for Git
+Plug 'https://github.com/leafgarland/typescript-vim.git' "Typescript support
+Plug 'pangloss/vim-javascript' "Javascript support
+Plug 'https://github.com/hail2u/vim-css3-syntax.git' "vim css3 syntax support
+Plug 'mxw/vim-jsx' "vim jsx support
 Plug 'vim-scripts/loremipsum'
-Plug 'honza/vim-snippets'
 Plug 'dart-lang/dart-vim-plugin'
-Plug 'neoclide/coc.nvim', {'branch': 'release'} " Also do: :CocInstall coc-flutter
 Plug 'altercation/vim-colors-solarized'
 Plug 'google/vim-searchindex'
+Plug 'flowtype/vim-flow'
+Plug 'mg979/vim-visual-multi' "vscode multi cursor plugin
+Plug 'sainnhe/sonokai' "Sonokai dark theme
 call plug#end()
 
-"Set material colorscheme
-" colorscheme material
-" colorscheme onedark
+
 "Preconfig Rainbow brackets
 let g:rainbow_active = 1 "set to 0 if you want to enable it later via :RainbowToggle
 
@@ -47,3 +46,19 @@ let g:NERDTreeDirArrowCollapsible="~"
 
 " Plugin rainbow change highlight color
 " hi rainbowcol1 guifg=#feec37
+
+"Set material colorscheme
+" colorscheme material
+" colorscheme onedark
+
+" Important!!
+if has('termguicolors')
+	set termguicolors
+endif
+" The configuration options should be placed before `colorscheme sonokai`.
+let g:sonokai_style = 'andromeda'
+let g:sonokai_better_performance = 1
+
+" override some color schemes
+let g:sonokai_colors_override = {'fg': ['#D8D8D8', '255'], 'grey': ['#183465', '255']}
+colorscheme sonokai

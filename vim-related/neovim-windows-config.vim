@@ -24,6 +24,9 @@ Plug 'mxw/vim-jsx'
 Plug 'honza/vim-snippets'
 Plug 'dart-lang/dart-vim-plugin'
 Plug 'google/vim-searchindex'
+Plug 'sainnhe/sonokai' "Sonokai dark theme
+Plug 'mg979/vim-visual-multi' "VSCode type multi cursor select
+
 
 call plug#end()
 
@@ -38,4 +41,17 @@ let g:NERDTreeDirArrowCollapsible="~"
 
 " default theme
 " source ~/.config/nvim/themes/dracula.vim
-source ~/.config/nvim/themes/onedark.vim
+" source ~/.config/nvim/themes/onedark.vim
+
+" Important!!
+if has('termguicolors')
+	set termguicolors
+endif
+" The configuration options should be placed before `colorscheme sonokai`.
+let g:sonokai_style = 'andromeda'
+let g:sonokai_better_performance = 1
+
+
+" override some color schemes
+let g:sonokai_colors_override = {'fg': ['#D8D8D8', '255'], 'grey': ['#49D6C4', '255']}
+colorscheme sonokai
