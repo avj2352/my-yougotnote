@@ -1,0 +1,284 @@
+{
+  "id": "playlist-38b35b50-3efa-403d-a386-33930061080f",
+  "title": "AWS Single Table Design - by Rick and Alex ",
+  "createdBy": "",
+  "bookmarks": [
+    {
+      "id": "bookmark-91914298-2289-4232-aad8-a62bb920fc11",
+      "description": "<p><strong>Alex Debrie - Single Table Design in Dynamo DB</strong></p>",
+      "start": 718,
+      "position": 1,
+      "video": {
+        "id": "video-83c0b71e-d832-4bb1-965b-831ac42d0336",
+        "url": "https://www.youtube.com/watch?v=BnDKD_Zv0og",
+        "seen": 718.1910200667572,
+        "total": 4171.341
+      },
+      "pin": "orange"
+    },
+    {
+      "id": "bookmark-71242f4f-02c4-4f38-b651-3c8e4682841b",
+      "description": "<p><strong>Two types of Primary Keys</strong><br><br>+ Simple Primary Key -&gt; Just the partition key</p><p>+ Composite Primary Key -&gt; Partition Key + Sort Key</p>",
+      "start": 1014,
+      "position": 2,
+      "video": {
+        "id": "video-34bde549-0689-443f-976f-5083500ee64e",
+        "url": "https://www.youtube.com/watch?v=BnDKD_Zv0og",
+        "seen": 1014.224258087738,
+        "total": 4171.341
+      }
+    },
+    {
+      "id": "bookmark-de5c114d-59a1-4549-88c5-a5b973ee02c4",
+      "description": "<p><strong>SQL vs NoSQL</strong></p><p><br>Dynamo DB's guiding &nbsp;principle</p><p>+ Do not allow operations that don't SCALE<br>+ Importance of Primary Keys<br>+ No JOIN operations present in NoSQL<br>+ Secondary Indexes<br>+ Data from the table is copied over into Secondary index with the new Primary key<br>+ Can use query and scan on secondary indexes, but NO writes directly<br>+ Get comfortable with De-normalization<br><br><br><strong>🧐 Why no JOIN ?</strong><br>+ Hashing Query-able fields<br>&nbsp;</p><p>😎<strong>Quick tip:</strong>&nbsp;<br>+ Always do a project \"ALL\" on secondary indexes. Because once a secondary index has been created with certain projection, You cannot alter it.</p><p>+ Casing is always important when dealing with Primary Keys (PK + SK). So decide if you want to Lower case or Upper case your Primary Keys</p>",
+      "start": 1110,
+      "position": 3,
+      "video": {
+        "id": "video-c3be22fa-4a49-4092-b84d-64aa25958414",
+        "url": "https://www.youtube.com/watch?v=BnDKD_Zv0og",
+        "seen": 1109.8054379256134,
+        "total": 4171.341
+      },
+      "pin": "red"
+    },
+    {
+      "id": "bookmark-25c5aaad-1947-41fa-9ab7-4d4d8740a716",
+      "description": "<p>Know your access patterns in advance</p>",
+      "start": 1692,
+      "position": 4,
+      "video": {
+        "id": "video-7aad9a44-051f-4c55-ac35-240f51daf6f8",
+        "url": "https://www.youtube.com/watch?v=BnDKD_Zv0og",
+        "seen": 1691.7787020133514,
+        "total": 4171.341
+      }
+    },
+    {
+      "id": "bookmark-5b3fef63-97f6-4b6d-b656-aecfe1d4447f",
+      "description": "<p>All Items in a Single Table =&gt; Generic Attributes for Primary Key</p>",
+      "start": 1783,
+      "position": 5,
+      "video": {
+        "id": "video-9e40bcc9-d650-44a6-9dee-33578b995dae",
+        "url": "https://www.youtube.com/watch?v=BnDKD_Zv0og",
+        "seen": 1782.8275039332427,
+        "total": 4171.341
+      }
+    },
+    {
+      "id": "bookmark-0bb2e683-8e8c-4683-9d9f-60cd2775dc01",
+      "description": "<p><strong>Item Collection</strong></p><p>&nbsp;</p><p>+ Items with the same \"Partition Key\" belong to the same Item Collection</p><p>+ <strong>Query</strong>: A query is going to select multiple items with the <strong>SAME Partition Key</strong><br><strong>+ </strong>Efficient to select multiple items</p>",
+      "start": 2008,
+      "position": 6,
+      "video": {
+        "id": "video-62991d3d-83c6-41d3-8ef7-934133b99953",
+        "url": "https://www.youtube.com/watch?v=BnDKD_Zv0og",
+        "seen": 2007.7305379752045,
+        "total": 4171.341
+      },
+      "pin": "red"
+    },
+    {
+      "id": "bookmark-9393423b-59e6-463c-a5e0-5ab713576eac",
+      "description": "<p>One-to-many relationships in Dynamo DB</p>",
+      "start": 2153,
+      "position": 7,
+      "video": {
+        "id": "video-76439fce-f507-41de-a0bf-d33767f47085",
+        "url": "https://www.youtube.com/watch?v=BnDKD_Zv0og",
+        "seen": 2152.5983750591276,
+        "total": 4171.341
+      }
+    },
+    {
+      "id": "bookmark-dc1bbcc5-f0d0-4245-b2a9-a606f473da71",
+      "description": "<p><strong>Strategy #1</strong>: De-normalization + Complex Attribute</p>",
+      "start": 2252,
+      "position": 8,
+      "video": {
+        "id": "video-8a91a2cf-731c-4b7d-bb57-d66c653e1f93",
+        "url": "https://www.youtube.com/watch?v=BnDKD_Zv0og",
+        "seen": 2251.6142589980927,
+        "total": 4171.341
+      },
+      "pin": "red"
+    },
+    {
+      "id": "bookmark-8430f10b-af25-4c25-b083-af7b93d9280f",
+      "description": "<p><strong>Strategy #2</strong>: De-normalization + Duplication</p>",
+      "start": 2579,
+      "position": 9,
+      "video": {
+        "id": "video-9a7a694b-e61b-4b81-9772-0122813b6a01",
+        "url": "https://www.youtube.com/watch?v=BnDKD_Zv0og",
+        "seen": 2579.2806910514983,
+        "total": 4171.341
+      }
+    },
+    {
+      "id": "bookmark-8bd86886-6d32-491b-87d4-41e5636ad9d1",
+      "description": "<p><strong>Strategy #3: Composite primary key + Query operation</strong><br><br>+ commonly used strategy<br>+ NOTE: Query operation is read-only</p>",
+      "start": 2696,
+      "position": 10,
+      "video": {
+        "id": "video-43f5cb47-96cf-4908-8288-ec236e37b0c7",
+        "url": "https://www.youtube.com/watch?v=BnDKD_Zv0og",
+        "seen": 2695.622626994278,
+        "total": 4171.341
+      },
+      "pin": "red"
+    },
+    {
+      "id": "bookmark-eaec2c16-5d0c-4e47-a71c-7bf0e6e860f3",
+      "description": "<p><strong>Strategy #4: Secondary Index + Query</strong><br><br>+ also commonly used (2nd commonly used)<br>+ Useful for new quarriable fields</p>",
+      "start": 2769,
+      "position": 11,
+      "video": {
+        "id": "video-e6755b48-2458-4de0-a904-4b5cc9558e95",
+        "url": "https://www.youtube.com/watch?v=BnDKD_Zv0og",
+        "seen": 2769.4837840972746,
+        "total": 4171.341
+      },
+      "pin": "red"
+    },
+    {
+      "id": "bookmark-82cfb2ae-16bc-4abc-aa24-10e7cfa47f82",
+      "description": "<p>Strategy #5: Composite Sort Key</p>",
+      "start": 3118,
+      "position": 12,
+      "video": {
+        "id": "video-f8af8662-4171-4510-8d64-8f7a23b643e5",
+        "url": "https://www.youtube.com/watch?v=BnDKD_Zv0og",
+        "seen": 3118.2205200305175,
+        "total": 4172
+      }
+    },
+    {
+      "id": "bookmark-8ed4ff7a-ac18-4ebd-96da-a3847c357109",
+      "description": "<p>Summary</p>",
+      "start": 3344,
+      "position": 13,
+      "video": {
+        "id": "video-20397521-9731-4bf8-9e7f-66a64ca386da",
+        "url": "https://www.youtube.com/watch?v=BnDKD_Zv0og",
+        "seen": 3343.5710980686645,
+        "total": 4172
+      }
+    },
+    {
+      "id": "bookmark-c6889d72-b56c-479a-8880-92824d611bf9",
+      "description": "<p><strong>AWS Dynamo DB &nbsp;- Rick Houlihan</strong></p><p>&nbsp;</p><p>75% cost reduction to use - Single Table Design</p>",
+      "start": 249,
+      "position": 14,
+      "video": {
+        "id": "video-8d815490-bde8-4f6b-a6a0-ab17a2e2d3ab",
+        "url": "https://www.youtube.com/watch?v=KYy8X8t4MB8",
+        "seen": 248.79877314305114,
+        "total": 3509
+      },
+      "pin": "orange"
+    },
+    {
+      "id": "bookmark-995c1ca2-46c3-4471-b04b-08bde315f6a3",
+      "description": "<p><strong>Use Case - Discovery Phase</strong></p><p>&nbsp;</p><p>Online Shop</p><p>&nbsp;</p><p>A customer visits an online shop, browses through different products and places an order for some of the products. Based on the invoice, customer can pay using discount code or gift card and pay for the remaining amount by credit card. Purchased products will be picked from one or several warehouses and will be shipped to the provided address.</p><p>&nbsp;</p><p>- customers</p><p>- products</p><p>- orders</p><p>- invoices</p><p>- payments</p><p>- warehouses</p><p>- shipments</p>",
+      "start": 445,
+      "position": 15,
+      "video": {
+        "id": "video-5184ef36-6b58-4600-aae0-4f33e49fbc19",
+        "url": "https://www.youtube.com/watch?v=KYy8X8t4MB8",
+        "seen": 444.969159,
+        "total": 3509
+      },
+      "pin": "yellow"
+    },
+    {
+      "id": "bookmark-5033aa94-7292-4919-9779-fbf245de5e22",
+      "description": "<p>Entity Relation Diagram</p>",
+      "start": 454,
+      "position": 16,
+      "video": {
+        "id": "video-5c7f3c4b-d817-4f94-8f5c-00d304713959",
+        "url": "https://www.youtube.com/watch?v=KYy8X8t4MB8",
+        "seen": 453.9245670267029,
+        "total": 3509
+      },
+      "pin": "cyan"
+    },
+    {
+      "id": "bookmark-3f2b9c1d-92a8-4c10-b341-b523e6c93950",
+      "description": "<p>How data is stored in a NoSQL - Single Table design (Dynamo DB)</p><p>&nbsp;</p><p>+ Partition Key - Determines data distribution (preferrably entity names)</p><p>+ Sort key (Optional) - Model 1:N relationships, enables rich query capabilities<br>+ Index items either by table / Global Secondary items</p>",
+      "start": 525,
+      "position": 17,
+      "video": {
+        "id": "video-4bd6b936-3833-40e3-ad22-a1316d7c1c68",
+        "url": "https://www.youtube.com/watch?v=KYy8X8t4MB8",
+        "seen": 524.5255360476838,
+        "total": 3509
+      }
+    },
+    {
+      "id": "bookmark-fd7c6179-4bfb-47d3-a7e2-7405f9f84e1a",
+      "description": "<p>Access Patterns for the above Discovery Phase</p>",
+      "start": 671,
+      "position": 18,
+      "video": {
+        "id": "video-6d7d7aad-f4a8-48cf-adcc-1e9edf8a1288",
+        "url": "https://www.youtube.com/watch?v=KYy8X8t4MB8",
+        "seen": 671.196577,
+        "total": 3509
+      },
+      "pin": "cyan"
+    },
+    {
+      "id": "bookmark-95f7d989-5631-477e-a8c2-71fdeeb19ed1",
+      "description": "<p>Access Patterns -&gt; Table | Key Condition | Filter Expression</p>",
+      "start": 709,
+      "position": 19,
+      "video": {
+        "id": "video-a7881054-7055-434e-a6c0-8c2c894ea18a",
+        "url": "https://www.youtube.com/watch?v=KYy8X8t4MB8",
+        "seen": 708.940909,
+        "total": 3509
+      }
+    },
+    {
+      "id": "bookmark-3f11fb16-5020-49d5-89d7-0e5db884289c",
+      "description": "<p><a href=\"https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/workbench.settingup.html\">Download NoSQL Workbench - Amazon DynamoDB</a></p>",
+      "start": 751,
+      "position": 20,
+      "video": {
+        "id": "video-cd440988-f1d9-41eb-9f8b-3bcb3fdfe79d",
+        "url": "https://www.youtube.com/watch?v=KYy8X8t4MB8",
+        "seen": 750.894155,
+        "total": 3509
+      },
+      "pin": "green"
+    },
+    {
+      "id": "bookmark-04422573-1e4c-4646-a055-8e93d6e4cfc0",
+      "description": "<p><strong>One to Many Examples</strong></p><p>&nbsp;</p><p><strong>Get a product inventory for all warehouses by a productId</strong><br><br>+ Key Conditions: PK=productId and SK begins_with \"w#\"<br>+ Example: PK=\"p#12345\" and SK begins_with \"w#\"</p>",
+      "start": 1246,
+      "position": 21,
+      "video": {
+        "id": "video-8ea74a20-d25e-4847-8260-86c2b6d6de3e",
+        "url": "https://www.youtube.com/watch?v=KYy8X8t4MB8",
+        "seen": 1246.337529,
+        "total": 3509
+      },
+      "pin": "cyan"
+    },
+    {
+      "id": "bookmark-f7fcc6ae-8877-4164-a32d-a982dfb5386c",
+      "description": "<p><strong>Example of Several - One to Many relationships</strong></p><p>&nbsp;</p><p><strong>Access-Pattern: </strong>Get order for a given orderId</p><p>&nbsp;&nbsp;<strong> EntityType:</strong> Orders</p><p>&nbsp; &nbsp;<strong>Key Conditions:</strong> PK=orderId</p><p>&nbsp; &nbsp;<strong>Example:</strong> PK = \"o#12345\"</p><p>&nbsp;</p><p><strong>Access-Pattern:</strong> Get invoice for a given orderId &nbsp;</p><p>&nbsp; &nbsp;<strong>EntityType:</strong> Orders</p><p>&nbsp; &nbsp;<strong>Key Conditions:</strong> PK=orderId and SK begins_with \"i#\" &nbsp; &nbsp; &nbsp;</p><p>&nbsp; &nbsp;<strong>Example:</strong> PK = \"o#12345\" and SK begins_with \"i#\"</p><p>&nbsp;</p><p><strong>Access-Pattern:&nbsp;</strong> Get all products for a given orderId</p><p>&nbsp; &nbsp;<strong>EntityType:</strong> Orders</p><p>&nbsp;&nbsp;<strong> Key Conditions:&nbsp;</strong> &nbsp;PK=orderId and SK begins_with \"p#\" &nbsp;</p><p>&nbsp; &nbsp;<strong>Example:</strong> PK = \"o#12345\" and SK begins_with \"p#\"</p><p>&nbsp;</p><p><strong>Access-Pattern: </strong>Get all shipments for a given orderId</p><p>&nbsp; &nbsp;<strong>EntityType</strong>: Orders</p><p>&nbsp;<strong> &nbsp;Key Conditions:</strong> PK=orderId and SK begins_with \"sh#\" &nbsp; &nbsp; &nbsp;</p><p>&nbsp;<strong> &nbsp;Example: </strong>PK = \"o#12345\" and SK begins_with \"sh#\"</p><p>&nbsp;</p>",
+      "start": 1690,
+      "position": 22,
+      "video": {
+        "id": "video-dc6392e7-304e-4a1e-a64d-74f27cd23560",
+        "url": "https://www.youtube.com/watch?v=KYy8X8t4MB8",
+        "seen": 1689.813938,
+        "total": 3509
+      },
+      "pin": "cyan"
+    }
+  ]
+}
