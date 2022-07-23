@@ -1,0 +1,91 @@
+{
+  "id": "playlist-518c4ce3-2df9-40a0-a5fb-1ace73e1dcc9",
+  "title": "Amazon SES Tutorial - Playlist",
+  "createdBy": "",
+  "bookmarks": [
+    {
+      "id": "bookmark-6e35b828-a1aa-401c-b15e-330c5f70a4d8",
+      "description": "<p>Amazon SES Intro</p>",
+      "start": 2,
+      "position": 1,
+      "video": {
+        "id": "video-edffd60b-cd47-447b-8c68-eae393648b58",
+        "url": "https://www.youtube.com/watch?v=gVRTKuMFc0c",
+        "seen": 2.4940177785732387,
+        "total": 1671
+      }
+    },
+    {
+      "id": "bookmark-efe58db0-c825-40b2-a994-52165f1b7f87",
+      "description": "<p>What is Amazon SES?</p><p>&nbsp;</p><p>+ Amazon SES is cloud based email service for sending both transactional and mass emails.<br>+ SMTP is communication protocol for email transmission</p><p>+ AWS SDK and Email clients available</p>",
+      "start": 135,
+      "position": 2,
+      "video": {
+        "id": "video-060eb218-5e80-44e2-b765-cbf80655d00a",
+        "url": "https://www.youtube.com/watch?v=gVRTKuMFc0c",
+        "seen": 135.03676920958054,
+        "total": 1671
+      }
+    },
+    {
+      "id": "bookmark-17de80d2-4ecc-4be5-9be5-48800e8fd67c",
+      "description": "<p>Why Amazon SES ?</p><p>&nbsp;</p><p>+ Reasonable Cost</p><p>+ Competitive prices<br>+ First 62,000 of your monthly emails are FREE !!</p><p>+ $0.1 for 10k emails</p><p>+ High deliverable rate</p><p>&nbsp;</p><p>&nbsp;</p><p>+ DKIM - Domain Key Identified Mails - Email security standard (public key crypto to sign mails during transmission)</p><p>+ SPF - Sender Policy Framework - Allows email senders to whitelist which IP address are allowed to send the emails from</p><p>+ DMARC - Domain based Message Authentication Reporting &amp; Conformance. uses SPF protocol</p><p>+ You can track all your sending activity</p>",
+      "start": 201,
+      "position": 3,
+      "video": {
+        "id": "video-757a9e09-6372-4df1-9832-c6f0f8270aa8",
+        "url": "https://www.youtube.com/watch?v=gVRTKuMFc0c",
+        "seen": 201.13490575519774,
+        "total": 1671
+      }
+    },
+    {
+      "id": "bookmark-5eb9d6aa-2e34-4956-b90a-074e2d7325ae",
+      "description": "<p>AWS SES Pros &amp; Cons</p><p>&nbsp;</p><p>Pros:<br>+ High availability and deliverability</p><p>+ No additional maintenance<br>+ Best Quality to price ratio</p><p>+ Comprehensive set of tools</p><p><br>Cons:<br>+ Complicated setup - lacking documentation</p><p>+ Good set of documentation</p><p>+ Initial limitations before verify your sending domains</p><p>+ Simple sending service - not marketing platform</p><p>+ Lack of template building<br>+ No email list storage&nbsp;</p><p>&nbsp;</p>",
+      "start": 598,
+      "position": 4,
+      "video": {
+        "id": "video-cdd2f441-a524-4b63-aa1a-13a42800c332",
+        "url": "https://www.youtube.com/watch?v=gVRTKuMFc0c",
+        "seen": 598.495446051954,
+        "total": 1670.221
+      }
+    },
+    {
+      "id": "bookmark-70a3f2c0-2c9a-43ea-b972-31bd2e2c02f9",
+      "description": "<p>Alternatives<br><br>+ SendGrid<br>+ MailChimp<br>+ No A/B Testing, Detailed analytics<br>+ Mailgun<br>+ ClickSend<br>+ Peppy post</p>",
+      "start": 752,
+      "position": 5,
+      "video": {
+        "id": "video-bef57e17-dbe1-4d5a-9111-c42b5660e46e",
+        "url": "https://www.youtube.com/watch?v=gVRTKuMFc0c",
+        "seen": 751.6068433616678,
+        "total": 1670.221
+      }
+    },
+    {
+      "id": "bookmark-bda7cf5a-84ca-4c8b-9e26-ff7963bf96f6",
+      "description": "<p>AWS SES Hands on</p>",
+      "start": 858,
+      "position": 6,
+      "video": {
+        "id": "video-04090671-8e9b-4f2a-b586-0cb979f799c4",
+        "url": "https://www.youtube.com/watch?v=gVRTKuMFc0c",
+        "seen": 857.9194028574427,
+        "total": 1670.221
+      }
+    },
+    {
+      "id": "bookmark-920fa241-c24b-4e59-8e1d-226c9e5d261d",
+      "description": "<p>AWS SES Production Access Request?</p><p>&nbsp;</p><p>Dear Team,&nbsp;<br>My Official website is located here: <a href=\"https://soullyrics.net/\">https://soullyrics.net </a>and overtime I have collected emails through opt-in subscriptions. My emails are clean and verified. I have been using other emails service providers like SendGrid for a long time and now I have planned to make a shift to Amazon SES.&nbsp;<br><br>With earlier service providers like SendGrid, The website on daily basis sees around 75-100 transactional emails. We have a growing userbase with over 375 users currently now and seeing growth in the number of opt-in users and subscriptions I would like to move to AWS SES for Better price ratio and high delivery rate.&nbsp;<br><br>I am using MailWizz software (<a href=\"https://www.mailwizz.com/\">https://www.mailwizz.com </a>) to maintain recipients lists, manage bounces, complaints and unsubsribe requests. This application can handle bounce, complaint and unsubscription effectively. The type of emails would be - transactional and subscription newsletter emails to my users.&nbsp;<br><br>Kindly approve my request for Amazon SES production access in above specified region (N.Virginia us-east-1).&nbsp;<br>Let me know if you have any questions.&nbsp;<br><br>Thanks and Regards,&nbsp;<br>Sincerely,&nbsp;<br><a href=\"https://support.console.aws.amazon.com/support/pramodctci20@gmail.com\">pramodctci20@gmail.com</a></p>",
+      "start": 1456,
+      "position": 7,
+      "video": {
+        "id": "video-93b1222d-eb47-49e1-bfd8-bdb7b4fd80c6",
+        "url": "https://www.youtube.com/watch?v=gVRTKuMFc0c",
+        "seen": 1456.2295344540635,
+        "total": 1670.221
+      }
+    }
+  ]
+}

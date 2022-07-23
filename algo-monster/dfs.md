@@ -61,8 +61,6 @@ The following code-snippet is the template to write for Depth first search (espe
 
 - Think from a node's perspective
 - When you are a node, the only things you know are 1) your value and 2) how to get to your children. So the recursive function you write manipulates these things.
-  
-  
 
 ```javascript
 function dfs(node, state):
@@ -228,7 +226,7 @@ function dfs (root, maxValue) {
     total += dfs(root.right, Math.max(maxValue, root.val));
     return total;
 }
-    
+
 // main
 function visibleNodes (root) {    
     return dfs(root, -Infinity);
@@ -322,7 +320,6 @@ Time Complexity: `O(n)`
 There are `n` nodes and `n - 1` edges in a tree so if we traverse each once then the total traversal is `O(2n - 1)` which is `O(n)`.
 
 ---
-
 
 ## 4. Balanced Binary Tree
 
@@ -481,7 +478,6 @@ Lowest common ancestor (LCA) of two nodes v and w in a tree is the lowest (i.e. 
 
 Given two nodes of a binary tree, find their lowest common ancestor.
 
-
 **NOTE:** Lowest common ancestor is where the split occurs between v and w
 
  Also if we reach the node itself, then it also qualifies to be a LCA
@@ -508,8 +504,6 @@ Having decided on the state and return value, we can now write the DFS.
 Time Complexity: **O(n)**
 
 There are **n** nodes and **n - 1** edges in a tree so if we traverse each once then the total traversal is **O(2n - 1)** which is **O(n)**.
-
-
 
 ```javascript
 // recursive
@@ -553,5 +547,3 @@ function lca (root, p, q) {
 ```
 
 ---
-
-
