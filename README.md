@@ -2,6 +2,7 @@
 
 ## Important Links
 
+- [Javascript games under 13kb](https://github.blog/2022-10-06-js13k-2022-winners/)
 - [Just Javascript](https://justjavascript.com/learn/01-mental-models)
 - [Amazon Interview Questions](https://algomonster.medium.com/amazon-oa-2022-hackerrank-5d90e1fb46d4)
 - [Javascript tricks & trips](https://medium.com/geekculture/10-clever-javascript-tricks-that-every-developer-should-know-e0be92bcfe9)
