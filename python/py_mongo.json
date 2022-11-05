@@ -143,6 +143,19 @@
         "total": 2088.601
       },
       "pin": "red"
+    },
+    {
+      "id": "bookmark-c9debf16-dd91-4175-86f1-3a884013f09c",
+      "description": "<p>PyMongo Query | Aggregate | Map-reduce</p>",
+      "start": 2,
+      "position": 12,
+      "video": {
+        "id": "video-fdbc158a-b995-4fe6-a558-be102cd3b064",
+        "url": "https://www.youtube.com/watch?v=QOuan5A8Id4",
+        "seen": 2.1506342771879905,
+        "total": 973.801
+      },
+      "pin": "yellow"
     }
   ]
 }
