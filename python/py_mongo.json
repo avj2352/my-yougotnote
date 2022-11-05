@@ -1,0 +1,124 @@
+{
+    "id": "playlist-10dc925d-61a9-4b14-a8d2-8ad22eee4111",
+    "title": "FastAPI + Mongo DB - RESTful API playlist",
+    "createdBy": "",
+    "bookmarks": [{
+        "id": "bookmark-591daea7-4744-485f-b6d1-5ecc185cb93b",
+        "description": "<p>FastAPI + Mongo DB - RESTful API course</p><p>&nbsp;</p><p>+ PyMongo</p><p>+ Mongo DB</p><p>+ FastAPI</p><p>+ uvicorn</p>",
+        "start": 2,
+        "position": 1,
+        "video": {
+            "id": "video-85be7374-5692-4b17-a657-13edb047e37c",
+            "url": "https://www.youtube.com/watch?v=G7hZlOLhhMY",
+            "seen": 1.638866879025322,
+            "total": 2088.601
+        },
+        "pin": "yellow"
+    }, {
+        "id": "bookmark-673d00f2-c6a0-42b9-9792-893e0aac2b1d",
+        "description": "<p>pip freeze &gt; requirements.txt</p><p>&nbsp;</p><p><u>fastapi</u></p><p><u>uvicorn</u></p><p><u>mangum</u></p><p><u>pymongo</u></p>",
+        "start": 190,
+        "position": 2,
+        "video": {
+            "id": "video-1bc32162-12a8-463a-af05-e02130320a08",
+            "url": "https://www.youtube.com/watch?v=G7hZlOLhhMY",
+            "seen": 189.69990755499867,
+            "total": 2088.601
+        },
+        "pin": "green"
+    }, {
+        "id": "bookmark-ba3b005a-45e2-4f45-9e96-0a5bd95fa222",
+        "description": "<p>Barebones FastAPI setup</p><p>&nbsp;</p><blockquote><p>python3 -m unicorn main:app --reload</p></blockquote>",
+        "start": 360,
+        "position": 3,
+        "video": {
+            "id": "video-69e26488-6a79-49c1-913a-1b38744eb51d",
+            "url": "https://www.youtube.com/watch?v=G7hZlOLhhMY",
+            "seen": 360.1360499189915,
+            "total": 2088.601
+        }
+    }, {
+        "id": "bookmark-0dcaa027-0b42-4621-b691-136e779c95fd",
+        "description": "<p>&nbsp;To connect remotely, you need to configure as follows:</p><p>&nbsp;</p><pre><code class=\"language-python\">from pymongo import MongoClient\n\n# connection string\nconn = MongoClient(\"mongodb+srv://username:password@cluster.bd8rbrv.mongodb.net\")\ndatabase = conn.get_database('fastapi-mongo')\n# list all collections\nuser_collection = database.get_collection('user')</code></pre>",
+        "start": 439,
+        "position": 4,
+        "video": {
+            "id": "video-09808e48-2a91-40ed-bbd0-530c33b78f1b",
+            "url": "https://www.youtube.com/watch?v=G7hZlOLhhMY",
+            "seen": 438.95082259983064,
+            "total": 2088.601
+        },
+        "pin": "red"
+    }, {
+        "id": "bookmark-824b87d9-c584-46ae-a9aa-51e696f3b302",
+        "description": "<p>Creating Models using PyMongo</p>",
+        "start": 437,
+        "position": 5,
+        "video": {
+            "id": "video-3e98b4a6-405c-4e6c-837d-2746310c5ba9",
+            "url": "https://www.youtube.com/watch?v=G7hZlOLhhMY",
+            "seen": 437.0492452970022,
+            "total": 2088.601
+        }
+    }, {
+        "id": "bookmark-e8f532c1-5d93-4183-9436-0b2574ac3cb1",
+        "description": "<p>Creating User schema<br><br>+ Schemas is just a serializer for mongo db</p><p>+ Serializer to convert from Mongo BSON to a simple JSON</p><p>+ This is a 1:1 mapping between models/user.py</p>",
+        "start": 780,
+        "position": 6,
+        "video": {
+            "id": "video-8c0a3058-bcbf-48b9-ba8e-6e3de8c738d7",
+            "url": "https://www.youtube.com/watch?v=G7hZlOLhhMY",
+            "seen": 779.8964000002968,
+            "total": 2088.601
+        },
+        "pin": "yellow"
+    }, {
+        "id": "bookmark-0aff9bf4-24f5-439b-8057-62bba7358382",
+        "description": "<p>Insert a record into User collection</p><p>&nbsp;</p><pre><code class=\"language-python\">@user.post('/')\nasync def create_user(user: User):\n    user_collection.insert_one(dict(user))\n    return {\"message\": \"OK\"}</code></pre>",
+        "start": 1138,
+        "position": 7,
+        "video": {
+            "id": "video-dfcdb212-5dbc-43d5-823d-d4ed29457334",
+            "url": "https://www.youtube.com/watch?v=G7hZlOLhhMY",
+            "seen": 1138.46933029877,
+            "total": 2088.601
+        },
+        "pin": "cyan"
+    }, {
+        "id": "bookmark-7302d5f3-1c7f-4831-a5dc-87e0218b94a8",
+        "description": "<p>Retrieve a record by it's id in User collection</p><p>&nbsp;</p><pre><code class=\"language-python\">@user.get('/{id}')\nasync def find_one_user(id: str):    \n    return user_entity(user_collection.find_one({\"_id\":ObjectId(id)}))</code></pre>",
+        "start": 1583,
+        "position": 8,
+        "video": {
+            "id": "video-6528de89-4577-4ad9-aa6e-a643c4b90764",
+            "url": "https://www.youtube.com/watch?v=G7hZlOLhhMY",
+            "seen": 1583.1395931855523,
+            "total": 2088.601
+        },
+        "pin": "cyan"
+    }, {
+        "id": "bookmark-d00faa75-37ad-48ec-b8eb-56a4fb2644ea",
+        "description": "<p>Update record by it's id in Users collection</p><p>&nbsp;</p><pre><code class=\"language-python\">@user.put('/{id}')\nasync def update_user(id: str, user: User):\n    user_collection.find_one_and_update({\"_id\":ObjectId(id)},{\"$set\": dict(user)})\n    return {\"message\": \"OK\"}</code></pre>",
+        "start": 1322,
+        "position": 9,
+        "video": {
+            "id": "video-a52a604a-45b2-4803-98b3-ad5f67d3c3e6",
+            "url": "https://www.youtube.com/watch?v=G7hZlOLhhMY",
+            "seen": 1322.2866601700305,
+            "total": 2088.601
+        },
+        "pin": "cyan"
+    }, {
+        "id": "bookmark-d58f5c99-4059-4113-bedd-49222e0c0f72",
+        "description": "<p>Delete a record by it's id in User collection</p><p>&nbsp;</p><pre><code class=\"language-python\">@user.delete('/{id}')\nasync def delete_user(id: str):\n    user_collection.find_one_and_delete({\"_id\":ObjectId(id)})\n    return {\"message\": \"OK\"}</code></pre>",
+        "start": 1531,
+        "position": 10,
+        "video": {
+            "id": "video-feab352d-ce1d-4f0c-aba3-47f2038d3e49",
+            "url": "https://www.youtube.com/watch?v=G7hZlOLhhMY",
+            "seen": 1530.6929198840082,
+            "total": 2088.601
+        },
+        "pin": "cyan"
+    }]
+}
